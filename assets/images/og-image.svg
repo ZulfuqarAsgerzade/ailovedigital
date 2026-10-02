@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F7F5F0"/>
+  <g fill="#FF304D" transform="translate(96 171) scale(16)"><rect x="3" y="0" width="3" height="3"/><rect x="6" y="0" width="3" height="3"/><rect x="12" y="0" width="3" height="3"/><rect x="15" y="0" width="3" height="3"/><rect x="0" y="3" width="21" height="3"/><rect x="0" y="6" width="21" height="3"/><rect x="3" y="9" width="15" height="3"/><rect x="6" y="12" width="9" height="3"/><rect x="9" y="15" width="3" height="3"/></g>
+  <text x="500" y="318" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="92" font-weight="700" letter-spacing="-3" fill="#0B0B0B">AILoveDigital<tspan fill="#FF304D">.</tspan></text>
+  <text x="504" y="388" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="36" font-weight="500" fill="#5E5E59">AI, Technology &amp; Business Growth</text>
+  <rect x="504" y="430" width="64" height="4" fill="#FF304D"/>
+</svg>

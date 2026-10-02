@@ -1,0 +1,34 @@
+# AILoveDigital
+
+> AILoveDigital is a technology and creative studio. We build digital products, automate operations with AI and turn both into measurable business growth.
+
+And we make businesses love it too. Built with logic. Finished with love.
+
+## Services
+- Build: We design and build software people actually use — and that your team can keep running. (Web platforms · Mobile apps · Internal tools · Digital products)
+- Automate: We find the repetitive work and make it disappear, quietly, in the background. (AI agents · Workflow automation · Integrations · Ops tooling)
+- Grow: We turn attention into customers, and creative into a number you can report. (Social · Performance · Creative production · Brand growth)
+- Teach: We make your team faster with the tools they already have — plus the ones they should. (AI training · IT education · Corporate workshops)
+- Think: Technology decisions before technology spending. Sometimes the answer is “not yet”. (Strategy · Consulting · Digital transformation · Audits)
+
+## Selected work
+- ChefMarket — A restaurant-to-supplier B2B marketplace [Marketplace, 2026]
+- Vicdoor — A multi-tenant SaaS for door and window manufacturers [B2B & SaaS, 2026]
+- AltisCassa — An integrated finance and cash management platform [Fintech & finance, 2026]
+- e-Hesab — An AI-driven pre-accounting platform [Fintech & finance, 2026]
+- E-Faktura — An offline invoicing app for small business [Fintech & finance, 2026]
+- İnsanİş — A construction management system [B2B & SaaS, 2026]
+- Suntech — A domestic logistics and content management platform [B2B & SaaS, 2026]
+- Nitro Garage — A car service and spare parts marketplace [Marketplace, 2026]
+- JobRemotely — A curated remote job board [Marketplace, 2026]
+- Moleaks — A data-leak search platform [Cybersecurity, 2026]
+- Safemole — A digital security and privacy platform [Cybersecurity, 2026]
+- Rana — A digital legacy and message-to-the-future platform [Cybersecurity, 2026]
+- Guraba — A global e-commerce and sales ecosystem [E-commerce & catalog, 2026]
+- ParkHub — A unified smart parking and payment ecosystem [Platforms & web, 2026]
+- Arsa Creative — A creative agency and portfolio web platform [Platforms & web, 2026]
+- Marka House — A branding and digital marketing platform [Platforms & web, 2026]
+
+## Contact
+- Email: info@ailovedigital.com
+- Website: https://ailovedigital.com/

@@ -1,0 +1,23 @@
+{
+  "name": "AILoveDigital",
+  "short_name": "AILoveDigital",
+  "description": "AILoveDigital is a technology and creative studio. We build digital products, automate operations with AI and turn both into measurable business growth.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "browser",
+  "theme_color": "#F7F5F0",
+  "background_color": "#F7F5F0",
+  "icons": [
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

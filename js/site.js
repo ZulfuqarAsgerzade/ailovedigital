@@ -1,7 +1,7 @@
 // Site-level glue code — everything here sits outside the dc-runtime's
 // component (which must stay inline in index.html, see the <script
-// data-dc-script> comment there) and outside the two vendor/starter files
-// (support.js, image-slot.js). Safe to run at any point relative to those —
+// data-dc-script> comment there) and outside the vendor runtime file
+// (support.js). Safe to run at any point relative to those —
 // it only defines functions and registers event listeners, none of which
 // touch the DOM until the events they're waiting for actually fire.
 
@@ -80,20 +80,4 @@ document.addEventListener('click', (e) => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
   history.pushState(null, '', a.hash);
-});
-
-// The <image-slot> placeholders in "Selected work" are an editor-only upload
-// widget (drag/drop + click-to-browse) from the omelette design tool. On this
-// static site there's no window.omelette.writeFile, so a visitor's upload
-// would never actually save anywhere — but the click/drop handlers aren't
-// gated on that, so they'd still pop the file picker or accept a dropped file
-// for nothing. Photos here are added in code (an `src` on the <image-slot>),
-// not by visitors, so intercept these events in the capture phase — before
-// they reach the element's own shadow-DOM listeners — and drop them.
-['click', 'dragenter', 'dragover', 'drop'].forEach((type) => {
-  document.addEventListener(type, (e) => {
-    if (!e.target.closest || !e.target.closest('image-slot')) return;
-    e.stopPropagation();
-    if (type !== 'click') e.preventDefault();
-  }, true);
 });
