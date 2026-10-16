@@ -1,0 +1,14 @@
+{
+  "name": "ailovedigital",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AILoveDigital marketing site — static pages generated from data/projects.json",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-work.mjs && node scripts/build-seo.mjs",
+    "build:work": "node scripts/build-work.mjs",
+    "build:seo": "node scripts/build-seo.mjs",
+    "serve": "python3 -m http.server 4173"
+  },
+  "engines": { "node": ">=18" }
+}

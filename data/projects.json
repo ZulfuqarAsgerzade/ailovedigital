@@ -1,0 +1,1838 @@
+[
+  {
+    "slug": "chefmarket",
+    "name": "CHEFMARKET",
+    "brand": "ChefMarket",
+    "line": "A restaurant-to-supplier B2B marketplace",
+    "headline": "A restaurant–supplier B2B marketplace ecosystem",
+    "subtitle": "Three mobile apps, an admin panel and a real-time backend — in one ecosystem.",
+    "year": "2026",
+    "scope": "Marketplace",
+    "time": "",
+    "chips": [
+      "3 role-specific mobile apps",
+      "40+ admin panel views",
+      "500ms notification dedup window"
+    ],
+    "metrics": [
+      {
+        "v": "3",
+        "l": "role-specific mobile apps"
+      },
+      {
+        "v": "40+",
+        "l": "admin panel views"
+      },
+      {
+        "v": "500ms",
+        "l": "notification dedup window"
+      }
+    ],
+    "overview": "ChefMarket fully digitises restaurant–supplier trade in Azerbaijan: suppliers sell products, restaurants place orders and drivers deliver. Three separate mobile apps (Supplier, Restaurant, Driver), a React admin panel and a Tenant Portal talk to each other in real time through a single .NET 8 backend.",
+    "problem": "Restaurant supply ran on phone calls, WhatsApp and paper delivery notes. Nobody knew exactly where an order was, prices could not be compared, and the cash a driver collected was reconciled by hand at the end of the day.",
+    "approach": "Every role got its own app — one each for suppliers, restaurants and drivers — with an admin panel on top. The whole order lifecycle sits on one status flow, pushed to all three parties at the same moment over SignalR. When the network drops, actions go into an offline queue and are replayed on reconnect.",
+    "result": "Orders, delivery and cash reconciliation now live in one panel. Suppliers manage their own catalogue through Buy Box competition and bulk price updates, and restaurants collect quotes from several suppliers at once with a tender request.",
+    "features": [
+      {
+        "t": "Full order lifecycle",
+        "d": "Accepted → preparing → ready → on the way, with a real-time notification at every step."
+      },
+      {
+        "t": "Buy Box and price competition",
+        "d": "Market price comparison and recommendations for the supplier."
+      },
+      {
+        "t": "Tender requests",
+        "d": "A restaurant asks once and collects prices from many suppliers."
+      },
+      {
+        "t": "Logistics board",
+        "d": "Waves, routes and stops, plus driver assignment."
+      },
+      {
+        "t": "Driver cash reconciliation",
+        "d": "Expected versus collected cash, tracked per stop."
+      },
+      {
+        "t": "Offline queue",
+        "d": "Actions are kept when the network drops and replayed when it returns."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "One global notification bridge",
+        "d": "A single SignalR toast bridge with map-based dedup (a 500ms window) stops the same event being shown twice."
+      },
+      {
+        "t": "Boundary conversion",
+        "d": "Backend PascalCase becomes camelCase at the service boundary, so components never deal with two naming schemes."
+      },
+      {
+        "t": "Relative URL storage",
+        "d": "The database holds only relative paths and IStorageUrlResolver builds the full address, so moving storage never touches the data."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET 8",
+          "FastEndpoints",
+          "CQRS / MediatR",
+          "Hangfire"
+        ]
+      },
+      {
+        "k": "Database",
+        "v": [
+          "PostgreSQL"
+        ]
+      },
+      {
+        "k": "Mobile",
+        "v": [
+          "React Native 0.84",
+          "React 19 (New Architecture)",
+          "TypeScript 5.8"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React 19",
+          "Horizon UI (Chakra + Tailwind)",
+          "ApexCharts"
+        ]
+      },
+      {
+        "k": "State",
+        "v": [
+          "Zustand 4",
+          "React Context"
+        ]
+      },
+      {
+        "k": "Real-time",
+        "v": [
+          "SignalR (WebSocket)",
+          "Firebase Cloud Messaging"
+        ]
+      },
+      {
+        "k": "Print and maps",
+        "v": [
+          "Bluetooth ESC/POS thermal printer",
+          "react-native-maps"
+        ]
+      },
+      {
+        "k": "Monitoring",
+        "v": [
+          "Firebase Crashlytics (PII-redacted breadcrumbs)"
+        ]
+      }
+    ],
+    "coverAlt": "ChefMarket web admin panel and mobile app screens in laptop and phone frames",
+    "mockup": {
+      "web": [
+        11
+      ],
+      "phones": [
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "slug": "vicdoor",
+    "name": "VICDOOR",
+    "brand": "Vicdoor",
+    "line": "A multi-tenant SaaS for door and window manufacturers",
+    "headline": "A multi-tenant SaaS for door and window manufacturers",
+    "subtitle": "Quoting, visual design, production, installation and customer trust in one system.",
+    "year": "2026",
+    "scope": "B2B & SaaS",
+    "time": "",
+    "chips": [
+      "150+ ready design templates",
+      "46 profile systems in the catalogue",
+      "12 shared packages across web, mobile and API"
+    ],
+    "metrics": [
+      {
+        "v": "150+",
+        "l": "ready design templates"
+      },
+      {
+        "v": "46",
+        "l": "profile systems in the catalogue"
+      },
+      {
+        "v": "12",
+        "l": "shared packages across web, mobile and API"
+      }
+    ],
+    "overview": "Vicdoor replaces the Excel-based workflow in a PVC and aluminium door and window manufacturer’s workshops with one integrated digital system. It covers quoting, visual design, production, field installation and customer satisfaction, and is tailored to the Baku market.",
+    "problem": "Workshops priced jobs in Excel, wrote measurements on paper and checked production status by phone. Finding the state of one order meant calling three people, and the same data lived in three different places.",
+    "approach": "The whole order lifecycle runs through a single status workflow with an audit trail. The price calculator, visual designer and drawing engine are shared packages used by web, mobile and API alike. An offline-first mobile app serves field installers, with measurements without internet, annotations on images and digital signatures.",
+    "result": "Manual hand-offs between quoting and production are gone. The designer exports PDF and DXF files straight to CNC machines, and customers get a magic-link portal with live production status and a warranty card.",
+    "features": [
+      {
+        "t": "Smart price calculator",
+        "d": "Profile systems, glass packages, steel frames and accessories, with multi-currency maths under VAT and central-bank exchange rates."
+      },
+      {
+        "t": "Interactive visual designer",
+        "d": "Geometric constraint solving and CNC-ready PDF and DXF export."
+      },
+      {
+        "t": "Offline-first mobile app",
+        "d": "Measuring, annotation, signatures and on-site pricing without a connection."
+      },
+      {
+        "t": "Production line management",
+        "d": "A workshop kiosk, a TV status panel and cut optimisation."
+      },
+      {
+        "t": "Customer trust portal",
+        "d": "Quotes, live status and a warranty card behind a magic link."
+      },
+      {
+        "t": "Finance and inventory",
+        "d": "Invoicing, payment reconciliation, P&L including COGS, and real-time stock."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Database-level isolation",
+        "d": "PostgreSQL Row-Level Security keeps every tenant’s data separate."
+      },
+      {
+        "t": "End-to-end type safety",
+        "d": "tRPC v11 with shared Zod contracts across web, mobile and API."
+      },
+      {
+        "t": "Asynchronous jobs",
+        "d": "PDF and DXF generation, cron tasks and push notifications run on BullMQ and Redis workers."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Monorepo and API",
+        "v": [
+          "Turborepo",
+          "pnpm",
+          "tRPC v11",
+          "Fastify"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "Next.js 14 (App Router / RSC)",
+          "Tailwind CSS",
+          "shadcn/ui",
+          "Konva"
+        ]
+      },
+      {
+        "k": "Mobile",
+        "v": [
+          "React Native (Expo)",
+          "Skia"
+        ]
+      },
+      {
+        "k": "Data",
+        "v": [
+          "PostgreSQL 16 (RLS multi-tenancy)",
+          "Prisma ORM",
+          "Redis"
+        ]
+      },
+      {
+        "k": "Background jobs",
+        "v": [
+          "BullMQ workers"
+        ]
+      },
+      {
+        "k": "Security and storage",
+        "v": [
+          "Better Auth",
+          "Cloudflare R2"
+        ]
+      },
+      {
+        "k": "Quality",
+        "v": [
+          "Vitest",
+          "Playwright",
+          "i18n (AZ / RU / EN)"
+        ]
+      }
+    ],
+    "coverAlt": "Vicdoor web application shown on a laptop and a tablet",
+    "mockup": {
+      "web": [
+        1
+      ],
+      "tablet": [
+        3
+      ]
+    }
+  },
+  {
+    "slug": "altiscassa",
+    "name": "ALTISCASSA",
+    "brand": "AltisCassa",
+    "line": "An integrated finance and cash management platform",
+    "headline": "An integrated finance and cash management platform",
+    "subtitle": "Multi-currency cash management, counterparty debts and 11+ financial reports.",
+    "year": "2026",
+    "scope": "Fintech & finance",
+    "time": "",
+    "chips": [
+      "11+ analytical financial reports",
+      "56+ database migrations",
+      "15 min access token lifetime"
+    ],
+    "metrics": [
+      {
+        "v": "11+",
+        "l": "analytical financial reports"
+      },
+      {
+        "v": "56+",
+        "l": "database migrations"
+      },
+      {
+        "v": "15 min",
+        "l": "access-token lifetime"
+      }
+    ],
+    "overview": "AltisCassa is an all-in-one system that centralises a business’s cash operations, counterparty obligations, project budgets and corporate reporting, handling multi-currency transactions, invoice flows and financial reports in real time.",
+    "problem": "Cash, debts and project budgets were kept in separate Excel files. Month-end profit and loss meant merging them by hand, and nobody had a clear real-time balance per currency.",
+    "approach": "Clean Architecture with separate domain, application, infrastructure and API layers. Every operation leaves an audit trail, and deletions are soft-only, so financial data is never lost for good.",
+    "result": "Profit and loss, cash flow, turnover, VAT and ageing reports are generated instantly, and a Ctrl+K command palette gives one-step access to the advanced features.",
+    "features": [
+      {
+        "t": "Centralised cash management",
+        "d": "Cash across multiple currencies in one place."
+      },
+      {
+        "t": "Counterparties and debts",
+        "d": "Debt management with per-currency analytics."
+      },
+      {
+        "t": "Project finance",
+        "d": "Budget versus actual spending and profitability analysis."
+      },
+      {
+        "t": "Invoice workflow with VAT",
+        "d": "From draft to payment, including printing."
+      },
+      {
+        "t": "Ctrl+K command palette",
+        "d": "Jump to any advanced feature in one step."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Clean Architecture",
+        "d": "Domain, application, infrastructure and API layers kept strictly apart."
+      },
+      {
+        "t": "Audit trail and soft deletes",
+        "d": "Every operation is recorded and nothing financial is ever permanently deleted."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          "ASP.NET Core 8 (C#)",
+          "EF Core 8",
+          "MS SQL Server 2022"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React 19",
+          "TypeScript",
+          "Vite",
+          "AG Grid",
+          "Recharts",
+          "Zustand",
+          "TanStack Query"
+        ]
+      },
+      {
+        "k": "Security",
+        "v": [
+          "JWT",
+          "BCrypt",
+          "HttpOnly refresh tokens",
+          "Automatic account blocking"
+        ]
+      },
+      {
+        "k": "Infrastructure",
+        "v": [
+          "Docker Compose",
+          "Nginx reverse proxy"
+        ]
+      },
+      {
+        "k": "Quality",
+        "v": [
+          "FluentValidation",
+          "Serilog",
+          "Zod",
+          "ClosedXML"
+        ]
+      }
+    ],
+    "coverAlt": "AltisCassa web application shown on a laptop and a tablet",
+    "mockup": {
+      "web": [
+        1
+      ],
+      "tablet": [
+        2
+      ]
+    }
+  },
+  {
+    "slug": "e-hesab",
+    "name": "E-HESAB",
+    "brand": "e-Hesab",
+    "line": "An AI-driven pre-accounting platform",
+    "headline": "An AI-based pre-accounting platform",
+    "subtitle": "DVX integration, OCR invoices and a dynamic tax engine.",
+    "year": "2026",
+    "scope": "Fintech & finance",
+    "time": "",
+    "chips": [
+      ">95% test coverage on critical logic",
+      "2 AI engines — OCR and Claude",
+      "0 hardcoded tax rates"
+    ],
+    "metrics": [
+      {
+        "v": ">95%",
+        "l": "test coverage on critical logic"
+      },
+      {
+        "v": "2",
+        "l": "AI engines — OCR and Claude"
+      },
+      {
+        "v": "0",
+        "l": "hardcoded tax rates"
+      }
+    ],
+    "overview": "e-Hesab is a mobile-first, AI-driven pre-accounting platform for freelancers and small and medium businesses. It is localised to Azerbaijani tax law and the State Tax Service infrastructure, and automates invoices, expense tracking, payroll, DSMF and e-Qaimə processes.",
+    "problem": "Freelancers and small businesses often learn their tax obligations at the last moment. Receipts stay on paper, expenses go untracked and filing deadlines are forgotten — and an accountant is too expensive at this scale.",
+    "approach": "Tax calculations are not hardcoded. Simplified tax, VAT, profit tax and payroll deductions run on a configurable dynamic engine, so nobody rewrites code when legislation changes. Paper documents become digital invoices through camera capture, OCR and the Claude API.",
+    "result": "Users see their tax calendar, expected payments and potential penalties in advance. e-Qaiməs go straight to the DVX portal, and expenses entered offline sync when the network returns.",
+    "features": [
+      {
+        "t": "AI invoices and OCR",
+        "d": "Photograph a paper receipt and turn it into a digital invoice."
+      },
+      {
+        "t": "DVX e-Qaimə integration",
+        "d": "Submit declarations and send XML-based e-receipts automatically."
+      },
+      {
+        "t": "Dynamic tax engine",
+        "d": "Rates are changed through configuration, not code."
+      },
+      {
+        "t": "AI virtual accountant",
+        "d": "Assigns expenses to ledger accounts and recommends month-end closing steps."
+      },
+      {
+        "t": "Smart tax calendar",
+        "d": "Tracks deadlines, calculates penalties and sends timely push notifications."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Modular monolith",
+        "d": "Isolated domains with CQRS and MediatR that could later be split into microservices."
+      },
+      {
+        "t": "Offline-first",
+        "d": "Expenses and invoices are saved locally in SQLite and synced to the central server when connectivity returns."
+      },
+      {
+        "t": "ASAN Login",
+        "d": "Sign-in through ASAN Login with JWT-based authentication."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          "ASP.NET Core 8",
+          "Modular Monolith",
+          "CQRS + MediatR"
+        ]
+      },
+      {
+        "k": "Data",
+        "v": [
+          "PostgreSQL 16",
+          "Redis 7",
+          "EF Core 8"
+        ]
+      },
+      {
+        "k": "Mobile",
+        "v": [
+          "React Native (Expo SDK 52+)",
+          "Expo Router",
+          "expo-sqlite"
+        ]
+      },
+      {
+        "k": "State",
+        "v": [
+          "Zustand",
+          "TanStack Query"
+        ]
+      },
+      {
+        "k": "AI and integrations",
+        "v": [
+          "Claude API",
+          "Google Vision OCR",
+          "ASAN Login",
+          "QuestPDF"
+        ]
+      },
+      {
+        "k": "Quality",
+        "v": [
+          "FluentValidation",
+          "xUnit",
+          "FluentAssertions",
+          "Playwright",
+          "SonarQube"
+        ]
+      }
+    ],
+    "coverAlt": "e-Hesab mobile app screens in phone frames",
+    "mockup": {
+      "phones": [
+        1,
+        2,
+        3
+      ],
+      "hue": 214
+    }
+  },
+  {
+    "slug": "e-faktura",
+    "name": "E-FAKTURA",
+    "brand": "E-Faktura",
+    "line": "An offline invoicing app for small business",
+    "headline": "An offline invoicing app for small business",
+    "subtitle": "An invoicing solution that works without internet, fully in Azerbaijani.",
+    "year": "2026",
+    "scope": "Fintech & finance",
+    "time": "",
+    "chips": [
+      "5 professional A4 invoice templates",
+      "0 servers required — fully offline",
+      "6 months in the revenue chart"
+    ],
+    "metrics": [
+      {
+        "v": "5",
+        "l": "professional A4 invoice templates"
+      },
+      {
+        "v": "0",
+        "l": "servers required — fully offline"
+      },
+      {
+        "v": "6 months",
+        "l": "revenue chart cycle"
+      }
+    ],
+    "overview": "E-Faktura is an offline-first mobile app for entrepreneurs and freelancers. It covers A4 invoice creation, client management and payment tracking. Data stays on the device, and invoices can be sent as PDF or over WhatsApp.",
+    "problem": "Small business owners either write invoices in Word templates or do not issue them at all, and cloud tools fail wherever there is no internet.",
+    "approach": "The app is built offline-first on local SQLite storage with no server. The code is split into layers — repository, pure business logic, state, UI — and the calculation logic is covered by unit tests.",
+    "result": "Users can issue invoices offline, track debts, send WhatsApp deep-link payment reminders and scan paper invoices with the camera.",
+    "features": [
+      {
+        "t": "Invoice creation",
+        "d": "Five templates, adjustable tax rate, multi-line items and currency support."
+      },
+      {
+        "t": "Payment tracking",
+        "d": "Partial and full payments, unpaid / paid / overdue statuses and a receivables and payables balance."
+      },
+      {
+        "t": "OCR scanning",
+        "d": "Scan a paper invoice with the camera."
+      },
+      {
+        "t": "WhatsApp and SMS sending",
+        "d": "With Azerbaijani phone-number normalisation."
+      },
+      {
+        "t": "Backup and restore",
+        "d": "Export and import the data on the device."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Layered structure",
+        "d": "Repository → pure business logic → state → UI."
+      },
+      {
+        "t": "Tested core and strict types",
+        "d": "The calculation core is unit-tested and the codebase runs in TypeScript strict mode."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Mobile",
+        "v": [
+          "React Native 0.81",
+          "Expo SDK 54 (React 19)",
+          "expo-router"
+        ]
+      },
+      {
+        "k": "Language",
+        "v": [
+          "TypeScript"
+        ]
+      },
+      {
+        "k": "Data and state",
+        "v": [
+          "expo-sqlite",
+          "Zustand"
+        ]
+      },
+      {
+        "k": "Documents",
+        "v": [
+          "expo-print",
+          "react-native-webview"
+        ]
+      },
+      {
+        "k": "Testing",
+        "v": [
+          "Jest"
+        ]
+      }
+    ],
+    "coverAlt": "E-Faktura mobile app screens in phone frames",
+    "mockup": {
+      "phones": [
+        1,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "slug": "insanis",
+    "name": "İNSANİŞ",
+    "brand": "İnsanİş",
+    "line": "A construction management system",
+    "headline": "A construction management system",
+    "subtitle": "Bridging the information gap between the office and the construction site.",
+    "year": "2026",
+    "scope": "B2B & SaaS",
+    "time": "",
+    "chips": [
+      "3 roles — manager, contractor, owner",
+      "real-time finance and progress analytics",
+      "1 management panel for every site"
+    ],
+    "metrics": [
+      {
+        "v": "3",
+        "l": "roles — manager, contractor, owner"
+      },
+      {
+        "v": "Real-time",
+        "l": "finance and progress analytics"
+      },
+      {
+        "v": "1",
+        "l": "management panel for every site"
+      }
+    ],
+    "overview": "İnsanİş is construction management software that automates processes that usually stay undigitised. It gives managers, contractors and owners one hub for site work, staff and materials.",
+    "problem": "Site data gets lost between the office and the field. Daily logs stay on paper, material use is reported by phone in the evening, and budget overruns only surface at month-end.",
+    "approach": "Sites, staff and material supply were consolidated into one dashboard. Daily logs, task assignment and hand-overs were digitised, and finance and progress were tied to real-time charts.",
+    "result": "Managers see percentage progress, the budget overview and critical alerts on one screen. Digitising routine work lowers operating costs and speeds up decisions.",
+    "features": [
+      {
+        "t": "Centralised dashboard",
+        "d": "Every site, person and material in one place."
+      },
+      {
+        "t": "Process automation",
+        "d": "Daily logs, tasks and hand-overs."
+      },
+      {
+        "t": "Real-time analytics",
+        "d": "Finance, progress and efficiency reports."
+      },
+      {
+        "t": "BoQ and estimate tracking",
+        "d": "Planned versus actual."
+      },
+      {
+        "t": "Critical alerts",
+        "d": "Budget overruns, safety incidents and delays."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Scalable infrastructure",
+        "d": "Built to handle high load, from small contractors to large corporations."
+      },
+      {
+        "t": "One data flow",
+        "d": "The office and the site work from the same data."
+      },
+      {
+        "t": "Role-based views",
+        "d": "Managers, contractors and owners each see what they need."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Architecture",
+        "v": [
+          "Full-stack",
+          "Scalable and secure",
+          "Role-based access"
+        ]
+      },
+      {
+        "k": "Reporting",
+        "v": [
+          "Real-time finance, progress and efficiency reports"
+        ]
+      }
+    ],
+    "coverAlt": "İnsanİş tablet app screens",
+    "mockup": {
+      "tablets": [
+        1,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "slug": "suntech",
+    "name": "SUNTECH",
+    "brand": "Suntech",
+    "line": "A domestic logistics and content management platform",
+    "headline": "A domestic logistics and content management platform",
+    "subtitle": "Every element of the site is managed without a developer.",
+    "year": "2026",
+    "scope": "B2B & SaaS",
+    "time": "",
+    "chips": [
+      "∞ unlimited dynamic pages",
+      "0 lines of code to change content",
+      "SSR server-side rendering for SEO"
+    ],
+    "metrics": [
+      {
+        "v": "∞",
+        "l": "unlimited dynamic pages"
+      },
+      {
+        "v": "0",
+        "l": "lines of code to change content"
+      },
+      {
+        "v": "SSR",
+        "l": "server-side rendering for SEO"
+      }
+    ],
+    "overview": "Suntech.az is a web platform presenting a company’s internal logistics services. Its core is a large admin panel that lets non-developers change the site’s structure, add or delete pages and manage all content.",
+    "problem": "The logistics company’s service list and equipment fleet changed often, but every small text edit needed a developer, so the site lagged behind reality.",
+    "approach": "Frontend and backend are fully separated: Next.js SSR renders the showcase site and a .NET Core API serves the content. Each page created in the admin panel gets an automatic URL and is added to the navigation structure.",
+    "result": "The content team manages the site on its own. Server-side rendering makes pages load quickly and index correctly in search engines.",
+    "features": [
+      {
+        "t": "Fully controlled admin panel",
+        "d": "Every text, image and structural element is editable."
+      },
+      {
+        "t": "Dynamic page management",
+        "d": "Create, edit, hide or delete unlimited pages."
+      },
+      {
+        "t": "Logistics-focused content",
+        "d": "Shipping rules, the equipment fleet and corporate information in one platform."
+      },
+      {
+        "t": "Performance and SEO",
+        "d": "Next.js SSR keeps pages fast and indexable."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Headless approach",
+        "d": "A future mobile app could connect to the same API."
+      },
+      {
+        "t": "Dynamic routing",
+        "d": "Each page created in the admin panel gets an automatic URL integrated into the structure."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React",
+          "Next.js (SSR)"
+        ]
+      },
+      {
+        "k": "Database",
+        "v": [
+          "MS SQL Server"
+        ]
+      }
+    ],
+    "coverAlt": "Suntech website shown on a laptop",
+    "mockup": {
+      "web": [
+        1
+      ]
+    }
+  },
+  {
+    "slug": "nitro-garage",
+    "name": "NITRO GARAGE",
+    "brand": "Nitro Garage",
+    "line": "A car service and spare parts marketplace",
+    "headline": "An automotive service and spare parts marketplace",
+    "subtitle": "Driver, mechanic and store on one platform — four roles, 79+ screens.",
+    "year": "2026",
+    "scope": "Marketplace",
+    "time": "",
+    "chips": [
+      "79+ screens across four roles",
+      "4 user roles",
+      "3 languages — AZ / RU / EN"
+    ],
+    "metrics": [
+      {
+        "v": "79+",
+        "l": "screens across four roles"
+      },
+      {
+        "v": "4",
+        "l": "user roles"
+      },
+      {
+        "v": "3",
+        "l": "languages — AZ / RU / EN"
+      }
+    ],
+    "overview": "Nitro Garage is a mobile app digitising Azerbaijan’s car service market. It connects drivers, mechanics and spare-parts stores on one platform: drivers post service or part requests, and mechanics and stores send real-time bids so the cheapest option can be chosen.",
+    "problem": "Drivers call stores one by one to compare part prices, do not know a mechanic’s workload, and struggle to find help when stranded. The market lacks price transparency.",
+    "approach": "A tender model — one request, many offers. Separate navigators and screen sets were built for four roles: driver, mechanic, store and admin. A geolocation-based SOS flow covers emergencies.",
+    "result": "Drivers get several offers from one request and compare prices. Stores sell inventory with auto-bid rules, and mechanics manage their bookings through the app.",
+    "features": [
+      {
+        "t": "Service marketplace",
+        "d": "Drivers post requests; mechanics and stores bid."
+      },
+      {
+        "t": "SOS roadside assistance",
+        "d": "Nearby mechanics are alerted automatically using geolocation."
+      },
+      {
+        "t": "VIN scanner",
+        "d": "Camera and OCR identify the vehicle."
+      },
+      {
+        "t": "AI assistant",
+        "d": "Diagnostics plus service and part recommendations."
+      },
+      {
+        "t": "Wallet and cashback",
+        "d": "Transaction history, refunds and per-role balances."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Role-based navigation",
+        "d": "Fully separate navigators and screens for each role."
+      },
+      {
+        "t": "Service layer per domain",
+        "d": "Each backend domain has its own service layer, all going through one central axios client with JWT injection and token refresh."
+      },
+      {
+        "t": "Deliberate state choices",
+        "d": "Zustand stores for cross-screen state, useState for local state — Redux deliberately not used."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Mobile",
+        "v": [
+          "React Native 0.83",
+          "React 19 (New Architecture)",
+          "TypeScript 5.8 (strict)"
+        ]
+      },
+      {
+        "k": "Navigation",
+        "v": [
+          "React Navigation v7 (native-stack, drawer, tabs)"
+        ]
+      },
+      {
+        "k": "State and networking",
+        "v": [
+          "Zustand",
+          "Axios"
+        ]
+      },
+      {
+        "k": "Real-time",
+        "v": [
+          "SignalR (WebSocket)",
+          "Firebase Cloud Messaging",
+          "Notifee"
+        ]
+      },
+      {
+        "k": "Camera and scanning",
+        "v": [
+          "Vision Camera v5",
+          "OCR"
+        ]
+      },
+      {
+        "k": "Backend",
+        "v": [
+          ".NET 9",
+          "FastEndpoints",
+          "CQRS",
+          "PostgreSQL"
+        ]
+      }
+    ],
+    "coverAlt": "Nitro Garage mobile app screens in phone frames",
+    "mockup": {
+      "phones": [
+        1,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "slug": "jobremotely",
+    "name": "JOBREMOTELY",
+    "brand": "JobRemotely",
+    "line": "A curated remote job board",
+    "headline": "A curated remote job board",
+    "subtitle": "Vacancies with publicly disclosed salaries, verified by HR and free of spam.",
+    "year": "2026",
+    "scope": "Marketplace",
+    "time": "",
+    "chips": [
+      "1280+ Vitest tests",
+      "3 ATS sources — Greenhouse, Lever, Ashby",
+      "7 stages in the hiring pipeline"
+    ],
+    "metrics": [
+      {
+        "v": "1280+",
+        "l": "Vitest tests"
+      },
+      {
+        "v": "3",
+        "l": "ATS sources — Greenhouse, Lever, Ashby"
+      },
+      {
+        "v": "7",
+        "l": "stages in the hiring pipeline"
+      }
+    ],
+    "overview": "JobRemotely is a job board that brings together HR-verified vacancies for remote engineers, designers and operators. It publishes only remote roles with disclosed salaries and moves candidates from application to offer through an automated flow.",
+    "problem": "Remote job seekers get lost among spam listings, hidden salaries and recruiter messages. After applying, candidates never know which stage their application is in.",
+    "approach": "Vacancies are collected by scheduled scraping of the Greenhouse, Lever and Ashby ATS platforms, then filtered by salary and language. Application status is bound to a finite state machine: it changes only through permitted transitions, so candidates always see the right stage.",
+    "result": "Candidates apply with one click and move transparently through skills testing, language verification, interviews and the offer stage. Admins see live funnel, throughput and stage-time metrics.",
+    "features": [
+      {
+        "t": "Curated board",
+        "d": "HR-verified, spam-free remote vacancies. Companies cannot see applicant identities (blind apply)."
+      },
+      {
+        "t": "Multi-stage pipeline",
+        "d": "Application → screening → skills test → language → interview → offer → hiring."
+      },
+      {
+        "t": "AI tools",
+        "d": "Auto-fill a profile from a CV and generate cover letters."
+      },
+      {
+        "t": "Automated scraping",
+        "d": "Scheduled collection from ATS platforms with salary and language filters."
+      },
+      {
+        "t": "Admin analytics",
+        "d": "Funnel, throughput and stage-time metrics calculated from status events."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "State machine",
+        "d": "Application status changes only through allowed transitions; optimistic-concurrency conflicts are guarded with HTTP 409."
+      },
+      {
+        "t": "Single source of truth",
+        "d": "Zod schemas are shared between API and frontend, and responses use typed ok() / err() envelopes."
+      },
+      {
+        "t": "Separated background work",
+        "d": "Email, scraping, Telegram notifications and view counters run in a pg-boss worker outside the web process."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Framework",
+        "v": [
+          "Next.js 15 (App Router / RSC)",
+          "React 19",
+          "TypeScript 5.7"
+        ]
+      },
+      {
+        "k": "UI",
+        "v": [
+          "Tailwind CSS v4",
+          "Radix UI",
+          "shadcn/ui",
+          "Framer Motion"
+        ]
+      },
+      {
+        "k": "Security",
+        "v": [
+          "NextAuth v5",
+          "JWT (jose)",
+          "bcrypt",
+          "Google OAuth"
+        ]
+      },
+      {
+        "k": "Data",
+        "v": [
+          "PostgreSQL",
+          "Prisma 6",
+          "Redis (ioredis)"
+        ]
+      },
+      {
+        "k": "Background jobs",
+        "v": [
+          "pg-boss worker"
+        ]
+      },
+      {
+        "k": "AI",
+        "v": [
+          "OpenAI — CV-based profile filling and cover letters"
+        ]
+      },
+      {
+        "k": "Quality",
+        "v": [
+          "Vitest (1280+ tests)",
+          "Playwright",
+          "axe accessibility checks"
+        ]
+      },
+      {
+        "k": "Infrastructure",
+        "v": [
+          "Docker",
+          "Cloudflare DNS/TLS",
+          "Cron-based scraping"
+        ]
+      }
+    ],
+    "coverAlt": "JobRemotely web application shown on a laptop and a tablet",
+    "mockup": {
+      "web": [
+        1
+      ],
+      "tablet": [
+        4
+      ]
+    }
+  },
+  {
+    "slug": "moleaks",
+    "name": "MOLEAKS",
+    "brand": "Moleaks",
+    "line": "A data-leak search platform",
+    "headline": "A leaked-data search platform",
+    "subtitle": "Deep search by email, phone number, domain and face recognition.",
+    "year": "2026",
+    "scope": "Cybersecurity",
+    "time": "",
+    "chips": [
+      "4 search vectors — email, phone, domain, face",
+      "M+ rows scanned in seconds",
+      "SSR fast, SEO-friendly UI on Next.js"
+    ],
+    "metrics": [
+      {
+        "v": "4",
+        "l": "search vectors — email, phone, domain, face"
+      },
+      {
+        "v": "M+",
+        "l": "rows scanned in seconds"
+      },
+      {
+        "v": "SSR",
+        "l": "fast, SEO-friendly UI on Next.js"
+      }
+    ],
+    "overview": "Moleaks is a verification tool for individuals and cybersecurity specialists. It shows whether their data appears in leaked databases on the internet or the dark web — an email address, a mobile number, a domain name or a face can be checked.",
+    "problem": "People often learn that their data has leaked only after an account is compromised. Leak databases are scattered, unformatted and hold millions of rows, which makes manual checking impossible.",
+    "approach": "Search and analysis are separated. A .NET Core API handles thousands of simultaneous requests while heavy analysis runs in the background with Python and DeepScanner. Database indexing strategies let millions of rows be scanned in seconds.",
+    "result": "Users can check an email, a phone number or a whole corporate domain and get a detailed report on the leak’s source, date and type.",
+    "features": [
+      {
+        "t": "Multi-parameter search",
+        "d": "Fast checks across leaked databases by email, mobile number and IP address."
+      },
+      {
+        "t": "Domain analysis",
+        "d": "Finds leaked accounts tied to a corporate or personal domain."
+      },
+      {
+        "t": "Face recognition search",
+        "d": "Identifies people in internet images by facial features."
+      },
+      {
+        "t": "Deep scanning",
+        "d": "Automated analysis of large volumes of leaked data."
+      },
+      {
+        "t": "Security reports",
+        "d": "Detailed reports on each leak’s source, date and type."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Asynchronous processing",
+        "d": "Python and DeepScanner run in the background, so large analyses never slow the main system."
+      },
+      {
+        "t": "Optimised database",
+        "d": "MSSQL indexing lets millions of rows be scanned in seconds."
+      },
+      {
+        "t": "High-performance API",
+        "d": ".NET Core securely handles thousands of concurrent search requests."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React",
+          "Next.js (server-side rendering)"
+        ]
+      },
+      {
+        "k": "Database",
+        "v": [
+          "MS SQL Server with indexing strategies"
+        ]
+      },
+      {
+        "k": "Analysis",
+        "v": [
+          "Python",
+          "DeepScanner"
+        ]
+      }
+    ],
+    "coverAlt": "Moleaks leak search and report interface"
+  },
+  {
+    "slug": "safemole",
+    "name": "SAFEMOLE",
+    "brand": "Safemole",
+    "line": "A digital security and privacy platform",
+    "headline": "A digital security and privacy platform",
+    "subtitle": "Fully native iOS and Android, a hybrid database and end-to-end encryption.",
+    "year": "2026",
+    "scope": "Cybersecurity",
+    "time": "",
+    "chips": [
+      "2 fully native apps — Kotlin and Swift",
+      "AES-256 end-to-end encryption",
+      "2 databases — MSSQL for ACID, MongoDB for logs"
+    ],
+    "metrics": [
+      {
+        "v": "2",
+        "l": "fully native apps — Kotlin and Swift"
+      },
+      {
+        "v": "AES-256",
+        "l": "end-to-end encryption"
+      },
+      {
+        "v": "2",
+        "l": "databases — MSSQL (ACID) and MongoDB (logs)"
+      }
+    ],
+    "overview": "Safemole is a native mobile solution for protecting personal and corporate data, managing it securely and keeping detailed records. The iOS and Android apps are both fully native, which gives direct access to device security features such as biometrics and the secure enclave.",
+    "problem": "Privacy apps are usually built cross-platform, which limits access to the device’s security hardware. Logging every security event also bloats the main database and slows the system down.",
+    "approach": "Each platform is built in its own native language — Kotlin for Android, Swift for iOS. The database is polyglot: transactional data sits in MSSQL under ACID guarantees, while continuous operational logs are written to MongoDB, so the main database stays fast.",
+    "result": "Logins and every sensitive operation are verified with hardware-level biometrics. When a suspicious login attempt or unauthorised data export happens, the user gets an immediate push notification.",
+    "features": [
+      {
+        "t": "Full native performance",
+        "d": "Optimal use of device resources, high speed and a polished UI."
+      },
+      {
+        "t": "Detailed logging",
+        "d": "Real-time records of every step, API request and security event."
+      },
+      {
+        "t": "Biometric integration",
+        "d": "Hardware-level verification via FaceID, TouchID and the Android Fingerprint API."
+      },
+      {
+        "t": "Layered encryption",
+        "d": "Sensitive data is protected in transit and at rest."
+      },
+      {
+        "t": "Anomaly alerts",
+        "d": "Immediate push notifications for suspicious logins or unauthorised data extraction."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Polyglot persistence",
+        "d": "Transactional data in MSSQL with ACID guarantees, continuous logs in MongoDB — the core database never slows down."
+      },
+      {
+        "t": "Clean architecture",
+        "d": "MVVM or VIPER on mobile and a modular backend, with business logic, data layer and UI clearly separated."
+      },
+      {
+        "t": "Secure API gateway",
+        "d": "Every request passes through a single gateway with a firewall and rate limiting."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API",
+          "Microservices approach"
+        ]
+      },
+      {
+        "k": "Mobile",
+        "v": [
+          "Kotlin (Android, native)",
+          "Swift (iOS, native)"
+        ]
+      },
+      {
+        "k": "Databases",
+        "v": [
+          "MS SQL Server (relational)",
+          "MongoDB (logs and big data)"
+        ]
+      },
+      {
+        "k": "Security",
+        "v": [
+          "JWT",
+          "OAuth 2.0",
+          "AES-256 end-to-end encryption"
+        ]
+      }
+    ],
+    "coverAlt": "Safemole mobile app screens in phone frames",
+    "mockup": {
+      "phones": [
+        1,
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "slug": "rana",
+    "name": "RANA",
+    "brand": "Rana",
+    "line": "A digital legacy and message-to-the-future platform",
+    "headline": "A digital legacy and message-to-the-future platform",
+    "subtitle": "A time capsule where encrypted messages open only on a scheduled date.",
+    "year": "2026",
+    "scope": "Cybersecurity",
+    "time": "",
+    "chips": [
+      "E2E end-to-end encryption — invisible even to admins",
+      "3 message formats — text, audio, video",
+      "2 platforms — iOS and Android"
+    ],
+    "metrics": [
+      {
+        "v": "E2E",
+        "l": "end-to-end encryption — invisible even to admins"
+      },
+      {
+        "v": "3",
+        "l": "message formats — text, voice, video"
+      },
+      {
+        "v": "2",
+        "l": "platforms — iOS and Android"
+      }
+    ],
+    "overview": "Rana is a time-capsule solution that securely delivers memories, important messages and digital legacy to future generations. Users schedule messages for family members years ahead; the data is encrypted and opens only on a predetermined date, for the chosen heirs.",
+    "problem": "Digital legacy — passwords, documents, family videos — is usually not organised anywhere. Storing it in the cloud means the provider or an administrator could, in principle, read it.",
+    "approach": "Content is end-to-end encrypted, so no third party, administrators included, can reach videos or messages. Large video and audio files are stored asynchronously in encrypted cloud storage to keep the database light, and the backend is set up for high availability with Docker and Nginx.",
+    "result": "A user can schedule a video message, a document or a will for their child’s 18th birthday. When the time comes, the recipient is notified by SMS, email or push notification, and the content opens only at that moment.",
+    "features": [
+      {
+        "t": "Time capsule",
+        "d": "Schedule text, voice or video messages for a specific future date and time."
+      },
+      {
+        "t": "Digital legacy and will",
+        "d": "Store documents, passwords and wills securely and pass them to heirs when the time comes."
+      },
+      {
+        "t": "Smart notifications",
+        "d": "Recipients are notified at the scheduled time by SMS, email or push."
+      },
+      {
+        "t": "Premium UI/UX",
+        "d": "A refined, minimalist interface with navigation suited to every age group."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "End-to-end encryption",
+        "d": "Custom cryptography, so no third party — the administrator included — can access content."
+      },
+      {
+        "t": "Secure blob storage",
+        "d": "Large video and audio files are stored asynchronously in encrypted cloud storage."
+      },
+      {
+        "t": "Containerised infrastructure",
+        "d": "The backend is isolated with Docker and set up for high availability behind an Nginx reverse proxy."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API"
+        ]
+      },
+      {
+        "k": "Mobile",
+        "v": [
+          "React Native with Expo"
+        ]
+      },
+      {
+        "k": "Database",
+        "v": [
+          "MS SQL Server"
+        ]
+      },
+      {
+        "k": "File storage",
+        "v": [
+          "Cloud storage (AWS S3 or Azure Blob) for encrypted files"
+        ]
+      },
+      {
+        "k": "Infrastructure",
+        "v": [
+          "Docker",
+          "Nginx",
+          "PM2"
+        ]
+      }
+    ],
+    "coverAlt": "Rana mobile app screens in phone frames",
+    "mockup": {
+      "phones": [
+        1,
+        2,
+        3
+      ],
+      "hue": 268
+    }
+  },
+  {
+    "slug": "guraba",
+    "name": "GURABA",
+    "brand": "Guraba",
+    "line": "A global e-commerce and sales ecosystem",
+    "headline": "A global e-commerce and sales ecosystem",
+    "subtitle": "Web, mobile and a Telegram bot — one account, one cart.",
+    "year": "2026",
+    "scope": "E-commerce & catalog",
+    "time": "",
+    "chips": [
+      "3 sales channels — web, mobile, Telegram",
+      "2 admin panels — web and mobile",
+      "ms cross-channel stock sync"
+    ],
+    "metrics": [
+      {
+        "v": "3",
+        "l": "sales channels — web, mobile, Telegram"
+      },
+      {
+        "v": "2",
+        "l": "admin panels — web and mobile"
+      },
+      {
+        "v": "ms",
+        "l": "cross-channel stock sync"
+      }
+    ],
+    "overview": "Guraba is more than a standard e-commerce site. It combines a website, a mobile app and a Telegram bot into one multi-channel sales ecosystem. Its main strength is a dual admin architecture: sales, stock and users are managed from both a full-featured web panel and a dedicated admin mobile app.",
+    "problem": "A customer fills a cart on the site, asks questions on Telegram, then downloads the app — and has to start over on every channel. The store owner has to sit at a computer to approve orders.",
+    "approach": "All channels sit on a single API, so accounts and carts are identical across web, mobile and the bot. The database is hybrid: financial transactions and stock live in MSSQL with ACID guarantees, while thousands of clicks and logs per second are written asynchronously to MongoDB.",
+    "result": "Stock changes reach every channel within milliseconds and are pushed to the admin app. The store owner approves orders from a phone, and the customer continues on whichever channel they prefer.",
+    "features": [
+      {
+        "t": "Multi-channel sales",
+        "d": "Order through the website, the mobile app or the Telegram bot, with the same account and cart."
+      },
+      {
+        "t": "Mobile admin management",
+        "d": "Approve orders, add products and view analytics from a phone."
+      },
+      {
+        "t": "Global and hybrid payments",
+        "d": "Apple Pay, Google Pay and Web3 / cryptocurrency integration."
+      },
+      {
+        "t": "Automated Telegram bot",
+        "d": "Search products, add them to the cart and track order status inside the chat."
+      },
+      {
+        "t": "Big-data analysis",
+        "d": "User behaviour, search history and logs analysed for marketing."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Hybrid database",
+        "d": "Financial transactions and stock in MSSQL with ACID; thousands of clicks and logs per second written asynchronously to MongoDB."
+      },
+      {
+        "t": "Real-time ecosystem sync",
+        "d": "Web, mobile, bot and admin panels talk through one API, so a stock change appears on every channel instantly."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API built for high load"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React",
+          "Next.js (SSR)"
+        ]
+      },
+      {
+        "k": "Mobile",
+        "v": [
+          "Consumer app",
+          "Dedicated admin app"
+        ]
+      },
+      {
+        "k": "Bot",
+        "v": [
+          "Telegram Bot API"
+        ]
+      },
+      {
+        "k": "Databases",
+        "v": [
+          "MS SQL Server (relational)",
+          "MongoDB (logs and big data)"
+        ]
+      },
+      {
+        "k": "Payments",
+        "v": [
+          "Apple Pay",
+          "Google Pay (Stripe)",
+          "Web3 / cryptocurrency"
+        ]
+      }
+    ],
+    "coverAlt": "Guraba website shown on a laptop",
+    "mockup": {
+      "web": [
+        1
+      ]
+    }
+  },
+  {
+    "slug": "parkhub",
+    "name": "PARKHUB",
+    "brand": "ParkHub",
+    "line": "A unified smart parking and payment ecosystem",
+    "headline": "A unified smart parking and payment ecosystem",
+    "subtitle": "City parking, subscriptions and payments in one app.",
+    "year": "2026",
+    "scope": "Platforms & web",
+    "time": "",
+    "chips": [
+      "3 external system integrations",
+      "ACL isolation through an anti-corruption layer",
+      "MCP a custom architecture analysis tool"
+    ],
+    "metrics": [
+      {
+        "v": "3",
+        "l": "external system integrations"
+      },
+      {
+        "v": "ACL",
+        "l": "anti-corruption layer isolation"
+      },
+      {
+        "v": "MCP",
+        "l": "custom architecture analysis tool"
+      }
+    ],
+    "overview": "ParkHub is a mobile platform that digitises city parking infrastructure and automates payments. Users find the nearest zone with geolocation, manage parking sessions in real time, subscribe and pay online securely.",
+    "problem": "A city has several parking operators, each with its own system and payment method. Drivers cannot see which zones are free, must pay each operator separately and cannot easily track when their parking expires.",
+    "approach": "The external operators (ParkZone and Axsis) and the EPoint payment gateway sit behind an Anti-Corruption Layer, so their data models never leak into the core domain. The backend uses Clean Architecture, FastEndpoints and MediatR for CQRS, and a custom MCP server automatically checks for architecture drift.",
+    "result": "Drivers see every operator’s zones in one app, pay with a single subscription and watch their session’s end time live.",
+    "features": [
+      {
+        "t": "Location-based zone search",
+        "d": "The nearest parking zones on an interactive map."
+      },
+      {
+        "t": "Real-time session management",
+        "d": "Start time, elapsed duration and expiry warnings."
+      },
+      {
+        "t": "Subscription flow",
+        "d": "One citywide subscription covers payments across all operators."
+      },
+      {
+        "t": "Plate and barcode scanning",
+        "d": "Reads vehicle plate numbers from the camera using ML Kit."
+      },
+      {
+        "t": "Push notifications",
+        "d": "Centralised Firebase alerts about sessions, payments and subscriptions."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Anti-Corruption Layer",
+        "d": "Isolates every interaction with ParkZone, Axsis and EPoint from the internal domain."
+      },
+      {
+        "t": "Dependency-analysis MCP",
+        "d": "A TypeScript Model Context Protocol server maps the codebase’s dependency graph and scores Clean Architecture compliance."
+      },
+      {
+        "t": "Background services",
+        "d": "Scheduled jobs and a centralised push-notification system built on Firebase."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET 8",
+          "FastEndpoints",
+          "MediatR (CQRS)",
+          "EF Core 9"
+        ]
+      },
+      {
+        "k": "Database",
+        "v": [
+          "PostgreSQL"
+        ]
+      },
+      {
+        "k": "Mobile",
+        "v": [
+          "Flutter 3.6+",
+          "flutter_bloc",
+          "go_router",
+          "Dio"
+        ]
+      },
+      {
+        "k": "Maps and scanning",
+        "v": [
+          "Google Maps",
+          "ML Kit (OCR and barcode)",
+          "fl_chart"
+        ]
+      },
+      {
+        "k": "Integrations",
+        "v": [
+          "ParkZone",
+          "Axsis",
+          "EPoint (via ACL)",
+          "Firebase Push"
+        ]
+      },
+      {
+        "k": "Security",
+        "v": [
+          "JWT with refresh tokens"
+        ]
+      }
+    ],
+    "coverAlt": "ParkHub mobile app screens in phone frames",
+    "mockup": {
+      "phones": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "slug": "arsa-creative",
+    "name": "ARSA CREATIVE",
+    "brand": "Arsa Creative",
+    "line": "A creative agency and portfolio web platform",
+    "headline": "A creative agency and portfolio web platform",
+    "subtitle": "A showcase that presents creative work at the highest visual quality.",
+    "year": "2026",
+    "scope": "Platforms & web",
+    "time": "",
+    "chips": [
+      "SSR instant loading and SEO",
+      "lazy heavy media without straining the server",
+      "100% responsive across every device"
+    ],
+    "metrics": [
+      {
+        "v": "SSR",
+        "l": "instant loading and SEO"
+      },
+      {
+        "v": "Lazy",
+        "l": "heavy media without straining the server"
+      },
+      {
+        "v": "100%",
+        "l": "responsive across every device"
+      }
+    ],
+    "overview": "The Arsa Creative website serves as the agency’s digital business card. It was designed with attention to visual detail and minimalist UX, with the goal of showing the portfolio attractively and making it easy for prospective clients to get in touch.",
+    "problem": "The agency presents its work through heavy, high-quality images and video. Loading them as they were slowed the site down, and visitors left within the first five seconds.",
+    "approach": "Media is optimised with Next.js built-in tools — Image Optimization and lazy loading — so it loads without straining the server. The interface is split into modular React components and combined with SSR, so animations run smoothly and the page appears immediately.",
+    "result": "The portfolio gallery opens without interruption, the site is indexed correctly by Google, and visitor enquiries arrive securely through a .NET Core API.",
+    "features": [
+      {
+        "t": "Dynamic portfolio gallery",
+        "d": "Completed work in high-quality image and video formats, without interruption."
+      },
+      {
+        "t": "Minimalist, animated interface",
+        "d": "Interactive animations that reflect the brand’s creative character."
+      },
+      {
+        "t": "Speed and SEO",
+        "d": "Near-instant loading and strong search ranking through Next.js SSR."
+      },
+      {
+        "t": "Secure contact forms",
+        "d": "Enquiries go through the .NET Core API to the database or by email."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Media optimisation",
+        "d": "Heavy files load through Next.js Image Optimization and lazy loading without overloading the server."
+      },
+      {
+        "t": "Component-based interface",
+        "d": "A modular React approach gives a clean codebase and fully responsive behaviour on every device."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React",
+          "Next.js (server-side rendering)"
+        ]
+      },
+      {
+        "k": "Database",
+        "v": [
+          "MS SQL Server"
+        ]
+      }
+    ],
+    "coverAlt": "Arsa Creative web application shown on a laptop and a tablet",
+    "mockup": {
+      "web": [
+        1
+      ],
+      "tablet": [
+        2
+      ]
+    }
+  },
+  {
+    "slug": "marka-house",
+    "name": "MARKA HOUSE",
+    "brand": "Marka House",
+    "line": "A branding and digital marketing platform",
+    "headline": "A branding and digital marketing platform",
+    "subtitle": "Brand identity and service portfolio combined in one showcase.",
+    "year": "2026",
+    "scope": "Platforms & web",
+    "time": "",
+    "chips": [
+      "SSR server-side rendering for SEO",
+      "100% responsive — mobile, tablet, desktop",
+      "API ready for a future CRM and client portal"
+    ],
+    "metrics": [
+      {
+        "v": "SSR",
+        "l": "server-side rendering for SEO"
+      },
+      {
+        "v": "100%",
+        "l": "responsive — mobile, tablet, desktop"
+      },
+      {
+        "v": "API",
+        "l": "ready for a future CRM and client portal"
+      }
+    ],
+    "overview": "Marka House is a branding and marketing agency. This project is a fast, interactive web platform that serves as the agency’s digital identity: it presents the brand’s visual story, makes the service portfolio easy to browse and guides prospective clients to the right services.",
+    "problem": "The agency’s site had to prove its design skill and explain its services clearly at the same time. Often one goal undermines the other: sites end up either beautiful but hard to understand, or clear but forgettable.",
+    "approach": "The visual story and the service structure were separated into distinct layers. A gallery showcases the brand’s work, while service blocks explain the offering through a clear hierarchy. Animations run through client-side routing so they do not burden the server.",
+    "result": "Visitors see the agency’s work and understand how to buy each service. Briefs and enquiry forms feed straight into the API.",
+    "features": [
+      {
+        "t": "Branding and portfolio display",
+        "d": "Dedicated galleries for brand creation, design and marketing projects."
+      },
+      {
+        "t": "Fully responsive design",
+        "d": "Smooth on mobile, tablet and desktop."
+      },
+      {
+        "t": "Interactive contact modules",
+        "d": "Secure forms for service enquiries and briefs."
+      },
+      {
+        "t": "SEO and speed",
+        "d": "Near-instant page loads and stronger search ranking through Next.js SSR."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Performance-focused frontend",
+        "d": "Modern web animations run smoothly through client-side routing."
+      },
+      {
+        "t": "Extensible infrastructure",
+        "d": "A clean .NET Core API makes it easy to add a new service module, a client panel or a CRM later."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React",
+          "Next.js (server-side rendering)"
+        ]
+      },
+      {
+        "k": "Database",
+        "v": [
+          "MS SQL Server"
+        ]
+      }
+    ],
+    "coverAlt": "Marka House website shown on a laptop",
+    "mockup": {
+      "web": [
+        1
+      ]
+    }
+  }
+]

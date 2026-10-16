@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+# repo tooling — not part of the site; keep it out of search results if the whole folder is deployed
+Disallow: /tools/
+Disallow: /scripts/
+Disallow: /data/
 
 Sitemap: https://ailovedigital.com/sitemap.xml

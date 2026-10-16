@@ -8,43 +8,13 @@
 //                                                               crawlers/visitors without JavaScript
 //   robots.txt, sitemap.xml, llms.txt, site.webmanifest
 //
-// Run after changing projects, services or copy:   node scripts/build-seo.mjs
-// Edit the CONFIG below (not the generated blocks) to change the meta text or the domain.
+// Run after changing projects, services or copy:   npm run build   (build-work.mjs first, then this)
+// Edit the CONFIG in scripts/lib/site.mjs (not the generated blocks) to change the meta text or the domain.
 
-import { readFileSync, writeFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-
-// ───────────────────────────── CONFIG ─────────────────────────────
-const SITE_URL = 'https://ailovedigital.com'; // ← production origin, no trailing slash
-const NAME = 'AILoveDigital';
-const TITLE = 'AILoveDigital — AI, Technology & Business Growth';
-const DESCRIPTION =
-  'AILoveDigital is a technology and creative studio. We build digital products, automate operations with AI and turn both into measurable business growth.';
-const TAGLINE = 'And we make businesses love it too.';
-const SLOGAN = 'Built with logic. Finished with love.';
-const EMAIL = 'info@ailovedigital.com';
-const LOCALE = 'en_US';
-const LANG = 'en';
-const BG = '#F7F5F0';
-const OG_IMAGE = '/assets/images/og-image.png';
-const OG_ALT = 'AILoveDigital — pixel heart logo and the tagline "AI, Technology & Business Growth"';
-// Display names are upper-cased in the UI; structured data should carry the real brand names.
-const BRAND = {
-  chefmarket: 'ChefMarket', vicdoor: 'Vicdoor', altiscassa: 'AltisCassa', 'e-hesab': 'e-Hesab',
-  'e-faktura': 'E-Faktura', insanis: 'İnsanİş', suntech: 'Suntech', 'nitro-garage': 'Nitro Garage',
-  jobremotely: 'JobRemotely', moleaks: 'Moleaks', safemole: 'Safemole', rana: 'Rana',
-  guraba: 'Guraba', parkhub: 'ParkHub', 'arsa-creative': 'Arsa Creative', 'marka-house': 'Marka House',
-};
-// ──────────────────────────────────────────────────────────────────
-
-const read = (f) => readFileSync(join(ROOT, f), 'utf8');
-const write = (f, s) => writeFileSync(join(ROOT, f), s);
-const abs = (p) => (p.startsWith('http') ? p : SITE_URL + '/' + p.replace(/^\.?\//, ''));
-const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const cap = (s) => s.charAt(0) + s.slice(1).toLowerCase();
+import {
+  SITE_URL, NAME, TITLE, DESCRIPTION, TAGLINE, SLOGAN, EMAIL, LOCALE, LANG, BG, OG_IMAGE, OG_ALT,
+  read, write, abs, esc, cap, loadProjects,
+} from './lib/site.mjs';
 
 const html = read('index.html');
 const support = read('js/support.js');
@@ -69,8 +39,7 @@ const services = grabArray('svcData');
 const steps = grabArray('steps');
 const values = grabArray('values');
 const nextSteps = grabArray('next');
-const work = grabArray('workAll').map((w, i) => ({ ...w, brand: BRAND[w.slot.replace(/^case-/, '')] || cap(w.name), n: i + 1 }));
-if (work.length === 0 || work.some((w) => !w.line || !w.img)) throw new Error('work data is incomplete');
+const work = loadProjects(); // data/projects.json — also the source of the case-study pages
 
 // React comes from unpkg (see support.js); preload it with the same SRI so the browser starts
 // the download in parallel with support.js instead of after it.
@@ -113,7 +82,7 @@ const graph = [
     '@type': 'ItemList', '@id': `${SITE_URL}/#work`, name: 'Selected work', numberOfItems: work.length,
     itemListElement: work.map((w) => ({
       '@type': 'ListItem', position: w.n,
-      item: { '@type': 'CreativeWork', name: w.brand, description: w.line, genre: w.scope, dateCreated: w.year, image: abs(w.img), creator: { '@id': `${SITE_URL}/#org` } },
+      item: { '@type': 'CreativeWork', '@id': `${w.url}#project`, url: w.url, name: w.brand, description: w.line, genre: w.scope, dateCreated: w.year, image: abs(w.homeImg), creator: { '@id': `${SITE_URL}/#org` } },
     })),
   },
 ];
@@ -174,8 +143,9 @@ ${services.map((s) => `<li><strong>${esc(cap(s.word))}</strong> — ${esc(s.desc
 </ul>
 <h2>Selected work</h2>
 <ol>
-${work.map((w) => `<li><h3>${esc(w.brand)}</h3><p>${esc(w.line)}</p><p>${esc(w.scope)} · ${esc(w.year)}</p><ul>${[w.m1, w.m2, w.m3].map((m) => `<li>${esc(m)}</li>`).join('')}</ul></li>`).join('\n')}
+${work.map((w) => `<li><h3><a href="${w.path}">${esc(w.brand)}</a></h3><p>${esc(w.line)}</p><p>${esc(w.scope)} · ${esc(w.year)}</p><ul>${w.chips.map((m) => `<li>${esc(m)}</li>`).join('')}</ul></li>`).join('\n')}
 </ol>
+<p><a href="work/">All projects</a></p>
 <h2>How we work</h2>
 <ol>
 ${steps.map((s) => `<li><strong>${esc(s.t)}</strong> — ${esc(s.d)}</li>`).join('\n')}
@@ -203,19 +173,32 @@ write('index.html', replaceBlock(replaceBlock(html, 'head', headBlock), 'noscrip
 
 // ───────────────────────────── standalone files ─────────────────────────────
 const today = new Date().toISOString().slice(0, 10);
+const imgs = (list) => list.map((u) => `    <image:image><image:loc>${abs(u)}</image:loc></image:image>`).join('\n');
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>${SITE_URL}/</loc>
     <lastmod>${today}</lastmod>
-    <image:image><image:loc>${abs(OG_IMAGE)}</image:loc></image:image>
-${work.map((w) => `    <image:image><image:loc>${abs(w.img)}</image:loc></image:image>`).join('\n')}
+${imgs([OG_IMAGE, ...work.map((w) => w.homeImg)])}
   </url>
+  <url>
+    <loc>${SITE_URL}/work/</loc>
+    <lastmod>${today}</lastmod>
+  </url>
+${work.map((w) => `  <url>
+    <loc>${w.url}</loc>
+    <lastmod>${today}</lastmod>
+${imgs([w.cover.src, ...w.shots.map((s) => s.src)])}
+  </url>`).join('\n')}
 </urlset>
 `);
 
 write('robots.txt', `User-agent: *
 Allow: /
+# repo tooling — not part of the site; keep it out of search results if the whole folder is deployed
+Disallow: /tools/
+Disallow: /scripts/
+Disallow: /data/
 
 Sitemap: ${SITE_URL}/sitemap.xml
 `);
@@ -230,7 +213,8 @@ ${TAGLINE} ${SLOGAN}
 ${services.map((s) => `- ${cap(s.word)}: ${s.desc} (${s.tags})`).join('\n')}
 
 ## Selected work
-${work.map((w) => `- ${w.brand} — ${w.line} [${w.scope}, ${w.year}]`).join('\n')}
+${work.map((w) => `- [${w.brand}](${w.url}): ${w.headline}. ${w.subtitle} [${w.scope}, ${w.year}]`).join('\n')}
+- [All projects](${SITE_URL}/work/)
 
 ## Contact
 - Email: ${EMAIL}
@@ -246,4 +230,4 @@ write('site.webmanifest', JSON.stringify({
   ],
 }, null, 2) + '\n');
 
-console.log(`seo: ${work.length} projects, ${services.length} services → index.html (head + noscript), sitemap.xml, robots.txt, llms.txt, site.webmanifest`);
+console.log(`seo: ${work.length} projects, ${services.length} services → index.html (head + noscript), sitemap.xml (${work.length + 2} URLs), robots.txt, llms.txt, site.webmanifest`);

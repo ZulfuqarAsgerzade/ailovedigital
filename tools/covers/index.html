@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cover composer</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;450;500;700&display=swap">
+<style>
+  body{margin:0;background:#1b1b1f;color:#eee;font:14px/1.4 system-ui,sans-serif}
+  header{position:sticky;top:0;z-index:2;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 14px;background:#111;border-bottom:1px solid #333}
+  button,select{font:inherit;padding:6px 12px;border-radius:6px;border:1px solid #555;background:#2a2a30;color:#eee;cursor:pointer}
+  #log{opacity:.8}
+  main{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:14px;padding:14px}
+  figure{margin:0}figcaption{padding:4px 2px;opacity:.8}
+  canvas{display:block;width:100%;height:auto;background:#000;border-radius:6px}
+</style>
+</head>
+<body>
+<header>
+  <select id="only"><option value="">All projects</option></select>
+  <button id="render">Render</button>
+  <button id="save">Save to disk</button>
+  <span id="log">Generates cover.webp, the home card and og.jpg from the screens in data/projects.json → "mockup".</span>
+</header>
+<main id="out"></main>
+<script type="module">
+import { prepare, render } from './compose.js';
+
+const SAVE = 'http://127.0.0.1:4177/save';
+const log = (m) => { document.getElementById('log').textContent = m; };
+const projects = (await (await fetch('../../data/projects.json')).json()).filter((p) => p.mockup);
+const only = document.getElementById('only');
+projects.forEach((p) => only.add(new Option(p.brand, p.slug)));
+const results = new Map();
+
+async function build(p, i) {
+  // the second argument makes the browser fetch the latin-ext face too (İ, ş, ə, ğ … are not in the latin subset)
+  const glyphs = 'İşəğüöçıƏÇŞ'; await document.fonts.load('700 100px Geist', glyphs); await document.fonts.load('450 34px Geist', glyphs);
+  const prep = await prepare(p);
+  const cover = document.createElement('canvas');
+  render(cover, p, prep, i, { width: 1600, scale: 1 });
+  const card = document.createElement('canvas'); card.width = 800; card.height = 500;
+  card.getContext('2d').drawImage(cover, 0, 0, 800, 500);
+  const og = document.createElement('canvas');
+  render(og, p, prep, i, { width: 1905, scale: 630 / 1000 });
+  results.set(p.slug, { cover, card, og, set: prep.set });
+  return { cover, set: prep.set };
+}
+
+document.getElementById('render').onclick = async () => {
+  const out = document.getElementById('out'); out.innerHTML = '';
+  const want = only.value;
+  for (const [i, p] of projects.entries()) {
+    if (want && p.slug !== want) continue;
+    log(`rendering ${p.brand}…`);
+    const { cover, set } = await build(p, i);
+    const fig = document.createElement('figure'); fig.append(cover);
+    const cap = document.createElement('figcaption'); cap.textContent = `${p.brand} — ${set}`; fig.append(cap); out.append(fig);
+  }
+  log('done');
+};
+
+const blob = (c, type, q) => new Promise((r) => c.toBlob(r, type, q));
+async function put(path, b) {
+  const r = await fetch(`${SAVE}?path=${encodeURIComponent(path)}`, { method: 'POST', body: b });
+  if (!r.ok) throw new Error(`${path}: ${r.status}`);
+}
+document.getElementById('save').onclick = async () => {
+  for (const [slug, r] of results) {
+    const base = `assets/images/work/${slug}`;
+    await put(`${base}/cover.webp`, await blob(r.cover, 'image/webp', 0.9));
+    await put(`${base}.webp`, await blob(r.card, 'image/webp', 0.88));
+    await put(`${base}/og.jpg`, await blob(r.og, 'image/jpeg', 0.88));
+    log(`saved ${slug}`);
+  }
+  log(`saved ${results.size} covers`);
+};
+</script>
+</body>
+</html>

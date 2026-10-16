@@ -12,22 +12,23 @@ And we make businesses love it too. Built with logic. Finished with love.
 - Think: Technology decisions before technology spending. Sometimes the answer is “not yet”. (Strategy · Consulting · Digital transformation · Audits)
 
 ## Selected work
-- ChefMarket — A restaurant-to-supplier B2B marketplace [Marketplace, 2026]
-- Vicdoor — A multi-tenant SaaS for door and window manufacturers [B2B & SaaS, 2026]
-- AltisCassa — An integrated finance and cash management platform [Fintech & finance, 2026]
-- e-Hesab — An AI-driven pre-accounting platform [Fintech & finance, 2026]
-- E-Faktura — An offline invoicing app for small business [Fintech & finance, 2026]
-- İnsanİş — A construction management system [B2B & SaaS, 2026]
-- Suntech — A domestic logistics and content management platform [B2B & SaaS, 2026]
-- Nitro Garage — A car service and spare parts marketplace [Marketplace, 2026]
-- JobRemotely — A curated remote job board [Marketplace, 2026]
-- Moleaks — A data-leak search platform [Cybersecurity, 2026]
-- Safemole — A digital security and privacy platform [Cybersecurity, 2026]
-- Rana — A digital legacy and message-to-the-future platform [Cybersecurity, 2026]
-- Guraba — A global e-commerce and sales ecosystem [E-commerce & catalog, 2026]
-- ParkHub — A unified smart parking and payment ecosystem [Platforms & web, 2026]
-- Arsa Creative — A creative agency and portfolio web platform [Platforms & web, 2026]
-- Marka House — A branding and digital marketing platform [Platforms & web, 2026]
+- [ChefMarket](https://ailovedigital.com/work/chefmarket/): A restaurant–supplier B2B marketplace ecosystem. Three mobile apps, an admin panel and a real-time backend — in one ecosystem. [Marketplace, 2026]
+- [Vicdoor](https://ailovedigital.com/work/vicdoor/): A multi-tenant SaaS for door and window manufacturers. Quoting, visual design, production, installation and customer trust in one system. [B2B & SaaS, 2026]
+- [AltisCassa](https://ailovedigital.com/work/altiscassa/): An integrated finance and cash management platform. Multi-currency cash management, counterparty debts and 11+ financial reports. [Fintech & finance, 2026]
+- [e-Hesab](https://ailovedigital.com/work/e-hesab/): An AI-based pre-accounting platform. DVX integration, OCR invoices and a dynamic tax engine. [Fintech & finance, 2026]
+- [E-Faktura](https://ailovedigital.com/work/e-faktura/): An offline invoicing app for small business. An invoicing solution that works without internet, fully in Azerbaijani. [Fintech & finance, 2026]
+- [İnsanİş](https://ailovedigital.com/work/insanis/): A construction management system. Bridging the information gap between the office and the construction site. [B2B & SaaS, 2026]
+- [Suntech](https://ailovedigital.com/work/suntech/): A domestic logistics and content management platform. Every element of the site is managed without a developer. [B2B & SaaS, 2026]
+- [Nitro Garage](https://ailovedigital.com/work/nitro-garage/): An automotive service and spare parts marketplace. Driver, mechanic and store on one platform — four roles, 79+ screens. [Marketplace, 2026]
+- [JobRemotely](https://ailovedigital.com/work/jobremotely/): A curated remote job board. Vacancies with publicly disclosed salaries, verified by HR and free of spam. [Marketplace, 2026]
+- [Moleaks](https://ailovedigital.com/work/moleaks/): A leaked-data search platform. Deep search by email, phone number, domain and face recognition. [Cybersecurity, 2026]
+- [Safemole](https://ailovedigital.com/work/safemole/): A digital security and privacy platform. Fully native iOS and Android, a hybrid database and end-to-end encryption. [Cybersecurity, 2026]
+- [Rana](https://ailovedigital.com/work/rana/): A digital legacy and message-to-the-future platform. A time capsule where encrypted messages open only on a scheduled date. [Cybersecurity, 2026]
+- [Guraba](https://ailovedigital.com/work/guraba/): A global e-commerce and sales ecosystem. Web, mobile and a Telegram bot — one account, one cart. [E-commerce & catalog, 2026]
+- [ParkHub](https://ailovedigital.com/work/parkhub/): A unified smart parking and payment ecosystem. City parking, subscriptions and payments in one app. [Platforms & web, 2026]
+- [Arsa Creative](https://ailovedigital.com/work/arsa-creative/): A creative agency and portfolio web platform. A showcase that presents creative work at the highest visual quality. [Platforms & web, 2026]
+- [Marka House](https://ailovedigital.com/work/marka-house/): A branding and digital marketing platform. Brand identity and service portfolio combined in one showcase. [Platforms & web, 2026]
+- [All projects](https://ailovedigital.com/work/)
 
 ## Contact
 - Email: info@ailovedigital.com

@@ -18,6 +18,24 @@
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 if (!location.hash) scrollTo(0, 0);
 
+// Opening a case study and pressing Back must land where the visitor left. Since the browser's own
+// restoration is switched off above, the home page keeps its own bookmark: a click on a project card
+// stores the scroll position, and a back/forward load puts it back once the page has finished
+// building (see restoreFromCaseStudy below).
+const ALD_HOME_KEY = 'ald:home';
+const navType = (performance.getEntriesByType('navigation')[0] || {}).type;
+window.__aldRestore = null;
+if (navType === 'back_forward') {
+  try { window.__aldRestore = JSON.parse(sessionStorage.getItem(ALD_HOME_KEY)); } catch (_) { /* storage blocked */ }
+}
+document.addEventListener('click', (e) => {
+  const card = e.target.closest && e.target.closest('.ald-work-link');
+  if (!card) return;
+  try {
+    sessionStorage.setItem(ALD_HOME_KEY, JSON.stringify({ y: Math.round(scrollY) }));
+  } catch (_) { /* storage blocked — Back simply lands at the top */ }
+});
+
 // ScrollTrigger.refresh() measures every trigger by briefly jumping the page
 // to scrollY 0 and back. With `html{scroll-behavior:smooth}` (style.css) that
 // jump is animated instead of instant, so the measurement happens at the
@@ -81,3 +99,21 @@ document.addEventListener('click', (e) => {
   target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
   history.pushState(null, '', a.hash);
 });
+
+// Put the scroll position back after returning from a case study. Wait until the page has finished
+// building — fonts and triggers settled, then a refresh — otherwise the pinned "Made to be loved"
+// section would measure from the wrong place.
+(function restoreFromCaseStudy() {
+  const saved = window.__aldRestore;
+  if (!saved || !saved.y) return;
+  const t0 = performance.now();
+  (function wait() {
+    const ready = document.readyState === 'complete' && window.ScrollTrigger && document.querySelector('.ald-work');
+    if (!ready && performance.now() - t0 < 6000) return void setTimeout(wait, 80);
+    setTimeout(() => {
+      aldSafeRefresh();
+      scrollTo(0, saved.y);
+      if (window.ScrollTrigger) ScrollTrigger.update();
+    }, 200);
+  })();
+})();
