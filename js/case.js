@@ -32,7 +32,7 @@
       menu.hidden = !open;
       burger.classList.toggle('is-open', open);
       burger.setAttribute('aria-expanded', String(open));
-      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      burger.setAttribute('aria-label', (open ? burger.dataset.labelClose : burger.dataset.labelOpen) || (open ? 'Close menu' : 'Open menu'));
       document.body.classList.toggle('is-locked', open);
       // keep the page behind the dialog out of the tab order and the accessibility tree
       background.forEach((el) => { el.inert = open; });

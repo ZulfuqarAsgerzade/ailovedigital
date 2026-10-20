@@ -4,5 +4,6 @@ Allow: /
 Disallow: /tools/
 Disallow: /scripts/
 Disallow: /data/
+Disallow: /i18n/
 
 Sitemap: https://ailovedigital.com/sitemap.xml

@@ -30,6 +30,11 @@ And we make businesses love it too. Built with logic. Finished with love.
 - [Marka House](https://ailovedigital.com/work/marka-house/): A branding and digital marketing platform. Brand identity and service portfolio combined in one showcase. [Platforms & web, 2026]
 - [All projects](https://ailovedigital.com/work/)
 
+## Languages
+- English: [home](https://ailovedigital.com/), [projects](https://ailovedigital.com/work/)
+- Русский: [home](https://ailovedigital.com/ru/), [projects](https://ailovedigital.com/ru/work/)
+- Azərbaycanca: [home](https://ailovedigital.com/az/), [projects](https://ailovedigital.com/az/work/)
+
 ## Contact
 - Email: info@ailovedigital.com
 - Website: https://ailovedigital.com/

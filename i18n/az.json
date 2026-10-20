@@ -1,0 +1,527 @@
+{
+  "_note": "ui/meta: page chrome and meta tags. home: [English fragment in index.html, translation] — applied to build /az/index.html; every English fragment must still exist in index.html or the build fails.",
+  "meta": {
+    "title": "AILoveDigital — Süni intellekt, texnologiya və biznes artımı",
+    "description": "AILoveDigital texnologiya və kreativ studiyasıdır. Rəqəmsal məhsullar yaradır, prosesləri süni intellektlə avtomatlaşdırır və bunları ölçülə bilən biznes artımına çeviririk.",
+    "tagline": "Və bizneslərin də bunu sevməsini təmin edirik.",
+    "slogan": "Məntiqlə qurulub. Sevgiylə tamamlanıb.",
+    "ogAlt": "AILoveDigital — piksel ürək loqosu və «AI, Technology & Business Growth» şüarı"
+  },
+  "ui": {
+    "language": "Dil",
+    "skip": "Məzmuna keç",
+    "navPrimary": "Əsas naviqasiya",
+    "services": "Xidmətlər",
+    "work": "Layihələr",
+    "process": "Proses",
+    "about": "Haqqımızda",
+    "contact": "Əlaqə",
+    "startSomething": "Layihəyə başla",
+    "openMenu": "Menyunu aç",
+    "closeMenu": "Menyunu bağla",
+    "menu": "Menyu",
+    "homeLabel": "ana səhifə",
+    "footerBlurb": "Bizneslərə rəqəmsalı sevdiririk — öz xərcini çıxaran texnologiya, süni intellekt və kreativlə.",
+    "footServices": "Xidmətlər",
+    "svcBuild": "İnkişaf",
+    "svcAutomate": "Avtomatlaşdırma",
+    "svcGrow": "Böyümə",
+    "svcTeach": "Tədris",
+    "svcThink": "Strategiya",
+    "footCompany": "Şirkət",
+    "footContact": "Əlaqə saxlayın",
+    "backToTop": "Yuxarı qayıt ↑",
+    "crumbs": "Naviqasiya zənciri",
+    "home": "Ana səhifə",
+    "year": "İl",
+    "scope": "İstiqamət",
+    "timeline": "Müddət",
+    "inNumbers": "{brand} rəqəmlərlə",
+    "overview": "Ümumi baxış",
+    "problem": "Problem",
+    "approach": "Yanaşmamız",
+    "result": "Nəticə",
+    "keyFeatures": "Əsas funksiyalar",
+    "whatItDoes": "Nə edir",
+    "architecture": "Arxitektura",
+    "howBuilt": "Necə qurulub",
+    "technology": "Texnologiya",
+    "techStack": "Texnoloji stek",
+    "moreWork": "Digər işlər",
+    "related": "Oxşar layihələr",
+    "relatedLead": "«{scope}» istiqamətində və ona yaxın digər işlərimiz.",
+    "morePager": "Digər layihələr",
+    "prev": "← Əvvəlki layihə",
+    "next": "Növbəti layihə →",
+    "ctaSimilar": "Oxşar ideyanız<br>var<span class=\"ald-dot\">?</span>",
+    "ctaReal": "Gəlin onu reallığa çevirək.",
+    "allProjects": "Bütün layihələr →",
+    "allProjectsLabel": "Bütün layihələr",
+    "hubTitle": "Layihələr — {n} rəqəmsal məhsul | {name}",
+    "hubDescription": "{name} komandasının hazırladığı {n} məhsul: {scopes} — mobil tətbiqlər, veb platformalar və süni intellekt alətləri. Hər birinin problemi, yanaşması və nəticəsi ilə.",
+    "selectedWork": "Seçilmiş işlər",
+    "hubH1": "Sevgiylə <span class=\"ald-dot\">♥</span> yaratdıqlarımız<span class=\"ald-dot\">.</span>",
+    "hubLead": "Hər layihə — fərqli problem, yanaşma isə birdir: biznesi anlamaq, real məhsul buraxmaq və rəqəmləri hərəkətə gətirmək. {m} istiqamətdə {n} məhsul.",
+    "hubCtaH": "Növbəti layihə<br>sizinki ola bilər<span class=\"ald-dot\">.</span>",
+    "hubCtaS": "Nəyi dəyişmək istədiyinizi bizə deyin.",
+    "hubOgAlt": "AILoveDigital — seçilmiş işlər",
+    "nsServices": "Sevdiyimiz beş iş",
+    "nsWork": "Seçilmiş işlər",
+    "nsAll": "Bütün layihələr",
+    "nsProcess": "Necə işləyirik",
+    "nsWho": "Biz kimik",
+    "nsContact": "Əlaqə",
+    "nsEmail": "E-poçt",
+    "nsNext": "Bundan sonra nə olur:"
+  },
+  "home": [
+    [
+      ">Skip to content<",
+      ">Məzmuna keç<"
+    ],
+    [
+      "label: 'Services'",
+      "label: 'Xidmətlər'"
+    ],
+    [
+      "label: 'Work'",
+      "label: 'Layihələr'"
+    ],
+    [
+      "label: 'Process'",
+      "label: 'Proses'"
+    ],
+    [
+      "label: 'About'",
+      "label: 'Haqqımızda'"
+    ],
+    [
+      "label: 'Contact'",
+      "label: 'Əlaqə'"
+    ],
+    [
+      "aria-label=\"AILoveDigital — back to top\"",
+      "aria-label=\"AILoveDigital — yuxarı qayıt\""
+    ],
+    [
+      "Start something <span",
+      "Layihəyə başla <span"
+    ],
+    [
+      "aria-label=\"Menu\"",
+      "aria-label=\"Menyu\""
+    ],
+    [
+      "st.menu ? 'Close menu' : 'Open menu'",
+      "st.menu ? 'Menyunu bağla' : 'Menyunu aç'"
+    ],
+    [
+      ">TECH × CREATIVITY × BUSINESS<",
+      ">TEXNOLOGİYA × KREATİV × BİZNES<"
+    ],
+    [
+      "aria-label=\"Animated pixel heart\"",
+      "aria-label=\"Animasiyalı piksel ürək\""
+    ],
+    [
+      ">And we make businesses love it too.<",
+      ">Və bizneslərin də bunu sevməsini təmin edirik.<"
+    ],
+    [
+      ">A technology and creative studio building digital products, automating operations with AI, and turning both into growth you can measure.<",
+      ">Rəqəmsal məhsullar yaradan, prosesləri süni intellektlə avtomatlaşdıran və hər ikisini ölçülə bilən artıma çevirən texnologiya və kreativ studiya.<"
+    ],
+    [
+      ">See our work<",
+      ">İşlərimizə baxın<"
+    ],
+    [
+      "</span> Taking on new projects<",
+      "</span> Yeni layihələr qəbul edirik<"
+    ],
+    [
+      ">Build · Automate · Grow · Teach · Think<",
+      ">İnkişaf · Avtomatlaşdırma · Böyümə · Tədris · Strategiya<"
+    ],
+    [
+      ">Keep going ↓<",
+      ">Davam edin ↓<"
+    ],
+    [
+      ">Disciplines<br>in one team<",
+      ">Sahə bir<br>komandada<"
+    ],
+    [
+      "ald-stat-n\">24h<",
+      "ald-stat-n\">24 saat<"
+    ],
+    [
+      ">First response<br>on every brief<",
+      ">Hər müraciətə<br>ilk cavab<"
+    ],
+    [
+      "2–6<span class=\"ald-dot\">wk</span>",
+      "2–6<span class=\"ald-dot\">həftə</span>"
+    ],
+    [
+      ">Typical time to<br>a first release<",
+      ">İlk buraxılışa<br>qədər adi müddət<"
+    ],
+    [
+      ">Senior, in-house<br>delivery<",
+      ">Yalnız təcrübəli,<br>daxili komanda<"
+    ],
+    [
+      "</span> / What we do<",
+      "</span> / Nə edirik<"
+    ],
+    [
+      "Five things we love doing<span",
+      "Sevdiyimiz beş iş<span"
+    ],
+    [
+      ">Most clients start with one of them. The useful part is that they connect — a product that ships, runs itself, and grows.<",
+      ">Müştərilərin çoxu bunlardan biri ilə başlayır. Əsas üstünlük onların bir-birinə bağlı olmasıdır: vaxtında buraxılan, özü işləyən və böyüyən məhsul.<"
+    ],
+    [
+      "word: 'BUILD'",
+      "word: 'İNKİŞAF'"
+    ],
+    [
+      "desc: 'We design and build software people actually use — and that your team can keep running.'",
+      "desc: 'İnsanların həqiqətən istifadə etdiyi və komandanızın özünün idarə edə biləcəyi proqram təminatı layihələndirir və hazırlayırıq.'"
+    ],
+    [
+      "tags: 'Web platforms · Mobile apps · Internal tools · Digital products'",
+      "tags: 'Veb platformalar · Mobil tətbiqlər · Daxili alətlər · Rəqəmsal məhsullar'"
+    ],
+    [
+      "word: 'AUTOMATE'",
+      "word: 'AVTOMATLAŞDIRMA'"
+    ],
+    [
+      "desc: 'We find the repetitive work and make it disappear, quietly, in the background.'",
+      "desc: 'Təkrarlanan işləri tapır və onları arxa planda, səssizcə aradan qaldırırıq.'"
+    ],
+    [
+      "tags: 'AI agents · Workflow automation · Integrations · Ops tooling'",
+      "tags: 'Süni intellekt agentləri · İş axınlarının avtomatlaşdırılması · İnteqrasiyalar · Əməliyyat alətləri'"
+    ],
+    [
+      "word: 'GROW'",
+      "word: 'BÖYÜMƏ'"
+    ],
+    [
+      "desc: 'We turn attention into customers, and creative into a number you can report.'",
+      "desc: 'Diqqəti müştəriyə, kreativi isə hesabatda göstərə biləcəyiniz rəqəmə çeviririk.'"
+    ],
+    [
+      "tags: 'Social · Performance · Creative production · Brand growth'",
+      "tags: 'Sosial media · Performans marketinq · Kreativ istehsal · Brend artımı'"
+    ],
+    [
+      "word: 'TEACH'",
+      "word: 'TƏDRİS'"
+    ],
+    [
+      "desc: 'We make your team faster with the tools they already have — plus the ones they should.'",
+      "desc: 'Komandanızı artıq istifadə etdiyi alətlərlə — və istifadə etməli olduğu alətlərlə — daha sürətli edirik.'"
+    ],
+    [
+      "tags: 'AI training · IT education · Corporate workshops'",
+      "tags: 'Süni intellekt təlimləri · İT təhsili · Korporativ seminarlar'"
+    ],
+    [
+      "word: 'THINK'",
+      "word: 'STRATEGİYA'"
+    ],
+    [
+      "desc: 'Technology decisions before technology spending. Sometimes the answer is “not yet”.'",
+      "desc: 'Əvvəl texnoloji qərarlar, sonra texnologiyaya xərclər. Bəzən doğru cavab «hələ yox» olur.'"
+    ],
+    [
+      "tags: 'Strategy · Consulting · Digital transformation · Audits'",
+      "tags: 'Strategiya · Konsaltinq · Rəqəmsal transformasiya · Auditlər'"
+    ],
+    [
+      "</span> / Start here<",
+      "</span> / Buradan başlayın<"
+    ],
+    [
+      "What do you want<br>to change<span",
+      "Nəyi dəyişmək<br>istəyirsiniz<span"
+    ],
+    [
+      ">Start with the problem. Not the technology. Pick the line that sounds like your week.<",
+      ">Texnologiyadan yox, problemdən başlayın. Həftənizi ən yaxşı təsvir edən cümləni seçin.<"
+    ],
+    [
+      ">Sounds like {{ answer.name }}. <span",
+      ">Deyəsən, sizə {{ answer.name }} lazımdır. <span"
+    ],
+    [
+      ">Show me how →<",
+      ">Necə olduğunu göstərin →<"
+    ],
+    [
+      "text: 'My business needs more customers.', name: 'Growth', body: 'We find where your audience already is,\\nmake creative they actually notice,\\nand turn that attention into customers.'",
+      "text: 'Biznesimə daha çox müştəri lazımdır.', name: 'böyümə', body: 'Auditoriyanızın artıq olduğu yeri tapır,\\nhəqiqətən diqqət çəkən kreativ hazırlayır\\nvə bu diqqəti müştərilərə çeviririk.'"
+    ],
+    [
+      "text: 'We waste too much time on manual work.', name: 'Automation', body: 'We map the repetitive work,\\nconnect the systems that should talk to each other,\\nand let AI handle the boring part.'",
+      "text: 'Əl ilə görülən işlərə çox vaxt itiririk.', name: 'avtomatlaşdırma', body: 'Təkrarlanan işləri xəritələyir,\\nbir-biri ilə əlaqəli olmalı sistemləri birləşdirir\\nvə darıxdırıcı hissəni süni intellektə həvalə edirik.'"
+    ],
+    [
+      "text: 'I need a digital product.', name: 'Build', body: 'We take the idea,\\nshape it into something people can use,\\nand ship it properly — not as a demo.'",
+      "text: 'Mənə rəqəmsal məhsul lazımdır.', name: 'rəqəmsal məhsul', body: 'İdeyanı götürür,\\ninsanların istifadə edə biləcəyi formaya salır\\nvə demo kimi yox, düzgün şəkildə istifadəyə veririk.'"
+    ],
+    [
+      "text: 'My team needs AI skills.', name: 'Teach', body: 'We train your team on real tools,\\ninside real workflows,\\nnot slideware.'",
+      "text: 'Komandama süni intellekt bacarıqları lazımdır.', name: 'təlim', body: 'Komandanızı real alətlər üzərində,\\nreal iş axınlarının içində öyrədirik —\\nslaydlarla yox.'"
+    ],
+    [
+      "text: 'I’m not sure. Help me figure it out.', name: 'Think', body: 'We start with your business,\\nmap where technology actually helps,\\nand decide together before you spend.'",
+      "text: 'Əmin deyiləm. Anlamağa kömək edin.', name: 'strategiya', body: 'Biznesinizdən başlayır,\\ntexnologiyanın həqiqətən harada kömək etdiyini müəyyən edir\\nvə pul xərcləməzdən əvvəl birlikdə qərar veririk.'"
+    ],
+    [
+      "</span> / Selected work<",
+      "</span> / Seçilmiş işlər<"
+    ],
+    [
+      "Things we <span class=\"ald-dot\">♥</span> made<span class=\"ald-dot\">.</span>",
+      "Sevgiylə <span class=\"ald-dot\">♥</span> yaratdıqlarımız<span class=\"ald-dot\">.</span>"
+    ],
+    [
+      ">Every project, a different problem — one approach: understand the business, ship something real, then make the numbers move.<",
+      ">Hər layihə — fərqli problem, yanaşma isə birdir: biznesi anlamaq, real məhsul buraxmaq və rəqəmləri hərəkətə gətirmək.<"
+    ],
+    [
+      ">All projects ",
+      ">Bütün layihələr "
+    ],
+    [
+      "<dt>Year</dt>",
+      "<dt>İl</dt>"
+    ],
+    [
+      "<dt>Scope</dt>",
+      "<dt>İstiqamət</dt>"
+    ],
+    [
+      "<dt>Timeline</dt>",
+      "<dt>Müddət</dt>"
+    ],
+    [
+      ">View case <span",
+      ">Keysə bax <span"
+    ],
+    [
+      "</span> / How we work<",
+      "</span> / Necə işləyirik<"
+    ],
+    [
+      "No mystery. No 90-page decks<span",
+      "Sirr yoxdur. 90 səhifəlik təqdimat yoxdur<span"
+    ],
+    [
+      ">A short, honest process you can plan a budget around.<",
+      ">Büdcəni planlaya biləcəyiniz qısa və dürüst proses.<"
+    ],
+    [
+      "t: 'Discover', d: 'We start with your business, your numbers and your constraints — not a tool list.'",
+      "t: 'Kəşf', d: 'Alət siyahısından yox, biznesinizdən, rəqəmlərinizdən və məhdudiyyətlərinizdən başlayırıq.'"
+    ],
+    [
+      "t: 'Shape', d: 'We agree on scope, what success looks like, and what we are deliberately not doing.'",
+      "t: 'Formalaşdırma', d: 'İşin həcmini, uğurun nə demək olduğunu və bilərəkdən nəyi etmədiyimizi razılaşdırırıq.'"
+    ],
+    [
+      "t: 'Build', d: 'Short cycles and working software you can see every week. No black box.'",
+      "t: 'Hazırlama', d: 'Qısa dövrlər və hər həftə görə biləcəyiniz işləyən proqram. Qara qutu yoxdur.'"
+    ],
+    [
+      "t: 'Scale', d: 'We measure, improve, document and hand over something your team owns.'",
+      "t: 'Miqyaslama', d: 'Ölçür, təkmilləşdirir, sənədləşdirir və komandanızın sahib olacağı məhsulu təhvil veririk.'"
+    ],
+    [
+      "<span>TECHNOLOGY</span></span>\n        <span class=\"ald-line\"><span>SHOULD MAKE</span></span>\n        <span class=\"ald-line\"><span>BUSINESS</span></span>\n        <span class=\"ald-line\"><span>SIMPLER<span",
+      "<span>TEXNOLOGİYA</span></span>\n        <span class=\"ald-line\"><span>BİZNESİ</span></span>\n        <span class=\"ald-line\"><span>DAHA SADƏ</span></span>\n        <span class=\"ald-line\"><span>ETMƏLİDİR<span"
+    ],
+    [
+      ">Not more complicated.<",
+      ">Daha mürəkkəb yox.<"
+    ],
+    [
+      ">We combine technology, creativity and automation to remove the friction between a business and where it wants to go — and we leave you with something your own team can run.<",
+      ">Texnologiya, kreativlik və avtomatlaşdırmanı birləşdirərək biznesi hədəfindən ayıran maneələri aradan qaldırırıq — və sizə öz komandanızın idarə edə biləcəyi bir sistem qoyub gedirik.<"
+    ],
+    [
+      ">The digital heart<",
+      ">Rəqəmsal ürək<"
+    ],
+    [
+      "Made to be loved<span",
+      "Sevilmək üçün yaradılıb<span"
+    ],
+    [
+      ">Digital works better when people actually love using it — so every project gets the same test: would we enjoy using this every day?<",
+      ">Rəqəmsal məhsul insanlar ondan həqiqətən zövq alanda daha yaxşı işləyir — ona görə də hər layihə eyni sınaqdan keçir: bundan hər gün özümüz istifadə etmək istərdikmi?<"
+    ],
+    [
+      "aria-label=\"Interactive pixel heart — click to scatter it\"",
+      "aria-label=\"İnteraktiv piksel ürək — dağıtmaq üçün klikləyin\""
+    ],
+    [
+      ">Click the heart<",
+      ">Ürəyə klikləyin<"
+    ],
+    [
+      "</span> / Who we are<",
+      "</span> / Biz kimik<"
+    ],
+    [
+      "One team.<br>Multiple disciplines.<br>One direction<span",
+      "Bir komanda.<br>Çoxlu sahə.<br>Bir istiqamət<span"
+    ],
+    [
+      "<span>TECH</span><span class=\"ald-dot\">♥</span><span>AI</span><span class=\"ald-dot\">♥</span><span>CREATIVE</span><span class=\"ald-dot\">♥</span><span>BUSINESS</span>",
+      "<span>TEXNOLOGİYA</span><span class=\"ald-dot\">♥</span><span>Sİ</span><span class=\"ald-dot\">♥</span><span>KREATİV</span><span class=\"ald-dot\">♥</span><span>BİZNES</span>"
+    ],
+    [
+      "ald-chain-result\">GROWTH<",
+      "ald-chain-result\">ARTIM<"
+    ],
+    [
+      "t: 'Business first', d: 'We start with the commercial problem, then choose the technology — never the other way around.'",
+      "t: 'Əvvəlcə biznes', d: 'Əvvəl kommersiya problemindən başlayır, sonra texnologiyanı seçirik — heç vaxt əksinə yox.'"
+    ],
+    [
+      "t: 'One accountable team', d: 'Strategy, design, engineering and growth sit together. No hand-offs, no finger-pointing.'",
+      "t: 'Bir məsuliyyətli komanda', d: 'Strategiya, dizayn, proqramlaşdırma və marketinq bir yerdədir. İşi başqasına ötürmək, günahkar axtarmaq yoxdur.'"
+    ],
+    [
+      "t: 'Built to be owned', d: 'You get the documentation, the access and a team that can run it after we leave.'",
+      "t: 'Sizin olsun deyə qurulur', d: 'Sənədləri, girişləri və biz getdikdən sonra da sistemi idarə edə biləcək komandanı əldə edirsiniz.'"
+    ],
+    [
+      "</span> / Contact<",
+      "</span> / Əlaqə<"
+    ],
+    [
+      ">HAVE<br>AN IDEA?<",
+      ">İDEYANIZ<br>VAR?<"
+    ],
+    [
+      ">Let’s make it real. <span",
+      ">Gəlin onu reallığa çevirək. <span"
+    ],
+    [
+      ">What happens next<",
+      ">Bundan sonra nə olur<"
+    ],
+    [
+      "<span>Name <span class=\"ald-req\">",
+      "<span>Ad <span class=\"ald-req\">"
+    ],
+    [
+      "<span>Email <span class=\"ald-req\">",
+      "<span>E-poçt <span class=\"ald-req\">"
+    ],
+    [
+      "<span>Company</span>",
+      "<span>Şirkət</span>"
+    ],
+    [
+      "<span>Message</span>",
+      "<span>Mesaj</span>"
+    ],
+    [
+      "placeholder=\"Context, deadlines, links — anything that helps.\"",
+      "placeholder=\"Kontekst, son tarixlər, linklər — kömək edə biləcək hər şey.\""
+    ],
+    [
+      "value=\"New enquiry — AILoveDigital.com\"",
+      "value=\"New enquiry (AZ) — AILoveDigital.com\""
+    ],
+    [
+      ">We reply within one working day. No newsletters, no sales sequences — just an answer from a human.<",
+      ">Bir iş günü ərzində cavab veririk. Bülleten və satış zəncirləri yoxdur — sadəcə insandan cavab.<"
+    ],
+    [
+      ">Something went wrong sending that — please try again, or email us directly at <",
+      ">Göndərmək alınmadı — yenidən cəhd edin və ya birbaşa bu ünvana yazın: <"
+    ],
+    [
+      ">We <span class=\"ald-dot\">♥</span> this idea{{ senderName }}.<",
+      ">İdeyanızı <span class=\"ald-dot\">♥</span> sevdik{{ senderName }}.<"
+    ],
+    [
+      ">Your message is on its way. We’ll come back to you within one working day — usually sooner.<",
+      ">Mesajınız göndərildi. Bir iş günü ərzində — adətən daha tez — sizə cavab verəcəyik.<"
+    ],
+    [
+      ">Or email us directly →<",
+      ">Və ya birbaşa e-poçt yazın →<"
+    ],
+    [
+      "t: 'We read it properly and reply within one working day.'",
+      "t: 'Diqqətlə oxuyur və bir iş günü ərzində cavab veririk.'"
+    ],
+    [
+      "t: 'A 30-minute call. Questions, not a pitch deck.'",
+      "t: '30 dəqiqəlik zəng. Təqdimat yox, suallar.'"
+    ],
+    [
+      "t: 'A short written plan: scope, timeline and price.'",
+      "t: 'Qısa yazılı plan: işin həcmi, müddət və qiymət.'"
+    ],
+    [
+      "'Please tell us your name.'",
+      "'Zəhmət olmasa, adınızı yazın.'"
+    ],
+    [
+      "'Please enter a valid email address.'",
+      "'Düzgün e-poçt ünvanı daxil edin.'"
+    ],
+    [
+      "'Sending…'",
+      "'Göndərilir…'"
+    ],
+    [
+      "'Send some love'",
+      "'Sevgiylə göndər'"
+    ],
+    [
+      ">Making businesses love digital — with technology, AI and creative that earns its keep.<",
+      ">Bizneslərə rəqəmsalı sevdiririk — öz xərcini çıxaran texnologiya, süni intellekt və kreativlə.<"
+    ],
+    [
+      "ald-foot-h\">Services<",
+      "ald-foot-h\">Xidmətlər<"
+    ],
+    [
+      "ald-foot-h\">Company<",
+      "ald-foot-h\">Şirkət<"
+    ],
+    [
+      "ald-foot-h\">Get in touch<",
+      "ald-foot-h\">Əlaqə saxlayın<"
+    ],
+    [
+      "<a href=\"#services\">Build</a><a href=\"#services\">Automate</a><a href=\"#services\">Grow</a><a href=\"#services\">Teach</a><a href=\"#services\">Think</a>",
+      "<a href=\"#services\">İnkişaf</a><a href=\"#services\">Avtomatlaşdırma</a><a href=\"#services\">Böyümə</a><a href=\"#services\">Tədris</a><a href=\"#services\">Strategiya</a>"
+    ],
+    [
+      "<a href=\"#work\">Work</a><a href=\"#process\">Process</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a>",
+      "<a href=\"#work\">Layihələr</a><a href=\"#process\">Proses</a><a href=\"#about\">Haqqımızda</a><a href=\"#contact\">Əlaqə</a>"
+    ],
+    [
+      "<span>Built with logic. Finished with love.</span>",
+      "<span>Məntiqlə qurulub. Sevgiylə tamamlanıb.</span>"
+    ],
+    [
+      ">Back to top ↑<",
+      ">Yuxarı qayıt ↑<"
+    ]
+  ]
+}

@@ -1,0 +1,1668 @@
+[
+  {
+    "slug": "chefmarket",
+    "line": "Restoranları təchizatçılarla birləşdirən B2B marketpleys",
+    "headline": "Restoran və təchizatçılar üçün B2B marketpleys ekosistemi",
+    "subtitle": "Üç mobil tətbiq, admin panel və real vaxt rejimində işləyən backend — vahid ekosistemdə.",
+    "scope": "Marketpleys",
+    "chips": [
+      "3 rola uyğun mobil tətbiq",
+      "40+ admin panel ekranı",
+      "500ms təkrar bildirişləri süzmə pəncərəsi"
+    ],
+    "metrics": [
+      {
+        "v": "3",
+        "l": "rola uyğun mobil tətbiq"
+      },
+      {
+        "v": "40+",
+        "l": "admin panel ekranı"
+      },
+      {
+        "v": "500ms",
+        "l": "təkrar bildirişləri süzmə pəncərəsi"
+      }
+    ],
+    "overview": "ChefMarket Azərbaycanda restoranlarla təchizatçılar arasındakı ticarəti tam rəqəmsallaşdırır: təchizatçılar məhsul satır, restoranlar sifariş verir, sürücülər isə çatdırır. Üç ayrı mobil tətbiq (Təchizatçı, Restoran, Sürücü), React admin panel və Tenant Portal vahid .NET 8 backend vasitəsilə bir-biri ilə real vaxtda əlaqə saxlayır.",
+    "problem": "Restoranların təchizatı telefon zəngləri, WhatsApp və kağız qaimələr üzərində qurulmuşdu. Sifarişin dəqiq harada olduğunu heç kim bilmirdi, qiymətləri müqayisə etmək mümkün deyildi, sürücünün topladığı nağd pul isə gün sonunda əl ilə üzləşdirilirdi.",
+    "approach": "Hər rol öz tətbiqini aldı — təchizatçılar, restoranlar və sürücülər üçün ayrıca, bütün bunların üzərində isə admin panel dayanır. Sifarişin bütün həyat dövrü vahid status axınına əsaslanır və SignalR vasitəsilə hər üç tərəfə eyni anda ötürülür. Şəbəkə kəsiləndə əməliyyatlar oflayn növbəyə düşür və bağlantı bərpa olunduqda yenidən icra edilir.",
+    "result": "Sifarişlər, çatdırılma və nağd pulun üzləşdirilməsi artıq vahid paneldə idarə olunur. Təchizatçılar öz kataloqlarını Buy Box rəqabəti və toplu qiymət yeniləmələri ilə idarə edir, restoranlar isə tender sorğusu ilə eyni anda bir neçə təchizatçıdan təklif toplayır.",
+    "features": [
+      {
+        "t": "Sifarişin tam həyat dövrü",
+        "d": "Qəbul edildi → hazırlanır → hazırdır → yoldadır; hər mərhələdə real vaxt bildirişi göndərilir."
+      },
+      {
+        "t": "Buy Box və qiymət rəqabəti",
+        "d": "Təchizatçı üçün bazar qiymətlərinin müqayisəsi və tövsiyələr."
+      },
+      {
+        "t": "Tender sorğuları",
+        "d": "Restoran bir dəfə sorğu göndərir və çoxsaylı təchizatçıdan qiymət toplayır."
+      },
+      {
+        "t": "Logistika lövhəsi",
+        "d": "Dalğalar, marşrutlar və dayanacaqlar, həmçinin sürücülərin təyin edilməsi."
+      },
+      {
+        "t": "Sürücü kassasının üzləşdirilməsi",
+        "d": "Gözlənilən və faktiki toplanmış nağd pul hər dayanacaq üzrə izlənir."
+      },
+      {
+        "t": "Oflayn növbə",
+        "d": "Şəbəkə kəsiləndə əməliyyatlar saxlanılır, bağlantı bərpa olunanda yenidən icra edilir."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Vahid qlobal bildiriş körpüsü",
+        "d": "Xəritə əsaslı dedup (500ms pəncərə) ilə işləyən tək SignalR toast körpüsü eyni hadisənin iki dəfə göstərilməsinin qarşısını alır."
+      },
+      {
+        "t": "Sərhəddə çevirmə",
+        "d": "Backend-dəki PascalCase servis sərhədində camelCase-ə çevrilir, beləliklə komponentlər heç vaxt iki fərqli adlandırma sxemi ilə işləmir."
+      },
+      {
+        "t": "Nisbi URL-lərin saxlanması",
+        "d": "Verilənlər bazasında yalnız nisbi yollar saxlanılır, tam ünvanı isə IStorageUrlResolver qurur — buna görə də fayl yaddaşının köçürülməsi məlumatlara toxunmur."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET 8",
+          "FastEndpoints",
+          "CQRS / MediatR",
+          "Hangfire"
+        ]
+      },
+      {
+        "k": "Verilənlər bazası",
+        "v": [
+          "PostgreSQL"
+        ]
+      },
+      {
+        "k": "Mobil",
+        "v": [
+          "React Native 0.84",
+          "React 19 (New Architecture)",
+          "TypeScript 5.8"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React 19",
+          "Horizon UI (Chakra + Tailwind)",
+          "ApexCharts"
+        ]
+      },
+      {
+        "k": "Vəziyyətin idarəsi",
+        "v": [
+          "Zustand 4",
+          "React Context"
+        ]
+      },
+      {
+        "k": "Real vaxt",
+        "v": [
+          "SignalR (WebSocket)",
+          "Firebase Cloud Messaging"
+        ]
+      },
+      {
+        "k": "Çap və xəritələr",
+        "v": [
+          "Bluetooth ESC/POS termoprinter",
+          "react-native-maps"
+        ]
+      },
+      {
+        "k": "Monitorinq",
+        "v": [
+          "Firebase Crashlytics (PII məlumatları gizlədilmiş breadcrumb-lar)"
+        ]
+      }
+    ],
+    "coverAlt": "ChefMarket veb admin panelinin və mobil tətbiqin ekranları noutbuk və telefon çərçivələrində"
+  },
+  {
+    "slug": "vicdoor",
+    "line": "Qapı və pəncərə istehsalçıları üçün multi-tenant SaaS",
+    "headline": "Qapı və pəncərə istehsalçıları üçün multi-tenant SaaS",
+    "subtitle": "Qiymət təklifi, vizual dizayn, istehsal, quraşdırma və müştəri etimadı — vahid sistemdə.",
+    "scope": "B2B və SaaS",
+    "chips": [
+      "150+ hazır dizayn şablonu",
+      "46 profil sisteminin kataloqu",
+      "12 ortaq paket — veb, mobil və API üçün"
+    ],
+    "metrics": [
+      {
+        "v": "150+",
+        "l": "hazır dizayn şablonu"
+      },
+      {
+        "v": "46",
+        "l": "profil sisteminin kataloqu"
+      },
+      {
+        "v": "12",
+        "l": "ortaq paket — veb, mobil və API üçün"
+      }
+    ],
+    "overview": "Vicdoor PVC və alüminium qapı-pəncərə istehsalçısının sexlərində Excel üzərində qurulmuş iş prosesini vahid, inteqrasiya olunmuş rəqəmsal sistemlə əvəz edir. Sistem qiymət təklifini, vizual dizaynı, istehsalı, sahədə quraşdırmanı və müştəri məmnuniyyətini əhatə edir və Bakı bazarına uyğunlaşdırılıb.",
+    "problem": "Sexlər qiymətləri Excel-də hesablayır, ölçüləri kağıza yazır, istehsalın vəziyyətini isə telefonla öyrənirdi. Bir sifarişin vəziyyətini bilmək üçün üç nəfərə zəng etmək lazım gəlirdi, eyni məlumat isə üç fərqli yerdə saxlanılırdı.",
+    "approach": "Sifarişin bütün həyat dövrü audit izi olan vahid status iş axını üzərindən keçir. Qiymət kalkulyatoru, vizual dizayner və çertyoj mühərriki veb, mobil və API tərəfindən eyni şəkildə istifadə olunan ortaq paketlərdir. Offline-first mobil tətbiq sahədəki quraşdırıcılara xidmət edir: internetsiz ölçmə, şəkillər üzərində qeydlər və rəqəmsal imza.",
+    "result": "Qiymət təklifi ilə istehsal arasında əl ilə ötürmələr aradan qalxıb. Dizayner PDF və DXF fayllarını birbaşa CNC dəzgahlarına ixrac edir, müştərilər isə magic link ilə açılan, canlı istehsal statusu və zəmanət kartı olan portal əldə edir.",
+    "features": [
+      {
+        "t": "Ağıllı qiymət kalkulyatoru",
+        "d": "Profil sistemləri, şüşə paketləri, polad çərçivələr və aksesuarlar; ƏDV və Mərkəzi Bankın məzənnələri nəzərə alınmaqla çoxvalyutalı hesablamalar."
+      },
+      {
+        "t": "İnteraktiv vizual dizayner",
+        "d": "Həndəsi məhdudiyyətlərin həlli və CNC-yə hazır PDF və DXF ixracı."
+      },
+      {
+        "t": "Offline-first mobil tətbiq",
+        "d": "Bağlantı olmadan ölçmə, qeydlər, imzalar və yerində qiymət hesablanması."
+      },
+      {
+        "t": "İstehsal xəttinin idarə edilməsi",
+        "d": "Sex kiosku, TV status paneli və kəsimin optimallaşdırılması."
+      },
+      {
+        "t": "Müştəri etimadı portalı",
+        "d": "Qiymət təklifləri, canlı status və zəmanət kartı — magic link vasitəsilə."
+      },
+      {
+        "t": "Maliyyə və anbar",
+        "d": "Hesab-fakturalar, ödənişlərin üzləşdirilməsi, COGS daxil olmaqla P&L və real vaxt rejimində anbar qalığı."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Verilənlər bazası səviyyəsində izolyasiya",
+        "d": "PostgreSQL Row-Level Security hər tenantın məlumatlarını digərlərindən ayrı saxlayır."
+      },
+      {
+        "t": "Uçdan-uca tip təhlükəsizliyi",
+        "d": "Veb, mobil və API arasında ortaq Zod müqavilələri ilə tRPC v11."
+      },
+      {
+        "t": "Asinxron tapşırıqlar",
+        "d": "PDF və DXF generasiyası, cron tapşırıqları və push bildirişləri BullMQ və Redis worker-ləri üzərində işləyir."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Monorepo və API",
+        "v": [
+          "Turborepo",
+          "pnpm",
+          "tRPC v11",
+          "Fastify"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "Next.js 14 (App Router / RSC)",
+          "Tailwind CSS",
+          "shadcn/ui",
+          "Konva"
+        ]
+      },
+      {
+        "k": "Mobil",
+        "v": [
+          "React Native (Expo)",
+          "Skia"
+        ]
+      },
+      {
+        "k": "Məlumatlar",
+        "v": [
+          "PostgreSQL 16 (RLS multi-tenancy)",
+          "Prisma ORM",
+          "Redis"
+        ]
+      },
+      {
+        "k": "Fon tapşırıqları",
+        "v": [
+          "BullMQ worker-ləri"
+        ]
+      },
+      {
+        "k": "Təhlükəsizlik və yaddaş",
+        "v": [
+          "Better Auth",
+          "Cloudflare R2"
+        ]
+      },
+      {
+        "k": "Keyfiyyət",
+        "v": [
+          "Vitest",
+          "Playwright",
+          "i18n (AZ / RU / EN)"
+        ]
+      }
+    ],
+    "coverAlt": "Vicdoor veb tətbiqi noutbuk və planşet ekranında"
+  },
+  {
+    "slug": "altiscassa",
+    "line": "İnteqrasiya olunmuş maliyyə və kassa idarəetmə platforması",
+    "headline": "İnteqrasiya olunmuş maliyyə və kassa idarəetmə platforması",
+    "subtitle": "Çoxvalyutalı kassa idarəetməsi, kontragent borcları və 11+ maliyyə hesabatı.",
+    "scope": "Fintex və maliyyə",
+    "chips": [
+      "11+ analitik maliyyə hesabatı",
+      "56+ verilənlər bazası miqrasiyası",
+      "15 dəq giriş tokeninin ömrü"
+    ],
+    "metrics": [
+      {
+        "v": "11+",
+        "l": "analitik maliyyə hesabatı"
+      },
+      {
+        "v": "56+",
+        "l": "verilənlər bazası miqrasiyası"
+      },
+      {
+        "v": "15 dəq",
+        "l": "giriş tokeninin ömrü"
+      }
+    ],
+    "overview": "AltisCassa biznesin kassa əməliyyatlarını, kontragent öhdəliklərini, layihə büdcələrini və korporativ hesabatlılığı mərkəzləşdirən hərtərəfli sistemdir: çoxvalyutalı əməliyyatları, hesab-faktura axınlarını və maliyyə hesabatlarını real vaxtda emal edir.",
+    "problem": "Kassa, borclar və layihə büdcələri ayrı-ayrı Excel fayllarında aparılırdı. Ay sonunda mənfəət və zərəri hesablamaq üçün onları əl ilə birləşdirmək lazım gəlirdi, hər valyuta üzrə real vaxt balansını isə heç kim dəqiq bilmirdi.",
+    "approach": "Domen, tətbiq, infrastruktur və API qatları bir-birindən ayrılmış Clean Architecture. Hər əməliyyat audit izi buraxır, silmə isə yalnız yumşaq (soft delete) şəkildə aparılır — beləliklə maliyyə məlumatları heç vaxt birdəfəlik itmir.",
+    "result": "Mənfəət və zərər, pul vəsaitlərinin hərəkəti, dövriyyə, ƏDV və borcların yaşlandırılması hesabatları dərhal hazırlanır, Ctrl+K komanda palitrası isə qabaqcıl funksiyalara bir addımda çıxış verir.",
+    "features": [
+      {
+        "t": "Mərkəzləşdirilmiş kassa idarəetməsi",
+        "d": "Bir neçə valyutada olan kassa vəsaitləri — bir yerdə."
+      },
+      {
+        "t": "Kontragentlər və borclar",
+        "d": "Hər valyuta üzrə analitika ilə borcların idarə edilməsi."
+      },
+      {
+        "t": "Layihə maliyyəsi",
+        "d": "Büdcə ilə faktiki xərclərin müqayisəsi və gəlirlilik təhlili."
+      },
+      {
+        "t": "ƏDV ilə hesab-faktura iş axını",
+        "d": "Qaralamadan ödənişədək, çap da daxil olmaqla."
+      },
+      {
+        "t": "Ctrl+K komanda palitrası",
+        "d": "İstənilən qabaqcıl funksiyaya bir addımda keçid."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Clean Architecture",
+        "d": "Domen, tətbiq, infrastruktur və API qatları bir-birindən ciddi şəkildə ayrılıb."
+      },
+      {
+        "t": "Audit izi və yumşaq silmə",
+        "d": "Hər əməliyyat qeydə alınır və heç bir maliyyə məlumatı birdəfəlik silinmir."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          "ASP.NET Core 8 (C#)",
+          "EF Core 8",
+          "MS SQL Server 2022"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React 19",
+          "TypeScript",
+          "Vite",
+          "AG Grid",
+          "Recharts",
+          "Zustand",
+          "TanStack Query"
+        ]
+      },
+      {
+        "k": "Təhlükəsizlik",
+        "v": [
+          "JWT",
+          "BCrypt",
+          "HttpOnly refresh token-lər",
+          "Hesabın avtomatik bloklanması"
+        ]
+      },
+      {
+        "k": "İnfrastruktur",
+        "v": [
+          "Docker Compose",
+          "Nginx reverse proxy"
+        ]
+      },
+      {
+        "k": "Keyfiyyət",
+        "v": [
+          "FluentValidation",
+          "Serilog",
+          "Zod",
+          "ClosedXML"
+        ]
+      }
+    ],
+    "coverAlt": "AltisCassa veb tətbiqi noutbuk və planşet ekranında"
+  },
+  {
+    "slug": "e-hesab",
+    "line": "Süni intellektə əsaslanan ilkin mühasibat platforması",
+    "headline": "Süni intellekt əsaslı ilkin mühasibat platforması",
+    "subtitle": "DVX inteqrasiyası, OCR ilə hesab-fakturalar və dinamik vergi mühərriki.",
+    "scope": "Fintex və maliyyə",
+    "chips": [
+      ">95% kritik məntiqin test əhatəsi",
+      "2 süni intellekt mühərriki — OCR və Claude",
+      "0 kodda sabitlənmiş vergi dərəcəsi"
+    ],
+    "metrics": [
+      {
+        "v": ">95%",
+        "l": "kritik məntiqin test əhatəsi"
+      },
+      {
+        "v": "2",
+        "l": "süni intellekt mühərriki — OCR və Claude"
+      },
+      {
+        "v": "0",
+        "l": "kodda sabitlənmiş vergi dərəcəsi"
+      }
+    ],
+    "overview": "e-Hesab frilanserlər, kiçik və orta biznes üçün mobil yönümlü, süni intellektə əsaslanan ilkin mühasibat platformasıdır. Platforma Azərbaycan vergi qanunvericiliyinə və Dövlət Vergi Xidmətinin infrastrukturuna uyğunlaşdırılıb, hesab-fakturaları, xərclərin uçotunu, əmək haqqını, DSMF və e-Qaimə proseslərini avtomatlaşdırır.",
+    "problem": "Frilanserlər və kiçik bizneslər vergi öhdəliklərindən çox vaxt son anda xəbər tutur. Qəbzlər kağızda qalır, xərclər uçota alınmır, bəyannamə müddətləri unudulur — bu miqyasda mühasib saxlamaq isə həddindən artıq bahadır.",
+    "approach": "Vergi hesablamaları koda sabit yazılmayıb. Sadələşdirilmiş vergi, ƏDV, mənfəət vergisi və əmək haqqından tutulmalar konfiqurasiya edilə bilən dinamik mühərrik üzərində işləyir, ona görə də qanunvericilik dəyişəndə heç kim kodu yenidən yazmır. Kağız sənədlər kamera ilə çəkiliş, OCR və Claude API vasitəsilə rəqəmsal hesab-fakturaya çevrilir.",
+    "result": "İstifadəçilər vergi təqvimini, gözlənilən ödənişləri və mümkün cərimələri əvvəlcədən görür. e-Qaimələr birbaşa DVX portalına göndərilir, oflayn daxil edilmiş xərclər isə şəbəkə bərpa olunanda sinxronlaşdırılır.",
+    "features": [
+      {
+        "t": "Süni intellektlə hesab-fakturalar və OCR",
+        "d": "Kağız qəbzin şəklini çəkin və onu rəqəmsal hesab-fakturaya çevirin."
+      },
+      {
+        "t": "DVX e-Qaimə inteqrasiyası",
+        "d": "Bəyannamələrin təqdim edilməsi və XML əsaslı e-qəbzlərin avtomatik göndərilməsi."
+      },
+      {
+        "t": "Dinamik vergi mühərriki",
+        "d": "Dərəcələr kodla deyil, konfiqurasiya ilə dəyişdirilir."
+      },
+      {
+        "t": "Süni intellektli virtual mühasib",
+        "d": "Xərcləri mühasibat hesablarına aid edir və ay sonu bağlanış addımlarını tövsiyə edir."
+      },
+      {
+        "t": "Ağıllı vergi təqvimi",
+        "d": "Müddətləri izləyir, cərimələri hesablayır və vaxtında push bildirişləri göndərir."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Modulyar monolit",
+        "d": "CQRS və MediatR ilə təcrid olunmuş domenlər; gələcəkdə mikroservislərə ayrıla bilər."
+      },
+      {
+        "t": "Offline-first yanaşma",
+        "d": "Xərclər və hesab-fakturalar SQLite-da lokal saxlanılır və bağlantı bərpa olunanda mərkəzi serverlə sinxronlaşdırılır."
+      },
+      {
+        "t": "ASAN Login",
+        "d": "JWT əsaslı autentifikasiya ilə ASAN Login vasitəsilə giriş."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          "ASP.NET Core 8",
+          "Modulyar monolit",
+          "CQRS + MediatR"
+        ]
+      },
+      {
+        "k": "Məlumatlar",
+        "v": [
+          "PostgreSQL 16",
+          "Redis 7",
+          "EF Core 8"
+        ]
+      },
+      {
+        "k": "Mobil",
+        "v": [
+          "React Native (Expo SDK 52+)",
+          "Expo Router",
+          "expo-sqlite"
+        ]
+      },
+      {
+        "k": "Vəziyyətin idarəsi",
+        "v": [
+          "Zustand",
+          "TanStack Query"
+        ]
+      },
+      {
+        "k": "Süni intellekt və inteqrasiyalar",
+        "v": [
+          "Claude API",
+          "Google Vision OCR",
+          "ASAN Login",
+          "QuestPDF"
+        ]
+      },
+      {
+        "k": "Keyfiyyət",
+        "v": [
+          "FluentValidation",
+          "xUnit",
+          "FluentAssertions",
+          "Playwright",
+          "SonarQube"
+        ]
+      }
+    ],
+    "coverAlt": "e-Hesab mobil tətbiqinin ekranları telefon çərçivələrində"
+  },
+  {
+    "slug": "e-faktura",
+    "line": "Kiçik biznes üçün oflayn hesab-faktura tətbiqi",
+    "headline": "Kiçik biznes üçün oflayn hesab-faktura tətbiqi",
+    "subtitle": "İnternetsiz işləyən, tamamilə Azərbaycan dilində hesab-faktura həlli.",
+    "scope": "Fintex və maliyyə",
+    "chips": [
+      "5 peşəkar A4 hesab-faktura şablonu",
+      "0 server tələb olunur — tam oflayn",
+      "6 ay əhatə edən gəlir qrafiki"
+    ],
+    "metrics": [
+      {
+        "v": "5",
+        "l": "peşəkar A4 hesab-faktura şablonu"
+      },
+      {
+        "v": "0",
+        "l": "server tələb olunur — tam oflayn"
+      },
+      {
+        "v": "6 ay",
+        "l": "gəlir qrafikinin dövrü"
+      }
+    ],
+    "overview": "E-Faktura sahibkarlar və frilanserlər üçün offline-first mobil tətbiqdir. Tətbiq A4 formatında hesab-faktura yaradılmasını, müştərilərin idarə edilməsini və ödənişlərin izlənməsini əhatə edir. Məlumatlar cihazda qalır, hesab-fakturalar isə PDF formatında və ya WhatsApp vasitəsilə göndərilə bilər.",
+    "problem": "Kiçik biznes sahibləri hesab-fakturaları ya Word şablonlarında yazır, ya da ümumiyyətlə tərtib etmir, bulud alətləri isə internet olmayan yerdə işləmir.",
+    "approach": "Tətbiq serversiz, lokal SQLite yaddaşı üzərində offline-first prinsipi ilə qurulub. Kod qatlara bölünüb — repository, təmiz biznes məntiqi, vəziyyət, UI — hesablama məntiqi isə unit testlərlə əhatə olunub.",
+    "result": "İstifadəçilər oflayn rejimdə hesab-faktura tərtib edə, borcları izləyə, WhatsApp deep link vasitəsilə ödəniş xatırlatmaları göndərə və kağız hesab-fakturaları kamera ilə skan edə bilər.",
+    "features": [
+      {
+        "t": "Hesab-fakturanın yaradılması",
+        "d": "Beş şablon, tənzimlənən vergi dərəcəsi, çoxsətirli mövqelər və valyuta dəstəyi."
+      },
+      {
+        "t": "Ödənişlərin izlənməsi",
+        "d": "Qismən və tam ödənişlər, ödənilməyib / ödənilib / gecikib statusları, debitor və kreditor borcları balansı."
+      },
+      {
+        "t": "OCR skanlama",
+        "d": "Kağız hesab-fakturanı kamera ilə skan edin."
+      },
+      {
+        "t": "WhatsApp və SMS ilə göndərmə",
+        "d": "Azərbaycan telefon nömrələrinin normallaşdırılması ilə."
+      },
+      {
+        "t": "Ehtiyat nüsxə və bərpa",
+        "d": "Cihazdakı məlumatların ixracı və idxalı."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Qatlı struktur",
+        "d": "Repository → təmiz biznes məntiqi → vəziyyət → UI."
+      },
+      {
+        "t": "Testlənmiş nüvə və sərt tiplər",
+        "d": "Hesablama nüvəsi unit testlərlə yoxlanılır, kod bazası isə TypeScript strict rejimində işləyir."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Mobil",
+        "v": [
+          "React Native 0.81",
+          "Expo SDK 54 (React 19)",
+          "expo-router"
+        ]
+      },
+      {
+        "k": "Dil",
+        "v": [
+          "TypeScript"
+        ]
+      },
+      {
+        "k": "Məlumatlar və vəziyyət",
+        "v": [
+          "expo-sqlite",
+          "Zustand"
+        ]
+      },
+      {
+        "k": "Sənədlər",
+        "v": [
+          "expo-print",
+          "react-native-webview"
+        ]
+      },
+      {
+        "k": "Testləşdirmə",
+        "v": [
+          "Jest"
+        ]
+      }
+    ],
+    "coverAlt": "E-Faktura mobil tətbiqinin ekranları telefon çərçivələrində"
+  },
+  {
+    "slug": "insanis",
+    "line": "Tikinti idarəetmə sistemi",
+    "headline": "Tikinti idarəetmə sistemi",
+    "subtitle": "Ofis ilə tikinti sahəsi arasındakı informasiya boşluğunu aradan qaldırır.",
+    "scope": "B2B və SaaS",
+    "chips": [
+      "3 rol — menecer, podratçı, sifarişçi",
+      "real vaxt maliyyə və irəliləyiş analitikası",
+      "1 idarəetmə paneli — bütün obyektlər üçün"
+    ],
+    "metrics": [
+      {
+        "v": "3",
+        "l": "rol — menecer, podratçı, sifarişçi"
+      },
+      {
+        "v": "Real vaxt",
+        "l": "maliyyə və irəliləyiş analitikası"
+      },
+      {
+        "v": "1",
+        "l": "idarəetmə paneli — bütün obyektlər üçün"
+      }
+    ],
+    "overview": "İnsanİş adətən rəqəmsallaşdırılmamış qalan prosesləri avtomatlaşdıran tikinti idarəetmə proqram təminatıdır. O, menecerlərə, podratçılara və sifarişçilərə tikinti işləri, işçi heyəti və materiallar üçün vahid mərkəz təqdim edir.",
+    "problem": "Obyekt məlumatları ofislə tikinti sahəsi arasında itib-batır. Gündəlik jurnallar kağızda qalır, material sərfi axşam telefonla bildirilir, büdcənin aşılması isə yalnız ay sonunda üzə çıxır.",
+    "approach": "Obyektlər, işçi heyəti və material təchizatı vahid idarə panelində birləşdirildi. Gündəlik jurnallar, tapşırıqların təyinatı və təhvil-təslim prosesləri rəqəmsallaşdırıldı, maliyyə və irəliləyiş isə real vaxt qrafiklərinə bağlandı.",
+    "result": "Menecerlər faizlə irəliləyişi, büdcə icmalını və kritik xəbərdarlıqları bir ekranda görür. Gündəlik işlərin rəqəmsallaşdırılması əməliyyat xərclərini azaldır və qərarların qəbulunu sürətləndirir.",
+    "features": [
+      {
+        "t": "Mərkəzləşdirilmiş idarə paneli",
+        "d": "Bütün obyektlər, insanlar və materiallar bir yerdə."
+      },
+      {
+        "t": "Proseslərin avtomatlaşdırılması",
+        "d": "Gündəlik jurnallar, tapşırıqlar və təhvil-təslim."
+      },
+      {
+        "t": "Real vaxt analitikası",
+        "d": "Maliyyə, irəliləyiş və səmərəlilik hesabatları."
+      },
+      {
+        "t": "BoQ və smeta izlənməsi",
+        "d": "Planlaşdırılan və faktiki göstəricilərin müqayisəsi."
+      },
+      {
+        "t": "Kritik xəbərdarlıqlar",
+        "d": "Büdcənin aşılması, təhlükəsizlik insidentləri və gecikmələr."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Miqyaslana bilən infrastruktur",
+        "d": "Kiçik podratçılardan iri korporasiyalara qədər yüksək yükü daşımaq üçün qurulub."
+      },
+      {
+        "t": "Vahid məlumat axını",
+        "d": "Ofis və tikinti sahəsi eyni məlumatlarla işləyir."
+      },
+      {
+        "t": "Rola əsaslanan görünüşlər",
+        "d": "Menecerlər, podratçılar və sifarişçilər hər biri ehtiyac duyduğu məlumatı görür."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Arxitektura",
+        "v": [
+          "Full-stack",
+          "Miqyaslana bilən və təhlükəsiz",
+          "Rola əsaslanan giriş"
+        ]
+      },
+      {
+        "k": "Hesabatlılıq",
+        "v": [
+          "Real vaxt rejimində maliyyə, irəliləyiş və səmərəlilik hesabatları"
+        ]
+      }
+    ],
+    "coverAlt": "İnsanİş planşet tətbiqinin ekranları"
+  },
+  {
+    "slug": "suntech",
+    "line": "Daxili logistika və kontent idarəetmə platforması",
+    "headline": "Daxili logistika və kontent idarəetmə platforması",
+    "subtitle": "Saytın hər bir elementi proqramçı olmadan idarə olunur.",
+    "scope": "B2B və SaaS",
+    "chips": [
+      "∞ limitsiz dinamik səhifə",
+      "0 sətir kod — kontenti dəyişmək üçün",
+      "SSR SEO üçün server tərəfində render"
+    ],
+    "metrics": [
+      {
+        "v": "∞",
+        "l": "limitsiz dinamik səhifə"
+      },
+      {
+        "v": "0",
+        "l": "sətir kod — kontenti dəyişmək üçün"
+      },
+      {
+        "v": "SSR",
+        "l": "SEO üçün server tərəfində render"
+      }
+    ],
+    "overview": "Suntech.az şirkətin daxili logistika xidmətlərini təqdim edən veb platformadır. Onun əsasını proqramçı olmayan əməkdaşlara saytın strukturunu dəyişməyə, səhifə əlavə etməyə və ya silməyə, bütün kontenti idarə etməyə imkan verən geniş admin panel təşkil edir.",
+    "problem": "Logistika şirkətinin xidmət siyahısı və texnika parkı tez-tez dəyişirdi, lakin mətndə edilən hər kiçik düzəliş üçün proqramçı lazım idi, ona görə də sayt reallıqdan geri qalırdı.",
+    "approach": "Frontend və backend tam ayrılıb: vitrin saytını Next.js SSR render edir, kontenti isə .NET Core API təqdim edir. Admin paneldə yaradılan hər səhifə avtomatik URL alır və naviqasiya strukturuna əlavə olunur.",
+    "result": "Kontent komandası saytı müstəqil idarə edir. Server tərəfində render sayəsində səhifələr tez yüklənir və axtarış sistemlərində düzgün indekslənir.",
+    "features": [
+      {
+        "t": "Tam idarə olunan admin panel",
+        "d": "Hər mətn, şəkil və struktur elementi redaktə edilə bilər."
+      },
+      {
+        "t": "Dinamik səhifələrin idarə edilməsi",
+        "d": "Limitsiz sayda səhifə yaradın, redaktə edin, gizlədin və ya silin."
+      },
+      {
+        "t": "Logistikaya yönəlmiş kontent",
+        "d": "Daşınma qaydaları, texnika parkı və korporativ məlumatlar vahid platformada."
+      },
+      {
+        "t": "Performans və SEO",
+        "d": "Next.js SSR səhifələri sürətli və indekslənən saxlayır."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Headless yanaşma",
+        "d": "Gələcəkdə mobil tətbiq də eyni API-yə qoşula bilər."
+      },
+      {
+        "t": "Dinamik marşrutlaşdırma",
+        "d": "Admin paneldə yaradılan hər səhifə struktura inteqrasiya olunan avtomatik URL alır."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React",
+          "Next.js (SSR)"
+        ]
+      },
+      {
+        "k": "Verilənlər bazası",
+        "v": [
+          "MS SQL Server"
+        ]
+      }
+    ],
+    "coverAlt": "Suntech veb saytı noutbuk ekranında"
+  },
+  {
+    "slug": "nitro-garage",
+    "line": "Avtoservis və ehtiyat hissələri marketpleysi",
+    "headline": "Avtomobil servisi və ehtiyat hissələri marketpleysi",
+    "subtitle": "Sürücü, usta və mağaza vahid platformada — dörd rol, 79+ ekran.",
+    "scope": "Marketpleys",
+    "chips": [
+      "79+ ekran — dörd rol üzrə",
+      "4 istifadəçi rolu",
+      "3 dil — AZ / RU / EN"
+    ],
+    "metrics": [
+      {
+        "v": "79+",
+        "l": "ekran — dörd rol üzrə"
+      },
+      {
+        "v": "4",
+        "l": "istifadəçi rolu"
+      },
+      {
+        "v": "3",
+        "l": "dil — AZ / RU / EN"
+      }
+    ],
+    "overview": "Nitro Garage Azərbaycanın avtoservis bazarını rəqəmsallaşdıran mobil tətbiqdir. O, sürücüləri, ustaları və ehtiyat hissələri mağazalarını vahid platformada birləşdirir: sürücülər servis və ya ehtiyat hissəsi sorğusu yerləşdirir, ustalar və mağazalar isə real vaxtda təkliflər göndərir ki, ən ucuz variant seçilə bilsin.",
+    "problem": "Sürücülər ehtiyat hissələrinin qiymətini müqayisə etmək üçün mağazalara bir-bir zəng edir, ustanın nə qədər məşğul olduğunu bilmir, yolda qaldıqda isə kömək tapmaqda çətinlik çəkir. Bazarda qiymət şəffaflığı yoxdur.",
+    "approach": "Tender modeli — bir sorğu, çoxlu təklif. Dörd rol üçün — sürücü, usta, mağaza və admin — ayrıca naviqatorlar və ekran dəstləri hazırlandı. Təcili hallar üçün geolokasiyaya əsaslanan SOS axını nəzərdə tutulub.",
+    "result": "Sürücülər bir sorğu ilə bir neçə təklif alır və qiymətləri müqayisə edir. Mağazalar avtomatik təklif qaydaları ilə məhsullarını satır, ustalar isə rezervasiyalarını tətbiq vasitəsilə idarə edir.",
+    "features": [
+      {
+        "t": "Servis marketpleysi",
+        "d": "Sürücülər sorğu yerləşdirir, ustalar və mağazalar təklif verir."
+      },
+      {
+        "t": "SOS yol yardımı",
+        "d": "Geolokasiya vasitəsilə yaxınlıqdakı ustalara avtomatik xəbərdarlıq göndərilir."
+      },
+      {
+        "t": "VIN skaneri",
+        "d": "Kamera və OCR avtomobili müəyyən edir."
+      },
+      {
+        "t": "Süni intellekt köməkçisi",
+        "d": "Diaqnostika, həmçinin servis və ehtiyat hissəsi tövsiyələri."
+      },
+      {
+        "t": "Pul kisəsi və keşbek",
+        "d": "Əməliyyat tarixçəsi, geri ödənişlər və hər rol üzrə balanslar."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Rola əsaslanan naviqasiya",
+        "d": "Hər rol üçün tamamilə ayrı naviqatorlar və ekranlar."
+      },
+      {
+        "t": "Hər domen üçün servis qatı",
+        "d": "Hər backend domeninin öz servis qatı var və hamısı JWT ötürülməsi və token yenilənməsi olan vahid mərkəzi axios klienti üzərindən işləyir."
+      },
+      {
+        "t": "Düşünülmüş vəziyyət seçimləri",
+        "d": "Ekranlararası vəziyyət üçün Zustand store-ları, lokal vəziyyət üçün useState — Redux qəsdən istifadə edilməyib."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Mobil",
+        "v": [
+          "React Native 0.83",
+          "React 19 (New Architecture)",
+          "TypeScript 5.8 (strict)"
+        ]
+      },
+      {
+        "k": "Naviqasiya",
+        "v": [
+          "React Navigation v7 (native-stack, drawer, tabs)"
+        ]
+      },
+      {
+        "k": "Vəziyyət və şəbəkə",
+        "v": [
+          "Zustand",
+          "Axios"
+        ]
+      },
+      {
+        "k": "Real vaxt",
+        "v": [
+          "SignalR (WebSocket)",
+          "Firebase Cloud Messaging",
+          "Notifee"
+        ]
+      },
+      {
+        "k": "Kamera və skanlama",
+        "v": [
+          "Vision Camera v5",
+          "OCR"
+        ]
+      },
+      {
+        "k": "Backend",
+        "v": [
+          ".NET 9",
+          "FastEndpoints",
+          "CQRS",
+          "PostgreSQL"
+        ]
+      }
+    ],
+    "coverAlt": "Nitro Garage mobil tətbiqinin ekranları telefon çərçivələrində"
+  },
+  {
+    "slug": "jobremotely",
+    "line": "Seçilmiş uzaqdan iş vakansiyaları platforması",
+    "headline": "Seçilmiş uzaqdan iş vakansiyaları platforması",
+    "subtitle": "Maaşı açıq göstərilən, HR tərəfindən yoxlanılmış və spamdan təmiz vakansiyalar.",
+    "scope": "Marketpleys",
+    "chips": [
+      "1280+ Vitest testi",
+      "3 ATS mənbəyi — Greenhouse, Lever, Ashby",
+      "7 mərhələli işə qəbul prosesi"
+    ],
+    "metrics": [
+      {
+        "v": "1280+",
+        "l": "Vitest testi"
+      },
+      {
+        "v": "3",
+        "l": "ATS mənbəyi — Greenhouse, Lever, Ashby"
+      },
+      {
+        "v": "7",
+        "l": "mərhələli işə qəbul prosesi"
+      }
+    ],
+    "overview": "JobRemotely uzaqdan işləyən mühəndislər, dizaynerlər və operatorlar üçün HR tərəfindən yoxlanılmış vakansiyaları bir araya gətirən iş elanları platformasıdır. Platformada yalnız maaşı açıq göstərilən uzaqdan iş vakansiyaları dərc olunur, namizədlər isə avtomatlaşdırılmış axın vasitəsilə müraciətdən iş təklifinədək irəliləyir.",
+    "problem": "Uzaqdan iş axtaranlar spam elanlar, gizlədilmiş maaşlar və rekruter mesajları arasında itib-batır. Müraciət etdikdən sonra namizədlər müraciətlərinin hansı mərhələdə olduğunu heç vaxt bilmir.",
+    "approach": "Vakansiyalar Greenhouse, Lever və Ashby ATS platformalarından planlaşdırılmış skreypinq yolu ilə toplanır, sonra maaş və dil üzrə filtrlənir. Müraciətin statusu sonlu vəziyyət maşınına (finite state machine) bağlanıb: o, yalnız icazə verilən keçidlərlə dəyişir, buna görə də namizəd həmişə düzgün mərhələni görür.",
+    "result": "Namizədlər bir kliklə müraciət edir və bacarıq testi, dil yoxlaması, müsahibələr və iş təklifi mərhələlərindən şəffaf şəkildə keçir. Adminlər konversiya qıfı, ötürücülük və mərhələlərdə keçirilən vaxt üzrə canlı göstəriciləri izləyir.",
+    "features": [
+      {
+        "t": "Seçilmiş vakansiyalar lövhəsi",
+        "d": "HR tərəfindən yoxlanılmış, spamsız uzaqdan iş vakansiyaları. Şirkətlər namizədlərin şəxsiyyətini görmür (anonim müraciət)."
+      },
+      {
+        "t": "Çoxmərhələli proses",
+        "d": "Müraciət → ilkin seçim → bacarıq testi → dil → müsahibə → iş təklifi → işə qəbul."
+      },
+      {
+        "t": "Süni intellekt alətləri",
+        "d": "CV əsasında profilin avtomatik doldurulması və motivasiya məktublarının yaradılması."
+      },
+      {
+        "t": "Avtomatlaşdırılmış skreypinq",
+        "d": "Maaş və dil filtrləri ilə ATS platformalarından planlaşdırılmış toplama."
+      },
+      {
+        "t": "Admin analitikası",
+        "d": "Status hadisələri əsasında hesablanan konversiya qıfı, ötürücülük və mərhələ müddəti göstəriciləri."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Sonlu vəziyyət maşını",
+        "d": "Müraciətin statusu yalnız icazə verilən keçidlərlə dəyişir; optimistic concurrency konfliktlərinin qarşısı HTTP 409 ilə alınır."
+      },
+      {
+        "t": "Vahid həqiqət mənbəyi",
+        "d": "Zod sxemləri API ilə frontend arasında paylaşılır, cavablar isə tipləşdirilmiş ok() / err() zərflərindən istifadə edir."
+      },
+      {
+        "t": "Ayrılmış fon işləri",
+        "d": "E-poçt, skreypinq, Telegram bildirişləri və baxış sayğacları veb prosesdən kənarda, pg-boss worker-ində işləyir."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Freymvork",
+        "v": [
+          "Next.js 15 (App Router / RSC)",
+          "React 19",
+          "TypeScript 5.7"
+        ]
+      },
+      {
+        "k": "UI",
+        "v": [
+          "Tailwind CSS v4",
+          "Radix UI",
+          "shadcn/ui",
+          "Framer Motion"
+        ]
+      },
+      {
+        "k": "Təhlükəsizlik",
+        "v": [
+          "NextAuth v5",
+          "JWT (jose)",
+          "bcrypt",
+          "Google OAuth"
+        ]
+      },
+      {
+        "k": "Məlumatlar",
+        "v": [
+          "PostgreSQL",
+          "Prisma 6",
+          "Redis (ioredis)"
+        ]
+      },
+      {
+        "k": "Fon tapşırıqları",
+        "v": [
+          "pg-boss worker"
+        ]
+      },
+      {
+        "k": "Süni intellekt",
+        "v": [
+          "OpenAI — CV əsasında profilin doldurulması və motivasiya məktubları"
+        ]
+      },
+      {
+        "k": "Keyfiyyət",
+        "v": [
+          "Vitest (1280+ test)",
+          "Playwright",
+          "axe əlçatanlıq yoxlamaları"
+        ]
+      },
+      {
+        "k": "İnfrastruktur",
+        "v": [
+          "Docker",
+          "Cloudflare DNS/TLS",
+          "Cron əsaslı skreypinq"
+        ]
+      }
+    ],
+    "coverAlt": "JobRemotely veb tətbiqi noutbuk və planşet ekranında"
+  },
+  {
+    "slug": "moleaks",
+    "line": "Məlumat sızmalarının axtarışı platforması",
+    "headline": "Sızdırılmış məlumatların axtarışı platforması",
+    "subtitle": "E-poçt, telefon nömrəsi, domen və üz tanıma üzrə dərin axtarış.",
+    "scope": "Kibertəhlükəsizlik",
+    "chips": [
+      "4 axtarış vektoru — e-poçt, telefon, domen, üz",
+      "M+ sətir saniyələr ərzində skan edilir",
+      "SSR Next.js üzərində sürətli, SEO-dostu interfeys"
+    ],
+    "metrics": [
+      {
+        "v": "4",
+        "l": "axtarış vektoru — e-poçt, telefon, domen, üz"
+      },
+      {
+        "v": "M+",
+        "l": "sətir saniyələr ərzində skan edilir"
+      },
+      {
+        "v": "SSR",
+        "l": "Next.js üzərində sürətli, SEO-dostu interfeys"
+      }
+    ],
+    "overview": "Moleaks fərdlər və kibertəhlükəsizlik mütəxəssisləri üçün yoxlama alətidir. O, istifadəçinin məlumatlarının internetdə və ya dark web-də sızdırılmış verilənlər bazalarında olub-olmadığını göstərir — e-poçt ünvanı, mobil nömrə, domen adı və ya üz yoxlanıla bilər.",
+    "problem": "İnsanlar çox vaxt məlumatlarının sızdığını yalnız hesabları ələ keçirildikdən sonra öyrənir. Sızma bazaları dağınıq, formatlaşdırılmamışdır və milyonlarla sətirdən ibarətdir, bu da əl ilə yoxlamanı qeyri-mümkün edir.",
+    "approach": "Axtarış və analiz bir-birindən ayrılıb. .NET Core API minlərlə eyni vaxtlı sorğunu emal edir, ağır analiz isə fonda Python və DeepScanner ilə aparılır. Verilənlər bazasının indeksləmə strategiyaları milyonlarla sətri saniyələr ərzində skan etməyə imkan verir.",
+    "result": "İstifadəçilər e-poçt ünvanını, telefon nömrəsini və ya bütöv korporativ domeni yoxlaya və sızmanın mənbəyi, tarixi və növü barədə ətraflı hesabat ala bilər.",
+    "features": [
+      {
+        "t": "Çoxparametrli axtarış",
+        "d": "Sızdırılmış bazalarda e-poçt, mobil nömrə və IP ünvanı üzrə sürətli yoxlama."
+      },
+      {
+        "t": "Domen analizi",
+        "d": "Korporativ və ya şəxsi domenlə bağlı sızdırılmış hesabları aşkar edir."
+      },
+      {
+        "t": "Üz tanıma ilə axtarış",
+        "d": "İnternetdəki şəkillərdə insanları üz cizgilərinə görə müəyyən edir."
+      },
+      {
+        "t": "Dərin skanlama",
+        "d": "Böyük həcmli sızdırılmış məlumatların avtomatlaşdırılmış analizi."
+      },
+      {
+        "t": "Təhlükəsizlik hesabatları",
+        "d": "Hər sızmanın mənbəyi, tarixi və növü barədə ətraflı hesabatlar."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Asinxron emal",
+        "d": "Python və DeepScanner fonda işləyir, buna görə də böyük analizlər əsas sistemi heç vaxt yavaşlatmır."
+      },
+      {
+        "t": "Optimallaşdırılmış verilənlər bazası",
+        "d": "MSSQL indeksləməsi milyonlarla sətri saniyələr ərzində skan etməyə imkan verir."
+      },
+      {
+        "t": "Yüksək performanslı API",
+        "d": ".NET Core minlərlə eyni vaxtlı axtarış sorğusunu təhlükəsiz şəkildə emal edir."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React",
+          "Next.js (server tərəfində render)"
+        ]
+      },
+      {
+        "k": "Verilənlər bazası",
+        "v": [
+          "İndeksləmə strategiyaları ilə MS SQL Server"
+        ]
+      },
+      {
+        "k": "Analiz",
+        "v": [
+          "Python",
+          "DeepScanner"
+        ]
+      }
+    ],
+    "coverAlt": "Moleaks sızma axtarışı və hesabat interfeysi"
+  },
+  {
+    "slug": "safemole",
+    "line": "Rəqəmsal təhlükəsizlik və məxfilik platforması",
+    "headline": "Rəqəmsal təhlükəsizlik və məxfilik platforması",
+    "subtitle": "Tam native iOS və Android, hibrid verilənlər bazası və uçdan-uca şifrələmə.",
+    "scope": "Kibertəhlükəsizlik",
+    "chips": [
+      "2 tam native tətbiq — Kotlin və Swift",
+      "AES-256 uçdan-uca şifrələmə",
+      "2 verilənlər bazası — ACID üçün MSSQL, loglar üçün MongoDB"
+    ],
+    "metrics": [
+      {
+        "v": "2",
+        "l": "tam native tətbiq — Kotlin və Swift"
+      },
+      {
+        "v": "AES-256",
+        "l": "uçdan-uca şifrələmə"
+      },
+      {
+        "v": "2",
+        "l": "verilənlər bazası — MSSQL (ACID) və MongoDB (loglar)"
+      }
+    ],
+    "overview": "Safemole şəxsi və korporativ məlumatların qorunması, təhlükəsiz idarə edilməsi və ətraflı qeydiyyatının aparılması üçün native mobil həlldir. iOS və Android tətbiqlərinin hər ikisi tam native-dir, bu da biometriya və secure enclave kimi cihazın təhlükəsizlik funksiyalarına birbaşa çıxış verir.",
+    "problem": "Məxfilik tətbiqləri adətən kross-platforma qurulur, bu isə cihazın təhlükəsizlik avadanlığına çıxışı məhdudlaşdırır. Bundan əlavə, hər təhlükəsizlik hadisəsinin loglanması əsas verilənlər bazasını şişirdir və sistemi yavaşladır.",
+    "approach": "Hər platforma öz native dilində yazılıb — Android üçün Kotlin, iOS üçün Swift. Verilənlər bazası poliqlotdur: tranzaksiya məlumatları ACID zəmanətləri ilə MSSQL-də saxlanılır, davamlı əməliyyat logları isə MongoDB-yə yazılır, beləliklə əsas baza sürətli qalır.",
+    "result": "Girişlər və hər bir həssas əməliyyat aparat səviyyəsində biometriya ilə təsdiqlənir. Şübhəli giriş cəhdi və ya icazəsiz məlumat ixracı baş verdikdə istifadəçi dərhal push bildiriş alır.",
+    "features": [
+      {
+        "t": "Tam native performans",
+        "d": "Cihaz resurslarından optimal istifadə, yüksək sürət və səliqəli interfeys."
+      },
+      {
+        "t": "Ətraflı loglama",
+        "d": "Hər addımın, API sorğusunun və təhlükəsizlik hadisəsinin real vaxtda qeydə alınması."
+      },
+      {
+        "t": "Biometrik inteqrasiya",
+        "d": "FaceID, TouchID və Android Fingerprint API vasitəsilə aparat səviyyəsində təsdiqləmə."
+      },
+      {
+        "t": "Çoxqatlı şifrələmə",
+        "d": "Həssas məlumatlar həm ötürülmə zamanı, həm də saxlanılarkən qorunur."
+      },
+      {
+        "t": "Anomaliya xəbərdarlıqları",
+        "d": "Şübhəli girişlər və ya icazəsiz məlumat çıxarılması zamanı dərhal push bildirişlər."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Poliqlot saxlama",
+        "d": "ACID zəmanətli tranzaksiya məlumatları MSSQL-də, davamlı loglar MongoDB-də — əsas verilənlər bazası heç vaxt yavaşlamır."
+      },
+      {
+        "t": "Təmiz arxitektura",
+        "d": "Mobil tərəfdə MVVM və ya VIPER, backend-də modul struktur; biznes məntiqi, məlumat qatı və UI aydın şəkildə ayrılıb."
+      },
+      {
+        "t": "Təhlükəsiz API gateway",
+        "d": "Hər sorğu firewall və sorğu limiti tətbiq olunan vahid gateway-dən keçir."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API",
+          "Mikroservis yanaşması"
+        ]
+      },
+      {
+        "k": "Mobil",
+        "v": [
+          "Kotlin (Android, native)",
+          "Swift (iOS, native)"
+        ]
+      },
+      {
+        "k": "Verilənlər bazaları",
+        "v": [
+          "MS SQL Server (relyasiyalı)",
+          "MongoDB (loglar və böyük verilənlər)"
+        ]
+      },
+      {
+        "k": "Təhlükəsizlik",
+        "v": [
+          "JWT",
+          "OAuth 2.0",
+          "AES-256 uçdan-uca şifrələmə"
+        ]
+      }
+    ],
+    "coverAlt": "Safemole mobil tətbiqinin ekranları telefon çərçivələrində"
+  },
+  {
+    "slug": "rana",
+    "line": "Rəqəmsal miras və gələcəyə mesaj platforması",
+    "headline": "Rəqəmsal miras və gələcəyə mesaj platforması",
+    "subtitle": "Şifrələnmiş mesajların yalnız təyin olunmuş tarixdə açıldığı zaman kapsulu.",
+    "scope": "Kibertəhlükəsizlik",
+    "chips": [
+      "E2E uçdan-uca şifrələmə — hətta adminlər üçün də görünməz",
+      "3 mesaj formatı — mətn, səs, video",
+      "2 platforma — iOS və Android"
+    ],
+    "metrics": [
+      {
+        "v": "E2E",
+        "l": "uçdan-uca şifrələmə — hətta adminlər üçün də görünməz"
+      },
+      {
+        "v": "3",
+        "l": "mesaj formatı — mətn, səs, video"
+      },
+      {
+        "v": "2",
+        "l": "platforma — iOS və Android"
+      }
+    ],
+    "overview": "Rana xatirələri, vacib mesajları və rəqəmsal mirası gələcək nəsillərə təhlükəsiz çatdıran zaman kapsulu həllidir. İstifadəçilər ailə üzvləri üçün illər sonrasına mesajlar planlaşdırır; məlumatlar şifrələnir və yalnız əvvəlcədən müəyyən edilmiş tarixdə, seçilmiş varislər üçün açılır.",
+    "problem": "Rəqəmsal miras — parollar, sənədlər, ailə videoları — adətən heç bir yerdə sistemləşdirilmir. Onu buludda saxlamaq isə provayderin və ya administratorun nəzəri olaraq onu oxuya bilməsi deməkdir.",
+    "approach": "Kontent uçdan-uca şifrələnir, buna görə də heç bir üçüncü tərəf, o cümlədən administratorlar videolara və ya mesajlara çıxış əldə edə bilmir. Verilənlər bazasını yüngül saxlamaq üçün böyük video və audio fayllar asinxron şəkildə şifrələnmiş bulud yaddaşında saxlanılır, backend isə Docker və Nginx ilə yüksək əlçatanlıq üçün qurulub.",
+    "result": "İstifadəçi övladının 18 yaşı tamam olacağı gün üçün video mesaj, sənəd və ya vəsiyyət planlaşdıra bilər. Vaxt çatanda alıcı SMS, e-poçt və ya push bildiriş vasitəsilə xəbərdar edilir və kontent yalnız həmin anda açılır.",
+    "features": [
+      {
+        "t": "Zaman kapsulu",
+        "d": "Mətn, səs və ya video mesajları gələcəkdə konkret tarix və saata planlaşdırın."
+      },
+      {
+        "t": "Rəqəmsal miras və vəsiyyət",
+        "d": "Sənədləri, parolları və vəsiyyətləri təhlükəsiz saxlayın və vaxtı çatanda varislərə ötürün."
+      },
+      {
+        "t": "Ağıllı bildirişlər",
+        "d": "Alıcılar planlaşdırılmış vaxtda SMS, e-poçt və ya push vasitəsilə xəbərdar edilir."
+      },
+      {
+        "t": "Premium UI/UX",
+        "d": "Hər yaş qrupuna uyğun naviqasiyaya malik zərif, minimalist interfeys."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Uçdan-uca şifrələmə",
+        "d": "Xüsusi kriptoqrafiya sayəsində heç bir üçüncü tərəf, o cümlədən administrator kontentə çıxış əldə edə bilmir."
+      },
+      {
+        "t": "Təhlükəsiz blob yaddaşı",
+        "d": "Böyük video və audio fayllar asinxron şəkildə şifrələnmiş bulud yaddaşında saxlanılır."
+      },
+      {
+        "t": "Konteynerləşdirilmiş infrastruktur",
+        "d": "Backend Docker ilə təcrid olunub və Nginx reverse proxy arxasında yüksək əlçatanlıq üçün qurulub."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API"
+        ]
+      },
+      {
+        "k": "Mobil",
+        "v": [
+          "Expo ilə React Native"
+        ]
+      },
+      {
+        "k": "Verilənlər bazası",
+        "v": [
+          "MS SQL Server"
+        ]
+      },
+      {
+        "k": "Fayl yaddaşı",
+        "v": [
+          "Şifrələnmiş fayllar üçün bulud yaddaşı (AWS S3 və ya Azure Blob)"
+        ]
+      },
+      {
+        "k": "İnfrastruktur",
+        "v": [
+          "Docker",
+          "Nginx",
+          "PM2"
+        ]
+      }
+    ],
+    "coverAlt": "Rana mobil tətbiqinin ekranları telefon çərçivələrində"
+  },
+  {
+    "slug": "guraba",
+    "line": "Qlobal e-ticarət və satış ekosistemi",
+    "headline": "Qlobal e-ticarət və satış ekosistemi",
+    "subtitle": "Veb, mobil və Telegram botu — bir hesab, bir səbət.",
+    "scope": "E-ticarət və kataloq",
+    "chips": [
+      "3 satış kanalı — veb, mobil, Telegram",
+      "2 admin panel — veb və mobil",
+      "ms anbar qalığının kanallararası sinxronizasiyası"
+    ],
+    "metrics": [
+      {
+        "v": "3",
+        "l": "satış kanalı — veb, mobil, Telegram"
+      },
+      {
+        "v": "2",
+        "l": "admin panel — veb və mobil"
+      },
+      {
+        "v": "ms",
+        "l": "anbar qalığının kanallararası sinxronizasiyası"
+      }
+    ],
+    "overview": "Guraba adi e-ticarət saytından daha artığıdır. O, veb saytı, mobil tətbiqi və Telegram botunu vahid çoxkanallı satış ekosistemində birləşdirir. Onun əsas üstünlüyü ikili admin arxitekturasıdır: satışlar, anbar qalığı və istifadəçilər həm tam funksional veb paneldən, həm də ayrıca admin mobil tətbiqindən idarə olunur.",
+    "problem": "Müştəri saytda səbəti doldurur, Telegram-da suallar verir, sonra tətbiqi yükləyir — və hər kanalda hər şeyə yenidən başlamalı olur. Mağaza sahibi isə sifarişləri təsdiqləmək üçün kompüter arxasında oturmalıdır.",
+    "approach": "Bütün kanallar vahid API üzərində qurulub, buna görə də hesablar və səbətlər veb, mobil və botda eynidir. Verilənlər bazası hibriddir: maliyyə əməliyyatları və anbar qalığı ACID zəmanətləri ilə MSSQL-də saxlanılır, saniyədə minlərlə klik və log isə asinxron şəkildə MongoDB-yə yazılır.",
+    "result": "Anbar qalığındakı dəyişikliklər millisaniyələr ərzində bütün kanallara çatır və admin tətbiqinə ötürülür. Mağaza sahibi sifarişləri telefondan təsdiqləyir, müştəri isə istədiyi kanalda davam edir.",
+    "features": [
+      {
+        "t": "Çoxkanallı satış",
+        "d": "Veb sayt, mobil tətbiq və ya Telegram botu vasitəsilə eyni hesab və səbətlə sifariş."
+      },
+      {
+        "t": "Mobil admin idarəetməsi",
+        "d": "Sifarişləri təsdiqləyin, məhsul əlavə edin və analitikaya telefondan baxın."
+      },
+      {
+        "t": "Qlobal və hibrid ödənişlər",
+        "d": "Apple Pay, Google Pay və Web3 / kriptovalyuta inteqrasiyası."
+      },
+      {
+        "t": "Avtomatlaşdırılmış Telegram botu",
+        "d": "Çatın içində məhsul axtarın, səbətə əlavə edin və sifarişin statusunu izləyin."
+      },
+      {
+        "t": "Böyük verilənlərin analizi",
+        "d": "Marketinq üçün istifadəçi davranışı, axtarış tarixçəsi və loglar təhlil edilir."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Hibrid verilənlər bazası",
+        "d": "Maliyyə əməliyyatları və anbar qalığı ACID ilə MSSQL-də; saniyədə minlərlə klik və log asinxron şəkildə MongoDB-yə yazılır."
+      },
+      {
+        "t": "Ekosistemin real vaxt sinxronizasiyası",
+        "d": "Veb, mobil, bot və admin panellər vahid API vasitəsilə əlaqə saxlayır, buna görə də anbar qalığındakı dəyişiklik bütün kanallarda dərhal görünür."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          "Yüksək yük üçün qurulmuş .NET Core API"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React",
+          "Next.js (SSR)"
+        ]
+      },
+      {
+        "k": "Mobil",
+        "v": [
+          "Müştəri tətbiqi",
+          "Ayrıca admin tətbiqi"
+        ]
+      },
+      {
+        "k": "Bot",
+        "v": [
+          "Telegram Bot API"
+        ]
+      },
+      {
+        "k": "Verilənlər bazaları",
+        "v": [
+          "MS SQL Server (relyasiyalı)",
+          "MongoDB (loglar və böyük verilənlər)"
+        ]
+      },
+      {
+        "k": "Ödənişlər",
+        "v": [
+          "Apple Pay",
+          "Google Pay (Stripe)",
+          "Web3 / kriptovalyuta"
+        ]
+      }
+    ],
+    "coverAlt": "Guraba veb saytı noutbuk ekranında"
+  },
+  {
+    "slug": "parkhub",
+    "line": "Vahid ağıllı parkinq və ödəniş ekosistemi",
+    "headline": "Vahid ağıllı parkinq və ödəniş ekosistemi",
+    "subtitle": "Şəhər parkinqi, abunəliklər və ödənişlər bir tətbiqdə.",
+    "scope": "Platformalar və veb",
+    "chips": [
+      "3 xarici sistem inteqrasiyası",
+      "ACL anti-corruption layer vasitəsilə izolyasiya",
+      "MCP xüsusi arxitektura analizi aləti"
+    ],
+    "metrics": [
+      {
+        "v": "3",
+        "l": "xarici sistem inteqrasiyası"
+      },
+      {
+        "v": "ACL",
+        "l": "anti-corruption layer vasitəsilə izolyasiya"
+      },
+      {
+        "v": "MCP",
+        "l": "xüsusi arxitektura analizi aləti"
+      }
+    ],
+    "overview": "ParkHub şəhər parkinq infrastrukturunu rəqəmsallaşdıran və ödənişləri avtomatlaşdıran mobil platformadır. İstifadəçilər geolokasiya ilə ən yaxın zonanı tapır, parkinq sessiyalarını real vaxtda idarə edir, abunə olur və onlayn təhlükəsiz ödəniş edir.",
+    "problem": "Şəhərdə bir neçə parkinq operatoru fəaliyyət göstərir və hər birinin öz sistemi və ödəniş üsulu var. Sürücülər hansı zonaların boş olduğunu görə bilmir, hər operatora ayrıca ödəniş etməli olur və parkinq müddətinin nə vaxt bitdiyini asanlıqla izləyə bilmir.",
+    "approach": "Xarici operatorlar (ParkZone və Axsis) və EPoint ödəniş şlüzü Anti-Corruption Layer arxasında yerləşir, buna görə də onların məlumat modelləri heç vaxt əsas domenə sızmır. Backend Clean Architecture, FastEndpoints və CQRS üçün MediatR-dan istifadə edir, xüsusi MCP server isə arxitekturadan yayınmaları avtomatik yoxlayır.",
+    "result": "Sürücülər bütün operatorların zonalarını bir tətbiqdə görür, vahid abunəliklə ödəniş edir və sessiyanın bitmə vaxtını canlı izləyir.",
+    "features": [
+      {
+        "t": "Məkana əsaslanan zona axtarışı",
+        "d": "Ən yaxın parkinq zonaları interaktiv xəritədə."
+      },
+      {
+        "t": "Sessiyaların real vaxtda idarə edilməsi",
+        "d": "Başlama vaxtı, keçən müddət və bitmə xəbərdarlıqları."
+      },
+      {
+        "t": "Abunəlik axını",
+        "d": "Vahid şəhər abunəliyi bütün operatorlar üzrə ödənişləri əhatə edir."
+      },
+      {
+        "t": "Nömrə nişanı və barkod skanlama",
+        "d": "ML Kit vasitəsilə kameradan avtomobilin dövlət qeydiyyat nişanını oxuyur."
+      },
+      {
+        "t": "Push bildirişlər",
+        "d": "Sessiyalar, ödənişlər və abunəliklər barədə mərkəzləşdirilmiş Firebase bildirişləri."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Anti-Corruption Layer",
+        "d": "ParkZone, Axsis və EPoint ilə bütün qarşılıqlı əlaqəni daxili domendən təcrid edir."
+      },
+      {
+        "t": "Asılılıq analizi üçün MCP",
+        "d": "TypeScript ilə yazılmış Model Context Protocol serveri kod bazasının asılılıq qrafını qurur və Clean Architecture prinsiplərinə uyğunluğu qiymətləndirir."
+      },
+      {
+        "t": "Fon servisləri",
+        "d": "Firebase üzərində qurulmuş planlaşdırılmış tapşırıqlar və mərkəzləşdirilmiş push bildiriş sistemi."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET 8",
+          "FastEndpoints",
+          "MediatR (CQRS)",
+          "EF Core 9"
+        ]
+      },
+      {
+        "k": "Verilənlər bazası",
+        "v": [
+          "PostgreSQL"
+        ]
+      },
+      {
+        "k": "Mobil",
+        "v": [
+          "Flutter 3.6+",
+          "flutter_bloc",
+          "go_router",
+          "Dio"
+        ]
+      },
+      {
+        "k": "Xəritələr və skanlama",
+        "v": [
+          "Google Maps",
+          "ML Kit (OCR və barkod)",
+          "fl_chart"
+        ]
+      },
+      {
+        "k": "İnteqrasiyalar",
+        "v": [
+          "ParkZone",
+          "Axsis",
+          "EPoint (ACL vasitəsilə)",
+          "Firebase Push"
+        ]
+      },
+      {
+        "k": "Təhlükəsizlik",
+        "v": [
+          "Refresh token-lərlə JWT"
+        ]
+      }
+    ],
+    "coverAlt": "ParkHub mobil tətbiqinin ekranları telefon çərçivələrində"
+  },
+  {
+    "slug": "arsa-creative",
+    "line": "Kreativ agentlik və portfolio veb platforması",
+    "headline": "Kreativ agentlik və portfolio veb platforması",
+    "subtitle": "Kreativ işləri ən yüksək vizual keyfiyyətdə təqdim edən vitrin.",
+    "scope": "Platformalar və veb",
+    "chips": [
+      "SSR ani yüklənmə və SEO",
+      "Lazy ağır media serveri yormadan",
+      "100% bütün cihazlarda adaptiv"
+    ],
+    "metrics": [
+      {
+        "v": "SSR",
+        "l": "ani yüklənmə və SEO"
+      },
+      {
+        "v": "Lazy",
+        "l": "ağır media serveri yormadan"
+      },
+      {
+        "v": "100%",
+        "l": "bütün cihazlarda adaptiv"
+      }
+    ],
+    "overview": "Arsa Creative veb saytı agentliyin rəqəmsal vizit kartı rolunu oynayır. Sayt vizual detallara və minimalist UX-ə xüsusi diqqətlə dizayn edilib; məqsəd portfolionu cəlbedici şəkildə nümayiş etdirmək və potensial müştərilərin əlaqə saxlamasını asanlaşdırmaqdır.",
+    "problem": "Agentlik işlərini ağır, yüksək keyfiyyətli şəkillər və videolar vasitəsilə təqdim edir. Onları olduğu kimi yükləmək saytı yavaşladırdı və ziyarətçilər ilk beş saniyə ərzində saytı tərk edirdi.",
+    "approach": "Media Next.js-in daxili alətləri — Image Optimization və lazy loading — ilə optimallaşdırılıb, beləliklə serveri yormadan yüklənir. İnterfeys modul React komponentlərinə bölünüb və SSR ilə birləşdirilib, buna görə də animasiyalar rəvan işləyir və səhifə dərhal görünür.",
+    "result": "Portfolio qalereyası fasiləsiz açılır, sayt Google tərəfindən düzgün indekslənir, ziyarətçi müraciətləri isə .NET Core API vasitəsilə təhlükəsiz şəkildə daxil olur.",
+    "features": [
+      {
+        "t": "Dinamik portfolio qalereyası",
+        "d": "Tamamlanmış işlər yüksək keyfiyyətli şəkil və video formatlarında, fasiləsiz."
+      },
+      {
+        "t": "Minimalist, animasiyalı interfeys",
+        "d": "Brendin kreativ xarakterini əks etdirən interaktiv animasiyalar."
+      },
+      {
+        "t": "Sürət və SEO",
+        "d": "Next.js SSR sayəsində demək olar ki, ani yüklənmə və axtarışda yüksək mövqe."
+      },
+      {
+        "t": "Təhlükəsiz əlaqə formaları",
+        "d": "Müraciətlər .NET Core API vasitəsilə verilənlər bazasına və ya e-poçta göndərilir."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Medianın optimallaşdırılması",
+        "d": "Ağır fayllar Next.js Image Optimization və lazy loading vasitəsilə serveri həddindən artıq yükləmədən açılır."
+      },
+      {
+        "t": "Komponent əsaslı interfeys",
+        "d": "Modul React yanaşması səliqəli kod bazası və bütün cihazlarda tam adaptiv davranış təmin edir."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React",
+          "Next.js (server tərəfində render)"
+        ]
+      },
+      {
+        "k": "Verilənlər bazası",
+        "v": [
+          "MS SQL Server"
+        ]
+      }
+    ],
+    "coverAlt": "Arsa Creative veb tətbiqi noutbuk və planşet ekranında"
+  },
+  {
+    "slug": "marka-house",
+    "line": "Brendinq və rəqəmsal marketinq platforması",
+    "headline": "Brendinq və rəqəmsal marketinq platforması",
+    "subtitle": "Brend identikası və xidmət portfeli vahid vitrində birləşir.",
+    "scope": "Platformalar və veb",
+    "chips": [
+      "SSR SEO üçün server tərəfində render",
+      "100% adaptiv — mobil, planşet, desktop",
+      "API gələcək CRM və müştəri portalı üçün hazırdır"
+    ],
+    "metrics": [
+      {
+        "v": "SSR",
+        "l": "SEO üçün server tərəfində render"
+      },
+      {
+        "v": "100%",
+        "l": "adaptiv — mobil, planşet, desktop"
+      },
+      {
+        "v": "API",
+        "l": "gələcək CRM və müştəri portalı üçün hazırdır"
+      }
+    ],
+    "overview": "Marka House brendinq və marketinq agentliyidir. Bu layihə agentliyin rəqəmsal kimliyi rolunu oynayan sürətli, interaktiv veb platformadır: o, brendin vizual hekayəsini təqdim edir, xidmət portfelinə baxışı asanlaşdırır və potensial müştəriləri uyğun xidmətlərə yönləndirir.",
+    "problem": "Agentliyin saytı eyni zamanda həm dizayn bacarığını sübut etməli, həm də xidmətləri aydın izah etməli idi. Çox vaxt bir məqsəd digərinə xələl gətirir: saytlar ya gözəl, amma anlaşılmaz, ya da aydın, amma yaddaqalmaz olur.",
+    "approach": "Vizual hekayə və xidmət strukturu ayrı-ayrı qatlara bölündü. Qalereya brendin işlərini nümayiş etdirir, xidmət blokları isə təklifi aydın iyerarxiya ilə izah edir. Animasiyalar serveri yükləməmək üçün klient tərəfində marşrutlaşdırma ilə işləyir.",
+    "result": "Ziyarətçilər agentliyin işlərini görür və hər xidməti necə sifariş edəcəklərini anlayır. Brif və müraciət formaları birbaşa API-yə ötürülür.",
+    "features": [
+      {
+        "t": "Brendinq və portfolio nümayişi",
+        "d": "Brend yaradılması, dizayn və marketinq layihələri üçün ayrıca qalereyalar."
+      },
+      {
+        "t": "Tam adaptiv dizayn",
+        "d": "Mobil, planşet və desktopda rəvan işləyir."
+      },
+      {
+        "t": "İnteraktiv əlaqə modulları",
+        "d": "Xidmət sorğuları və brif üçün təhlükəsiz formalar."
+      },
+      {
+        "t": "SEO və sürət",
+        "d": "Next.js SSR sayəsində demək olar ki, ani səhifə yüklənməsi və axtarışda daha güclü mövqe."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Performansa yönəlmiş frontend",
+        "d": "Müasir veb animasiyaları klient tərəfində marşrutlaşdırma sayəsində rəvan işləyir."
+      },
+      {
+        "t": "Genişlənə bilən infrastruktur",
+        "d": "Səliqəli .NET Core API gələcəkdə yeni xidmət modulu, müştəri paneli və ya CRM əlavə etməyi asanlaşdırır."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          ".NET Core API"
+        ]
+      },
+      {
+        "k": "Frontend",
+        "v": [
+          "React",
+          "Next.js (server tərəfində render)"
+        ]
+      },
+      {
+        "k": "Verilənlər bazası",
+        "v": [
+          "MS SQL Server"
+        ]
+      }
+    ],
+    "coverAlt": "Marka House veb saytı noutbuk ekranında"
+  }
+]

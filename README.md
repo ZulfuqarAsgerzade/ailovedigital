@@ -5,6 +5,7 @@ One-page marketing site plus a static case-study page for every project.
 ```
 index.html              home page (dc-runtime component; the project cards are generated, see below)
 work/                   GENERATED — /work/ hub and /work/<slug>/ case studies (plain HTML, no JS needed to read)
+ru/  az/                GENERATED — the same site in Russian and Azerbaijani (see Languages)
 data/projects.json      the single source of truth for every project
 css/style.css           design tokens + home page      css/case.css   case studies and the /work/ hub
 js/site.js              home glue (scroll/ScrollTrigger fixes, Back-button restore)   js/case.js   case-study behaviour
@@ -31,6 +32,20 @@ or the config in `scripts/lib/site.mjs`. It is idempotent. Never edit `work/**` 
    (1600×1000), `og.jpg` (1200×630) and the screens `01.webp`, `02.webp` … (any size — they are not shown
    on the pages, the cover composer draws them into the device frames).
 3. `npm run build`.
+
+## Languages
+
+English is served from the root; Russian and Azerbaijani from `/ru/` and `/az/` with the same paths
+(`/ru/work/<slug>/` …). Every page carries `hreflang` alternates (plus `x-default` → English), its own canonical,
+`og:locale` and JSON-LD `inLanguage`; `sitemap.xml` lists every URL with its alternates. The nav's language menu
+links to the same page in the other languages. Config lives in `scripts/lib/i18n.mjs`.
+
+- `i18n/<lang>.json` — page chrome (`ui`), meta tags (`meta`) and the home page as `[English fragment, translation]`
+  pairs (`home`). `ru/index.html` and `az/index.html` are built from `index.html` with those pairs, so after
+  editing home-page copy in `index.html`, update the matching pair — the build stops and names any English
+  fragment it can no longer find.
+- `data/projects.<lang>.json` — the translated text of every project, same order and shape as `projects.json`
+  (the build checks it). A new project needs an entry here too.
 
 ## Covers (hero images)
 

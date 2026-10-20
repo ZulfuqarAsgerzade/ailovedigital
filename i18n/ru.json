@@ -1,0 +1,531 @@
+{
+  "_note": "ui/meta: page chrome and meta tags. home: [English fragment in index.html, translation] — applied to build /ru/index.html; every English fragment must still exist in index.html or the build fails.",
+  "meta": {
+    "title": "AILoveDigital — ИИ, технологии и рост бизнеса",
+    "description": "AILoveDigital — технологическая и креативная студия. Создаём цифровые продукты, автоматизируем процессы с помощью ИИ и превращаем это в измеримый рост бизнеса.",
+    "tagline": "И делаем так, чтобы бизнес тоже это полюбил.",
+    "slogan": "Построено на логике. Сделано с любовью.",
+    "ogAlt": "AILoveDigital — пиксельное сердце и слоган «AI, Technology & Business Growth»"
+  },
+  "ui": {
+    "language": "Язык",
+    "skip": "Перейти к содержанию",
+    "navPrimary": "Основная навигация",
+    "services": "Услуги",
+    "work": "Проекты",
+    "process": "Процесс",
+    "about": "О нас",
+    "contact": "Контакты",
+    "startSomething": "Начать проект",
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню",
+    "menu": "Меню",
+    "homeLabel": "главная",
+    "footerBlurb": "Помогаем бизнесу полюбить digital — с технологиями, ИИ и креативом, которые окупаются.",
+    "footServices": "Услуги",
+    "svcBuild": "Разработка",
+    "svcAutomate": "Автоматизация",
+    "svcGrow": "Рост",
+    "svcTeach": "Обучение",
+    "svcThink": "Стратегия",
+    "footCompany": "Компания",
+    "footContact": "Связаться",
+    "backToTop": "Наверх ↑",
+    "crumbs": "Навигационная цепочка",
+    "home": "Главная",
+    "year": "Год",
+    "scope": "Направление",
+    "timeline": "Сроки",
+    "inNumbers": "{brand} в цифрах",
+    "overview": "Обзор",
+    "problem": "Задача",
+    "approach": "Наш подход",
+    "result": "Результат",
+    "keyFeatures": "Ключевые функции",
+    "whatItDoes": "Что умеет продукт",
+    "architecture": "Архитектура",
+    "howBuilt": "Как это устроено",
+    "technology": "Технологии",
+    "techStack": "Технологический стек",
+    "moreWork": "Другие работы",
+    "related": "Похожие проекты",
+    "relatedLead": "Другие проекты направления «{scope}» и смежные работы студии.",
+    "morePager": "Другие проекты",
+    "prev": "← Предыдущий проект",
+    "next": "Следующий проект →",
+    "ctaSimilar": "Есть похожая<br>идея<span class=\"ald-dot\">?</span>",
+    "ctaReal": "Давайте воплотим её.",
+    "allProjects": "Все проекты →",
+    "allProjectsLabel": "Все проекты",
+    "hubTitle": "Проекты — {n} цифровых продуктов | {name}",
+    "hubDescription": "{n} продуктов от {name}: {scopes} — мобильные приложения, веб-платформы и ИИ-инструменты. У каждого — задача, подход и результат.",
+    "selectedWork": "Избранные работы",
+    "hubH1": "Сделано с <span class=\"ald-dot\">♥</span><span class=\"ald-dot\">.</span>",
+    "hubLead": "Каждый проект — своя задача, а подход один: понять бизнес, выпустить работающий продукт и сдвинуть цифры. {n} продуктов в {m} направлениях.",
+    "hubCtaH": "Ваша задача<br>может быть следующей<span class=\"ald-dot\">.</span>",
+    "hubCtaS": "Расскажите, что вы хотите изменить.",
+    "hubOgAlt": "AILoveDigital — избранные работы",
+    "nsServices": "Пять вещей, которые мы любим делать",
+    "nsWork": "Избранные работы",
+    "nsAll": "Все проекты",
+    "nsProcess": "Как мы работаем",
+    "nsWho": "Кто мы",
+    "nsContact": "Контакты",
+    "nsEmail": "Почта",
+    "nsNext": "Что будет дальше:"
+  },
+  "home": [
+    [
+      ">Skip to content<",
+      ">Перейти к содержанию<"
+    ],
+    [
+      "label: 'Services'",
+      "label: 'Услуги'"
+    ],
+    [
+      "label: 'Work'",
+      "label: 'Проекты'"
+    ],
+    [
+      "label: 'Process'",
+      "label: 'Процесс'"
+    ],
+    [
+      "label: 'About'",
+      "label: 'О нас'"
+    ],
+    [
+      "label: 'Contact'",
+      "label: 'Контакты'"
+    ],
+    [
+      "aria-label=\"AILoveDigital — back to top\"",
+      "aria-label=\"AILoveDigital — наверх\""
+    ],
+    [
+      "Start something <span",
+      "Начать проект <span"
+    ],
+    [
+      "aria-label=\"Menu\"",
+      "aria-label=\"Меню\""
+    ],
+    [
+      "st.menu ? 'Close menu' : 'Open menu'",
+      "st.menu ? 'Закрыть меню' : 'Открыть меню'"
+    ],
+    [
+      ">TECH × CREATIVITY × BUSINESS<",
+      ">ТЕХНОЛОГИИ × КРЕАТИВ × БИЗНЕС<"
+    ],
+    [
+      "aria-label=\"Animated pixel heart\"",
+      "aria-label=\"Анимированное пиксельное сердце\""
+    ],
+    [
+      ">And we make businesses love it too.<",
+      ">И делаем так, чтобы бизнес тоже это полюбил.<"
+    ],
+    [
+      ">A technology and creative studio building digital products, automating operations with AI, and turning both into growth you can measure.<",
+      ">Технологическая и креативная студия: создаём цифровые продукты, автоматизируем процессы с помощью ИИ и превращаем это в измеримый рост.<"
+    ],
+    [
+      ">See our work<",
+      ">Наши работы<"
+    ],
+    [
+      "</span> Taking on new projects<",
+      "</span> Берём новые проекты<"
+    ],
+    [
+      ">Build · Automate · Grow · Teach · Think<",
+      ">Разработка · Автоматизация · Рост · Обучение · Стратегия<"
+    ],
+    [
+      ">Keep going ↓<",
+      ">Листайте ↓<"
+    ],
+    [
+      ">Disciplines<br>in one team<",
+      ">Дисциплин<br>в одной команде<"
+    ],
+    [
+      "ald-stat-n\">24h<",
+      "ald-stat-n\">24ч<"
+    ],
+    [
+      ">First response<br>on every brief<",
+      ">Первый ответ<br>на любой запрос<"
+    ],
+    [
+      "2–6<span class=\"ald-dot\">wk</span>",
+      "2–6<span class=\"ald-dot\">нед</span>"
+    ],
+    [
+      ">Typical time to<br>a first release<",
+      ">Обычный срок<br>до первого релиза<"
+    ],
+    [
+      ">Senior, in-house<br>delivery<",
+      ">Только опытные<br>штатные специалисты<"
+    ],
+    [
+      "</span> / What we do<",
+      "</span> / Что мы делаем<"
+    ],
+    [
+      "Five things we love doing<span",
+      "Пять вещей, которые мы любим делать<span"
+    ],
+    [
+      ">Most clients start with one of them. The useful part is that they connect — a product that ships, runs itself, and grows.<",
+      ">Большинство клиентов начинают с одного направления. Ценность в том, что они связаны: продукт, который выходит в срок, работает сам и растёт.<"
+    ],
+    [
+      "word: 'BUILD'",
+      "word: 'РАЗРАБОТКА'"
+    ],
+    [
+      "desc: 'We design and build software people actually use — and that your team can keep running.'",
+      "desc: 'Проектируем и создаём софт, которым действительно пользуются, — и который ваша команда сможет поддерживать.'"
+    ],
+    [
+      "tags: 'Web platforms · Mobile apps · Internal tools · Digital products'",
+      "tags: 'Веб-платформы · Мобильные приложения · Внутренние инструменты · Цифровые продукты'"
+    ],
+    [
+      "word: 'AUTOMATE'",
+      "word: 'АВТОМАТИЗАЦИЯ'"
+    ],
+    [
+      "desc: 'We find the repetitive work and make it disappear, quietly, in the background.'",
+      "desc: 'Находим повторяющуюся работу и незаметно убираем её в фон.'"
+    ],
+    [
+      "tags: 'AI agents · Workflow automation · Integrations · Ops tooling'",
+      "tags: 'ИИ-агенты · Автоматизация процессов · Интеграции · Операционные инструменты'"
+    ],
+    [
+      "word: 'GROW'",
+      "word: 'РОСТ'"
+    ],
+    [
+      "desc: 'We turn attention into customers, and creative into a number you can report.'",
+      "desc: 'Превращаем внимание в клиентов, а креатив — в цифры, которые можно показать в отчёте.'"
+    ],
+    [
+      "tags: 'Social · Performance · Creative production · Brand growth'",
+      "tags: 'Соцсети · Performance-маркетинг · Креативный продакшн · Рост бренда'"
+    ],
+    [
+      "word: 'TEACH'",
+      "word: 'ОБУЧЕНИЕ'"
+    ],
+    [
+      "desc: 'We make your team faster with the tools they already have — plus the ones they should.'",
+      "desc: 'Ускоряем вашу команду с помощью инструментов, которые у неё уже есть, — и тех, что должны быть.'"
+    ],
+    [
+      "tags: 'AI training · IT education · Corporate workshops'",
+      "tags: 'Обучение ИИ · IT-образование · Корпоративные воркшопы'"
+    ],
+    [
+      "word: 'THINK'",
+      "word: 'СТРАТЕГИЯ'"
+    ],
+    [
+      "desc: 'Technology decisions before technology spending. Sometimes the answer is “not yet”.'",
+      "desc: 'Сначала решения о технологиях, потом расходы на них. Иногда правильный ответ — «пока нет».'"
+    ],
+    [
+      "tags: 'Strategy · Consulting · Digital transformation · Audits'",
+      "tags: 'Стратегия · Консалтинг · Цифровая трансформация · Аудит'"
+    ],
+    [
+      "</span> / Start here<",
+      "</span> / С чего начать<"
+    ],
+    [
+      "What do you want<br>to change<span",
+      "Что вы хотите<br>изменить<span"
+    ],
+    [
+      ">Start with the problem. Not the technology. Pick the line that sounds like your week.<",
+      ">Начните с задачи, а не с технологии. Выберите фразу, которая звучит как ваша неделя.<"
+    ],
+    [
+      "<span>“{{ pb.text }}”</span>",
+      "<span>«{{ pb.text }}»</span>"
+    ],
+    [
+      ">Sounds like {{ answer.name }}. <span",
+      ">Похоже, это про {{ answer.name }}. <span"
+    ],
+    [
+      ">Show me how →<",
+      ">Покажите как →<"
+    ],
+    [
+      "text: 'My business needs more customers.', name: 'Growth', body: 'We find where your audience already is,\\nmake creative they actually notice,\\nand turn that attention into customers.'",
+      "text: 'Моему бизнесу нужно больше клиентов.', name: 'рост', body: 'Находим, где уже есть ваша аудитория,\\nделаем креатив, который замечают,\\nи превращаем внимание в клиентов.'"
+    ],
+    [
+      "text: 'We waste too much time on manual work.', name: 'Automation', body: 'We map the repetitive work,\\nconnect the systems that should talk to each other,\\nand let AI handle the boring part.'",
+      "text: 'Мы тратим слишком много времени на ручную работу.', name: 'автоматизацию', body: 'Описываем повторяющуюся работу,\\nсвязываем системы, которые должны общаться,\\nи отдаём скучную часть ИИ.'"
+    ],
+    [
+      "text: 'I need a digital product.', name: 'Build', body: 'We take the idea,\\nshape it into something people can use,\\nand ship it properly — not as a demo.'",
+      "text: 'Мне нужен цифровой продукт.', name: 'разработку', body: 'Берём идею,\\nпревращаем её в то, чем удобно пользоваться,\\nи выпускаем по-настоящему — не как демо.'"
+    ],
+    [
+      "text: 'My team needs AI skills.', name: 'Teach', body: 'We train your team on real tools,\\ninside real workflows,\\nnot slideware.'",
+      "text: 'Моей команде нужны навыки работы с ИИ.', name: 'обучение', body: 'Обучаем команду на реальных инструментах,\\nвнутри реальных процессов,\\nа не на слайдах.'"
+    ],
+    [
+      "text: 'I’m not sure. Help me figure it out.', name: 'Think', body: 'We start with your business,\\nmap where technology actually helps,\\nand decide together before you spend.'",
+      "text: 'Не уверен. Помогите разобраться.', name: 'стратегию', body: 'Начинаем с вашего бизнеса,\\nопределяем, где технологии действительно помогают,\\nи принимаем решение вместе — до любых затрат.'"
+    ],
+    [
+      "</span> / Selected work<",
+      "</span> / Избранные работы<"
+    ],
+    [
+      "Things we <span class=\"ald-dot\">♥</span> made<span class=\"ald-dot\">.</span>",
+      "Сделано с <span class=\"ald-dot\">♥</span><span class=\"ald-dot\">.</span>"
+    ],
+    [
+      ">Every project, a different problem — one approach: understand the business, ship something real, then make the numbers move.<",
+      ">Каждый проект — своя задача, а подход один: понять бизнес, выпустить работающий продукт и сдвинуть цифры.<"
+    ],
+    [
+      ">All projects ",
+      ">Все проекты "
+    ],
+    [
+      "<dt>Year</dt>",
+      "<dt>Год</dt>"
+    ],
+    [
+      "<dt>Scope</dt>",
+      "<dt>Направление</dt>"
+    ],
+    [
+      "<dt>Timeline</dt>",
+      "<dt>Сроки</dt>"
+    ],
+    [
+      ">View case <span",
+      ">Смотреть кейс <span"
+    ],
+    [
+      "</span> / How we work<",
+      "</span> / Как мы работаем<"
+    ],
+    [
+      "No mystery. No 90-page decks<span",
+      "Без тайн. Без презентаций на 90 слайдов<span"
+    ],
+    [
+      ">A short, honest process you can plan a budget around.<",
+      ">Короткий и честный процесс, под который можно планировать бюджет.<"
+    ],
+    [
+      "t: 'Discover', d: 'We start with your business, your numbers and your constraints — not a tool list.'",
+      "t: 'Исследуем', d: 'Начинаем с вашего бизнеса, цифр и ограничений — а не со списка инструментов.'"
+    ],
+    [
+      "t: 'Shape', d: 'We agree on scope, what success looks like, and what we are deliberately not doing.'",
+      "t: 'Формируем', d: 'Согласуем объём работ, критерии успеха и то, чего мы сознательно не делаем.'"
+    ],
+    [
+      "t: 'Build', d: 'Short cycles and working software you can see every week. No black box.'",
+      "t: 'Создаём', d: 'Короткие циклы и работающий продукт, который вы видите каждую неделю. Никакого чёрного ящика.'"
+    ],
+    [
+      "t: 'Scale', d: 'We measure, improve, document and hand over something your team owns.'",
+      "t: 'Масштабируем', d: 'Измеряем, улучшаем, документируем и передаём продукт, которым владеет ваша команда.'"
+    ],
+    [
+      "<span>TECHNOLOGY</span></span>\n        <span class=\"ald-line\"><span>SHOULD MAKE</span></span>\n        <span class=\"ald-line\"><span>BUSINESS</span></span>\n        <span class=\"ald-line\"><span>SIMPLER<span",
+      "<span>ТЕХНОЛОГИИ</span></span>\n        <span class=\"ald-line\"><span>ДОЛЖНЫ ДЕЛАТЬ</span></span>\n        <span class=\"ald-line\"><span>БИЗНЕС</span></span>\n        <span class=\"ald-line\"><span>ПРОЩЕ<span"
+    ],
+    [
+      ">Not more complicated.<",
+      ">А не сложнее.<"
+    ],
+    [
+      ">We combine technology, creativity and automation to remove the friction between a business and where it wants to go — and we leave you with something your own team can run.<",
+      ">Мы соединяем технологии, креатив и автоматизацию, чтобы убрать препятствия между бизнесом и его целью, — и оставляем вам то, чем ваша команда сможет управлять сама.<"
+    ],
+    [
+      ">The digital heart<",
+      ">Цифровое сердце<"
+    ],
+    [
+      "Made to be loved<span",
+      "Создано, чтобы его любили<span"
+    ],
+    [
+      ">Digital works better when people actually love using it — so every project gets the same test: would we enjoy using this every day?<",
+      ">Цифровые продукты работают лучше, когда ими действительно нравится пользоваться, — поэтому каждый проект проходит один тест: хотели бы мы сами пользоваться этим каждый день?<"
+    ],
+    [
+      "aria-label=\"Interactive pixel heart — click to scatter it\"",
+      "aria-label=\"Интерактивное пиксельное сердце — нажмите, чтобы рассыпать его\""
+    ],
+    [
+      ">Click the heart<",
+      ">Нажмите на сердце<"
+    ],
+    [
+      "</span> / Who we are<",
+      "</span> / Кто мы<"
+    ],
+    [
+      "One team.<br>Multiple disciplines.<br>One direction<span",
+      "Одна команда.<br>Много дисциплин.<br>Одно направление<span"
+    ],
+    [
+      "<span>TECH</span><span class=\"ald-dot\">♥</span><span>AI</span><span class=\"ald-dot\">♥</span><span>CREATIVE</span><span class=\"ald-dot\">♥</span><span>BUSINESS</span>",
+      "<span>ТЕХНОЛОГИИ</span><span class=\"ald-dot\">♥</span><span>ИИ</span><span class=\"ald-dot\">♥</span><span>КРЕАТИВ</span><span class=\"ald-dot\">♥</span><span>БИЗНЕС</span>"
+    ],
+    [
+      "ald-chain-result\">GROWTH<",
+      "ald-chain-result\">РОСТ<"
+    ],
+    [
+      "t: 'Business first', d: 'We start with the commercial problem, then choose the technology — never the other way around.'",
+      "t: 'Сначала бизнес', d: 'Начинаем с коммерческой задачи и только потом выбираем технологию — никогда наоборот.'"
+    ],
+    [
+      "t: 'One accountable team', d: 'Strategy, design, engineering and growth sit together. No hand-offs, no finger-pointing.'",
+      "t: 'Одна ответственная команда', d: 'Стратегия, дизайн, разработка и маркетинг работают вместе. Без передачи задач по цепочке и поиска виноватых.'"
+    ],
+    [
+      "t: 'Built to be owned', d: 'You get the documentation, the access and a team that can run it after we leave.'",
+      "t: 'Создано, чтобы принадлежать вам', d: 'Вы получаете документацию, доступы и команду, которая сможет всё поддерживать после нас.'"
+    ],
+    [
+      "</span> / Contact<",
+      "</span> / Контакты<"
+    ],
+    [
+      ">HAVE<br>AN IDEA?<",
+      ">ЕСТЬ<br>ИДЕЯ?<"
+    ],
+    [
+      ">Let’s make it real. <span",
+      ">Давайте воплотим её. <span"
+    ],
+    [
+      ">What happens next<",
+      ">Что будет дальше<"
+    ],
+    [
+      "<span>Name <span class=\"ald-req\">",
+      "<span>Имя <span class=\"ald-req\">"
+    ],
+    [
+      "<span>Email <span class=\"ald-req\">",
+      "<span>Email <span class=\"ald-req\">"
+    ],
+    [
+      "<span>Company</span>",
+      "<span>Компания</span>"
+    ],
+    [
+      "<span>Message</span>",
+      "<span>Сообщение</span>"
+    ],
+    [
+      "placeholder=\"Context, deadlines, links — anything that helps.\"",
+      "placeholder=\"Контекст, сроки, ссылки — всё, что поможет.\""
+    ],
+    [
+      "value=\"New enquiry — AILoveDigital.com\"",
+      "value=\"New enquiry (RU) — AILoveDigital.com\""
+    ],
+    [
+      ">We reply within one working day. No newsletters, no sales sequences — just an answer from a human.<",
+      ">Отвечаем в течение одного рабочего дня. Без рассылок и навязчивых продаж — просто ответ от человека.<"
+    ],
+    [
+      ">Something went wrong sending that — please try again, or email us directly at <",
+      ">Не удалось отправить сообщение — попробуйте ещё раз или напишите нам напрямую на <"
+    ],
+    [
+      ">We <span class=\"ald-dot\">♥</span> this idea{{ senderName }}.<",
+      ">Нам <span class=\"ald-dot\">♥</span> эта идея{{ senderName }}.<"
+    ],
+    [
+      ">Your message is on its way. We’ll come back to you within one working day — usually sooner.<",
+      ">Ваше сообщение отправлено. Мы ответим в течение одного рабочего дня — обычно быстрее.<"
+    ],
+    [
+      ">Or email us directly →<",
+      ">Или напишите нам напрямую →<"
+    ],
+    [
+      "t: 'We read it properly and reply within one working day.'",
+      "t: 'Внимательно читаем и отвечаем в течение одного рабочего дня.'"
+    ],
+    [
+      "t: 'A 30-minute call. Questions, not a pitch deck.'",
+      "t: 'Звонок на 30 минут. Вопросы, а не презентация.'"
+    ],
+    [
+      "t: 'A short written plan: scope, timeline and price.'",
+      "t: 'Короткий письменный план: объём, сроки и цена.'"
+    ],
+    [
+      "'Please tell us your name.'",
+      "'Пожалуйста, укажите имя.'"
+    ],
+    [
+      "'Please enter a valid email address.'",
+      "'Введите корректный email.'"
+    ],
+    [
+      "'Sending…'",
+      "'Отправляем…'"
+    ],
+    [
+      "'Send some love'",
+      "'Отправить с любовью'"
+    ],
+    [
+      ">Making businesses love digital — with technology, AI and creative that earns its keep.<",
+      ">Помогаем бизнесу полюбить digital — с технологиями, ИИ и креативом, которые окупаются.<"
+    ],
+    [
+      "ald-foot-h\">Services<",
+      "ald-foot-h\">Услуги<"
+    ],
+    [
+      "ald-foot-h\">Company<",
+      "ald-foot-h\">Компания<"
+    ],
+    [
+      "ald-foot-h\">Get in touch<",
+      "ald-foot-h\">Связаться<"
+    ],
+    [
+      "<a href=\"#services\">Build</a><a href=\"#services\">Automate</a><a href=\"#services\">Grow</a><a href=\"#services\">Teach</a><a href=\"#services\">Think</a>",
+      "<a href=\"#services\">Разработка</a><a href=\"#services\">Автоматизация</a><a href=\"#services\">Рост</a><a href=\"#services\">Обучение</a><a href=\"#services\">Стратегия</a>"
+    ],
+    [
+      "<a href=\"#work\">Work</a><a href=\"#process\">Process</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a>",
+      "<a href=\"#work\">Проекты</a><a href=\"#process\">Процесс</a><a href=\"#about\">О нас</a><a href=\"#contact\">Контакты</a>"
+    ],
+    [
+      "<span>Built with logic. Finished with love.</span>",
+      "<span>Построено на логике. Сделано с любовью.</span>"
+    ],
+    [
+      ">Back to top ↑<",
+      ">Наверх ↑<"
+    ]
+  ]
+}

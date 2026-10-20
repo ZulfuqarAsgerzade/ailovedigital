@@ -4,7 +4,9 @@
 //   work/index.html            the "all projects" hub
 //   work/<slug>/index.html     one static case-study page per project (plain HTML — no JavaScript
 //                              needed to read it, which is what search engines and AI crawlers want)
+//   ru/work/…, az/work/…       the same pages in every other language (see scripts/lib/i18n.mjs)
 //   index.html                 the `workAll` array between // workAll:start … // workAll:end
+//                              (the /ru/ and /az/ home pages are built from index.html by build-seo.mjs)
 //
 // Run it (it chains into build-seo.mjs, which then refreshes the head, sitemap and llms.txt):
 //
@@ -14,9 +16,12 @@
 // assets/images/work/<slug>/ (cover.webp, 01.webp …, og.jpg) plus assets/images/work/<slug>.webp.
 
 import {
-  SITE_URL, NAME, EMAIL, SLOGAN, LOCALE, LANG, BG, OG_IMAGE,
+  SITE_URL, NAME, EMAIL, BG, OG_IMAGE,
   read, write, abs, esc, pad2, clip, loadProjects,
 } from './lib/site.mjs';
+import {
+  LANGS, LOCALES, strings, fill, localizeProjects, langMenu, hreflangLinks, ogLocaleTags, urlIn, workDataLiteral,
+} from './lib/i18n.mjs';
 
 const projects = loadProjects();
 const today = new Date().toISOString().slice(0, 10);
@@ -35,21 +40,25 @@ const orgNode = {
   logo: { '@type': 'ImageObject', url: abs('assets/icons/icon-512.png'), width: 512, height: 512 },
   email: EMAIL,
 };
-const siteNode = { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: NAME, inLanguage: LANG, publisher: { '@id': `${SITE_URL}/#org` } };
+const siteNode = { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: NAME, inLanguage: LANGS, publisher: { '@id': `${SITE_URL}/#org` } };
 
-/** `b` is the relative path back to the site root: "../../" from /work/<slug>/, "../" from /work/. */
-function head({ b, title, description, canonical, image, imageType, imageAlt, graph, robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }) {
+/**
+ * `b` is the relative path back to the site root ("../../" from /work/<slug>/, "../../../" from
+ * /ru/work/<slug>/); `path` is the page's language-neutral path ("work/", "work/<slug>/") for the
+ * hreflang alternates, or null for pages that have none (404).
+ */
+function head({ b, lang, path, title, description, canonical, image, imageType, imageAlt, graph, robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }) {
   return `<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
-${canonical ? `<link rel="canonical" href="${canonical}">\n` : ''}<meta name="robots" content="${robots}">
+${canonical ? `<link rel="canonical" href="${canonical}">\n` : ''}${path !== null ? hreflangLinks(path) + '\n' : ''}<meta name="robots" content="${robots}">
 <meta name="author" content="${NAME}">
 <meta name="theme-color" content="${BG}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${NAME}">
-<meta property="og:locale" content="${LOCALE}">
+${ogLocaleTags(lang)}
 ${canonical ? `<meta property="og:url" content="${canonical}">\n` : ''}
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
@@ -79,129 +88,126 @@ ${graph ? jsonLdTag(graph) + '\n' : ''}<script src="${b}js/case.js" defer></scri
 </head>`;
 }
 
-function nav(b, hubHref, hubCurrent) {
+/** `h` is the relative link to this language's home page (`b` + "ru/" …); `langHrefs` maps each language to this page in it. */
+function nav({ h, hubHref, hubCurrent, lang, langHrefs }) {
+  const t = strings(lang).ui;
   const link = (href, label, extra = '') => `<a href="${href}" class="ald-navlink${extra}">${label}</a>`;
-  return `<a class="ald-skip" href="#main">Skip to content</a>
-<nav class="ald-nav is-solid" aria-label="Primary">
-  <a href="${b}" class="ald-brand" aria-label="${NAME} — home">${HEART(21, 18)}<span>${NAME}</span></a>
+  return `<a class="ald-skip" href="#main">${t.skip}</a>
+<nav class="ald-nav is-solid" aria-label="${esc(t.navPrimary)}">
+  <a href="${h}" class="ald-brand" aria-label="${NAME} — ${esc(t.homeLabel)}">${HEART(21, 18)}<span>${NAME}</span></a>
   <div class="ald-nav-desk">
-    ${link(`${b}#services`, 'Services')}
-    <a href="${hubHref}" class="ald-navlink is-active"${hubCurrent ? ' aria-current="page"' : ''}>Work</a>
-    ${link(`${b}#process`, 'Process')}
-    ${link(`${b}#about`, 'About')}
-    ${link(`${b}#contact`, 'Contact')}
+    ${link(`${h}#services`, t.services)}
+    <a href="${hubHref}" class="ald-navlink is-active"${hubCurrent ? ' aria-current="page"' : ''}>${t.work}</a>
+    ${link(`${h}#process`, t.process)}
+    ${link(`${h}#about`, t.about)}
+    ${link(`${h}#contact`, t.contact)}
   </div>
   <div class="ald-nav-actions">
-    <details class="ald-lang">
-      <summary class="ald-lang-btn" aria-label="Language: English">
-        <svg class="ald-lang-ico" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M1.5 8h13M8 1.5c1.9 1.8 2.9 4 2.9 6.5S9.9 12.7 8 14.5M8 1.5C6.1 3.3 5.1 5.5 5.1 8s1 4.7 2.9 6.5"></path></svg>
-        <span>EN</span>
-        <svg class="ald-lang-chev" width="9" height="9" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"></path></svg>
-      </summary>
-      <div class="ald-lang-menu">
-        <span class="ald-lang-opt is-active" lang="en" aria-current="true"><span class="ald-flag ald-flag--en" aria-hidden="true"></span>English<span class="ald-lang-tag">✓</span></span>
-        <span class="ald-lang-opt is-soon" lang="ru"><span class="ald-flag ald-flag--ru" aria-hidden="true"></span>Русский</span>
-        <span class="ald-lang-opt is-soon" lang="az"><span class="ald-flag ald-flag--az" aria-hidden="true"></span>Azərbaycanca</span>
-      </div>
-    </details>
-    <a href="${b}#contact" class="ald-btn ald-btn--sm ald-nav-cta">Start something <span class="ald-dot">♥</span></a>
-    <button type="button" class="ald-burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    ${langMenu(lang, langHrefs)}
+    <a href="${h}#contact" class="ald-btn ald-btn--sm ald-nav-cta">${t.startSomething} <span class="ald-dot">♥</span></a>
+    <button type="button" class="ald-burger" aria-label="${esc(t.openMenu)}" data-label-open="${esc(t.openMenu)}" data-label-close="${esc(t.closeMenu)}" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </div>
   <div class="ald-prog" aria-hidden="true"></div>
 </nav>
-<div class="ald-menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+<div class="ald-menu" id="menu" role="dialog" aria-modal="true" aria-label="${esc(t.menu)}" hidden>
   <div class="ald-menu-links">
-    <a href="${b}#services">Services</a>
-    <a href="${hubHref}">Work</a>
-    <a href="${b}#process">Process</a>
-    <a href="${b}#about">About</a>
-    <a href="${b}#contact">Contact</a>
+    <a href="${h}#services">${t.services}</a>
+    <a href="${hubHref}">${t.work}</a>
+    <a href="${h}#process">${t.process}</a>
+    <a href="${h}#about">${t.about}</a>
+    <a href="${h}#contact">${t.contact}</a>
   </div>
   <div class="ald-menu-foot">
-    <a href="${b}#contact" class="ald-btn ald-btn--fit">Start something <span class="ald-dot">♥</span></a>
+    <a href="${h}#contact" class="ald-btn ald-btn--fit">${t.startSomething} <span class="ald-dot">♥</span></a>
     <a href="mailto:${EMAIL}">${EMAIL}</a>
   </div>
 </div>`;
 }
 
-function footer(b, hubHref) {
+function footer({ h, hubHref, lang }) {
+  const { ui: t, meta } = strings(lang);
   return `<footer class="ald-footer">
   <div class="ald-wrap">
     <div class="ald-foot-grid">
       <div>
-        <a href="${b}" class="ald-brand ald-brand--foot" aria-label="${NAME} — home">${HEART(17, 15)}<span>${NAME}</span></a>
-        <p class="ald-foot-list ald-foot-list--narrow">Making businesses love digital — with technology, AI and creative that earns its keep.</p>
+        <a href="${h}" class="ald-brand ald-brand--foot" aria-label="${NAME} — ${esc(t.homeLabel)}">${HEART(17, 15)}<span>${NAME}</span></a>
+        <p class="ald-foot-list ald-foot-list--narrow">${t.footerBlurb}</p>
       </div>
       <div>
-        <div class="ald-foot-h">Services</div>
-        <div class="ald-foot-list"><a href="${b}#services">Build</a><a href="${b}#services">Automate</a><a href="${b}#services">Grow</a><a href="${b}#services">Teach</a><a href="${b}#services">Think</a></div>
+        <div class="ald-foot-h">${t.footServices}</div>
+        <div class="ald-foot-list">${['svcBuild', 'svcAutomate', 'svcGrow', 'svcTeach', 'svcThink'].map((k) => `<a href="${h}#services">${t[k]}</a>`).join('')}</div>
       </div>
       <div>
-        <div class="ald-foot-h">Company</div>
-        <div class="ald-foot-list"><a href="${hubHref}">Work</a><a href="${b}#process">Process</a><a href="${b}#about">About</a><a href="${b}#contact">Contact</a></div>
+        <div class="ald-foot-h">${t.footCompany}</div>
+        <div class="ald-foot-list"><a href="${hubHref}">${t.work}</a><a href="${h}#process">${t.process}</a><a href="${h}#about">${t.about}</a><a href="${h}#contact">${t.contact}</a></div>
       </div>
       <div>
-        <div class="ald-foot-h">Get in touch</div>
+        <div class="ald-foot-h">${t.footContact}</div>
         <div class="ald-foot-list"><a href="mailto:${EMAIL}">${EMAIL}</a></div>
       </div>
     </div>
     <div class="ald-foot-mark" aria-hidden="true">AILOVEDIGITAL<span class="ald-dot">.</span></div>
     <div class="ald-foot-bottom">
       <span>© 2026 ${NAME}</span>
-      <span>${SLOGAN}</span>
-      <a href="#main" class="ald-totop">Back to top ↑</a>
+      <span>${meta.slogan}</span>
+      <a href="#main" class="ald-totop">${t.backToTop}</a>
     </div>
   </div>
 </footer>`;
 }
 
-const page = ({ b, hubHref, hubCurrent, headHtml, main, extra = '' }) => `<!doctype html>
-<!-- Generated by scripts/build-work.mjs from data/projects.json — edit the data or the script, not this file. -->
-<html lang="${LANG}">
+const page = ({ lang, headHtml, main, ...links }) => `<!doctype html>
+<!-- Generated by scripts/build-work.mjs from data/projects*.json and i18n/*.json — edit those or the script, not this file. -->
+<html lang="${lang}">
 ${headHtml}
 <body class="case">
-${nav(b, hubHref, hubCurrent)}
+${nav({ lang, ...links })}
 <main id="main">
 ${main}
 </main>
-${footer(b, hubHref)}
-${extra}
+${footer({ lang, ...links })}
 </body>
 </html>
 `;
 
+/** Relative links from a page to the same page in every language (`b` = back to the site root). */
+const langLinks = (b, path) => Object.fromEntries(LANGS.map((l) => [l, `${b}${LOCALES[l].prefix}${path}`]));
 
 // ───────────── shared project card (hub + "related projects") ─────────────
-const hubCard = (p, b, eager, level = 3) => `    <li class="hub-card case-rv">
+const hubCard = (p, b, h, eager, level = 3) => `    <li class="hub-card case-rv">
       <div class="hub-media"><img src="${b}${p.homeImg}" width="800" height="500" alt="${esc(p.coverAlt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"></div>
       <div class="hub-body">
         <span class="ald-work-num">${pad2(p.n)}</span>
-        <h${level} class="hub-name"><a href="${b}${p.path}" class="hub-link">${esc(p.brand)}</a></h${level}>
+        <h${level} class="hub-name"><a href="${h}${p.path}" class="hub-link">${esc(p.brand)}</a></h${level}>
         <p class="hub-line">${esc(p.line)}</p>
         <p class="hub-meta">${esc(p.scope)} · ${esc(p.year)}</p>
       </div>
     </li>`;
 
-/** Same-scope projects first, then the following ones in order — three, never the project itself. */
-function relatedFor(p) {
+/** Same-scope projects first, then the following ones in order — three, never the project itself.
+ *  Grouped on the English data so every language shows the same three; returned from `list`. */
+function relatedFor(p, list) {
   const others = projects.filter((x) => x.slug !== p.slug);
   const same = others.filter((x) => x.scope === p.scope);
   const rest = others.filter((x) => x.scope !== p.scope).sort((a, b) => ((a.n - p.n + 16) % 16) - ((b.n - p.n + 16) % 16));
-  return [...same, ...rest].slice(0, 3);
+  return [...same, ...rest].slice(0, 3).map((x) => list[x.n - 1]);
 }
 
 // ───────────────────────────── case-study page ─────────────────────────────
 /** "ChefMarket — Restaurant–supplier B2B marketplace ecosystem | AILoveDigital", kept near the ~60
  *  characters search results show: the leading article goes, and the site name goes if still too long. */
 function pageTitle(p) {
-  const core = `${p.brand} — ${p.headline.replace(/^(A|An)\s+/, '').replace(/^./, (c) => c.toUpperCase())}`;
+  const core = `${p.brand} — ${p.headline.replace(/^(A|An)\s+/, '').replace(/^./, (c) => c.toLocaleUpperCase(p.lang || 'en'))}`;
   return core.length + NAME.length + 3 <= 72 ? `${core} | ${NAME}` : core;
 }
 
-function casePage(p, i) {
-  const b = '../../';
-  const prev = projects[(i - 1 + projects.length) % projects.length];
-  const next = projects[(i + 1) % projects.length];
+function casePage(p, i, list, lang) {
+  const t = strings(lang).ui;
+  const pre = LOCALES[lang].prefix;
+  const b = pre ? '../../../' : '../../';
+  const h = b + pre;
+  const prev = list[(i - 1 + list.length) % list.length];
+  const next = list[(i + 1) % list.length];
   const title = pageTitle(p);
   const description = clip(p.overview, 156);
   const image = abs(p.og);
@@ -213,13 +219,13 @@ function casePage(p, i) {
     {
       '@type': 'BreadcrumbList', '@id': `${p.url}#breadcrumb`,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-        { '@type': 'ListItem', position: 2, name: 'Work', item: `${SITE_URL}/work/` },
+        { '@type': 'ListItem', position: 1, name: t.home, item: urlIn(lang) },
+        { '@type': 'ListItem', position: 2, name: t.work, item: urlIn(lang, 'work/') },
         { '@type': 'ListItem', position: 3, name: p.brand, item: p.url },
       ],
     },
     {
-      '@type': 'WebPage', '@id': `${p.url}#webpage`, url: p.url, name: title, description, inLanguage: LANG,
+      '@type': 'WebPage', '@id': `${p.url}#webpage`, url: p.url, name: title, description, inLanguage: lang,
       isPartOf: { '@id': `${SITE_URL}/#website` }, breadcrumb: { '@id': `${p.url}#breadcrumb` },
       primaryImageOfPage: { '@type': 'ImageObject', url: abs(p.cover.src), width: p.cover.w, height: p.cover.h },
       mainEntity: { '@id': `${p.url}#project` }, dateModified: today,
@@ -227,20 +233,20 @@ function casePage(p, i) {
     {
       '@type': 'CreativeWork', '@id': `${p.url}#project`, url: p.url, mainEntityOfPage: { '@id': `${p.url}#webpage` },
       name: p.brand, headline: p.headline, abstract: p.subtitle, description: p.overview,
-      genre: p.scope, dateCreated: p.year, inLanguage: LANG, keywords: keywords.join(', '),
+      genre: p.scope, dateCreated: p.year, inLanguage: lang, keywords: keywords.join(', '),
       creator: { '@id': `${SITE_URL}/#org` }, publisher: { '@id': `${SITE_URL}/#org` },
       image: abs(p.cover.src),
     },
   ];
 
-  const meta = [['Year', p.year], ['Scope', p.scope], ...(p.time ? [['Timeline', p.time]] : [])]
+  const meta = [[t.year, p.year], [t.scope, p.scope], ...(p.time ? [[t.timeline, p.time]] : [])]
     .map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('');
 
   const main = `
 <header class="case-hero">
   <div class="ald-wrap">
-    <nav class="case-crumbs" aria-label="Breadcrumb">
-      <ol><li><a href="${b}">Home</a></li><li><a href="../">Work</a></li><li aria-current="page">${esc(p.brand)}</li></ol>
+    <nav class="case-crumbs" aria-label="${esc(t.crumbs)}">
+      <ol><li><a href="${h}">${t.home}</a></li><li><a href="../">${t.work}</a></li><li aria-current="page">${esc(p.brand)}</li></ol>
     </nav>
     <p class="ald-eyebrow has-idx"><span class="ald-idx">${pad2(p.n)}</span> / ${esc(p.scope)}</p>
     <h1 class="case-h1"><span class="case-title">${esc(p.brand)}</span><span class="sr-only"> — </span><span class="case-headline">${esc(p.headline)}</span></h1>
@@ -253,7 +259,7 @@ function casePage(p, i) {
   <img src="${b}${p.cover.src}" width="${p.cover.w}" height="${p.cover.h}" alt="${esc(p.coverAlt)}" fetchpriority="high" decoding="async">
 </div>
 
-<section class="ald-stats-band" aria-label="${esc(p.brand)} in numbers">
+<section class="ald-stats-band" aria-label="${esc(fill(t.inNumbers, { brand: p.brand }))}">
   <ul class="ald-wrap ald-stats case-metrics">
 ${p.metrics.map((m) => `    <li class="ald-stat"><div class="ald-stat-n">${esc(m.v)}</div><div class="ald-stat-l">${esc(m.l)}</div></li>`).join('\n')}
   </ul>
@@ -262,15 +268,15 @@ ${p.metrics.map((m) => `    <li class="ald-stat"><div class="ald-stat-n">${esc(m
 <section class="ald-sec">
   <div class="ald-wrap">
     <div class="case-block case-rv">
-      <h2 class="ald-eyebrow has-idx case-label"><span class="ald-idx">01</span> / Overview</h2>
+      <h2 class="ald-eyebrow has-idx case-label"><span class="ald-idx">01</span> / ${t.overview}</h2>
       <p class="case-text case-text--lead">${esc(p.overview)}</p>
     </div>
     <div class="case-block case-rv">
-      <h2 class="ald-eyebrow has-idx case-label"><span class="ald-idx">02</span> / The problem</h2>
+      <h2 class="ald-eyebrow has-idx case-label"><span class="ald-idx">02</span> / ${t.problem}</h2>
       <p class="case-text">${esc(p.problem)}</p>
     </div>
     <div class="case-block case-rv">
-      <h2 class="ald-eyebrow has-idx case-label"><span class="ald-idx">03</span> / Our approach</h2>
+      <h2 class="ald-eyebrow has-idx case-label"><span class="ald-idx">03</span> / ${t.approach}</h2>
       <p class="case-text">${esc(p.approach)}</p>
     </div>
   </div>
@@ -279,7 +285,7 @@ ${p.metrics.map((m) => `    <li class="ald-stat"><div class="ald-stat-n">${esc(m
 <section class="ald-sec ald-sec--dark">
   <div class="ald-wrap">
     <div class="case-block case-rv">
-      <h2 class="ald-eyebrow has-idx case-label"><span class="ald-idx">04</span> / The result</h2>
+      <h2 class="ald-eyebrow has-idx case-label"><span class="ald-idx">04</span> / ${t.result}</h2>
       <p class="case-text case-text--result">${esc(p.result)}</p>
     </div>
   </div>
@@ -289,8 +295,8 @@ ${p.metrics.map((m) => `    <li class="ald-stat"><div class="ald-stat-n">${esc(m
   <div class="ald-wrap">
     <header class="ald-head case-rv">
       <div>
-        <p class="ald-eyebrow has-idx"><span class="ald-idx">05</span> / Key features</p>
-        <h2 class="ald-h2" id="features">What it does<span class="ald-dot">.</span></h2>
+        <p class="ald-eyebrow has-idx"><span class="ald-idx">05</span> / ${t.keyFeatures}</p>
+        <h2 class="ald-h2" id="features">${t.whatItDoes}<span class="ald-dot">.</span></h2>
       </div>
     </header>
     <ul class="case-features">
@@ -303,8 +309,8 @@ ${p.features.map((f, k) => `      <li class="ald-value case-rv"><div class="case
   <div class="ald-wrap">
     <header class="ald-head case-rv">
       <div>
-        <p class="ald-eyebrow has-idx"><span class="ald-idx">06</span> / Architecture</p>
-        <h2 class="ald-h2" id="architecture">How it is built<span class="ald-dot">.</span></h2>
+        <p class="ald-eyebrow has-idx"><span class="ald-idx">06</span> / ${t.architecture}</p>
+        <h2 class="ald-h2" id="architecture">${t.howBuilt}<span class="ald-dot">.</span></h2>
       </div>
     </header>
     <ol class="case-arch">
@@ -312,8 +318,8 @@ ${p.architecture.map((a) => `      <li class="case-rv"><h3>${esc(a.t)}</h3><p>${
     </ol>
     <header class="ald-head case-head-2 case-rv">
       <div>
-        <p class="ald-eyebrow has-idx"><span class="ald-idx">07</span> / Technology</p>
-        <h2 class="ald-h2" id="stack">Tech stack<span class="ald-dot">.</span></h2>
+        <p class="ald-eyebrow has-idx"><span class="ald-idx">07</span> / ${t.technology}</p>
+        <h2 class="ald-h2" id="stack">${t.techStack}<span class="ald-dot">.</span></h2>
       </div>
     </header>
     <dl class="case-stack" aria-labelledby="stack">
@@ -326,82 +332,86 @@ ${p.stack.map((g) => `      <div class="case-rv"><dt>${esc(g.k)}</dt><dd><ul cla
   <div class="ald-wrap">
     <header class="ald-head case-rv">
       <div>
-        <p class="ald-eyebrow has-idx"><span class="ald-idx">08</span> / More work</p>
-        <h2 class="ald-h2" id="related">Related projects<span class="ald-dot">.</span></h2>
+        <p class="ald-eyebrow has-idx"><span class="ald-idx">08</span> / ${t.moreWork}</p>
+        <h2 class="ald-h2" id="related">${t.related}<span class="ald-dot">.</span></h2>
       </div>
-      <p class="ald-lead">More ${esc(p.scope.toLowerCase())} and neighbouring work from the same studio.</p>
+      <p class="ald-lead">${esc(fill(t.relatedLead, { scope: p.scope, scopeLower: p.scope.toLocaleLowerCase(lang) }))}</p>
     </header>
     <ol class="hub-grid case-related">
-${relatedFor(p).map((r) => hubCard(r, b, false)).join('\n')}
+${relatedFor(p, list).map((r) => hubCard(r, b, h, false)).join('\n')}
     </ol>
   </div>
 </section>
 
-<nav class="case-pager" aria-label="More projects">
-  <a href="${b}${prev.path}" rel="prev"><span class="case-pager-k">← Previous project</span><span class="case-pager-n">${esc(prev.brand)}</span></a>
-  <a href="${b}${next.path}" rel="next"><span class="case-pager-k">Next project →</span><span class="case-pager-n">${esc(next.brand)}</span></a>
+<nav class="case-pager" aria-label="${esc(t.morePager)}">
+  <a href="${h}${prev.path}" rel="prev"><span class="case-pager-k">${t.prev}</span><span class="case-pager-n">${esc(prev.brand)}</span></a>
+  <a href="${h}${next.path}" rel="next"><span class="case-pager-k">${t.next}</span><span class="case-pager-n">${esc(next.brand)}</span></a>
 </nav>
 
 <section class="ald-sec ald-sec--dark case-cta">
   <div class="ald-wrap">
-    <h2 class="ald-contact-h">Have a similar<br>idea<span class="ald-dot">?</span></h2>
-    <p class="ald-contact-s">Let’s make it real. <span class="ald-dot">♥</span></p>
+    <h2 class="ald-contact-h">${t.ctaSimilar}</h2>
+    <p class="ald-contact-s">${t.ctaReal} <span class="ald-dot">♥</span></p>
     <div class="case-cta-actions">
-      <a href="${b}#contact" class="ald-btn">Start something <span class="ald-dot">♥</span></a>
+      <a href="${h}#contact" class="ald-btn">${t.startSomething} <span class="ald-dot">♥</span></a>
       <a href="mailto:${EMAIL}" class="ald-contact-mail">${EMAIL}</a>
-      <a href="../" class="ald-link">All projects →</a>
+      <a href="../" class="ald-link">${t.allProjects}</a>
     </div>
   </div>
 </section>`;
 
   return page({
-    b, hubHref: '../', hubCurrent: false,
-    headHtml: head({ b, title, description, canonical: p.url, image, imageType: 'image/jpeg', imageAlt: p.coverAlt, graph }),
+    lang, h, hubHref: '../', hubCurrent: false, langHrefs: langLinks(b, p.path),
+    headHtml: head({ b, lang, path: p.path, title, description, canonical: p.url, image, imageType: 'image/jpeg', imageAlt: p.coverAlt, graph }),
     main,
   });
 }
 
 // ───────────────────────────── /work/ hub ─────────────────────────────
-function hubPage() {
-  const b = '../';
-  const url = `${SITE_URL}/work/`;
-  const scopes = [...new Set(projects.map((p) => p.scope))];
-  const title = `Selected work — ${projects.length} digital products | ${NAME}`;
-  const description = clip(`${projects.length} products built by ${NAME}: ${scopes.join(', ').toLowerCase()} — mobile apps, web platforms and AI tools, each with the problem, approach and result behind it.`, 158);
+function hubPage(list, lang) {
+  const t = strings(lang).ui;
+  const pre = LOCALES[lang].prefix;
+  const b = pre ? '../../' : '../';
+  const h = b + pre;
+  const url = urlIn(lang, 'work/');
+  const scopes = [...new Set(list.map((p) => p.scope))];
+  const n = list.length;
+  const title = fill(t.hubTitle, { n, name: NAME });
+  const description = clip(fill(t.hubDescription, { n, name: NAME, scopes: lang === 'en' ? scopes.join(', ').toLowerCase() : scopes.join(', ') }), 158);
   const graph = [
     orgNode, siteNode,
     {
       '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-        { '@type': 'ListItem', position: 2, name: 'Work', item: url },
+        { '@type': 'ListItem', position: 1, name: t.home, item: urlIn(lang) },
+        { '@type': 'ListItem', position: 2, name: t.work, item: url },
       ],
     },
     {
-      '@type': 'CollectionPage', '@id': `${url}#webpage`, url, name: title, description, inLanguage: LANG,
+      '@type': 'CollectionPage', '@id': `${url}#webpage`, url, name: title, description, inLanguage: lang,
       isPartOf: { '@id': `${SITE_URL}/#website` }, breadcrumb: { '@id': `${url}#breadcrumb` },
       primaryImageOfPage: { '@type': 'ImageObject', url: abs(OG_IMAGE), width: 1200, height: 630 },
       mainEntity: { '@id': `${url}#projects` }, dateModified: today,
     },
     {
-      '@type': 'ItemList', '@id': `${url}#projects`, name: 'Selected work', numberOfItems: projects.length,
-      itemListElement: projects.map((p) => ({ '@type': 'ListItem', position: p.n, url: p.url, name: p.brand })),
+      '@type': 'ItemList', '@id': `${url}#projects`, name: t.selectedWork, numberOfItems: n,
+      itemListElement: list.map((p) => ({ '@type': 'ListItem', position: p.n, url: p.url, name: p.brand })),
     },
   ];
-  const cards = projects.map((p) => hubCard(p, b, p.n <= 3, 2)).join('\n');
+  const cards = list.map((p) => hubCard(p, b, h, p.n <= 3, 2)).join('\n');
 
   const main = `
 <header class="case-hero">
   <div class="ald-wrap">
-    <nav class="case-crumbs" aria-label="Breadcrumb">
-      <ol><li><a href="${b}">Home</a></li><li aria-current="page">Work</li></ol>
+    <nav class="case-crumbs" aria-label="${esc(t.crumbs)}">
+      <ol><li><a href="${h}">${t.home}</a></li><li aria-current="page">${t.work}</li></ol>
     </nav>
-    <p class="ald-eyebrow has-idx"><span class="ald-idx">03</span> / Selected work</p>
-    <h1 class="case-h1"><span class="case-title case-title--hub">Things we <span class="ald-dot">♥</span> made<span class="ald-dot">.</span></span></h1>
-    <p class="ald-lead case-sub">Every project, a different problem — one approach: understand the business, ship something real, then make the numbers move. ${projects.length} products across ${scopes.length} areas.</p>
+    <p class="ald-eyebrow has-idx"><span class="ald-idx">03</span> / ${t.selectedWork}</p>
+    <h1 class="case-h1"><span class="case-title case-title--hub">${t.hubH1}</span></h1>
+    <p class="ald-lead case-sub">${fill(t.hubLead, { n, m: scopes.length })}</p>
   </div>
 </header>
-<section class="ald-sec hub-sec" aria-label="All projects">
+<section class="ald-sec hub-sec" aria-label="${esc(t.allProjectsLabel)}">
   <div class="ald-wrap">
     <ol class="hub-grid">
 ${cards}
@@ -410,18 +420,18 @@ ${cards}
 </section>
 <section class="ald-sec ald-sec--dark case-cta">
   <div class="ald-wrap">
-    <h2 class="ald-contact-h">Your problem<br>could be next<span class="ald-dot">.</span></h2>
-    <p class="ald-contact-s">Tell us what you want to change. <span class="ald-dot">♥</span></p>
+    <h2 class="ald-contact-h">${t.hubCtaH}</h2>
+    <p class="ald-contact-s">${t.hubCtaS} <span class="ald-dot">♥</span></p>
     <div class="case-cta-actions">
-      <a href="${b}#contact" class="ald-btn">Start something <span class="ald-dot">♥</span></a>
+      <a href="${h}#contact" class="ald-btn">${t.startSomething} <span class="ald-dot">♥</span></a>
       <a href="mailto:${EMAIL}" class="ald-contact-mail">${EMAIL}</a>
     </div>
   </div>
 </section>`;
 
   return page({
-    b, hubHref: './', hubCurrent: true,
-    headHtml: head({ b, title, description, canonical: url, image: abs(OG_IMAGE), imageType: 'image/png', imageAlt: 'AILoveDigital — selected work', graph }),
+    lang, h, hubHref: './', hubCurrent: true, langHrefs: langLinks(b, 'work/'),
+    headHtml: head({ b, lang, path: 'work/', title, description, canonical: url, image: abs(OG_IMAGE), imageType: 'image/png', imageAlt: t.hubOgAlt, graph }),
     main,
   });
 }
@@ -443,28 +453,26 @@ function notFoundPage() {
   </div>
 </header>`;
   return page({
-    b, hubHref: `${b}work/`, hubCurrent: false,
-    headHtml: head({ b, title: `Page not found | ${NAME}`, description: 'This page does not exist.', canonical: '', image: abs(OG_IMAGE), imageType: 'image/png', imageAlt: NAME, robots: 'noindex,follow' }),
+    lang: 'en', h: b, hubHref: `${b}work/`, hubCurrent: false, langHrefs: langLinks(b, ''),
+    headHtml: head({ b, lang: 'en', path: null, title: `Page not found | ${NAME}`, description: 'This page does not exist.', canonical: '', image: abs(OG_IMAGE), imageType: 'image/png', imageAlt: NAME, robots: 'noindex,follow' }),
     main,
   });
 }
 
 // ───────────────────────────── home-page data block ─────────────────────────────
-// Single-quoted JS string literal, matching the style of the surrounding component code.
-const q = (s) => `'${String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
-const workAllLiteral = `const workData = [
-${projects.map((p) => `      { name: ${q(p.name)}, line: ${q(p.line)}, year: ${q(p.year)}, scope: ${q(p.scope)}, time: ${q(p.time || '')}, m1: ${q(p.chips[0])}, m2: ${q(p.chips[1])}, m3: ${q(p.chips[2])}, slug: ${q(p.slug)}, img: ${q('./' + p.homeImg)}, href: ${q('./' + p.path)} },`).join('\n')}
-    ];`;
-
 const home = read('index.html');
 const re = /(\/\/ workAll:start[^\n]*\n\s*)const workData = \[[\s\S]*?\n\s*\];(\s*\n\s*\/\/ workAll:end)/;
 if (!re.test(home)) throw new Error('index.html: "// workAll:start … // workAll:end" markers not found around const workData');
-write('index.html', home.replace(re, (_, a, c) => a + workAllLiteral + c));
+write('index.html', home.replace(re, (_, a, c) => a + workDataLiteral(projects, './') + c));
 
 // ───────────────────────────── write pages ─────────────────────────────
-write('work/index.html', hubPage());
 write('404.html', notFoundPage());
-projects.forEach((p, i) => write(`work/${p.slug}/index.html`, casePage(p, i)));
-
-const longTitles = projects.filter((p) => pageTitle(p).length > 72).map((p) => p.slug);
-console.log(`work: hub + ${projects.length} case pages + 404, home workAll refreshed${longTitles.length ? ` (long <title>: ${longTitles.join(', ')})` : ''}`);
+for (const lang of LANGS) {
+  const list = localizeProjects(projects, lang);
+  const pre = LOCALES[lang].prefix;
+  write(`${pre}work/index.html`, hubPage(list, lang));
+  list.forEach((p, i) => write(`${pre}work/${p.slug}/index.html`, casePage(p, i, list, lang)));
+  const longTitles = list.filter((p) => pageTitle(p).length > 72).map((p) => p.slug);
+  console.log(`work [${lang}]: hub + ${list.length} case pages${longTitles.length ? ` (long <title>: ${longTitles.join(', ')})` : ''}`);
+}
+console.log('work: 404 and home workAll refreshed');

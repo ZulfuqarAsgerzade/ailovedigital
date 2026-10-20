@@ -73,7 +73,7 @@ h1,h2,h3{text-wrap:balance}
 .ald-navlink.is-active{color:var(--ink)}
 .ald-navlink:hover::after,.ald-navlink.is-active::after{right:0}
 .ald-nav-actions{display:flex;align-items:center;gap:12px}
-/* language menu (<details>): EN only for now, RU / AZ shown inactive until translated */
+/* language menu (<details>): the current language plus links to the same page in the others */
 .ald-lang{position:relative}
 .ald-lang-btn{display:flex;align-items:center;gap:6px;height:36px;padding:0 12px;border-radius:var(--r-pill);font-size:13px;font-weight:500;color:var(--muted);list-style:none;cursor:pointer;user-select:none;-webkit-user-select:none;transition:color .2s,background .2s}
 .ald-lang-btn::-webkit-details-marker{display:none}
@@ -85,11 +85,12 @@ h1,h2,h3{text-wrap:balance}
 .ald-lang-menu{position:absolute;top:calc(100% + 10px);right:0;z-index:2;display:flex;flex-direction:column;gap:2px;min-width:210px;padding:6px;background:var(--bg);border:1px solid var(--line-soft);border-radius:var(--r-md);box-shadow:var(--shadow-md);animation:aldFade .2s var(--ease)}
 .ald-lang-opt{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;font-size:14px;color:var(--ink)}
 .ald-lang-opt.is-active{background:var(--bg-alt);font-weight:500}
-.ald-lang-opt.is-soon{color:var(--muted);cursor:default}
+a.ald-lang-opt{transition:background .2s}
+a.ald-lang-opt:hover{background:var(--bg-alt)}
+a.ald-lang-opt:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
 .ald-lang-tag{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .ald-lang-opt.is-active .ald-lang-tag{font-size:13px;color:var(--red)}
 .ald-flag{flex:0 0 auto;width:20px;height:14px;border-radius:3px;background:center/cover no-repeat;box-shadow:0 0 0 1px rgba(11,11,11,.1)}
-.ald-lang-opt.is-soon .ald-flag{opacity:.75}
 .ald-flag--en{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 60 30%22%3E%3CclipPath id=%22t%22%3E%3Cpath d=%22M30 15h30v15zv15H0zH0V0zV0h30z%22/%3E%3C/clipPath%3E%3Cpath d=%22M0 0v30h60V0z%22 fill=%22%23012169%22/%3E%3Cpath d=%22M0 0l60 30m0-30L0 30%22 stroke=%22%23fff%22 stroke-width=%226%22/%3E%3Cpath d=%22M0 0l60 30m0-30L0 30%22 clip-path=%22url%28%23t%29%22 stroke=%22%23C8102E%22 stroke-width=%224%22/%3E%3Cpath d=%22M30 0v30M0 15h60%22 stroke=%22%23fff%22 stroke-width=%2210%22/%3E%3Cpath d=%22M30 0v30M0 15h60%22 stroke=%22%23C8102E%22 stroke-width=%226%22/%3E%3C/svg%3E")}
 .ald-flag--ru{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 9 6%22%3E%3Crect width=%229%22 height=%222%22 fill=%22%23fff%22/%3E%3Crect y=%222%22 width=%229%22 height=%222%22 fill=%22%230039A6%22/%3E%3Crect y=%224%22 width=%229%22 height=%222%22 fill=%22%23D52B1E%22/%3E%3C/svg%3E")}
 .ald-flag--az{background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22%3E%3Crect width=%221200%22 height=%22200%22 fill=%22%2300B5E2%22/%3E%3Crect y=%22200%22 width=%221200%22 height=%22200%22 fill=%22%23EF3340%22/%3E%3Crect y=%22400%22 width=%221200%22 height=%22200%22 fill=%22%23509E2F%22/%3E%3Ccircle cx=%22560%22 cy=%22300%22 r=%2290%22 fill=%22%23fff%22/%3E%3Ccircle cx=%22582%22 cy=%22300%22 r=%2275%22 fill=%22%23EF3340%22/%3E%3Cpolygon points=%22690.0,240.0 708.1,256.3 732.4,257.6 733.7,281.9 750.0,300.0 733.7,318.1 732.4,342.4 708.1,343.7 690.0,360.0 671.9,343.7 647.6,342.4 646.3,318.1 630.0,300.0 646.3,281.9 647.6,257.6 671.9,256.3%22 fill=%22%23fff%22/%3E%3C/svg%3E")}
@@ -326,3 +327,5 @@ html.ald-gsap{scroll-behavior:auto}
 .ald-work:hover .ald-work-name{color:var(--red)}
 .ald-work:hover .ald-link{color:var(--red);border-color:var(--red);gap:13px}
 .ald-head-side{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+/* translated pages: the big display words run longer in Russian and Azerbaijani */
+:lang(ru) .ald-svc-word,:lang(az) .ald-svc-word{font-size:clamp(25px,5.6vw,80px)}
