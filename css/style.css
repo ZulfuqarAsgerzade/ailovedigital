@@ -327,15 +327,11 @@ html.ald-gsap{scroll-behavior:auto}
 .ald-work:hover .ald-work-name{color:var(--red)}
 .ald-work:hover .ald-link{color:var(--red);border-color:var(--red);gap:13px}
 .ald-head-side{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
-/* desktop: a header with a side link ("All projects →") becomes two rows — eyebrow + link on top (the link in
-   the top-right corner), heading + lead below — so the link lines up with the eyebrow however long the heading is */
+/* desktop: a header with a side link ("All projects →") keeps the link in its top-right corner and the lead at
+   the bottom, with at least a comfortable gap between them; the eyebrow stays attached to its heading */
 @media (min-width:861px){
-  .ald-head--link{grid-template-rows:auto auto;row-gap:0}
-  .ald-head--link>div,.ald-head--link>.ald-head-side{display:contents}
-  .ald-head--link .ald-eyebrow{grid-column:1;grid-row:1}
-  .ald-head--link .ald-h2{grid-column:1;grid-row:2}
-  .ald-head--link .ald-head-side>.ald-link{grid-column:2;grid-row:1;justify-self:end;align-self:start}
-  .ald-head--link .ald-lead{grid-column:2;grid-row:2;align-self:end}
+  .ald-head--link .ald-head-side{align-self:stretch;justify-content:space-between;gap:clamp(28px,3.2vw,44px)}
+  .ald-head--link .ald-head-side>.ald-link{order:-1;align-self:flex-end}
 }
 /* translated pages: the big display words run longer in Russian and Azerbaijani */
 :lang(ru) .ald-svc-word,:lang(az) .ald-svc-word{font-size:clamp(25px,5.6vw,80px)}
