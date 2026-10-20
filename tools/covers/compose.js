@@ -242,7 +242,11 @@ export async function prepare(p) {
   return { src, hue: m.hue ?? dominantHue(all), set: deviceSet(m) };
 }
 
-export function render(canvas, p, prep, index, { width, scale }) {
+/**
+ * `content` < 1 shrinks the title and devices toward the centre while the background stays full-bleed —
+ * used for the home card, whose frame crops a few percent off every edge for the scroll parallax.
+ */
+export function render(canvas, p, prep, index, { width, scale, content = 1 }) {
   const W = width, ctx = canvas.getContext('2d');
   canvas.width = Math.round(W * scale); canvas.height = Math.round(H * scale);
   ctx.setTransform(scale, 0, 0, scale, 0, 0);
@@ -255,6 +259,7 @@ export function render(canvas, p, prep, index, { width, scale }) {
   const glow = ctx.createRadialGradient(W * (flip ? 0.38 : 0.64), H * 0.6, 0, W * (flip ? 0.38 : 0.64), H * 0.6, W * 0.42);
   glow.addColorStop(0, hsl(pal.h, 80, 55, 0.22)); glow.addColorStop(1, hsl(pal.h, 80, 55, 0));
   ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
+  ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(content, content); ctx.translate(-W / 2, -H / 2);
   title(ctx, p, W, pal, flip);
   const items = layout(prep.set, W);
   // far-to-near order as listed; for flipped covers mirror the positions, not the screenshots
@@ -263,4 +268,54 @@ export function render(canvas, p, prep, index, { width, scale }) {
     const dw = w; const ox = flip ? W - x - dw : x;
     DRAW[kind](ctx, s, ox, y, dw);
   }
+  ctx.restore();
+}
+
+/**
+ * Home card for a project with a hand-made cover (no "mockup"): trim the black frame baked into the
+ * cover, shrink it toward the centre by `content` and feather its edges into the cover's own background
+ * colour, so the card's parallax crop only ever eats background.
+ */
+export async function cardFromCover(canvas, p, { width, height, content }) {
+  const img = await load(`../../assets/images/work/${p.slug}/cover.webp`);
+  const W = img.naturalWidth, Hh = img.naturalHeight;
+  const c = document.createElement('canvas'); c.width = W; c.height = Hh;
+  const x = c.getContext('2d', { willReadFrequently: true }); x.drawImage(img, 0, 0);
+  const d = x.getImageData(0, 0, W, Hh).data;
+  const lum = (px, py) => { const k = (py * W + px) * 4; return (d[k] + d[k + 1] + d[k + 2]) / 3; };
+  const line = (n, get) => { let t = 0; for (let i = 0; i < n; i++) t += get(i); return t / n; };
+  const dark = 12; // the frame is near-black; the cover's own background is well above this
+  let t = 0, b = Hh - 1, l = 0, r = W - 1;
+  while (t < Hh / 4 && line(W, (i) => lum(i, t)) < dark) t++;
+  while (b > Hh * 0.75 && line(W, (i) => lum(i, b)) < dark) b--;
+  while (l < W / 4 && line(Hh, (i) => lum(l, i)) < dark) l++;
+  while (r > W * 0.75 && line(Hh, (i) => lum(r, i)) < dark) r--;
+  const pad = 4; t += pad; b -= pad; l += pad; r -= pad;
+  // background: the median colour of the trimmed cover's border
+  const ring = [];
+  for (let i = l; i <= r; i += 8) ring.push([i, t], [i, b]);
+  for (let i = t; i <= b; i += 8) ring.push([l, i], [r, i]);
+  const ch = (o) => ring.map(([px, py]) => d[(py * W + px) * 4 + o]).sort((p, q) => p - q)[ring.length >> 1];
+  const bg = `rgb(${ch(0)},${ch(1)},${ch(2)})`;
+
+  canvas.width = width; canvas.height = height;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = bg; ctx.fillRect(0, 0, width, height);
+  // cover-fit the trimmed cover into the card, then scale it about the centre
+  const sw = r - l, sh = b - t, fit = Math.max(width / sw, height / sh) * content;
+  const dw = sw * fit, dh = sh * fit, dx = (width - dw) / 2, dy = (height - dh) / 2;
+  const layer = document.createElement('canvas'); layer.width = width; layer.height = height;
+  const lx = layer.getContext('2d');
+  lx.drawImage(img, l, t, sw, sh, dx, dy, dw, dh);
+  // feather: fade the layer's outer band to transparent so it melts into the background
+  const f = Math.min(dw, dh) * 0.08;
+  lx.globalCompositeOperation = 'destination-in';
+  const fade = (x0, y0, x1, y1) => { const g = lx.createLinearGradient(x0, y0, x1, y1); g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(0,0,0,1)'); return g; };
+  for (const [g, rx, ry, rw, rh] of [
+    [fade(dx, 0, dx + f, 0), 0, 0, width, height],
+    [fade(dx + dw, 0, dx + dw - f, 0), 0, 0, width, height],
+    [fade(0, dy, 0, dy + f), 0, 0, width, height],
+    [fade(0, dy + dh, 0, dy + dh - f), 0, 0, width, height],
+  ]) { lx.fillStyle = g; lx.fillRect(rx, ry, rw, rh); }
+  ctx.drawImage(layer, 0, 0);
 }

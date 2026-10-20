@@ -92,6 +92,18 @@ function nav(b, hubHref, hubCurrent) {
     ${link(`${b}#contact`, 'Contact')}
   </div>
   <div class="ald-nav-actions">
+    <details class="ald-lang">
+      <summary class="ald-lang-btn" aria-label="Language: English">
+        <svg class="ald-lang-ico" width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5"></circle><path d="M1.5 8h13M8 1.5c1.9 1.8 2.9 4 2.9 6.5S9.9 12.7 8 14.5M8 1.5C6.1 3.3 5.1 5.5 5.1 8s1 4.7 2.9 6.5"></path></svg>
+        <span>EN</span>
+        <svg class="ald-lang-chev" width="9" height="9" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"></path></svg>
+      </summary>
+      <div class="ald-lang-menu">
+        <span class="ald-lang-opt is-active" lang="en" aria-current="true"><span class="ald-flag ald-flag--en" aria-hidden="true"></span>English<span class="ald-lang-tag">✓</span></span>
+        <span class="ald-lang-opt is-soon" lang="ru"><span class="ald-flag ald-flag--ru" aria-hidden="true"></span>Русский</span>
+        <span class="ald-lang-opt is-soon" lang="az"><span class="ald-flag ald-flag--az" aria-hidden="true"></span>Azərbaycanca</span>
+      </div>
+    </details>
     <a href="${b}#contact" class="ald-btn ald-btn--sm ald-nav-cta">Start something <span class="ald-dot">♥</span></a>
     <button type="button" class="ald-burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
   </div>
@@ -178,20 +190,6 @@ function relatedFor(p) {
   return [...same, ...rest].slice(0, 3);
 }
 
-// ───────────────────────────── gallery layout ─────────────────────────────
-// Screens become small thumbnails in a grid (4 per row for phone and tablet screens, 3 for landscape ones on
-// desktop; fewer on narrower screens — see css/case.css). Consecutive screens of the same kind share a grid so
-// every thumbnail in it has the same shape; the full image opens in the viewer.
-const shotKind = (s) => { const r = s.w / s.h; return r >= 0.85 ? 'wide' : r < 0.6 ? 'phone' : 'tablet'; };
-function galleryGroups(shots) {
-  const groups = [];
-  shots.forEach((s, idx) => {
-    const kind = shotKind(s), last = groups.at(-1);
-    if (last && last.kind === kind) last.items.push({ ...s, idx }); else groups.push({ kind, items: [{ ...s, idx }] });
-  });
-  return groups;
-}
-
 // ───────────────────────────── case-study page ─────────────────────────────
 /** "ChefMarket — Restaurant–supplier B2B marketplace ecosystem | AILoveDigital", kept near the ~60
  *  characters search results show: the leading article goes, and the site name goes if still too long. */
@@ -207,7 +205,6 @@ function casePage(p, i) {
   const title = pageTitle(p);
   const description = clip(p.overview, 156);
   const image = abs(p.og);
-  const shotAlt = (s, k) => (p.shotAlts && p.shotAlts[k]) || `${p.brand} interface — screen ${k + 1} of ${p.shots.length}`;
   const keywords = [...new Set(p.stack.flatMap((g) => g.v))];
 
   const graph = [
@@ -232,18 +229,12 @@ function casePage(p, i) {
       name: p.brand, headline: p.headline, abstract: p.subtitle, description: p.overview,
       genre: p.scope, dateCreated: p.year, inLanguage: LANG, keywords: keywords.join(', '),
       creator: { '@id': `${SITE_URL}/#org` }, publisher: { '@id': `${SITE_URL}/#org` },
-      image: [p.cover, ...p.shots].map((s) => abs(s.src)),
+      image: abs(p.cover.src),
     },
   ];
 
   const meta = [['Year', p.year], ['Scope', p.scope], ...(p.time ? [['Timeline', p.time]] : [])]
     .map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('');
-
-  const rows = galleryGroups(p.shots).map((g) => {
-    const items = g.items.map((s) =>
-      `<a class="case-shot" href="${b}${s.src}" data-lb="${s.idx}"><img src="${b}${s.src}" width="${s.w}" height="${s.h}" alt="${esc(shotAlt(s, s.idx))}" loading="lazy" decoding="async"></a>`).join('');
-    return `<div class="case-grid case-grid--${g.kind}${g.items.length <= 2 ? ' case-grid--few' : ''}">${items}</div>`;
-  }).join('\n      ');
 
   const main = `
 <header class="case-hero">
@@ -331,26 +322,11 @@ ${p.stack.map((g) => `      <div class="case-rv"><dt>${esc(g.k)}</dt><dd><ul cla
   </div>
 </section>
 
-<section class="ald-sec" aria-labelledby="screens">
+<section class="ald-sec" aria-labelledby="related">
   <div class="ald-wrap">
     <header class="ald-head case-rv">
       <div>
-        <p class="ald-eyebrow has-idx"><span class="ald-idx">08</span> / Screens</p>
-        <h2 class="ald-h2" id="screens">${p.shots.length} ${p.shots.length === 1 ? 'screen' : 'screens'} from the product<span class="ald-dot">.</span></h2>
-      </div>
-      <p class="ald-lead">Select a screen to see it full size.</p>
-    </header>
-    <div class="case-shots" data-gallery>
-      ${rows}
-    </div>
-  </div>
-</section>
-
-<section class="ald-sec ald-sec--alt" aria-labelledby="related">
-  <div class="ald-wrap">
-    <header class="ald-head case-rv">
-      <div>
-        <p class="ald-eyebrow has-idx"><span class="ald-idx">09</span> / More work</p>
+        <p class="ald-eyebrow has-idx"><span class="ald-idx">08</span> / More work</p>
         <h2 class="ald-h2" id="related">Related projects<span class="ald-dot">.</span></h2>
       </div>
       <p class="ald-lead">More ${esc(p.scope.toLowerCase())} and neighbouring work from the same studio.</p>
@@ -378,17 +354,10 @@ ${relatedFor(p).map((r) => hubCard(r, b, false)).join('\n')}
   </div>
 </section>`;
 
-  const lightbox = `<dialog class="case-lb" id="lightbox" aria-label="${esc(p.brand)} screenshot viewer">
-  <button type="button" class="case-lb-btn case-lb-close" aria-label="Close viewer">×</button>
-  <button type="button" class="case-lb-btn case-lb-prev" aria-label="Previous screen">←</button>
-  <figure class="case-lb-fig"><img alt="" decoding="async"><figcaption class="case-lb-cap" aria-live="polite"></figcaption></figure>
-  <button type="button" class="case-lb-btn case-lb-next" aria-label="Next screen">→</button>
-</dialog>`;
-
   return page({
     b, hubHref: '../', hubCurrent: false,
     headHtml: head({ b, title, description, canonical: p.url, image, imageType: 'image/jpeg', imageAlt: p.coverAlt, graph }),
-    main, extra: lightbox,
+    main,
   });
 }
 

@@ -23,15 +23,19 @@
   <select id="only"><option value="">All projects</option></select>
   <button id="render">Render</button>
   <button id="save">Save to disk</button>
-  <span id="log">Generates cover.webp, the home card and og.jpg from the screens in data/projects.json → "mockup".</span>
+  <span id="log">Generates cover.webp, the home card and og.jpg from the screens in data/projects.json → "mockup" (hand-made covers: home card only).</span>
 </header>
 <main id="out"></main>
 <script type="module">
-import { prepare, render } from './compose.js';
+import { prepare, render, cardFromCover } from './compose.js';
 
 const SAVE = 'http://127.0.0.1:4177/save';
 const log = (m) => { document.getElementById('log').textContent = m; };
-const projects = (await (await fetch('../../data/projects.json')).json()).filter((p) => p.mockup);
+// Projects without "mockup" keep their hand-made cover and og.jpg; only their home card is redrawn from it.
+const projects = await (await fetch('../../data/projects.json')).json();
+// The home card's frame crops ~4% off each edge for the scroll parallax (css/style.css .ald-work-media),
+// so the card's content is drawn smaller, toward the centre, to keep every edge clear.
+const CARD_CONTENT = 0.84;
 const only = document.getElementById('only');
 projects.forEach((p) => only.add(new Option(p.brand, p.slug)));
 const results = new Map();
@@ -39,25 +43,33 @@ const results = new Map();
 async function build(p, i) {
   // the second argument makes the browser fetch the latin-ext face too (İ, ş, ə, ğ … are not in the latin subset)
   const glyphs = 'İşəğüöçıƏÇŞ'; await document.fonts.load('700 100px Geist', glyphs); await document.fonts.load('450 34px Geist', glyphs);
+  if (!p.mockup) {
+    const card = document.createElement('canvas');
+    await cardFromCover(card, p, { width: 800, height: 500, content: CARD_CONTENT });
+    results.set(p.slug, { card, set: 'hand-made cover' });
+    return { preview: card, set: 'hand-made cover → card only' };
+  }
   const prep = await prepare(p);
   const cover = document.createElement('canvas');
   render(cover, p, prep, i, { width: 1600, scale: 1 });
-  const card = document.createElement('canvas'); card.width = 800; card.height = 500;
-  card.getContext('2d').drawImage(cover, 0, 0, 800, 500);
+  const card = document.createElement('canvas');
+  render(card, p, prep, i, { width: 1600, scale: 0.5, content: CARD_CONTENT });
   const og = document.createElement('canvas');
   render(og, p, prep, i, { width: 1905, scale: 630 / 1000 });
   results.set(p.slug, { cover, card, og, set: prep.set });
-  return { cover, set: prep.set };
+  return { preview: card, set: prep.set };
 }
 
 document.getElementById('render').onclick = async () => {
   const out = document.getElementById('out'); out.innerHTML = '';
   const want = only.value;
-  for (const [i, p] of projects.entries()) {
+  let i = -1; // style index (mirror + mesh) counts only the composed covers, so a hand-made one shifts nothing
+  for (const p of projects) {
+    if (p.mockup) i++;
     if (want && p.slug !== want) continue;
     log(`rendering ${p.brand}…`);
-    const { cover, set } = await build(p, i);
-    const fig = document.createElement('figure'); fig.append(cover);
+    const { preview, set } = await build(p, i);
+    const fig = document.createElement('figure'); fig.append(preview);
     const cap = document.createElement('figcaption'); cap.textContent = `${p.brand} — ${set}`; fig.append(cap); out.append(fig);
   }
   log('done');
@@ -71,9 +83,9 @@ async function put(path, b) {
 document.getElementById('save').onclick = async () => {
   for (const [slug, r] of results) {
     const base = `assets/images/work/${slug}`;
-    await put(`${base}/cover.webp`, await blob(r.cover, 'image/webp', 0.9));
+    if (r.cover) await put(`${base}/cover.webp`, await blob(r.cover, 'image/webp', 0.9));
     await put(`${base}.webp`, await blob(r.card, 'image/webp', 0.88));
-    await put(`${base}/og.jpg`, await blob(r.og, 'image/jpeg', 0.88));
+    if (r.og) await put(`${base}/og.jpg`, await blob(r.og, 'image/jpeg', 0.88));
     log(`saved ${slug}`);
   }
   log(`saved ${results.size} covers`);

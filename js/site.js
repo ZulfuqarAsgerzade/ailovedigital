@@ -117,3 +117,12 @@ document.addEventListener('click', (e) => {
     }, 200);
   })();
 })();
+
+// Language menu (<details class="ald-lang"> in the nav): close it on an outside click or Escape.
+document.addEventListener('click', (e) => {
+  document.querySelectorAll('details.ald-lang[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; });
+});
+document.addEventListener('keydown', (e) => {
+  const d = e.key === 'Escape' && document.querySelector('details.ald-lang[open]');
+  if (d) { d.open = false; d.querySelector('summary').focus(); }
+});

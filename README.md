@@ -28,10 +28,9 @@ or the config in `scripts/lib/site.mjs`. It is idempotent. Never edit `work/**` 
 
 1. Append an entry to `data/projects.json` (copy an existing one — every field is required).
 2. Add the images: `assets/images/work/<slug>.webp` (home card), `assets/images/work/<slug>/cover.webp`
-   (1600×1000), `01.webp`, `02.webp` … (screens, any size) and `og.jpg` (1200×630).
+   (1600×1000), `og.jpg` (1200×630) and the screens `01.webp`, `02.webp` … (any size — they are not shown
+   on the pages, the cover composer draws them into the device frames).
 3. `npm run build`.
-
-Screens become a thumbnail grid (3–4 per row on desktop) laid out from their dimensions; the full image opens in the viewer. Optional per-project `shotAlts` array overrides the default screenshot alt text.
 
 ## Covers (hero images)
 

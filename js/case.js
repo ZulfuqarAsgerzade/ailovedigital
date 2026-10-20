@@ -1,5 +1,5 @@
 // Behaviour for the static case-study pages and the /work/ hub: reading-progress bar, mobile menu,
-// scroll-reveal and the screenshot viewer. No dependencies, and every feature is progressive
+// scroll-reveal and the language menu. No dependencies, and every feature is progressive
 // enhancement — the pages read and navigate fine without any of it.
 (() => {
   'use strict';
@@ -68,37 +68,12 @@
     }
   }
 
-  // ───────────── screenshot viewer ─────────────
-  const box = $('#lightbox');
-  const shots = $$('.case-shot[data-lb]').sort((a, b) => a.dataset.lb - b.dataset.lb);
-  if (box && typeof box.showModal === 'function' && shots.length) {
-    const img = $('img', box), cap = $('.case-lb-cap', box);
-    const prev = $('.case-lb-prev', box), next = $('.case-lb-next', box);
-    let at = 0;
-    const show = (i) => {
-      at = (i + shots.length) % shots.length;
-      const thumb = $('img', shots[at]);
-      img.src = shots[at].href;
-      img.alt = thumb.alt;
-      cap.textContent = `${at + 1} / ${shots.length}`;
-      prev.hidden = next.hidden = shots.length < 2;
-      // warm the neighbours so stepping through feels instant
-      [at - 1, at + 1].forEach((n) => { new Image().src = shots[(n + shots.length) % shots.length].href; });
-    };
-    shots.forEach((a, i) => a.addEventListener('click', (e) => {
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; // let "open in new tab" through
-      e.preventDefault();
-      show(i);
-      box.showModal();
-    }));
-    prev.addEventListener('click', () => show(at - 1));
-    next.addEventListener('click', () => show(at + 1));
-    $('.case-lb-close', box).addEventListener('click', () => box.close());
-    box.addEventListener('click', (e) => { if (e.target === box) box.close(); }); // click on the dark area
-    box.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); show(at - 1); }
-      else if (e.key === 'ArrowRight') { e.preventDefault(); show(at + 1); }
-    });
-    box.addEventListener('close', () => { img.removeAttribute('src'); });
-  }
+  // ───────────── language menu: close on an outside click or Escape ─────────────
+  document.addEventListener('click', (e) => {
+    $$('details.ald-lang[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; });
+  });
+  document.addEventListener('keydown', (e) => {
+    const d = e.key === 'Escape' && $('details.ald-lang[open]');
+    if (d) { d.open = false; $('summary', d).focus(); }
+  });
 })();

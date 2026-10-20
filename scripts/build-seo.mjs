@@ -188,7 +188,7 @@ ${imgs([OG_IMAGE, ...work.map((w) => w.homeImg)])}
 ${work.map((w) => `  <url>
     <loc>${w.url}</loc>
     <lastmod>${today}</lastmod>
-${imgs([w.cover.src, ...w.shots.map((s) => s.src)])}
+${imgs([w.cover.src])}
   </url>`).join('\n')}
 </urlset>
 `);

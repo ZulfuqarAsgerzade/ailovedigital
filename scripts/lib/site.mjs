@@ -1,7 +1,7 @@
 // Shared by the build scripts: site-wide config, small helpers and the project loader.
 // Single place to change the domain, the brand text or how project data is read.
 
-import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -61,8 +61,9 @@ export function webpSize(file) {
 /**
  * Projects come from data/projects.json (the single source of truth for the home page cards,
  * the /work/ hub, every case-study page, the sitemap and the structured data).
- * Images are discovered on disk: assets/images/work/<slug>/{cover.webp, 01.webp, 02.webp …, og.jpg}
- * and the 800×500 home-page card image assets/images/work/<slug>.webp.
+ * Images: assets/images/work/<slug>/{cover.webp, og.jpg} and the 800×500 home-page card
+ * assets/images/work/<slug>.webp. The numbered screens (01.webp …) next to them only feed the cover
+ * composer (tools/covers/); the pages do not show them.
  */
 export function loadProjects() {
   const list = JSON.parse(read('data/projects.json'));
@@ -81,10 +82,6 @@ export function loadProjects() {
     const dir = `assets/images/work/${p.slug}`;
     const need = (f) => { if (!existsSync(join(ROOT, f))) throw new Error(`missing image ${f}`); return f; };
     const cover = { src: need(`${dir}/cover.webp`), ...webpSize(join(ROOT, `${dir}/cover.webp`)) };
-    const shots = readdirSync(join(ROOT, dir))
-      .filter((f) => /^\d+\.webp$/.test(f))
-      .sort((a, b) => parseInt(a) - parseInt(b))
-      .map((f) => ({ src: `${dir}/${f}`, ...webpSize(join(ROOT, dir, f)) }));
     return {
       ...p,
       n: i + 1,
@@ -93,7 +90,6 @@ export function loadProjects() {
       homeImg: need(`assets/images/work/${p.slug}.webp`),
       og: need(`${dir}/og.jpg`),
       cover,
-      shots,
     };
   });
 }
