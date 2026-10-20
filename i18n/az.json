@@ -21,7 +21,7 @@
     "closeMenu": "Menyunu bağla",
     "menu": "Menyu",
     "homeLabel": "ana səhifə",
-    "footerBlurb": "Bizneslərə rəqəmsalı sevdiririk — öz xərcini çıxaran texnologiya, süni intellekt və kreativlə.",
+    "footerBlurb": "Texnologiya, süni intellekt və ölçülə bilən nəticə verən kreativlə bizneslərin böyüməsinə kömək edirik.",
     "footServices": "Xidmətlər",
     "svcBuild": "İnkişaf",
     "svcAutomate": "Avtomatlaşdırma",
@@ -144,8 +144,8 @@
       ">İnkişaf · Avtomatlaşdırma · Böyümə · Tədris · Strategiya<"
     ],
     [
-      ">Keep going ↓<",
-      ">Davam edin ↓<"
+      ">Learn more ↓<",
+      ">Ətraflı ↓<"
     ],
     [
       "</span> / What we do<",
@@ -228,36 +228,36 @@
       "Nəyi dəyişmək<br>istəyirsiniz<span"
     ],
     [
-      ">Start with the problem. Not the technology. Pick the line that sounds like your week.<",
-      ">Texnologiyadan yox, problemdən başlayın. Həftənizi ən yaxşı təsvir edən cümləni seçin.<"
+      ">Start with the problem, not the technology. Choose the statement closest to your situation.<",
+      ">Texnologiyadan yox, problemdən başlayın. Vəziyyətinizə ən uyğun ifadəni seçin.<"
     ],
     [
-      ">Sounds like {{ answer.name }}. <span",
-      ">Deyəsən, sizə {{ answer.name }} lazımdır. <span"
+      ">Our recommendation: {{ answer.name }}. <span",
+      ">Tövsiyəmiz: {{ answer.name }}. <span"
     ],
     [
-      ">Show me how →<",
-      ">Necə olduğunu göstərin →<"
+      ">Discuss this with us →<",
+      ">Bizimlə müzakirə edin →<"
     ],
     [
-      "text: 'My business needs more customers.', name: 'Growth', body: 'We find where your audience already is,\\nmake creative they actually notice,\\nand turn that attention into customers.'",
-      "text: 'Biznesimə daha çox müştəri lazımdır.', name: 'böyümə', body: 'Auditoriyanızın artıq olduğu yeri tapır,\\nhəqiqətən diqqət çəkən kreativ hazırlayır\\nvə bu diqqəti müştərilərə çeviririk.'"
+      "text: 'My business needs more customers.', name: 'Growth', body: 'We find where your audience already is,\\ncreate content that earns its attention\\nand turn that attention into customers.'",
+      "text: 'Biznesimə daha çox müştəri lazımdır.', name: 'Böyümə', body: 'Auditoriyanızın artıq olduğu yeri tapır,\\nonun diqqətini çəkən kontent hazırlayır\\nvə bu diqqəti müştərilərə çeviririk.'"
     ],
     [
-      "text: 'We waste too much time on manual work.', name: 'Automation', body: 'We map the repetitive work,\\nconnect the systems that should talk to each other,\\nand let AI handle the boring part.'",
-      "text: 'Əl ilə görülən işlərə çox vaxt itiririk.', name: 'avtomatlaşdırma', body: 'Təkrarlanan işləri xəritələyir,\\nbir-biri ilə əlaqəli olmalı sistemləri birləşdirir\\nvə darıxdırıcı hissəni süni intellektə həvalə edirik.'"
+      "text: 'We waste too much time on manual work.', name: 'Automation', body: 'We map the repetitive work,\\nconnect the systems that should share data\\nand hand routine tasks to AI.'",
+      "text: 'Əl ilə görülən işlərə çox vaxt itiririk.', name: 'Avtomatlaşdırma', body: 'Təkrarlanan işləri xəritələyir,\\nməlumat mübadiləsi aparmalı olan sistemləri birləşdirir\\nvə rutin tapşırıqları süni intellektə həvalə edirik.'"
     ],
     [
-      "text: 'I need a digital product.', name: 'Build', body: 'We take the idea,\\nshape it into something people can use,\\nand ship a first version in about eight weeks — not a demo.'",
-      "text: 'Mənə rəqəmsal məhsul lazımdır.', name: 'rəqəmsal məhsul', body: 'İdeyanı götürür,\\ninsanların istifadə edə biləcəyi formaya salır\\nvə təxminən səkkiz həftəyə ilk versiyanı buraxırıq — demo yox.'"
+      "text: 'I need a digital product.', name: 'Product development', body: 'We take the idea,\\nshape it into a product people can use\\nand release a first version in about eight weeks.'",
+      "text: 'Mənə rəqəmsal məhsul lazımdır.', name: 'Məhsul hazırlanması', body: 'İdeyanı götürür,\\nonu insanların istifadə edə biləcəyi məhsula çevirir\\nvə təxminən səkkiz həftəyə ilk versiyanı buraxırıq.'"
     ],
     [
-      "text: 'My team needs AI skills.', name: 'Teach', body: 'We train your team on real tools,\\ninside real workflows,\\nnot slideware.'",
-      "text: 'Komandama süni intellekt bacarıqları lazımdır.', name: 'təlim', body: 'Komandanızı real alətlər üzərində,\\nreal iş axınlarının içində öyrədirik —\\nslaydlarla yox.'"
+      "text: 'My team needs AI skills.', name: 'Team training', body: 'We train your team on real tools,\\ninside real workflows,\\nwith hands-on practice.'",
+      "text: 'Komandama süni intellekt bacarıqları lazımdır.', name: 'Komanda təlimi', body: 'Komandanızı real alətlər üzərində,\\nreal iş axınlarının içində,\\npraktiki məşğələlərlə öyrədirik.'"
     ],
     [
-      "text: 'I’m not sure. Help me figure it out.', name: 'Think', body: 'We start with your business,\\nmap where technology actually helps,\\nand decide together before you spend.'",
-      "text: 'Əmin deyiləm. Anlamağa kömək edin.', name: 'strategiya', body: 'Biznesinizdən başlayır,\\ntexnologiyanın həqiqətən harada kömək etdiyini müəyyən edir\\nvə pul xərcləməzdən əvvəl birlikdə qərar veririk.'"
+      "text: 'I’m not sure yet. Help me decide.', name: 'Strategy', body: 'We start with your business,\\nidentify where technology adds real value\\nand agree on a plan before any spending.'",
+      "text: 'Hələ əmin deyiləm. Qərar verməyə kömək edin.', name: 'Strategiya', body: 'Biznesinizdən başlayır,\\ntexnologiyanın real dəyər qatdığı sahələri müəyyən edir\\nvə hər hansı xərcdən əvvəl planı razılaşdırırıq.'"
     ],
     [
       "</span> / Selected work<",
@@ -296,8 +296,8 @@
       "</span> / Necə işləyirik<"
     ],
     [
-      "No mystery. No 90-page decks<span",
-      "Sirr yoxdur. 90 səhifəlik təqdimat yoxdur<span"
+      "A clear process, from brief to launch<span",
+      "Brifdən istifadəyə verilişə qədər aydın proses<span"
     ],
     [
       ">Every project runs the same way, so you can plan a budget — and a launch date — around it.<",
@@ -312,8 +312,8 @@
       "t: 'Formalaşdırma', d: 'Prototip, vizual sistem və istifadəçi ssenariləri — kodun ilk sətrindən əvvəl, sabit həcm və qiymətlə razılaşdırılır.'"
     ],
     [
-      "t: 'Build', d: 'Two-week sprints, each ending in a working demo. An open task board, no black box.'",
-      "t: 'Hazırlama', d: 'İki həftəlik sprintlər, hər birinin sonunda işləyən demo. Açıq tapşırıq lövhəsi, qara qutu yoxdur.'"
+      "t: 'Build', d: 'Two-week sprints, each ending in a working demo, with progress visible on a shared task board.'",
+      "t: 'Hazırlama', d: 'İki həftəlik sprintlər, hər birinin sonunda işləyən demo; irəliləyiş ortaq tapşırıq lövhəsində görünür.'"
     ],
     [
       "t: 'Scale', d: 'Testing, performance and security checks, launch — then analytics and steady improvement. Launch is a beginning.'",
@@ -324,8 +324,8 @@
       "<span>TEXNOLOGİYA</span></span>\n        <span class=\"ald-line\"><span>BİZNESİ</span></span>\n        <span class=\"ald-line\"><span>DAHA SADƏ</span></span>\n        <span class=\"ald-line\"><span>ETMƏLİDİR<span"
     ],
     [
-      ">Not more complicated.<",
-      ">Daha mürəkkəb yox.<"
+      ">Clarity over complexity.<",
+      ">Mürəkkəblik yox, aydınlıq.<"
     ],
     [
       ">We combine technology, creativity and automation to remove the friction between a business and where it wants to go — and we leave you with something your own team can run.<",
@@ -372,12 +372,12 @@
       "t: 'Təxmin yox, ölçü', d: 'Uğur meyarları işə başlamazdan əvvəl yazılır. «Yaxşı keçdi» fikir yox, rəqəmdir.'"
     ],
     [
-      "t: 'Open by default', d: 'Weekly demos, an open task board and direct access to the people doing the work. Surprises — only the good kind.'",
-      "t: 'Hər şey açıq', d: 'Həftəlik demolar, açıq tapşırıq lövhəsi və işi görən insanlarla birbaşa əlaqə. Sürprizlər — yalnız xoş olanları.'"
+      "t: 'Transparent process', d: 'Weekly demos, a shared task board and direct access to the people doing the work.'",
+      "t: 'Şəffaf proses', d: 'Həftəlik demolar, ortaq tapşırıq lövhəsi və işi görən insanlarla birbaşa əlaqə.'"
     ],
     [
-      "t: 'Built to be owned', d: 'Source code, documentation and access are yours at handover — and handover isn’t goodbye.'",
-      "t: 'Sizin olsun deyə qurulur', d: 'Təhvil zamanı mənbə kodu, sənədlər və girişlər sizindir — təhvil isə vidalaşma deyil.'"
+      "t: 'Built to be owned', d: 'Source code, documentation and access are yours at handover, and we stay on for support afterwards.'",
+      "t: 'Sizin olsun deyə qurulur', d: 'Təhvil zamanı mənbə kodu, sənədlər və girişlər sizə keçir, biz isə sonra da dəstəyi davam etdiririk.'"
     ],
     [
       "</span> / Contact<",
@@ -420,8 +420,8 @@
       "value=\"New enquiry (AZ) — AILoveDigital.com\""
     ],
     [
-      ">We reply within one working day. No newsletters, no sales sequences — just an answer from a human.<",
-      ">Bir iş günü ərzində cavab veririk. Bülleten və satış zəncirləri yoxdur — sadəcə insandan cavab.<"
+      ">We reply personally within one working day — no newsletters or automated sales follow-ups.<",
+      ">Bir iş günü ərzində şəxsən cavab veririk — bülleten və avtomatik satış məktubları olmadan.<"
     ],
     [
       ">Something went wrong sending that — please try again, or email us directly at <",
@@ -444,8 +444,8 @@
       "t: 'Diqqətlə oxuyur və bir iş günü ərzində cavab veririk.'"
     ],
     [
-      "t: 'A free first meeting. Questions, not a pitch deck.'",
-      "t: 'Pulsuz ilk görüş. Təqdimat yox, suallar.'"
+      "t: 'A free first meeting to understand your goals.'",
+      "t: 'Məqsədlərinizi anlamaq üçün pulsuz ilk görüş.'"
     ],
     [
       "t: 'A written plan: scope, timeline and a fixed price.'",
@@ -468,8 +468,8 @@
       "'Sevgiylə göndər'"
     ],
     [
-      ">Making businesses love digital — with technology, AI and creative that earns its keep.<",
-      ">Bizneslərə rəqəmsalı sevdiririk — öz xərcini çıxaran texnologiya, süni intellekt və kreativlə.<"
+      ">Helping businesses grow with technology, AI and creative work that delivers measurable results.<",
+      ">Texnologiya, süni intellekt və ölçülə bilən nəticə verən kreativlə bizneslərin böyüməsinə kömək edirik.<"
     ],
     [
       "ald-foot-h\">Services<",

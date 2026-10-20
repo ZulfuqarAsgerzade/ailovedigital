@@ -523,20 +523,20 @@
 <ol>
 <li><strong>Discover</strong> — We study the business, the audience and the goal — and write down what success means before we start.</li>
 <li><strong>Shape</strong> — Prototype, visual system and user flows — agreed before a line of code, with a fixed scope and price.</li>
-<li><strong>Build</strong> — Two-week sprints, each ending in a working demo. An open task board, no black box.</li>
+<li><strong>Build</strong> — Two-week sprints, each ending in a working demo, with progress visible on a shared task board.</li>
 <li><strong>Scale</strong> — Testing, performance and security checks, launch — then analytics and steady improvement. Launch is a beginning.</li>
 </ol>
 <h2>Who we are</h2>
 <ul>
 <li><strong>Measured, not guessed</strong> — Success criteria are written down before we start. “It went well” is a number, not an opinion.</li>
-<li><strong>Open by default</strong> — Weekly demos, an open task board and direct access to the people doing the work. Surprises — only the good kind.</li>
-<li><strong>Built to be owned</strong> — Source code, documentation and access are yours at handover — and handover isn’t goodbye.</li>
+<li><strong>Transparent process</strong> — Weekly demos, a shared task board and direct access to the people doing the work.</li>
+<li><strong>Built to be owned</strong> — Source code, documentation and access are yours at handover, and we stay on for support afterwards.</li>
 </ul>
 <h2>Contact</h2>
 <p>Email <a href="mailto:info@ailovedigital.com">info@ailovedigital.com</a>. What happens next:</p>
 <ol>
 <li>We read it properly and reply within one working day.</li>
-<li>A free first meeting. Questions, not a pitch deck.</li>
+<li>A free first meeting to understand your goals.</li>
 <li>A written plan: scope, timeline and a fixed price.</li>
 </ol>
 <p>Built with logic. Finished with love.</p>
@@ -617,7 +617,7 @@
   <div class="ald-hero-rail" style="opacity:{{ ctaOp }}">
     <span class="ald-pill"><span class="ald-pulse"></span> Taking on new projects</span>
     <span class="ald-rail-mid">Build · Automate · Grow · Teach · Think</span>
-    <a href="#services" class="ald-rail-cue">Keep going ↓</a>
+    <a href="#services" class="ald-rail-cue">Learn more ↓</a>
   </div>
 </header>
 
@@ -668,7 +668,7 @@
         <p class="ald-eyebrow has-idx"><span class="ald-idx">02</span> / Start here</p>
         <h2 class="ald-h2">What do you want<br>to change<span class="ald-dot">?</span></h2>
       </div>
-      <p class="ald-lead">Start with the problem. Not the technology. Pick the line that sounds like your week.</p>
+      <p class="ald-lead">Start with the problem, not the technology. Choose the statement closest to your situation.</p>
     </header>
     <div class="ald-prob-list">
       <sc-for list="{{ problems }}" as="pb" hint-placeholder-count="5">
@@ -682,9 +682,9 @@
     <div aria-live="polite">
     <sc-if value="{{ answer }}" hint-placeholder-val="{{ false }}">
       <div class="ald-answer">
-        <p class="ald-answer-t">Sounds like {{ answer.name }}. <span class="ald-dot">♥</span></p>
+        <p class="ald-answer-t">Our recommendation: {{ answer.name }}. <span class="ald-dot">♥</span></p>
         <p class="ald-answer-b">{{ answer.body }}</p>
-        <a href="#contact" class="ald-link">Show me how →</a>
+        <a href="#contact" class="ald-link">Discuss this with us →</a>
       </div>
     </sc-if>
     </div>
@@ -739,7 +739,7 @@
     <header class="ald-head ald-rv">
       <div>
         <p class="ald-eyebrow has-idx"><span class="ald-idx">04</span> / How we work</p>
-        <h2 class="ald-h2">No mystery. No 90-page decks<span class="ald-dot">.</span></h2>
+        <h2 class="ald-h2">A clear process, from brief to launch<span class="ald-dot">.</span></h2>
       </div>
       <p class="ald-lead">Every project runs the same way, so you can plan a budget — and a launch date — around it.</p>
     </header>
@@ -764,7 +764,7 @@
         <span class="ald-line"><span>BUSINESS</span></span>
         <span class="ald-line"><span>SIMPLER<span class="ald-dot">.</span></span></span>
       </h2>
-      <p class="ald-rv ald-philo-note">Not more complicated.</p>
+      <p class="ald-rv ald-philo-note">Clarity over complexity.</p>
       <p class="ald-lead ald-rv">We combine technology, creativity and automation to remove the friction between a business and where it wants to go — and we leave you with something your own team can run.</p>
     </div>
     <svg class="ald-philo-mark ald-rv" width="84" height="72" viewBox="0 0 21 18" aria-hidden="true"><g fill="#FF304D"><rect x="3" y="0" width="3" height="3"></rect><rect x="6" y="0" width="3" height="3"></rect><rect x="12" y="0" width="3" height="3"></rect><rect x="15" y="0" width="3" height="3"></rect><rect x="0" y="3" width="21" height="3"></rect><rect x="0" y="6" width="21" height="3"></rect><rect x="3" y="9" width="15" height="3"></rect><rect x="6" y="12" width="9" height="3"></rect><rect x="9" y="15" width="3" height="3"></rect></g></svg>
@@ -853,7 +853,7 @@
           <input type="hidden" name="_template" value="table">
           <input type="text" name="_honey" class="ald-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button type="submit" class="ald-btn ald-btn--fit" disabled="{{ sending }}">{{ sendLabel }} <span class="ald-dot">♥</span></button>
-          <p class="ald-note">We reply within one working day. No newsletters, no sales sequences — just an answer from a human.</p>
+          <p class="ald-note">We reply personally within one working day — no newsletters or automated sales follow-ups.</p>
           <sc-if value="{{ formError }}" hint-placeholder-val="{{ false }}">
             <p class="ald-note ald-note--error" role="alert">{{ formError }}</p>
           </sc-if>
@@ -883,7 +883,7 @@
           <svg width="17" height="15" viewBox="0 0 21 18" aria-hidden="true"><g fill="#FF304D"><rect x="3" y="0" width="3" height="3"></rect><rect x="6" y="0" width="3" height="3"></rect><rect x="12" y="0" width="3" height="3"></rect><rect x="15" y="0" width="3" height="3"></rect><rect x="0" y="3" width="21" height="3"></rect><rect x="0" y="6" width="21" height="3"></rect><rect x="3" y="9" width="15" height="3"></rect><rect x="6" y="12" width="9" height="3"></rect><rect x="9" y="15" width="3" height="3"></rect></g></svg>
           <span>AILoveDigital</span>
         </div>
-        <p class="ald-foot-list ald-foot-list--narrow">Making businesses love digital — with technology, AI and creative that earns its keep.</p>
+        <p class="ald-foot-list ald-foot-list--narrow">Helping businesses grow with technology, AI and creative work that delivers measurable results.</p>
       </div>
       <div>
         <div class="ald-foot-h">Services</div>
@@ -1536,11 +1536,11 @@ class Component extends DCLogic {
     });
 
     const probData = [
-      { text: 'My business needs more customers.', name: 'Growth', body: 'We find where your audience already is,\nmake creative they actually notice,\nand turn that attention into customers.' },
-      { text: 'We waste too much time on manual work.', name: 'Automation', body: 'We map the repetitive work,\nconnect the systems that should talk to each other,\nand let AI handle the boring part.' },
-      { text: 'I need a digital product.', name: 'Build', body: 'We take the idea,\nshape it into something people can use,\nand ship a first version in about eight weeks — not a demo.' },
-      { text: 'My team needs AI skills.', name: 'Teach', body: 'We train your team on real tools,\ninside real workflows,\nnot slideware.' },
-      { text: 'I’m not sure. Help me figure it out.', name: 'Think', body: 'We start with your business,\nmap where technology actually helps,\nand decide together before you spend.' }
+      { text: 'My business needs more customers.', name: 'Growth', body: 'We find where your audience already is,\ncreate content that earns its attention\nand turn that attention into customers.' },
+      { text: 'We waste too much time on manual work.', name: 'Automation', body: 'We map the repetitive work,\nconnect the systems that should share data\nand hand routine tasks to AI.' },
+      { text: 'I need a digital product.', name: 'Product development', body: 'We take the idea,\nshape it into a product people can use\nand release a first version in about eight weeks.' },
+      { text: 'My team needs AI skills.', name: 'Team training', body: 'We train your team on real tools,\ninside real workflows,\nwith hands-on practice.' },
+      { text: 'I’m not sure yet. Help me decide.', name: 'Strategy', body: 'We start with your business,\nidentify where technology adds real value\nand agree on a plan before any spending.' }
     ];
     const problems = probData.map((p, i) => ({
       text: p.text,
@@ -1581,19 +1581,19 @@ class Component extends DCLogic {
     const steps = [
       { n: '01', t: 'Discover', d: 'We study the business, the audience and the goal — and write down what success means before we start.' },
       { n: '02', t: 'Shape', d: 'Prototype, visual system and user flows — agreed before a line of code, with a fixed scope and price.' },
-      { n: '03', t: 'Build', d: 'Two-week sprints, each ending in a working demo. An open task board, no black box.' },
+      { n: '03', t: 'Build', d: 'Two-week sprints, each ending in a working demo, with progress visible on a shared task board.' },
       { n: '04', t: 'Scale', d: 'Testing, performance and security checks, launch — then analytics and steady improvement. Launch is a beginning.' }
     ];
 
     const values = [
       { t: 'Measured, not guessed', d: 'Success criteria are written down before we start. “It went well” is a number, not an opinion.' },
-      { t: 'Open by default', d: 'Weekly demos, an open task board and direct access to the people doing the work. Surprises — only the good kind.' },
-      { t: 'Built to be owned', d: 'Source code, documentation and access are yours at handover — and handover isn’t goodbye.' }
+      { t: 'Transparent process', d: 'Weekly demos, a shared task board and direct access to the people doing the work.' },
+      { t: 'Built to be owned', d: 'Source code, documentation and access are yours at handover, and we stay on for support afterwards.' }
     ];
 
     const next = [
       { n: '01', t: 'We read it properly and reply within one working day.' },
-      { n: '02', t: 'A free first meeting. Questions, not a pitch deck.' },
+      { n: '02', t: 'A free first meeting to understand your goals.' },
       { n: '03', t: 'A written plan: scope, timeline and a fixed price.' }
     ];
 

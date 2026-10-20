@@ -21,7 +21,7 @@
     "closeMenu": "Закрыть меню",
     "menu": "Меню",
     "homeLabel": "главная",
-    "footerBlurb": "Помогаем бизнесу полюбить digital — с технологиями, ИИ и креативом, которые окупаются.",
+    "footerBlurb": "Помогаем бизнесу расти с помощью технологий, ИИ и креатива с измеримым результатом.",
     "footServices": "Услуги",
     "svcBuild": "Разработка",
     "svcAutomate": "Автоматизация",
@@ -144,8 +144,8 @@
       ">Разработка · Автоматизация · Рост · Обучение · Стратегия<"
     ],
     [
-      ">Keep going ↓<",
-      ">Листайте ↓<"
+      ">Learn more ↓<",
+      ">Подробнее ↓<"
     ],
     [
       "</span> / What we do<",
@@ -228,40 +228,40 @@
       "Что вы хотите<br>изменить<span"
     ],
     [
-      ">Start with the problem. Not the technology. Pick the line that sounds like your week.<",
-      ">Начните с задачи, а не с технологии. Выберите фразу, которая звучит как ваша неделя.<"
+      ">Start with the problem, not the technology. Choose the statement closest to your situation.<",
+      ">Начните с задачи, а не с технологии. Выберите утверждение, которое ближе всего к вашей ситуации.<"
     ],
     [
       "<span>“{{ pb.text }}”</span>",
       "<span>«{{ pb.text }}»</span>"
     ],
     [
-      ">Sounds like {{ answer.name }}. <span",
-      ">Похоже, это про {{ answer.name }}. <span"
+      ">Our recommendation: {{ answer.name }}. <span",
+      ">Наша рекомендация: {{ answer.name }}. <span"
     ],
     [
-      ">Show me how →<",
-      ">Покажите как →<"
+      ">Discuss this with us →<",
+      ">Обсудить с нами →<"
     ],
     [
-      "text: 'My business needs more customers.', name: 'Growth', body: 'We find where your audience already is,\\nmake creative they actually notice,\\nand turn that attention into customers.'",
-      "text: 'Моему бизнесу нужно больше клиентов.', name: 'рост', body: 'Находим, где уже есть ваша аудитория,\\nделаем креатив, который замечают,\\nи превращаем внимание в клиентов.'"
+      "text: 'My business needs more customers.', name: 'Growth', body: 'We find where your audience already is,\\ncreate content that earns its attention\\nand turn that attention into customers.'",
+      "text: 'Моему бизнесу нужно больше клиентов.', name: 'Рост', body: 'Находим, где уже есть ваша аудитория,\\nсоздаём контент, который привлекает её внимание,\\nи превращаем это внимание в клиентов.'"
     ],
     [
-      "text: 'We waste too much time on manual work.', name: 'Automation', body: 'We map the repetitive work,\\nconnect the systems that should talk to each other,\\nand let AI handle the boring part.'",
-      "text: 'Мы тратим слишком много времени на ручную работу.', name: 'автоматизацию', body: 'Описываем повторяющуюся работу,\\nсвязываем системы, которые должны общаться,\\nи отдаём скучную часть ИИ.'"
+      "text: 'We waste too much time on manual work.', name: 'Automation', body: 'We map the repetitive work,\\nconnect the systems that should share data\\nand hand routine tasks to AI.'",
+      "text: 'Мы тратим слишком много времени на ручную работу.', name: 'Автоматизация', body: 'Описываем повторяющуюся работу,\\nсвязываем системы, которые должны обмениваться данными,\\nи передаём рутинные задачи ИИ.'"
     ],
     [
-      "text: 'I need a digital product.', name: 'Build', body: 'We take the idea,\\nshape it into something people can use,\\nand ship a first version in about eight weeks — not a demo.'",
-      "text: 'Мне нужен цифровой продукт.', name: 'разработку', body: 'Берём идею,\\nпревращаем её в то, чем удобно пользоваться,\\nи выпускаем первую версию примерно за восемь недель — не демо.'"
+      "text: 'I need a digital product.', name: 'Product development', body: 'We take the idea,\\nshape it into a product people can use\\nand release a first version in about eight weeks.'",
+      "text: 'Мне нужен цифровой продукт.', name: 'Разработка продукта', body: 'Берём идею,\\nпревращаем её в продукт, которым удобно пользоваться,\\nи выпускаем первую версию примерно за восемь недель.'"
     ],
     [
-      "text: 'My team needs AI skills.', name: 'Teach', body: 'We train your team on real tools,\\ninside real workflows,\\nnot slideware.'",
-      "text: 'Моей команде нужны навыки работы с ИИ.', name: 'обучение', body: 'Обучаем команду на реальных инструментах,\\nвнутри реальных процессов,\\nа не на слайдах.'"
+      "text: 'My team needs AI skills.', name: 'Team training', body: 'We train your team on real tools,\\ninside real workflows,\\nwith hands-on practice.'",
+      "text: 'Моей команде нужны навыки работы с ИИ.', name: 'Обучение команды', body: 'Обучаем команду на реальных инструментах,\\nвнутри реальных процессов,\\nс практическими занятиями.'"
     ],
     [
-      "text: 'I’m not sure. Help me figure it out.', name: 'Think', body: 'We start with your business,\\nmap where technology actually helps,\\nand decide together before you spend.'",
-      "text: 'Не уверен. Помогите разобраться.', name: 'стратегию', body: 'Начинаем с вашего бизнеса,\\nопределяем, где технологии действительно помогают,\\nи принимаем решение вместе — до любых затрат.'"
+      "text: 'I’m not sure yet. Help me decide.', name: 'Strategy', body: 'We start with your business,\\nidentify where technology adds real value\\nand agree on a plan before any spending.'",
+      "text: 'Пока не уверен. Помогите определиться.', name: 'Стратегия', body: 'Начинаем с вашего бизнеса,\\nопределяем, где технологии приносят реальную пользу,\\nи согласуем план до любых расходов.'"
     ],
     [
       "</span> / Selected work<",
@@ -300,8 +300,8 @@
       "</span> / Как мы работаем<"
     ],
     [
-      "No mystery. No 90-page decks<span",
-      "Без тайн. Без презентаций на 90 слайдов<span"
+      "A clear process, from brief to launch<span",
+      "Понятный процесс — от брифа до запуска<span"
     ],
     [
       ">Every project runs the same way, so you can plan a budget — and a launch date — around it.<",
@@ -316,8 +316,8 @@
       "t: 'Формируем', d: 'Прототип, визуальная система и пользовательские сценарии — согласуем до первой строки кода, с фиксированным объёмом и ценой.'"
     ],
     [
-      "t: 'Build', d: 'Two-week sprints, each ending in a working demo. An open task board, no black box.'",
-      "t: 'Создаём', d: 'Двухнедельные спринты, каждый заканчивается рабочим демо. Открытая доска задач, никакого чёрного ящика.'"
+      "t: 'Build', d: 'Two-week sprints, each ending in a working demo, with progress visible on a shared task board.'",
+      "t: 'Создаём', d: 'Двухнедельные спринты, каждый заканчивается рабочим демо, а прогресс виден на общей доске задач.'"
     ],
     [
       "t: 'Scale', d: 'Testing, performance and security checks, launch — then analytics and steady improvement. Launch is a beginning.'",
@@ -328,8 +328,8 @@
       "<span>ТЕХНОЛОГИИ</span></span>\n        <span class=\"ald-line\"><span>ДОЛЖНЫ ДЕЛАТЬ</span></span>\n        <span class=\"ald-line\"><span>БИЗНЕС</span></span>\n        <span class=\"ald-line\"><span>ПРОЩЕ<span"
     ],
     [
-      ">Not more complicated.<",
-      ">А не сложнее.<"
+      ">Clarity over complexity.<",
+      ">Ясность вместо сложности.<"
     ],
     [
       ">We combine technology, creativity and automation to remove the friction between a business and where it wants to go — and we leave you with something your own team can run.<",
@@ -376,12 +376,12 @@
       "t: 'Измеряем, а не гадаем', d: 'Критерии успеха фиксируем до старта. «Всё прошло хорошо» — это цифра, а не мнение.'"
     ],
     [
-      "t: 'Open by default', d: 'Weekly demos, an open task board and direct access to the people doing the work. Surprises — only the good kind.'",
-      "t: 'Открыто по умолчанию', d: 'Еженедельные демо, открытая доска задач и прямой контакт с теми, кто делает работу. Сюрпризы — только приятные.'"
+      "t: 'Transparent process', d: 'Weekly demos, a shared task board and direct access to the people doing the work.'",
+      "t: 'Прозрачный процесс', d: 'Еженедельные демо, общая доска задач и прямой контакт с теми, кто выполняет работу.'"
     ],
     [
-      "t: 'Built to be owned', d: 'Source code, documentation and access are yours at handover — and handover isn’t goodbye.'",
-      "t: 'Создано, чтобы принадлежать вам', d: 'При передаче исходный код, документация и доступы — ваши. И передача проекта — это не прощание.'"
+      "t: 'Built to be owned', d: 'Source code, documentation and access are yours at handover, and we stay on for support afterwards.'",
+      "t: 'Создано, чтобы принадлежать вам', d: 'При передаче исходный код, документация и доступы переходят к вам, а мы продолжаем поддержку и после запуска.'"
     ],
     [
       "</span> / Contact<",
@@ -424,8 +424,8 @@
       "value=\"New enquiry (RU) — AILoveDigital.com\""
     ],
     [
-      ">We reply within one working day. No newsletters, no sales sequences — just an answer from a human.<",
-      ">Отвечаем в течение одного рабочего дня. Без рассылок и навязчивых продаж — просто ответ от человека.<"
+      ">We reply personally within one working day — no newsletters or automated sales follow-ups.<",
+      ">Отвечаем лично в течение одного рабочего дня — без рассылок и автоматических продаж.<"
     ],
     [
       ">Something went wrong sending that — please try again, or email us directly at <",
@@ -448,8 +448,8 @@
       "t: 'Внимательно читаем и отвечаем в течение одного рабочего дня.'"
     ],
     [
-      "t: 'A free first meeting. Questions, not a pitch deck.'",
-      "t: 'Бесплатная первая встреча. Вопросы, а не презентация.'"
+      "t: 'A free first meeting to understand your goals.'",
+      "t: 'Бесплатная первая встреча, чтобы понять ваши цели.'"
     ],
     [
       "t: 'A written plan: scope, timeline and a fixed price.'",
@@ -472,8 +472,8 @@
       "'Отправить с любовью'"
     ],
     [
-      ">Making businesses love digital — with technology, AI and creative that earns its keep.<",
-      ">Помогаем бизнесу полюбить digital — с технологиями, ИИ и креативом, которые окупаются.<"
+      ">Helping businesses grow with technology, AI and creative work that delivers measurable results.<",
+      ">Помогаем бизнесу расти с помощью технологий, ИИ и креатива с измеримым результатом.<"
     ],
     [
       "ald-foot-h\">Services<",
