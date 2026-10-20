@@ -2,7 +2,7 @@
   "_note": "ui/meta: page chrome and meta tags. home: [English fragment in index.html, translation] — applied to build /az/index.html; every English fragment must still exist in index.html or the build fails.",
   "meta": {
     "title": "AILoveDigital — Süni intellekt, texnologiya və biznes artımı",
-    "description": "AILoveDigital texnologiya və kreativ studiyasıdır. Rəqəmsal məhsullar yaradır, prosesləri süni intellektlə avtomatlaşdırır və bunları ölçülə bilən biznes artımına çeviririk.",
+    "description": "AILoveDigital Bakıda yerləşən texnologiya və kreativ studiyadır. Süni intellekt əsasında rəqəmsal məhsullar yaradır, onların auditoriyasını böyüdür və onları idarə edəcək komandaları yetişdiririk.",
     "tagline": "Və bizneslərin də bunu sevməsini təmin edirik.",
     "slogan": "Məntiqlə qurulub. Sevgiylə tamamlanıb.",
     "ogAlt": "AILoveDigital — piksel ürək loqosu və «AI, Technology & Business Growth» şüarı"
@@ -60,7 +60,7 @@
     "hubTitle": "Layihələr — {n} rəqəmsal məhsul | {name}",
     "hubDescription": "{name} komandasının hazırladığı {n} məhsul: {scopes} — mobil tətbiqlər, veb platformalar və süni intellekt alətləri. Hər birinin problemi, yanaşması və nəticəsi ilə.",
     "selectedWork": "Seçilmiş işlər",
-    "hubH1": "Sevgiylə <span class=\"ald-dot\">♥</span> yaratdıqlarımız<span class=\"ald-dot\">.</span>",
+    "hubH1": "Sevgiylə <span class=\"ald-dot\">♥</span><br>yaratdıqlarımız<span class=\"ald-dot\">.</span>",
     "hubLead": "Hər layihə — fərqli problem, yanaşma isə birdir: biznesi anlamaq, real məhsul buraxmaq və rəqəmləri hərəkətə gətirmək. {m} istiqamətdə {n} məhsul.",
     "hubCtaH": "Növbəti layihə<br>sizinki ola bilər<span class=\"ald-dot\">.</span>",
     "hubCtaS": "Nəyi dəyişmək istədiyinizi bizə deyin.",
@@ -128,8 +128,8 @@
       ">Və bizneslərin də bunu sevməsini təmin edirik.<"
     ],
     [
-      ">A technology and creative studio building digital products, automating operations with AI, and turning both into growth you can measure.<",
-      ">Rəqəmsal məhsullar yaradan, prosesləri süni intellektlə avtomatlaşdıran və hər ikisini ölçülə bilən artıma çevirən texnologiya və kreativ studiya.<"
+      ">A Baku-based technology and creative studio. We build your product with AI at its core, find its audience and train the team that takes it further.<",
+      ">Bakıda yerləşən texnologiya və kreativ studiya. Məhsulunuzu süni intellekt əsasında qurur, ona auditoriya tapır və onu irəli aparacaq komandanı yetişdiririk.<"
     ],
     [
       ">See our work<",
@@ -148,30 +148,6 @@
       ">Davam edin ↓<"
     ],
     [
-      ">Disciplines<br>in one team<",
-      ">Sahə bir<br>komandada<"
-    ],
-    [
-      "ald-stat-n\">24h<",
-      "ald-stat-n\">24 saat<"
-    ],
-    [
-      ">First response<br>on every brief<",
-      ">Hər müraciətə<br>ilk cavab<"
-    ],
-    [
-      "2–6<span class=\"ald-dot\">wk</span>",
-      "2–6<span class=\"ald-dot\">həftə</span>"
-    ],
-    [
-      ">Typical time to<br>a first release<",
-      ">İlk buraxılışa<br>qədər adi müddət<"
-    ],
-    [
-      ">Senior, in-house<br>delivery<",
-      ">Yalnız təcrübəli,<br>daxili komanda<"
-    ],
-    [
       "</span> / What we do<",
       "</span> / Nə edirik<"
     ],
@@ -180,68 +156,68 @@
       "Sevdiyimiz beş iş<span"
     ],
     [
-      ">Most clients start with one of them. The useful part is that they connect — a product that ships, runs itself, and grows.<",
-      ">Müştərilərin çoxu bunlardan biri ilə başlayır. Əsas üstünlük onların bir-birinə bağlı olmasıdır: vaxtında buraxılan, özü işləyən və böyüyən məhsul.<"
+      ">Most clients start with one. They work best as a loop: we build the product, grow its audience and train the team that runs it — with AI doing the repetitive part.<",
+      ">Müştərilərin çoxu bunlardan biri ilə başlayır. Amma ən yaxşı nəticə onlar birlikdə işləyəndə alınır: məhsulu qurur, auditoriyasını böyüdür və onu idarə edəcək komandanı öyrədirik — təkrarlanan işi isə süni intellekt görür.<"
     ],
     [
       "word: 'BUILD'",
       "word: 'İNKİŞAF'"
     ],
     [
-      "desc: 'We design and build software people actually use — and that your team can keep running.'",
-      "desc: 'İnsanların həqiqətən istifadə etdiyi və komandanızın özünün idarə edə biləcəyi proqram təminatı layihələndirir və hazırlayırıq.'"
+      "desc: 'Web platforms, mobile apps and enterprise systems — from discovery to launch, with clean code that is yours. A first MVP in about eight weeks.'",
+      "desc: 'Veb platformalar, mobil tətbiqlər və korporativ sistemlər — araşdırmadan istifadəyə verilməyə qədər, tamamilə sizə məxsus təmiz kodla. İlk MVP təxminən səkkiz həftəyə hazır olur.'"
     ],
     [
-      "tags: 'Web platforms · Mobile apps · Internal tools · Digital products'",
-      "tags: 'Veb platformalar · Mobil tətbiqlər · Daxili alətlər · Rəqəmsal məhsullar'"
+      "tags: 'Web platforms · iOS & Android apps · E-commerce & integrations · UI/UX design'",
+      "tags: 'Veb platformalar · iOS və Android tətbiqləri · E-ticarət və inteqrasiyalar · UI/UX dizayn'"
     ],
     [
       "word: 'AUTOMATE'",
       "word: 'AVTOMATLAŞDIRMA'"
     ],
     [
-      "desc: 'We find the repetitive work and make it disappear, quietly, in the background.'",
-      "desc: 'Təkrarlanan işləri tapır və onları arxa planda, səssizcə aradan qaldırırıq.'"
+      "desc: 'We find the repetitive work and hand it to AI agents and integrations — quietly, in the background, with the hours it saves on record.'",
+      "desc: 'Təkrarlanan işləri tapır və onları süni intellekt agentlərinə və inteqrasiyalara həvalə edirik — arxa planda, səssizcə, qənaət olunan saatları qeydə alaraq.'"
     ],
     [
-      "tags: 'AI agents · Workflow automation · Integrations · Ops tooling'",
-      "tags: 'Süni intellekt agentləri · İş axınlarının avtomatlaşdırılması · İnteqrasiyalar · Əməliyyat alətləri'"
+      "tags: 'AI agents · Workflow automation · CRM/ERP integrations · Ops tooling'",
+      "tags: 'Süni intellekt agentləri · İş axınlarının avtomatlaşdırılması · CRM/ERP inteqrasiyaları · Əməliyyat alətləri'"
     ],
     [
       "word: 'GROW'",
       "word: 'BÖYÜMƏ'"
     ],
     [
-      "desc: 'We turn attention into customers, and creative into a number you can report.'",
-      "desc: 'Diqqəti müştəriyə, kreativi isə hesabatda göstərə biləcəyiniz rəqəmə çeviririk.'"
+      "desc: 'Content, ads, SEO and analytics in one strategy, with every manat in a monthly report. On average, engagement triples within six months.'",
+      "desc: 'Kontent, reklam, SEO və analitika vahid strategiyada — hər manat aylıq hesabatda. Orta hesabla altı ayda auditoriya aktivliyi üç dəfə artır.'"
     ],
     [
-      "tags: 'Social · Performance · Creative production · Brand growth'",
-      "tags: 'Sosial media · Performans marketinq · Kreativ istehsal · Brend artımı'"
+      "tags: 'Social media & content · Meta, Google & TikTok ads · SEO · Analytics & reporting'",
+      "tags: 'Sosial media və kontent · Meta, Google və TikTok reklamları · SEO · Analitika və hesabatlar'"
     ],
     [
       "word: 'TEACH'",
       "word: 'TƏDRİS'"
     ],
     [
-      "desc: 'We make your team faster with the tools they already have — plus the ones they should.'",
-      "desc: 'Komandanızı artıq istifadə etdiyi alətlərlə — və istifadə etməli olduğu alətlərlə — daha sürətli edirik.'"
+      "desc: 'Courses, mentorship and real project work — for your team, or for the people you are about to hire. 300+ academy graduates so far.'",
+      "desc: 'Kurslar, mentorluq və real layihə təcrübəsi — komandanız üçün və ya işə götürəcəyiniz insanlar üçün. Artıq 300-dən çox akademiya məzunu.'"
     ],
     [
-      "tags: 'AI training · IT education · Corporate workshops'",
-      "tags: 'Süni intellekt təlimləri · İT təhsili · Korporativ seminarlar'"
+      "tags: 'AI & IT training · Programming, marketing & design courses · Mentorship · Corporate workshops'",
+      "tags: 'Süni intellekt və İT təlimləri · Proqramlaşdırma, marketinq və dizayn kursları · Mentorluq · Korporativ seminarlar'"
     ],
     [
       "word: 'THINK'",
       "word: 'STRATEGİYA'"
     ],
     [
-      "desc: 'Technology decisions before technology spending. Sometimes the answer is “not yet”.'",
-      "desc: 'Əvvəl texnoloji qərarlar, sonra texnologiyaya xərclər. Bəzən doğru cavab «hələ yox» olur.'"
+      "desc: 'Technology decisions before technology spending: an audit, a strategy and a written plan you keep. Sometimes the answer is “not yet”.'",
+      "desc: 'Əvvəl texnoloji qərarlar, sonra texnologiyaya xərclər: audit, strategiya və sizdə qalan yazılı plan. Bəzən doğru cavab «hələ yox» olur.'"
     ],
     [
-      "tags: 'Strategy · Consulting · Digital transformation · Audits'",
-      "tags: 'Strategiya · Konsaltinq · Rəqəmsal transformasiya · Auditlər'"
+      "tags: 'Strategy · Technical audits · Digital transformation · Consulting'",
+      "tags: 'Strategiya · Texniki audit · Rəqəmsal transformasiya · Konsaltinq'"
     ],
     [
       "</span> / Start here<",
@@ -272,8 +248,8 @@
       "text: 'Əl ilə görülən işlərə çox vaxt itiririk.', name: 'avtomatlaşdırma', body: 'Təkrarlanan işləri xəritələyir,\\nbir-biri ilə əlaqəli olmalı sistemləri birləşdirir\\nvə darıxdırıcı hissəni süni intellektə həvalə edirik.'"
     ],
     [
-      "text: 'I need a digital product.', name: 'Build', body: 'We take the idea,\\nshape it into something people can use,\\nand ship it properly — not as a demo.'",
-      "text: 'Mənə rəqəmsal məhsul lazımdır.', name: 'rəqəmsal məhsul', body: 'İdeyanı götürür,\\ninsanların istifadə edə biləcəyi formaya salır\\nvə demo kimi yox, düzgün şəkildə istifadəyə veririk.'"
+      "text: 'I need a digital product.', name: 'Build', body: 'We take the idea,\\nshape it into something people can use,\\nand ship a first version in about eight weeks — not a demo.'",
+      "text: 'Mənə rəqəmsal məhsul lazımdır.', name: 'rəqəmsal məhsul', body: 'İdeyanı götürür,\\ninsanların istifadə edə biləcəyi formaya salır\\nvə təxminən səkkiz həftəyə ilk versiyanı buraxırıq — demo yox.'"
     ],
     [
       "text: 'My team needs AI skills.', name: 'Teach', body: 'We train your team on real tools,\\ninside real workflows,\\nnot slideware.'",
@@ -289,7 +265,7 @@
     ],
     [
       "Things we <span class=\"ald-dot\">♥</span> made<span class=\"ald-dot\">.</span>",
-      "Sevgiylə <span class=\"ald-dot\">♥</span> yaratdıqlarımız<span class=\"ald-dot\">.</span>"
+      "Sevgiylə <span class=\"ald-dot\">♥</span><br>yaratdıqlarımız<span class=\"ald-dot\">.</span>"
     ],
     [
       ">Every project, a different problem — one approach: understand the business, ship something real, then make the numbers move.<",
@@ -324,24 +300,24 @@
       "Sirr yoxdur. 90 səhifəlik təqdimat yoxdur<span"
     ],
     [
-      ">A short, honest process you can plan a budget around.<",
-      ">Büdcəni planlaya biləcəyiniz qısa və dürüst proses.<"
+      ">Every project runs the same way, so you can plan a budget — and a launch date — around it.<",
+      ">Hər layihə eyni qaydada gedir — ona görə həm büdcəni, həm də istifadəyə veriliş tarixini əvvəlcədən planlaya bilərsiniz.<"
     ],
     [
-      "t: 'Discover', d: 'We start with your business, your numbers and your constraints — not a tool list.'",
-      "t: 'Kəşf', d: 'Alət siyahısından yox, biznesinizdən, rəqəmlərinizdən və məhdudiyyətlərinizdən başlayırıq.'"
+      "t: 'Discover', d: 'We study the business, the audience and the goal — and write down what success means before we start.'",
+      "t: 'Kəşf', d: 'Biznesi, auditoriyanı və məqsədi öyrənir, başlamazdan əvvəl uğurun nə demək olduğunu yazılı şəkildə müəyyənləşdiririk.'"
     ],
     [
-      "t: 'Shape', d: 'We agree on scope, what success looks like, and what we are deliberately not doing.'",
-      "t: 'Formalaşdırma', d: 'İşin həcmini, uğurun nə demək olduğunu və bilərəkdən nəyi etmədiyimizi razılaşdırırıq.'"
+      "t: 'Shape', d: 'Prototype, visual system and user flows — agreed before a line of code, with a fixed scope and price.'",
+      "t: 'Formalaşdırma', d: 'Prototip, vizual sistem və istifadəçi ssenariləri — kodun ilk sətrindən əvvəl, sabit həcm və qiymətlə razılaşdırılır.'"
     ],
     [
-      "t: 'Build', d: 'Short cycles and working software you can see every week. No black box.'",
-      "t: 'Hazırlama', d: 'Qısa dövrlər və hər həftə görə biləcəyiniz işləyən proqram. Qara qutu yoxdur.'"
+      "t: 'Build', d: 'Two-week sprints, each ending in a working demo. An open task board, no black box.'",
+      "t: 'Hazırlama', d: 'İki həftəlik sprintlər, hər birinin sonunda işləyən demo. Açıq tapşırıq lövhəsi, qara qutu yoxdur.'"
     ],
     [
-      "t: 'Scale', d: 'We measure, improve, document and hand over something your team owns.'",
-      "t: 'Miqyaslama', d: 'Ölçür, təkmilləşdirir, sənədləşdirir və komandanızın sahib olacağı məhsulu təhvil veririk.'"
+      "t: 'Scale', d: 'Testing, performance and security checks, launch — then analytics and steady improvement. Launch is a beginning.'",
+      "t: 'Miqyaslama', d: 'Test, performans və təhlükəsizlik yoxlamaları, istifadəyə veriliş — sonra analitika və davamlı təkmilləşdirmə. İstifadəyə veriliş sadəcə başlanğıcdır.'"
     ],
     [
       "<span>TECHNOLOGY</span></span>\n        <span class=\"ald-line\"><span>SHOULD MAKE</span></span>\n        <span class=\"ald-line\"><span>BUSINESS</span></span>\n        <span class=\"ald-line\"><span>SIMPLER<span",
@@ -392,16 +368,16 @@
       "ald-chain-result\">ARTIM<"
     ],
     [
-      "t: 'Business first', d: 'We start with the commercial problem, then choose the technology — never the other way around.'",
-      "t: 'Əvvəlcə biznes', d: 'Əvvəl kommersiya problemindən başlayır, sonra texnologiyanı seçirik — heç vaxt əksinə yox.'"
+      "t: 'Measured, not guessed', d: 'Success criteria are written down before we start. “It went well” is a number, not an opinion.'",
+      "t: 'Təxmin yox, ölçü', d: 'Uğur meyarları işə başlamazdan əvvəl yazılır. «Yaxşı keçdi» fikir yox, rəqəmdir.'"
     ],
     [
-      "t: 'One accountable team', d: 'Strategy, design, engineering and growth sit together. No hand-offs, no finger-pointing.'",
-      "t: 'Bir məsuliyyətli komanda', d: 'Strategiya, dizayn, proqramlaşdırma və marketinq bir yerdədir. İşi başqasına ötürmək, günahkar axtarmaq yoxdur.'"
+      "t: 'Open by default', d: 'Weekly demos, an open task board and direct access to the people doing the work. Surprises — only the good kind.'",
+      "t: 'Hər şey açıq', d: 'Həftəlik demolar, açıq tapşırıq lövhəsi və işi görən insanlarla birbaşa əlaqə. Sürprizlər — yalnız xoş olanları.'"
     ],
     [
-      "t: 'Built to be owned', d: 'You get the documentation, the access and a team that can run it after we leave.'",
-      "t: 'Sizin olsun deyə qurulur', d: 'Sənədləri, girişləri və biz getdikdən sonra da sistemi idarə edə biləcək komandanı əldə edirsiniz.'"
+      "t: 'Built to be owned', d: 'Source code, documentation and access are yours at handover — and handover isn’t goodbye.'",
+      "t: 'Sizin olsun deyə qurulur', d: 'Təhvil zamanı mənbə kodu, sənədlər və girişlər sizindir — təhvil isə vidalaşma deyil.'"
     ],
     [
       "</span> / Contact<",
@@ -468,12 +444,12 @@
       "t: 'Diqqətlə oxuyur və bir iş günü ərzində cavab veririk.'"
     ],
     [
-      "t: 'A 30-minute call. Questions, not a pitch deck.'",
-      "t: '30 dəqiqəlik zəng. Təqdimat yox, suallar.'"
+      "t: 'A free first meeting. Questions, not a pitch deck.'",
+      "t: 'Pulsuz ilk görüş. Təqdimat yox, suallar.'"
     ],
     [
-      "t: 'A short written plan: scope, timeline and price.'",
-      "t: 'Qısa yazılı plan: işin həcmi, müddət və qiymət.'"
+      "t: 'A written plan: scope, timeline and a fixed price.'",
+      "t: 'Yazılı plan: işin həcmi, müddət və sabit qiymət.'"
     ],
     [
       "'Please tell us your name.'",
@@ -522,6 +498,10 @@
     [
       ">Back to top ↑<",
       ">Yuxarı qayıt ↑<"
+    ],
+    [
+      "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Projects<br>delivered</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">8<span class=\"ald-dot\">wk</span></div><div class=\"ald-stat-l\">Average path<br>to a first MVP</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">People<br>in one team</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Academy<br>graduates</div></div>",
+      "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Təhvil verilmiş<br>layihə</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">8<span class=\"ald-dot\">həftə</span></div><div class=\"ald-stat-l\">İlk MVP-yə<br>orta müddət</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">Bir komandada<br>mütəxəssis</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Akademiya<br>məzunu</div></div>"
     ]
   ]
 }

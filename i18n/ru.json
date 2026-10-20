@@ -2,7 +2,7 @@
   "_note": "ui/meta: page chrome and meta tags. home: [English fragment in index.html, translation] — applied to build /ru/index.html; every English fragment must still exist in index.html or the build fails.",
   "meta": {
     "title": "AILoveDigital — ИИ, технологии и рост бизнеса",
-    "description": "AILoveDigital — технологическая и креативная студия. Создаём цифровые продукты, автоматизируем процессы с помощью ИИ и превращаем это в измеримый рост бизнеса.",
+    "description": "AILoveDigital — технологическая и креативная студия из Баку. Создаём цифровые продукты с ИИ в основе, растим их аудиторию и обучаем команды, которые ими управляют.",
     "tagline": "И делаем так, чтобы бизнес тоже это полюбил.",
     "slogan": "Построено на логике. Сделано с любовью.",
     "ogAlt": "AILoveDigital — пиксельное сердце и слоган «AI, Technology & Business Growth»"
@@ -128,8 +128,8 @@
       ">И делаем так, чтобы бизнес тоже это полюбил.<"
     ],
     [
-      ">A technology and creative studio building digital products, automating operations with AI, and turning both into growth you can measure.<",
-      ">Технологическая и креативная студия: создаём цифровые продукты, автоматизируем процессы с помощью ИИ и превращаем это в измеримый рост.<"
+      ">A Baku-based technology and creative studio. We build your product with AI at its core, find its audience and train the team that takes it further.<",
+      ">Технологическая и креативная студия из Баку. Создаём ваш продукт с ИИ в основе, находим для него аудиторию и обучаем команду, которая поведёт его дальше.<"
     ],
     [
       ">See our work<",
@@ -148,30 +148,6 @@
       ">Листайте ↓<"
     ],
     [
-      ">Disciplines<br>in one team<",
-      ">Дисциплин<br>в одной команде<"
-    ],
-    [
-      "ald-stat-n\">24h<",
-      "ald-stat-n\">24ч<"
-    ],
-    [
-      ">First response<br>on every brief<",
-      ">Первый ответ<br>на любой запрос<"
-    ],
-    [
-      "2–6<span class=\"ald-dot\">wk</span>",
-      "2–6<span class=\"ald-dot\">нед</span>"
-    ],
-    [
-      ">Typical time to<br>a first release<",
-      ">Обычный срок<br>до первого релиза<"
-    ],
-    [
-      ">Senior, in-house<br>delivery<",
-      ">Только опытные<br>штатные специалисты<"
-    ],
-    [
       "</span> / What we do<",
       "</span> / Что мы делаем<"
     ],
@@ -180,68 +156,68 @@
       "Пять вещей, которые мы любим делать<span"
     ],
     [
-      ">Most clients start with one of them. The useful part is that they connect — a product that ships, runs itself, and grows.<",
-      ">Большинство клиентов начинают с одного направления. Ценность в том, что они связаны: продукт, который выходит в срок, работает сам и растёт.<"
+      ">Most clients start with one. They work best as a loop: we build the product, grow its audience and train the team that runs it — with AI doing the repetitive part.<",
+      ">Большинство клиентов начинают с одного направления. Но лучше всего они работают вместе: мы создаём продукт, растим его аудиторию и обучаем команду, которая им управляет, — а рутину берёт на себя ИИ.<"
     ],
     [
       "word: 'BUILD'",
       "word: 'РАЗРАБОТКА'"
     ],
     [
-      "desc: 'We design and build software people actually use — and that your team can keep running.'",
-      "desc: 'Проектируем и создаём софт, которым действительно пользуются, — и который ваша команда сможет поддерживать.'"
+      "desc: 'Web platforms, mobile apps and enterprise systems — from discovery to launch, with clean code that is yours. A first MVP in about eight weeks.'",
+      "desc: 'Веб-платформы, мобильные приложения и корпоративные системы — от исследования до запуска, с чистым кодом, который принадлежит вам. Первый MVP — примерно за восемь недель.'"
     ],
     [
-      "tags: 'Web platforms · Mobile apps · Internal tools · Digital products'",
-      "tags: 'Веб-платформы · Мобильные приложения · Внутренние инструменты · Цифровые продукты'"
+      "tags: 'Web platforms · iOS & Android apps · E-commerce & integrations · UI/UX design'",
+      "tags: 'Веб-платформы · Приложения для iOS и Android · E-commerce и интеграции · UI/UX-дизайн'"
     ],
     [
       "word: 'AUTOMATE'",
       "word: 'АВТОМАТИЗАЦИЯ'"
     ],
     [
-      "desc: 'We find the repetitive work and make it disappear, quietly, in the background.'",
-      "desc: 'Находим повторяющуюся работу и незаметно убираем её в фон.'"
+      "desc: 'We find the repetitive work and hand it to AI agents and integrations — quietly, in the background, with the hours it saves on record.'",
+      "desc: 'Находим рутинную работу и передаём её ИИ-агентам и интеграциям — незаметно, в фоне, с учётом сэкономленных часов.'"
     ],
     [
-      "tags: 'AI agents · Workflow automation · Integrations · Ops tooling'",
-      "tags: 'ИИ-агенты · Автоматизация процессов · Интеграции · Операционные инструменты'"
+      "tags: 'AI agents · Workflow automation · CRM/ERP integrations · Ops tooling'",
+      "tags: 'ИИ-агенты · Автоматизация процессов · Интеграции с CRM/ERP · Операционные инструменты'"
     ],
     [
       "word: 'GROW'",
       "word: 'РОСТ'"
     ],
     [
-      "desc: 'We turn attention into customers, and creative into a number you can report.'",
-      "desc: 'Превращаем внимание в клиентов, а креатив — в цифры, которые можно показать в отчёте.'"
+      "desc: 'Content, ads, SEO and analytics in one strategy, with every manat in a monthly report. On average, engagement triples within six months.'",
+      "desc: 'Контент, реклама, SEO и аналитика в одной стратегии — каждый манат в ежемесячном отчёте. В среднем вовлечённость вырастает втрое за шесть месяцев.'"
     ],
     [
-      "tags: 'Social · Performance · Creative production · Brand growth'",
-      "tags: 'Соцсети · Performance-маркетинг · Креативный продакшн · Рост бренда'"
+      "tags: 'Social media & content · Meta, Google & TikTok ads · SEO · Analytics & reporting'",
+      "tags: 'Соцсети и контент · Реклама в Meta, Google и TikTok · SEO · Аналитика и отчёты'"
     ],
     [
       "word: 'TEACH'",
       "word: 'ОБУЧЕНИЕ'"
     ],
     [
-      "desc: 'We make your team faster with the tools they already have — plus the ones they should.'",
-      "desc: 'Ускоряем вашу команду с помощью инструментов, которые у неё уже есть, — и тех, что должны быть.'"
+      "desc: 'Courses, mentorship and real project work — for your team, or for the people you are about to hire. 300+ academy graduates so far.'",
+      "desc: 'Курсы, менторство и работа над реальными проектами — для вашей команды или для тех, кого вы собираетесь нанять. Уже более 300 выпускников академии.'"
     ],
     [
-      "tags: 'AI training · IT education · Corporate workshops'",
-      "tags: 'Обучение ИИ · IT-образование · Корпоративные воркшопы'"
+      "tags: 'AI & IT training · Programming, marketing & design courses · Mentorship · Corporate workshops'",
+      "tags: 'Обучение ИИ и IT · Курсы программирования, маркетинга и дизайна · Менторство · Корпоративные воркшопы'"
     ],
     [
       "word: 'THINK'",
       "word: 'СТРАТЕГИЯ'"
     ],
     [
-      "desc: 'Technology decisions before technology spending. Sometimes the answer is “not yet”.'",
-      "desc: 'Сначала решения о технологиях, потом расходы на них. Иногда правильный ответ — «пока нет».'"
+      "desc: 'Technology decisions before technology spending: an audit, a strategy and a written plan you keep. Sometimes the answer is “not yet”.'",
+      "desc: 'Сначала решения о технологиях, потом расходы на них: аудит, стратегия и письменный план, который остаётся у вас. Иногда правильный ответ — «пока нет».'"
     ],
     [
-      "tags: 'Strategy · Consulting · Digital transformation · Audits'",
-      "tags: 'Стратегия · Консалтинг · Цифровая трансформация · Аудит'"
+      "tags: 'Strategy · Technical audits · Digital transformation · Consulting'",
+      "tags: 'Стратегия · Технический аудит · Цифровая трансформация · Консалтинг'"
     ],
     [
       "</span> / Start here<",
@@ -276,8 +252,8 @@
       "text: 'Мы тратим слишком много времени на ручную работу.', name: 'автоматизацию', body: 'Описываем повторяющуюся работу,\\nсвязываем системы, которые должны общаться,\\nи отдаём скучную часть ИИ.'"
     ],
     [
-      "text: 'I need a digital product.', name: 'Build', body: 'We take the idea,\\nshape it into something people can use,\\nand ship it properly — not as a demo.'",
-      "text: 'Мне нужен цифровой продукт.', name: 'разработку', body: 'Берём идею,\\nпревращаем её в то, чем удобно пользоваться,\\nи выпускаем по-настоящему — не как демо.'"
+      "text: 'I need a digital product.', name: 'Build', body: 'We take the idea,\\nshape it into something people can use,\\nand ship a first version in about eight weeks — not a demo.'",
+      "text: 'Мне нужен цифровой продукт.', name: 'разработку', body: 'Берём идею,\\nпревращаем её в то, чем удобно пользоваться,\\nи выпускаем первую версию примерно за восемь недель — не демо.'"
     ],
     [
       "text: 'My team needs AI skills.', name: 'Teach', body: 'We train your team on real tools,\\ninside real workflows,\\nnot slideware.'",
@@ -328,24 +304,24 @@
       "Без тайн. Без презентаций на 90 слайдов<span"
     ],
     [
-      ">A short, honest process you can plan a budget around.<",
-      ">Короткий и честный процесс, под который можно планировать бюджет.<"
+      ">Every project runs the same way, so you can plan a budget — and a launch date — around it.<",
+      ">Каждый проект идёт по одному порядку — под него можно планировать и бюджет, и дату запуска.<"
     ],
     [
-      "t: 'Discover', d: 'We start with your business, your numbers and your constraints — not a tool list.'",
-      "t: 'Исследуем', d: 'Начинаем с вашего бизнеса, цифр и ограничений — а не со списка инструментов.'"
+      "t: 'Discover', d: 'We study the business, the audience and the goal — and write down what success means before we start.'",
+      "t: 'Исследуем', d: 'Изучаем бизнес, аудиторию и цель — и до старта фиксируем, что будет считаться успехом.'"
     ],
     [
-      "t: 'Shape', d: 'We agree on scope, what success looks like, and what we are deliberately not doing.'",
-      "t: 'Формируем', d: 'Согласуем объём работ, критерии успеха и то, чего мы сознательно не делаем.'"
+      "t: 'Shape', d: 'Prototype, visual system and user flows — agreed before a line of code, with a fixed scope and price.'",
+      "t: 'Формируем', d: 'Прототип, визуальная система и пользовательские сценарии — согласуем до первой строки кода, с фиксированным объёмом и ценой.'"
     ],
     [
-      "t: 'Build', d: 'Short cycles and working software you can see every week. No black box.'",
-      "t: 'Создаём', d: 'Короткие циклы и работающий продукт, который вы видите каждую неделю. Никакого чёрного ящика.'"
+      "t: 'Build', d: 'Two-week sprints, each ending in a working demo. An open task board, no black box.'",
+      "t: 'Создаём', d: 'Двухнедельные спринты, каждый заканчивается рабочим демо. Открытая доска задач, никакого чёрного ящика.'"
     ],
     [
-      "t: 'Scale', d: 'We measure, improve, document and hand over something your team owns.'",
-      "t: 'Масштабируем', d: 'Измеряем, улучшаем, документируем и передаём продукт, которым владеет ваша команда.'"
+      "t: 'Scale', d: 'Testing, performance and security checks, launch — then analytics and steady improvement. Launch is a beginning.'",
+      "t: 'Масштабируем', d: 'Тестирование, проверки производительности и безопасности, запуск — затем аналитика и постоянные улучшения. Запуск — это только начало.'"
     ],
     [
       "<span>TECHNOLOGY</span></span>\n        <span class=\"ald-line\"><span>SHOULD MAKE</span></span>\n        <span class=\"ald-line\"><span>BUSINESS</span></span>\n        <span class=\"ald-line\"><span>SIMPLER<span",
@@ -396,16 +372,16 @@
       "ald-chain-result\">РОСТ<"
     ],
     [
-      "t: 'Business first', d: 'We start with the commercial problem, then choose the technology — never the other way around.'",
-      "t: 'Сначала бизнес', d: 'Начинаем с коммерческой задачи и только потом выбираем технологию — никогда наоборот.'"
+      "t: 'Measured, not guessed', d: 'Success criteria are written down before we start. “It went well” is a number, not an opinion.'",
+      "t: 'Измеряем, а не гадаем', d: 'Критерии успеха фиксируем до старта. «Всё прошло хорошо» — это цифра, а не мнение.'"
     ],
     [
-      "t: 'One accountable team', d: 'Strategy, design, engineering and growth sit together. No hand-offs, no finger-pointing.'",
-      "t: 'Одна ответственная команда', d: 'Стратегия, дизайн, разработка и маркетинг работают вместе. Без передачи задач по цепочке и поиска виноватых.'"
+      "t: 'Open by default', d: 'Weekly demos, an open task board and direct access to the people doing the work. Surprises — only the good kind.'",
+      "t: 'Открыто по умолчанию', d: 'Еженедельные демо, открытая доска задач и прямой контакт с теми, кто делает работу. Сюрпризы — только приятные.'"
     ],
     [
-      "t: 'Built to be owned', d: 'You get the documentation, the access and a team that can run it after we leave.'",
-      "t: 'Создано, чтобы принадлежать вам', d: 'Вы получаете документацию, доступы и команду, которая сможет всё поддерживать после нас.'"
+      "t: 'Built to be owned', d: 'Source code, documentation and access are yours at handover — and handover isn’t goodbye.'",
+      "t: 'Создано, чтобы принадлежать вам', d: 'При передаче исходный код, документация и доступы — ваши. И передача проекта — это не прощание.'"
     ],
     [
       "</span> / Contact<",
@@ -472,12 +448,12 @@
       "t: 'Внимательно читаем и отвечаем в течение одного рабочего дня.'"
     ],
     [
-      "t: 'A 30-minute call. Questions, not a pitch deck.'",
-      "t: 'Звонок на 30 минут. Вопросы, а не презентация.'"
+      "t: 'A free first meeting. Questions, not a pitch deck.'",
+      "t: 'Бесплатная первая встреча. Вопросы, а не презентация.'"
     ],
     [
-      "t: 'A short written plan: scope, timeline and price.'",
-      "t: 'Короткий письменный план: объём, сроки и цена.'"
+      "t: 'A written plan: scope, timeline and a fixed price.'",
+      "t: 'Письменный план: объём, сроки и фиксированная цена.'"
     ],
     [
       "'Please tell us your name.'",
@@ -526,6 +502,10 @@
     [
       ">Back to top ↑<",
       ">Наверх ↑<"
+    ],
+    [
+      "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Projects<br>delivered</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">8<span class=\"ald-dot\">wk</span></div><div class=\"ald-stat-l\">Average path<br>to a first MVP</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">People<br>in one team</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Academy<br>graduates</div></div>",
+      "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Проектов<br>сдано</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">8<span class=\"ald-dot\">нед</span></div><div class=\"ald-stat-l\">В среднем<br>до первого MVP</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">Человек<br>в одной команде</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Выпускников<br>академии</div></div>"
     ]
   ]
 }

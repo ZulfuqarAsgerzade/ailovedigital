@@ -1,15 +1,15 @@
 # AILoveDigital
 
-> AILoveDigital is a technology and creative studio. We build digital products, automate operations with AI and turn both into measurable business growth.
+> AILoveDigital is a Baku-based technology and creative studio. We build digital products with AI at the core, grow their audience and train the teams that run them.
 
 And we make businesses love it too. Built with logic. Finished with love.
 
 ## Services
-- Build: We design and build software people actually use — and that your team can keep running. (Web platforms · Mobile apps · Internal tools · Digital products)
-- Automate: We find the repetitive work and make it disappear, quietly, in the background. (AI agents · Workflow automation · Integrations · Ops tooling)
-- Grow: We turn attention into customers, and creative into a number you can report. (Social · Performance · Creative production · Brand growth)
-- Teach: We make your team faster with the tools they already have — plus the ones they should. (AI training · IT education · Corporate workshops)
-- Think: Technology decisions before technology spending. Sometimes the answer is “not yet”. (Strategy · Consulting · Digital transformation · Audits)
+- Build: Web platforms, mobile apps and enterprise systems — from discovery to launch, with clean code that is yours. A first MVP in about eight weeks. (Web platforms · iOS & Android apps · E-commerce & integrations · UI/UX design)
+- Automate: We find the repetitive work and hand it to AI agents and integrations — quietly, in the background, with the hours it saves on record. (AI agents · Workflow automation · CRM/ERP integrations · Ops tooling)
+- Grow: Content, ads, SEO and analytics in one strategy, with every manat in a monthly report. On average, engagement triples within six months. (Social media & content · Meta, Google & TikTok ads · SEO · Analytics & reporting)
+- Teach: Courses, mentorship and real project work — for your team, or for the people you are about to hire. 300+ academy graduates so far. (AI & IT training · Programming, marketing & design courses · Mentorship · Corporate workshops)
+- Think: Technology decisions before technology spending: an audit, a strategy and a written plan you keep. Sometimes the answer is “not yet”. (Strategy · Technical audits · Digital transformation · Consulting)
 
 ## Selected work
 - [ChefMarket](https://ailovedigital.com/work/chefmarket/): A restaurant–supplier B2B marketplace ecosystem. Three mobile apps, an admin panel and a real-time backend — in one ecosystem. [Marketplace, 2026]

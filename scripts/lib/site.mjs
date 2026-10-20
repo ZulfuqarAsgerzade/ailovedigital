@@ -12,7 +12,7 @@ export const SITE_URL = 'https://ailovedigital.com'; // ← production origin, n
 export const NAME = 'AILoveDigital';
 export const TITLE = 'AILoveDigital — AI, Technology & Business Growth';
 export const DESCRIPTION =
-  'AILoveDigital is a technology and creative studio. We build digital products, automate operations with AI and turn both into measurable business growth.';
+  'AILoveDigital is a Baku-based technology and creative studio. We build digital products with AI at the core, grow their audience and train the teams that run them.';
 export const TAGLINE = 'And we make businesses love it too.';
 export const SLOGAN = 'Built with logic. Finished with love.';
 export const EMAIL = 'info@ailovedigital.com';
