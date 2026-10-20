@@ -56,6 +56,7 @@ h1,h2,h3{text-wrap:balance}
 .ald-btn:active{transform:translateY(0)}
 .ald-arw{display:inline-block;transition:transform .3s var(--ease)}
 .ald-btn:hover .ald-arw{transform:translateX(3px)}
+.ald-btn:not(.ald-btn--ghost):hover .ald-dot{color:#fff} /* the fill turns heart-red on hover — keep the heart visible */
 .ald-btn--sm{min-height:38px;padding:9px 20px;font-size:13px}
 .ald-btn--ghost{background:transparent;color:var(--ink);border-color:rgba(11,11,11,.22)}
 .ald-btn--ghost:hover{background:transparent;color:var(--red);border-color:var(--red);box-shadow:none}
