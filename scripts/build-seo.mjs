@@ -17,7 +17,7 @@
 // the domain; i18n/<lang>.json for the other languages.
 
 import {
-  SITE_URL, NAME, EMAIL, LANG, BG, OG_IMAGE,
+  SITE_URL, NAME, EMAIL, PHONE_TEL, LANG, BG, OG_IMAGE,
   read, write, abs, esc, loadProjects,
 } from './lib/site.mjs';
 import {
@@ -100,6 +100,7 @@ function buildHome(lang) {
       logo: { '@type': 'ImageObject', url: abs('assets/icons/icon-512.png'), width: 512, height: 512 },
       image: abs(OG_IMAGE),
       email: EMAIL,
+      telephone: PHONE_TEL,
       description: meta.description,
       slogan: meta.slogan,
       knowsAbout: ['Web development', 'Mobile apps', 'AI automation', 'Workflow automation', 'Digital marketing', 'AI training', 'Technology consulting', 'Digital transformation'],
