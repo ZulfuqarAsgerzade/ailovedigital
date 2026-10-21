@@ -460,7 +460,7 @@ function privacyPage(lang) {
     },
   ];
   const main = `
-<header class="case-hero">
+<header class="case-hero legal-hero">
   <div class="ald-wrap">
     <nav class="case-crumbs" aria-label="${esc(t.crumbs)}">
       <ol><li><a href="${h}">${t.home}</a></li><li aria-current="page">${esc(P.h1)}</li></ol>
