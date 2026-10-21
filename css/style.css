@@ -245,6 +245,7 @@ a.ald-lang-opt:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
 .ald-contact-meta{display:flex;flex-direction:column;gap:10px;margin-top:34px;font-size:15px}
 .ald-contact-mail{width:max-content;padding-bottom:2px;border-bottom:1px solid var(--line);font-size:17px;font-weight:600;transition:color .2s,border-color .2s}
 .ald-contact-mail:hover{color:var(--red);border-color:var(--red)}
+.ald-contact-phone{font-size:15px;font-weight:500}
 .ald-social{display:flex;gap:18px;margin-top:6px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--muted)}
 .ald-social a:hover{color:var(--red)}
 .ald-next{margin-top:clamp(34px,4vw,48px);padding:clamp(24px,3vw,32px);border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow-sm)}
