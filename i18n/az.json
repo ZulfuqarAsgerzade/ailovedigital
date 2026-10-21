@@ -61,11 +61,11 @@
     "hubDescription": "{name} komandasının hazırladığı {n} məhsul: {scopes} — mobil tətbiqlər, veb platformalar və süni intellekt alətləri. Hər birinin problemi, yanaşması və nəticəsi ilə.",
     "selectedWork": "Seçilmiş işlər",
     "hubH1": "Sevgiylə <span class=\"ald-dot\">♥</span><br>yaratdıqlarımız<span class=\"ald-dot\">.</span>",
-    "hubLead": "Hər layihə — fərqli problem, yanaşma isə birdir: biznesi anlamaq, real məhsul buraxmaq və rəqəmləri hərəkətə gətirmək. {m} istiqamətdə {n} məhsul.",
+    "hubLead": "Hər layihəyə biznesin ehtiyaclarını anlamaqla başlayır, real dəyər yaradan məhsullar hazırlayır və ölçülə bilən nəticələr əldə etməyə fokuslanırıq. {m} istiqamətdə {n} məhsul.",
     "hubCtaH": "Növbəti layihə<br>sizinki ola bilər<span class=\"ald-dot\">.</span>",
     "hubCtaS": "Nəyi dəyişmək istədiyinizi bizə deyin.",
     "hubOgAlt": "AILoveDigital — seçilmiş işlər",
-    "nsServices": "Sevdiyimiz beş iş",
+    "nsServices": "Sevdiyimiz addımlar",
     "nsWork": "Seçilmiş işlər",
     "nsAll": "Bütün layihələr",
     "nsProcess": "Necə işləyirik",
@@ -132,8 +132,8 @@
       ">Süni intellekt və müasir texnologiyalarla bizneslər üçün innovativ rəqəmsal məhsullar yaradır, onların inkişafını sürətləndirir və davamlı böyümə üçün həllər təqdim edirik.<"
     ],
     [
-      ">See our work<",
-      ">İşlərimizə baxın<"
+      ">View portfolio<",
+      ">Portfolioya keçid<"
     ],
     [
       "</span> Taking on new projects<",
@@ -152,20 +152,20 @@
       "</span> / Nə edirik<"
     ],
     [
-      "Five things we love doing<span",
-      "Sevdiyimiz beş iş<span"
+      "What we love to do<span",
+      "Sevdiyimiz addımlar<span"
     ],
     [
-      ">Most clients start with one. They work best as a loop: we build the product, grow its audience and train the team that runs it — with AI doing the repetitive part.<",
-      ">Müştərilərin çoxu bunlardan biri ilə başlayır. Amma ən yaxşı nəticə onlar birlikdə işləyəndə alınır: məhsulu qurur, auditoriyasını böyüdür və onu idarə edəcək komandanı öyrədirik — təkrarlanan işi isə süni intellekt görür.<"
+      ">Every business has different needs, but the strongest results come when strategy, technology and creative work come together. We build digital products, grow audiences, strengthen teams and automate repetitive processes with AI.<",
+      ">Hər biznesin ehtiyacı fərqlidir, lakin ən güclü nəticələr strategiya, texnologiya və kreativ yanaşma bir araya gəldikdə yaranır. Rəqəmsal məhsullar yaradır, auditoriyanı genişləndirir, komandaları gücləndirir və təkrarlanan prosesləri süni intellektlə avtomatlaşdırırıq.<"
     ],
     [
       "word: 'BUILD'",
       "word: 'İNKİŞAF'"
     ],
     [
-      "desc: 'Web platforms, mobile apps and enterprise systems — from discovery to launch, with clean code that is yours. A first MVP in about eight weeks.'",
-      "desc: 'Veb platformalar, mobil tətbiqlər və korporativ sistemlər — araşdırmadan istifadəyə verilməyə qədər, tamamilə sizə məxsus təmiz kodla. İlk MVP təxminən səkkiz həftəyə hazır olur.'"
+      "desc: 'Web platforms, mobile apps and enterprise systems — from discovery to launch, with clean code that is yours. A first MVP in about two weeks.'",
+      "desc: 'Veb platformalar, mobil tətbiqlər və korporativ sistemlər — araşdırmadan istifadəyə verilməyə qədər, tamamilə sizə məxsus təmiz kodla. İlk MVP təxminən iki həftəyə hazır olur.'"
     ],
     [
       "tags: 'Web platforms · iOS & Android apps · E-commerce & integrations · UI/UX design'",
@@ -176,8 +176,8 @@
       "word: 'AVTOMATLAŞDIRMA'"
     ],
     [
-      "desc: 'We find the repetitive work and hand it to AI agents and integrations — quietly, in the background, with the hours it saves on record.'",
-      "desc: 'Təkrarlanan işləri tapır və onları süni intellekt agentlərinə və inteqrasiyalara həvalə edirik — arxa planda, səssizcə, qənaət olunan saatları qeydə alaraq.'"
+      "desc: 'We find the repetitive work and automate it with AI agents and integrations — quietly, in the background, with the hours it saves on record.'",
+      "desc: 'Təkrarlanan işləri tapır və onları süni intellekt agentləri və inteqrasiyalarla avtomatlaşdırırıq — arxa planda, səssizcə, qənaət olunan saatları qeydə alaraq.'"
     ],
     [
       "tags: 'AI agents · Workflow automation · CRM/ERP integrations · Ops tooling'",
@@ -212,8 +212,8 @@
       "word: 'STRATEGİYA'"
     ],
     [
-      "desc: 'Technology decisions before technology spending: an audit, a strategy and a written plan you keep. Sometimes the answer is “not yet”.'",
-      "desc: 'Əvvəl texnoloji qərarlar, sonra texnologiyaya xərclər: audit, strategiya və sizdə qalan yazılı plan. Bəzən doğru cavab «hələ yox» olur.'"
+      "desc: 'We set the right direction before you invest: we assess where you stand, build a technology strategy and give you a clear action plan to base decisions on. Because sometimes the right move is to wait for a better opportunity.'",
+      "desc: 'İnvestisiyadan əvvəl düzgün istiqaməti müəyyənləşdiririk. Mövcud vəziyyəti təhlil edir, texnoloji strategiya hazırlayır və qərarlarınızı əsaslandıran aydın fəaliyyət planı təqdim edirik. Çünki bəzən ən doğru addım gözləmək və daha yaxşı fürsəti dəyərləndirməkdir.'"
     ],
     [
       "tags: 'Strategy · Technical audits · Digital transformation · Consulting'",
@@ -244,12 +244,12 @@
       "text: 'Biznesimə daha çox müştəri lazımdır.', name: 'Böyümə', body: 'Auditoriyanızın artıq olduğu yeri tapır,\\nonun diqqətini çəkən kontent hazırlayır\\nvə bu diqqəti müştərilərə çeviririk.'"
     ],
     [
-      "text: 'We waste too much time on manual work.', name: 'Automation', body: 'We map the repetitive work,\\nconnect the systems that should share data\\nand hand routine tasks to AI.'",
-      "text: 'Əl ilə görülən işlərə çox vaxt itiririk.', name: 'Avtomatlaşdırma', body: 'Təkrarlanan işləri xəritələyir,\\nməlumat mübadiləsi aparmalı olan sistemləri birləşdirir\\nvə rutin tapşırıqları süni intellektə həvalə edirik.'"
+      "text: 'We waste too much time on manual work.', name: 'Automation', body: 'We map the repetitive work,\\nconnect the systems that should share data\\nand automate routine tasks with AI.'",
+      "text: 'Əl ilə görülən işlərə çox vaxt itiririk.', name: 'Avtomatlaşdırma', body: 'Təkrarlanan işləri xəritələyir,\\nməlumat mübadiləsi aparmalı olan sistemləri birləşdirir\\nvə rutin tapşırıqları süni intellektlə avtomatlaşdırırıq.'"
     ],
     [
-      "text: 'I need a digital product.', name: 'Product development', body: 'We take the idea,\\nshape it into a product people can use\\nand release a first version in about eight weeks.'",
-      "text: 'Mənə rəqəmsal məhsul lazımdır.', name: 'Məhsul hazırlanması', body: 'İdeyanı götürür,\\nonu insanların istifadə edə biləcəyi məhsula çevirir\\nvə təxminən səkkiz həftəyə ilk versiyanı buraxırıq.'"
+      "text: 'I need a digital product.', name: 'Product development', body: 'We take the idea,\\nshape it into a product people can use\\nand release a first version in about two weeks.'",
+      "text: 'Mənə rəqəmsal məhsul lazımdır.', name: 'Məhsul hazırlanması', body: 'İdeyanı götürür,\\nonu insanların istifadə edə biləcəyi məhsula çevirir\\nvə təxminən iki həftəyə ilk versiyanı buraxırıq.'"
     ],
     [
       "text: 'My team needs AI skills.', name: 'Team training', body: 'We train your team on real tools,\\ninside real workflows,\\nwith hands-on practice.'",
@@ -268,8 +268,8 @@
       "Sevgiylə <span class=\"ald-dot\">♥</span><br>yaratdıqlarımız<span class=\"ald-dot\">.</span>"
     ],
     [
-      ">Every project, a different problem — one approach: understand the business, ship something real, then make the numbers move.<",
-      ">Hər layihə — fərqli problem, yanaşma isə birdir: biznesi anlamaq, real məhsul buraxmaq və rəqəmləri hərəkətə gətirmək.<"
+      ">We start every project by understanding what the business needs, build products that create real value and focus on measurable results.<",
+      ">Hər layihəyə biznesin ehtiyaclarını anlamaqla başlayır, real dəyər yaradan məhsullar hazırlayır və ölçülə bilən nəticələr əldə etməyə fokuslanırıq.<"
     ],
     [
       ">All projects ",
@@ -288,16 +288,16 @@
       "<dt>Müddət</dt>"
     ],
     [
-      ">View case <span",
-      ">Keysə bax <span"
+      ">View project <span",
+      ">Layihəyə bax <span"
     ],
     [
       "</span> / How we work<",
       "</span> / Necə işləyirik<"
     ],
     [
-      "A clear process, from brief to launch<span",
-      "Brifdən istifadəyə verilişə qədər aydın proses<span"
+      "A clear, transparent process from first conversation to launch<span",
+      "İlk müzakirədən istifadəyə verilişə qədər aydın və şəffaf proses<span"
     ],
     [
       ">Every project runs the same way, so you can plan a budget — and a launch date — around it.<",
@@ -328,8 +328,8 @@
       ">Mürəkkəblik yox, aydınlıq.<"
     ],
     [
-      ">We combine technology, creativity and automation to remove the friction between a business and where it wants to go — and we leave you with something your own team can run.<",
-      ">Texnologiya, kreativlik və avtomatlaşdırmanı birləşdirərək biznesi hədəfindən ayıran maneələri aradan qaldırırıq — və sizə öz komandanızın idarə edə biləcəyi bir sistem qoyub gedirik.<"
+      ">We combine technology, creativity and automation to remove the friction between a business and where it wants to go — and we build you a system your own team can run.<",
+      ">Texnologiya, kreativlik və avtomatlaşdırmanı birləşdirərək biznesi hədəfindən ayıran maneələri aradan qaldırırıq — və sizə öz komandanızın idarə edə biləcəyi bir sistem qururuq.<"
     ],
     [
       ">The digital heart<",
@@ -420,8 +420,8 @@
       "value=\"New enquiry (AZ) — AILoveDigital.com\""
     ],
     [
-      ">We reply personally within one working day — no newsletters or automated sales follow-ups.<",
-      ">Bir iş günü ərzində şəxsən cavab veririk — bülleten və avtomatik satış məktubları olmadan.<"
+      ">We reply within one working day — no newsletters or automated sales follow-ups.<",
+      ">Bir iş günü ərzində cavab veririk — bülleten və avtomatik satış məktubları olmadan.<"
     ],
     [
       ">Something went wrong sending that — please try again, or email us directly at <",
@@ -444,8 +444,8 @@
       "t: 'Diqqətlə oxuyur və bir iş günü ərzində cavab veririk.'"
     ],
     [
-      "t: 'A free first meeting to understand your goals.'",
-      "t: 'Məqsədlərinizi anlamaq üçün pulsuz ilk görüş.'"
+      "t: 'A first meeting to understand your goals.'",
+      "t: 'Məqsədlərinizi anlamaq üçün ilk görüş.'"
     ],
     [
       "t: 'A written plan: scope, timeline and a fixed price.'",
@@ -500,8 +500,8 @@
       ">Yuxarı qayıt ↑<"
     ],
     [
-      "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Projects<br>delivered</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">8<span class=\"ald-dot\">wk</span></div><div class=\"ald-stat-l\">Average path<br>to a first MVP</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">People<br>in one team</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Academy<br>graduates</div></div>",
-      "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Təhvil verilmiş<br>layihə</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">8<span class=\"ald-dot\">həftə</span></div><div class=\"ald-stat-l\">İlk MVP-yə<br>orta müddət</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">Bir komandada<br>mütəxəssis</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Akademiya<br>məzunu</div></div>"
+      "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Projects<br>delivered</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">2<span class=\"ald-dot\">wk</span></div><div class=\"ald-stat-l\">Average path<br>to a first MVP</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">Experts in our<br>core team</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Academy<br>graduates</div></div>",
+      "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Təhvil verilmiş<br>layihə</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">2<span class=\"ald-dot\">həftə</span></div><div class=\"ald-stat-l\">İlk MVP-yə<br>orta müddət</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">Beyin və komandada<br>mütəxəssis</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Akademiya<br>məzunu</div></div>"
     ]
   ]
 }
