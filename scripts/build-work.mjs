@@ -17,7 +17,7 @@
 // assets/images/work/<slug>/ (cover.webp, 01.webp …, og.jpg) plus assets/images/work/<slug>.webp.
 
 import {
-  SITE_URL, NAME, EMAIL, PHONE, PHONE_TEL, BG, OG_IMAGE,
+  SITE_URL, NAME, EMAIL, PHONE, PHONE_TEL, INSTAGRAM, LINKEDIN, BG, OG_IMAGE,
   read, write, abs, esc, pad2, clip, loadProjects,
 } from './lib/site.mjs';
 import {
@@ -41,6 +41,7 @@ const orgNode = {
   logo: { '@type': 'ImageObject', url: abs('assets/icons/icon-512.png'), width: 512, height: 512 },
   email: EMAIL,
   telephone: PHONE_TEL,
+  sameAs: [INSTAGRAM, LINKEDIN],
 };
 const siteNode = { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: NAME, inLanguage: LANGS, publisher: { '@id': `${SITE_URL}/#org` } };
 
@@ -145,7 +146,7 @@ function footer({ h, hubHref, lang }) {
       </div>
       <div>
         <div class="ald-foot-h">${t.footContact}</div>
-        <div class="ald-foot-list"><a href="mailto:${EMAIL}">${EMAIL}</a><a href="tel:${PHONE_TEL}">${PHONE}</a></div>
+        <div class="ald-foot-list"><a href="mailto:${EMAIL}">${EMAIL}</a><a href="tel:${PHONE_TEL}">${PHONE}</a><a href="${INSTAGRAM}" target="_blank" rel="noopener">Instagram</a><a href="${LINKEDIN}" target="_blank" rel="noopener">LinkedIn</a></div>
       </div>
     </div>
     <div class="ald-foot-mark" aria-hidden="true">AILOVEDIGITAL<span class="ald-dot">.</span></div>
