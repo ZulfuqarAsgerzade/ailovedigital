@@ -107,3 +107,16 @@ html.has-js .ald-value.case-rv.is-in{transition:opacity .8s var(--ease),transfor
 .hub-meta{margin:4px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
 .case-related{margin-top:clamp(32px,4vw,52px)}
+
+/* ---------- legal pages (privacy policy) ---------- */
+.legal-title{text-transform:none;font-size:clamp(26px,8.2vw,92px)} /* the longest word ("конфиденциальности") stays whole down to 320px */
+.legal-updated{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.legal-sec{padding-top:clamp(12px,2vw,28px)}
+.legal{max-width:760px}
+.legal h2{margin:clamp(36px,4.2vw,56px) 0 14px;font-size:clamp(20px,2vw,26px);font-weight:600;line-height:1.25;letter-spacing:-.015em}
+.legal h2:first-child{margin-top:0}
+.legal p,.legal li{margin:0 0 14px;font-size:16.5px;line-height:1.72}
+.legal ul{margin:0 0 14px;padding-left:1.2em}
+.legal li::marker{color:var(--red)}
+.legal a{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px;transition:color .2s}
+.legal a:hover{color:var(--red)}

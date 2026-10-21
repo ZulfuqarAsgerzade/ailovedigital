@@ -100,6 +100,30 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/work/"/>
   </url>
   <url>
+    <loc>https://ailovedigital.com/privacy/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailovedigital.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ailovedigital.com/ru/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://ailovedigital.com/az/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://ailovedigital.com/ru/privacy/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailovedigital.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ailovedigital.com/ru/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://ailovedigital.com/az/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://ailovedigital.com/az/privacy/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailovedigital.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ailovedigital.com/ru/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://ailovedigital.com/az/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/privacy/"/>
+  </url>
+  <url>
     <loc>https://ailovedigital.com/work/chefmarket/</loc>
     <lastmod>2026-10-21</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://ailovedigital.com/work/chefmarket/"/>

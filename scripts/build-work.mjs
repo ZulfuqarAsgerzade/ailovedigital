@@ -4,6 +4,7 @@
 //   work/index.html            the "all projects" hub
 //   work/<slug>/index.html     one static case-study page per project (plain HTML — no JavaScript
 //                              needed to read it, which is what search engines and AI crawlers want)
+//   privacy/index.html         the privacy policy (text in i18n/<lang>.json → "privacy")
 //   ru/work/…, az/work/…       the same pages in every other language (see scripts/lib/i18n.mjs)
 //   index.html                 the `workAll` array between // workAll:start … // workAll:end
 //                              (the /ru/ and /az/ home pages are built from index.html by build-seo.mjs)
@@ -89,7 +90,7 @@ ${graph ? jsonLdTag(graph) + '\n' : ''}<script src="${b}js/case.js" defer></scri
 }
 
 /** `h` is the relative link to this language's home page (`b` + "ru/" …); `langHrefs` maps each language to this page in it. */
-function nav({ h, hubHref, hubCurrent, lang, langHrefs }) {
+function nav({ h, hubHref, hubCurrent, workActive = true, lang, langHrefs }) {
   const t = strings(lang).ui;
   const link = (href, label, extra = '') => `<a href="${href}" class="ald-navlink${extra}">${label}</a>`;
   return `<a class="ald-skip" href="#main">${t.skip}</a>
@@ -97,7 +98,7 @@ function nav({ h, hubHref, hubCurrent, lang, langHrefs }) {
   <a href="${h}" class="ald-brand" aria-label="${NAME} — ${esc(t.homeLabel)}">${HEART(21, 18)}<span>${NAME}</span></a>
   <div class="ald-nav-desk">
     ${link(`${h}#services`, t.services)}
-    <a href="${hubHref}" class="ald-navlink is-active"${hubCurrent ? ' aria-current="page"' : ''}>${t.work}</a>
+    <a href="${hubHref}" class="ald-navlink${workActive ? ' is-active' : ''}"${hubCurrent ? ' aria-current="page"' : ''}>${t.work}</a>
     ${link(`${h}#process`, t.process)}
     ${link(`${h}#about`, t.about)}
     ${link(`${h}#contact`, t.contact)}
@@ -436,6 +437,53 @@ ${cards}
   });
 }
 
+// ───────────────────────────── privacy policy ─────────────────────────────
+function privacyPage(lang) {
+  const { ui: t, privacy: P } = strings(lang);
+  if (!P) throw new Error(`i18n/${lang}.json: "privacy" is missing`);
+  const pre = LOCALES[lang].prefix;
+  const b = pre ? '../../' : '../';
+  const h = b + pre;
+  const url = urlIn(lang, 'privacy/');
+  const graph = [
+    orgNode, siteNode,
+    {
+      '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: t.home, item: urlIn(lang) },
+        { '@type': 'ListItem', position: 2, name: P.h1, item: url },
+      ],
+    },
+    {
+      '@type': 'WebPage', '@id': `${url}#webpage`, url, name: P.title, description: P.description, inLanguage: lang,
+      isPartOf: { '@id': `${SITE_URL}/#website` }, about: { '@id': `${SITE_URL}/#org` }, breadcrumb: { '@id': `${url}#breadcrumb` },
+    },
+  ];
+  const main = `
+<header class="case-hero">
+  <div class="ald-wrap">
+    <nav class="case-crumbs" aria-label="${esc(t.crumbs)}">
+      <ol><li><a href="${h}">${t.home}</a></li><li aria-current="page">${esc(P.h1)}</li></ol>
+    </nav>
+    <p class="ald-eyebrow">${esc(P.eyebrow)}</p>
+    <h1 class="case-h1"><span class="case-title legal-title">${esc(P.h1)}</span></h1>
+    <p class="ald-lead case-sub">${esc(P.lead)}<br><span class="legal-updated">${esc(P.updated)}</span></p>
+  </div>
+</header>
+<section class="ald-sec legal-sec">
+  <div class="ald-wrap">
+    <div class="legal">
+${P.sections.map(([heading, body]) => `      <h2>${esc(heading)}</h2>\n      ${body}`).join('\n')}
+    </div>
+  </div>
+</section>`;
+  return page({
+    lang, h, hubHref: `${h}work/`, hubCurrent: false, workActive: false, langHrefs: langLinks(b, 'privacy/'),
+    headHtml: head({ b, lang, path: 'privacy/', title: P.title, description: P.description, canonical: url, image: abs(OG_IMAGE), imageType: 'image/png', imageAlt: strings(lang).meta.ogAlt, graph }),
+    main,
+  });
+}
+
 // ───────────────────────────── 404 ─────────────────────────────
 // Served by static hosts for any unknown URL, at any depth — hence root-absolute asset paths.
 function notFoundPage() {
@@ -471,8 +519,9 @@ for (const lang of LANGS) {
   const list = localizeProjects(projects, lang);
   const pre = LOCALES[lang].prefix;
   write(`${pre}work/index.html`, hubPage(list, lang));
+  write(`${pre}privacy/index.html`, privacyPage(lang));
   list.forEach((p, i) => write(`${pre}work/${p.slug}/index.html`, casePage(p, i, list, lang)));
   const longTitles = list.filter((p) => pageTitle(p).length > 72).map((p) => p.slug);
-  console.log(`work [${lang}]: hub + ${list.length} case pages${longTitles.length ? ` (long <title>: ${longTitles.join(', ')})` : ''}`);
+  console.log(`work [${lang}]: hub + privacy + ${list.length} case pages${longTitles.length ? ` (long <title>: ${longTitles.join(', ')})` : ''}`);
 }
 console.log('work: 404 and home workAll refreshed');

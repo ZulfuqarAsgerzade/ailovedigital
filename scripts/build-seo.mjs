@@ -231,6 +231,7 @@ const alternates = (path) => [...LANGS.map((l) => `    <xhtml:link rel="alternat
 const pages = [
   { path: '', images: [OG_IMAGE, ...projects.map((w) => w.homeImg)] },
   { path: 'work/', images: [] },
+  { path: 'privacy/', images: [] },
   ...projects.map((w) => ({ path: w.path, images: [w.cover.src] })),
 ];
 const urls = pages.flatMap(({ path, images }) => LANGS.map((l) => `  <url>
