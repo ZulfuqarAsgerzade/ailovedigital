@@ -72,7 +72,8 @@
     "nsWho": "Biz kimik",
     "nsContact": "Əlaqə",
     "nsEmail": "E-poçt",
-    "nsNext": "Bundan sonra nə olur:"
+    "nsNext": "Bundan sonra nə olur:",
+    "privacyPolicy": "Məxfilik siyasəti"
   },
   "home": [
     [
@@ -488,8 +489,8 @@
       "<a href=\"#services\">İnkişaf</a><a href=\"#services\">Avtomatlaşdırma</a><a href=\"#services\">Böyümə</a><a href=\"#services\">Tədris</a><a href=\"#services\">Strategiya</a>"
     ],
     [
-      "<a href=\"#work\">Work</a><a href=\"#process\">Process</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a>",
-      "<a href=\"#work\">Layihələr</a><a href=\"#process\">Proses</a><a href=\"#about\">Haqqımızda</a><a href=\"#contact\">Əlaqə</a>"
+      "<a href=\"#work\">Work</a><a href=\"#process\">Process</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a><a href=\"./privacy/\">Privacy Policy</a>",
+      "<a href=\"#work\">Layihələr</a><a href=\"#process\">Proses</a><a href=\"#about\">Haqqımızda</a><a href=\"#contact\">Əlaqə</a><a href=\"./privacy/\">Məxfilik siyasəti</a>"
     ],
     [
       "<span>Built with logic. Finished with love.</span>",

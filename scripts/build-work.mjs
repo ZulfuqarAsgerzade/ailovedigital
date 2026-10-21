@@ -140,7 +140,7 @@ function footer({ h, hubHref, lang }) {
       </div>
       <div>
         <div class="ald-foot-h">${t.footCompany}</div>
-        <div class="ald-foot-list"><a href="${hubHref}">${t.work}</a><a href="${h}#process">${t.process}</a><a href="${h}#about">${t.about}</a><a href="${h}#contact">${t.contact}</a></div>
+        <div class="ald-foot-list"><a href="${hubHref}">${t.work}</a><a href="${h}#process">${t.process}</a><a href="${h}#about">${t.about}</a><a href="${h}#contact">${t.contact}</a><a href="${h}privacy/">${t.privacyPolicy}</a></div>
       </div>
       <div>
         <div class="ald-foot-h">${t.footContact}</div>

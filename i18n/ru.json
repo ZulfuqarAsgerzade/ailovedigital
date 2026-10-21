@@ -72,7 +72,8 @@
     "nsWho": "Кто мы",
     "nsContact": "Контакты",
     "nsEmail": "Почта",
-    "nsNext": "Что будет дальше:"
+    "nsNext": "Что будет дальше:",
+    "privacyPolicy": "Политика конфиденциальности"
   },
   "home": [
     [
@@ -492,8 +493,8 @@
       "<a href=\"#services\">Разработка</a><a href=\"#services\">Автоматизация</a><a href=\"#services\">Рост</a><a href=\"#services\">Обучение</a><a href=\"#services\">Стратегия</a>"
     ],
     [
-      "<a href=\"#work\">Work</a><a href=\"#process\">Process</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a>",
-      "<a href=\"#work\">Проекты</a><a href=\"#process\">Процесс</a><a href=\"#about\">О нас</a><a href=\"#contact\">Контакты</a>"
+      "<a href=\"#work\">Work</a><a href=\"#process\">Process</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a><a href=\"./privacy/\">Privacy Policy</a>",
+      "<a href=\"#work\">Проекты</a><a href=\"#process\">Процесс</a><a href=\"#about\">О нас</a><a href=\"#contact\">Контакты</a><a href=\"./privacy/\">Политика конфиденциальности</a>"
     ],
     [
       "<span>Built with logic. Finished with love.</span>",
