@@ -256,6 +256,120 @@
     }
   },
   {
+    "slug": "agentos",
+    "name": "AGENTOS",
+    "brand": "AgentOS",
+    "line": "An autonomous AI software development platform",
+    "headline": "AI agents and developers building software together",
+    "subtitle": "It turns client requirements into tasks, runs specialised AI agents in parallel and keeps every change under review, tests and human approval.",
+    "year": "2026",
+    "scope": "AI platforms",
+    "time": "3 months",
+    "chips": [
+      "3+ agent types — backend, frontend, QA",
+      "9 core capabilities",
+      "4 dev platforms — GitHub, GitLab, Forgejo, Jira"
+    ],
+    "metrics": [
+      {
+        "v": "3+",
+        "l": "agent types — backend, frontend, QA"
+      },
+      {
+        "v": "9",
+        "l": "core capabilities"
+      },
+      {
+        "v": "4",
+        "l": "dev platforms — GitHub, GitLab, Forgejo, Jira"
+      }
+    ],
+    "overview": "AgentOS is an autonomous development platform that coordinates software delivery between human developer teams and specialised AI agents — from the client's requirements to a tested release.",
+    "problem": "Software teams lose much of their time to repetitive work: turning requirements into tickets, boilerplate code, reviews, tests and status reports. Progress, blockers and technical risks are hard to see, and handing work to AI tools without structure makes quality harder to control.",
+    "approach": "AgentOS analyses client requirements and turns them into technical tasks, splits large projects into stages and small development tasks, and assigns them to AI developer agents. Backend, frontend, QA and other specialised agents work in parallel, while automatic checks, code review, tests and human approval gates keep quality under control.",
+    "result": "The aim is faster, more transparent and measurable software delivery: higher team productivity, less repetitive technical work and clear reporting on progress, blockers, risks and results. Within the ecosystem, AgentOS carries out the software tasks that RootOS and CompanyOS plan. The capabilities on this page describe the product's planned scope as development continues.",
+    "features": [
+      {
+        "t": "Requirements to tasks",
+        "d": "Analyses client requirements and turns them into technical tasks."
+      },
+      {
+        "t": "Planning in stages",
+        "d": "Splits large projects into stages and small development tasks."
+      },
+      {
+        "t": "Parallel AI agents",
+        "d": "Coordinates backend, frontend, QA and other specialised agents working in parallel."
+      },
+      {
+        "t": "Automatic quality checks",
+        "d": "Runs automatic checks, code review and tests on every change."
+      },
+      {
+        "t": "CI/CD and releases",
+        "d": "Coordinates CI/CD pipelines, deployment and release processes."
+      },
+      {
+        "t": "Progress reporting",
+        "d": "Reports on progress, blockers, technical risks and results."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Human in the loop",
+        "d": "Approval gates and quality checks keep people in control: agents propose, people approve what ships."
+      },
+      {
+        "t": "Works where developers work",
+        "d": "Integrates with GitHub, GitLab, Forgejo, Jira and other development tools instead of replacing them."
+      },
+      {
+        "t": "The ecosystem's developer workforce",
+        "d": "AgentOS executes the software tasks that come out of MeetOS decisions, RootOS priorities and CompanyOS plans."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Agents",
+        "v": [
+          "Requirements analysis",
+          "Code generation",
+          "Code review",
+          "QA and testing"
+        ]
+      },
+      {
+        "k": "Delivery",
+        "v": [
+          "CI/CD",
+          "Deployment",
+          "Release management"
+        ]
+      },
+      {
+        "k": "Integrations",
+        "v": [
+          "GitHub",
+          "GitLab",
+          "Forgejo",
+          "Jira"
+        ]
+      }
+    ],
+    "coverAlt": "The AgentOS logo — a blue and violet A mark on a dark background",
+    "brandArt": {
+      "hue": 245,
+      "logo": "logo.jpg",
+      "crop": [
+        440,
+        90,
+        630,
+        580
+      ],
+      "style": 2
+    }
+  },
+  {
     "slug": "meetos",
     "name": "MEETOS",
     "brand": "MeetOS",
@@ -359,6 +473,116 @@
       "hue": 318,
       "initial": "M",
       "style": 3
+    }
+  },
+  {
+    "slug": "companyos",
+    "name": "COMPANYOS",
+    "brand": "CompanyOS",
+    "line": "An AI-powered enterprise operating system",
+    "headline": "One AI-powered platform to run every part of a company",
+    "subtitle": "Departments, people, projects, sales, finance and marketing in one system — with AI agents that plan, coordinate and carry out the work.",
+    "year": "2026",
+    "scope": "AI platforms",
+    "time": "3 months",
+    "chips": [
+      "1 platform for every department",
+      "9 core capabilities",
+      "4 kinds of systems it connects — ERP, CRM, HRM, communication"
+    ],
+    "metrics": [
+      {
+        "v": "1",
+        "l": "platform for every department"
+      },
+      {
+        "v": "9",
+        "l": "core capabilities"
+      },
+      {
+        "v": "4",
+        "l": "kinds of systems it connects — ERP, CRM, HRM, communication"
+      }
+    ],
+    "overview": "CompanyOS is an AI-powered business system that runs all of a company's operations from one platform. It uses RootOS's intelligence to cover day-to-day work across departments, people and projects.",
+    "problem": "Most companies run on a patchwork of ERP, CRM, HR, task and finance tools. Leadership has no single view, data is copied between systems by hand, and the software only records the work — someone still has to plan it, chase it and report on it.",
+    "approach": "CompanyOS brings the leadership dashboard, HR, projects and tasks, sales and CRM, finance, marketing and client delivery into one platform and connects the systems a company already has. On top of it, AI agents plan, coordinate and monitor the work and — where appropriate — carry it out, preparing reports and recommendations for management.",
+    "result": "The aim goes beyond a classic ERP or task manager: not just recording work, but planning, coordinating and controlling it through AI agents. CompanyOS is built for small, mid-sized and large companies, service businesses, digital agencies, manufacturers and technology firms. The capabilities on this page describe the product's planned scope as development continues.",
+    "features": [
+      {
+        "t": "Leadership dashboard",
+        "d": "One control panel for the CEO and management."
+      },
+      {
+        "t": "People and HR",
+        "d": "Manages employees, departments and HR processes."
+      },
+      {
+        "t": "Projects and performance",
+        "d": "Tracks projects, tasks, deadlines and team performance."
+      },
+      {
+        "t": "Sales and CRM",
+        "d": "Manages sales, CRM, client relationships and contracts."
+      },
+      {
+        "t": "Finance analytics",
+        "d": "Covers finance, budgets, expenses and profitability analytics."
+      },
+      {
+        "t": "Marketing and client delivery",
+        "d": "Automates marketing and SMM workflows and tracks client projects and service quality."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "AI that executes, not just records",
+        "d": "AI agents plan, coordinate and monitor the work and, where appropriate, carry it out — with automatic reports and recommendations for management."
+      },
+      {
+        "t": "Connects what you already use",
+        "d": "Integrates with existing ERP, CRM, HRM, communication and other business systems instead of forcing a full replacement."
+      },
+      {
+        "t": "The business layer of the ecosystem",
+        "d": "Runs on RootOS's intelligence, receives decisions from MeetOS and hands software work to AgentOS."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Modules",
+        "v": [
+          "Leadership dashboard",
+          "HR",
+          "Projects and tasks",
+          "Sales and CRM",
+          "Finance",
+          "Marketing"
+        ]
+      },
+      {
+        "k": "Integrations",
+        "v": [
+          "ERP",
+          "CRM",
+          "HRM",
+          "Communication tools"
+        ]
+      },
+      {
+        "k": "Ecosystem",
+        "v": [
+          "RootOS",
+          "MeetOS",
+          "AgentOS"
+        ]
+      }
+    ],
+    "coverAlt": "CompanyOS cover — a C app icon on a dark amber background",
+    "brandArt": {
+      "hue": 28,
+      "initial": "C",
+      "style": 1
     }
   },
   {

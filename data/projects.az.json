@@ -228,6 +228,106 @@
     "coverAlt": "RootOS loqosu — tünd fonda yaşıl R işarəsi"
   },
   {
+    "slug": "agentos",
+    "line": "Avtonom süni intellekt proqram hazırlama platforması",
+    "headline": "Süni intellekt agentləri ilə proqram hazırlama platforması",
+    "subtitle": "Müştəri tələblərini tapşırıqlara çevirir, ixtisaslaşmış agentləri paralel işlədir və hər dəyişikliyi review, test və insan təsdiqi ilə nəzarətdə saxlayır.",
+    "scope": "Süni intellekt platformaları",
+    "time": "3 ay",
+    "chips": [
+      "3+ agent növü — backend, frontend, QA",
+      "9 əsas imkan",
+      "4 development platforması — GitHub, GitLab, Forgejo, Jira"
+    ],
+    "metrics": [
+      {
+        "v": "3+",
+        "l": "agent növü — backend, frontend, QA"
+      },
+      {
+        "v": "9",
+        "l": "əsas imkan"
+      },
+      {
+        "v": "4",
+        "l": "development platforması — GitHub, GitLab, Forgejo, Jira"
+      }
+    ],
+    "overview": "AgentOS proqram təminatının hazırlanmasını insan developer komandaları ilə ixtisaslaşmış süni intellekt agentləri arasında koordinasiya edən avtonom development platformasıdır — müştəri tələblərindən test olunmuş buraxılışa qədər.",
+    "problem": "Development komandaları vaxtın böyük hissəsini təkrarlanan işlərə sərf edir: tələbləri tapşırıqlara çevirmək, şablon kod, code review, testlər və status hesabatları. İşin gedişatı, bloklanmalar və texniki risklər çətin görünür, işi strukturu olmadan süni intellekt alətlərinə vermək isə keyfiyyətə nəzarəti çətinləşdirir.",
+    "approach": "AgentOS müştəri tələblərini analiz edib texniki tapşırıqlara çevirir, böyük layihələri mərhələlərə və kiçik development tapşırıqlarına bölür və onları süni intellekt developer agentlərinə paylayır. Backend, frontend, QA və digər ixtisaslaşmış agentlər paralel işləyir, avtomatik yoxlamalar, code review, testlər və insan təsdiqi isə keyfiyyəti nəzarətdə saxlayır.",
+    "result": "Məqsəd proqram təminatının hazırlanmasını daha sürətli, şəffaf və ölçüləbilən prosesə çevirməkdir: komandanın məhsuldarlığı artır, təkrarlanan texniki işlər azalır, işin gedişatı, bloklanmalar, risklər və nəticələr barədə aydın hesabat olur. Ekosistemdə AgentOS RootOS və CompanyOS-un planlaşdırdığı proqram tapşırıqlarını icra edir. Bu səhifədəki imkanlar məhsulun inkişafı ilə planlaşdırılan əhatəni təsvir edir.",
+    "features": [
+      {
+        "t": "Tələbdən tapşırığa",
+        "d": "Müştəri tələblərini analiz edir və texniki tapşırıqlara çevirir."
+      },
+      {
+        "t": "Mərhələli planlama",
+        "d": "Böyük layihələri mərhələlərə və kiçik development tapşırıqlarına bölür."
+      },
+      {
+        "t": "Paralel agentlər",
+        "d": "Backend, frontend, QA və digər ixtisaslaşmış agentlərin paralel işini koordinasiya edir."
+      },
+      {
+        "t": "Avtomatik keyfiyyət yoxlaması",
+        "d": "Hər dəyişiklikdə avtomatik yoxlama, code review və testləri işə salır."
+      },
+      {
+        "t": "CI/CD və buraxılışlar",
+        "d": "CI/CD, deployment və release proseslərini koordinasiya edir."
+      },
+      {
+        "t": "Gedişat hesabatları",
+        "d": "İşin gedişatı, bloklanmalar, texniki risklər və nəticələr barədə hesabat hazırlayır."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "İnsan nəzarəti",
+        "d": "Təsdiq mərhələləri və keyfiyyət yoxlamaları nəzarəti insanlarda saxlayır: agentlər təklif edir, buraxılışa gedəni insanlar təsdiqləyir."
+      },
+      {
+        "t": "Developerlərin işlədiyi yerdə",
+        "d": "GitHub, GitLab, Forgejo, Jira və digər development sistemləri ilə inteqrasiya olunur, onları əvəz etmir."
+      },
+      {
+        "t": "Ekosistemin developer komandası",
+        "d": "AgentOS MeetOS qərarlarından, RootOS prioritetlərindən və CompanyOS planlarından yaranan proqram tapşırıqlarını icra edir."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Agentlər",
+        "v": [
+          "Tələblərin analizi",
+          "Kod generasiyası",
+          "Code review",
+          "QA və testlər"
+        ]
+      },
+      {
+        "k": "Çatdırılma",
+        "v": [
+          "CI/CD",
+          "Deployment",
+          "Release idarəetməsi"
+        ]
+      },
+      {
+        "k": "İnteqrasiyalar",
+        "v": [
+          "GitHub",
+          "GitLab",
+          "Forgejo",
+          "Jira"
+        ]
+      }
+    ],
+    "coverAlt": "AgentOS loqosu — tünd fonda mavi-bənövşəyi A işarəsi"
+  },
+  {
     "slug": "meetos",
     "line": "Görüş analitikası və icra üçün süni intellekt platforması",
     "headline": "Görüşləri real biznes nəticələrinə çevirən platforma",
@@ -324,6 +424,108 @@
       }
     ],
     "coverAlt": "MeetOS örtüyü — tünd bənövşəyi fonda M hərfli ikon"
+  },
+  {
+    "slug": "companyos",
+    "line": "Süni intellekt əsaslı korporativ əməliyyat sistemi",
+    "headline": "Bütün əməliyyatları vahid platformadan idarə edən sistem",
+    "subtitle": "Departamentlər, işçilər, layihələr, satış, maliyyə və marketinq bir sistemdə — işi planlaşdıran, koordinasiya edən və icra edən süni intellekt agentləri ilə.",
+    "scope": "Süni intellekt platformaları",
+    "time": "3 ay",
+    "chips": [
+      "1 platforma bütün departamentlər üçün",
+      "9 əsas imkan",
+      "4 inteqrasiya növü — ERP, CRM, HRM, kommunikasiya"
+    ],
+    "metrics": [
+      {
+        "v": "1",
+        "l": "platforma bütün departamentlər üçün"
+      },
+      {
+        "v": "9",
+        "l": "əsas imkan"
+      },
+      {
+        "v": "4",
+        "l": "inteqrasiya növü — ERP, CRM, HRM, kommunikasiya"
+      }
+    ],
+    "overview": "CompanyOS şirkətin bütün əməliyyatlarını vahid platformadan idarə edən süni intellekt əsaslı biznes sistemidir. RootOS-un intellektual imkanlarından istifadə edərək departamentlərin, işçilərin və layihələrin gündəlik fəaliyyətini əhatə edir.",
+    "problem": "Şirkətlərin çoxu bir-biri ilə bağlı olmayan ERP, CRM, HR, tapşırıq və maliyyə proqramları ilə işləyir. Rəhbərliyin vahid mənzərəsi olmur, məlumatlar sistemlər arasında əl ilə köçürülür, proqramlar isə yalnız işi qeyd edir — onu planlaşdırmaq, izləmək və hesabat vermək yenə insanların üzərində qalır.",
+    "approach": "CompanyOS rəhbərlik panelini, HR-ı, layihə və tapşırıqları, satış və CRM-i, maliyyəni, marketinqi və müştəri layihələrini bir platformada birləşdirir və şirkətdə artıq olan sistemlərə qoşulur. Onun üzərində süni intellekt agentləri işi planlaşdırır, koordinasiya edir, nəzarətdə saxlayır, uyğun hallarda isə icra edir və rəhbərlik üçün hesabat və tövsiyələr hazırlayır.",
+    "result": "Məqsəd klassik ERP və ya tapşırıq proqramından daha genişdir: işi yalnız qeyd etmək deyil, süni intellekt agentləri vasitəsilə planlaşdırmaq, koordinasiya etmək və nəzarətdə saxlamaq. CompanyOS kiçik, orta və böyük şirkətlər, xidmət müəssisələri, digital agentliklər, istehsal və texnologiya şirkətləri üçün nəzərdə tutulub. Bu səhifədəki imkanlar məhsulun inkişafı ilə planlaşdırılan əhatəni təsvir edir.",
+    "features": [
+      {
+        "t": "Rəhbərlik paneli",
+        "d": "CEO və rəhbərlik üçün vahid idarəetmə paneli."
+      },
+      {
+        "t": "İşçilər və HR",
+        "d": "İşçilərin, departamentlərin və HR proseslərinin idarə edilməsi."
+      },
+      {
+        "t": "Layihələr və performans",
+        "d": "Layihələrin, tapşırıqların, deadline-ların və komanda performansının izlənməsi."
+      },
+      {
+        "t": "Satış və CRM",
+        "d": "Satışın, CRM-in, müştəri əlaqələrinin və müqavilələrin idarə edilməsi."
+      },
+      {
+        "t": "Maliyyə analitikası",
+        "d": "Maliyyə, büdcə, xərclər və gəlirlilik analitikası."
+      },
+      {
+        "t": "Marketinq və müştəri layihələri",
+        "d": "Marketinq və SMM proseslərini avtomatlaşdırır, müştəri layihələrini və xidmət keyfiyyətini izləyir."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Yalnız qeyd edən yox, icra edən AI",
+        "d": "Süni intellekt agentləri işi planlaşdırır, koordinasiya edir, nəzarətdə saxlayır və uyğun hallarda icra edir — rəhbərlik üçün avtomatik hesabat və tövsiyələrlə."
+      },
+      {
+        "t": "Mövcud sistemlərə qoşulur",
+        "d": "Mövcud ERP, CRM, HRM, kommunikasiya və digər biznes sistemləri ilə inteqrasiya olunur, onları tamamilə əvəz etməyi tələb etmir."
+      },
+      {
+        "t": "Ekosistemin biznes qatı",
+        "d": "RootOS-un intellekti üzərində işləyir, MeetOS-dan qərarları alır və proqram tapşırıqlarını AgentOS-a ötürür."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Modullar",
+        "v": [
+          "Rəhbərlik paneli",
+          "HR",
+          "Layihələr və tapşırıqlar",
+          "Satış və CRM",
+          "Maliyyə",
+          "Marketinq"
+        ]
+      },
+      {
+        "k": "İnteqrasiyalar",
+        "v": [
+          "ERP",
+          "CRM",
+          "HRM",
+          "Kommunikasiya"
+        ]
+      },
+      {
+        "k": "Ekosistem",
+        "v": [
+          "RootOS",
+          "MeetOS",
+          "AgentOS"
+        ]
+      }
+    ],
+    "coverAlt": "CompanyOS örtüyü — tünd kəhrəba fonda C hərfli ikon"
   },
   {
     "slug": "chefmarket",
