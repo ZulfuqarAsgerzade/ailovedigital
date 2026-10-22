@@ -28,10 +28,11 @@ html.has-js .ald-value.case-rv.is-in{transition:opacity .8s var(--ease),transfor
 .case-meta{margin:clamp(26px,3.4vw,40px) 0 0}
 .case-cover{width:100%;max-width:calc(var(--maxw) + 2 * var(--gut));margin:0 auto;padding:0 var(--gut)}
 /* a hero image that fits the screen below the nav: never wider than 1080px and, on short windows, scaled to the height left */
-.case-cover img{display:block;width:min(100%,1080px,max(520px,calc((100svh - 200px) * 1.6)));height:auto;aspect-ratio:16/10;margin:0 auto;object-fit:cover;border-radius:var(--r-lg);background:var(--bg-alt);box-shadow:var(--shadow-md)}
+/* full container width at every size, so the metrics band below lines up with it edge to edge */
+.case-cover img{display:block;width:100%;height:auto;aspect-ratio:16/10;margin:0 auto;object-fit:cover;border-radius:var(--r-lg);background:var(--bg-alt);box-shadow:var(--shadow-md)}
 
 /* ---------- numbers ---------- */
-.case-metrics{margin:0;padding:0;list-style:none;grid-template-columns:repeat(3,minmax(0,1fr))}
+.case-metrics{margin:0 auto;padding:0;list-style:none;grid-template-columns:repeat(3,minmax(0,1fr))}
 .case-metrics .ald-stat-n{overflow-wrap:anywhere}
 @media (max-width:640px){
   .case-metrics{grid-template-columns:1fr}
