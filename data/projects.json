@@ -256,6 +256,112 @@
     }
   },
   {
+    "slug": "meetos",
+    "name": "MEETOS",
+    "brand": "MeetOS",
+    "line": "An AI meeting intelligence and execution platform",
+    "headline": "An AI platform that turns meetings into real business results",
+    "subtitle": "It prepares each meeting, records and analyses it, then turns decisions into tasks with owners, deadlines and follow-ups.",
+    "year": "2026",
+    "scope": "AI platforms",
+    "time": "3 months",
+    "chips": [
+      "3 stages — before, during and after the meeting",
+      "9 core capabilities",
+      "4 products in one AI ecosystem"
+    ],
+    "metrics": [
+      {
+        "v": "3",
+        "l": "stages — before, during and after the meeting"
+      },
+      {
+        "v": "9",
+        "l": "core capabilities"
+      },
+      {
+        "v": "4",
+        "l": "products in one AI ecosystem"
+      }
+    ],
+    "overview": "MeetOS is an AI platform that makes meetings — internal ones and those with clients — produce results. It prepares each meeting, analyses what was said and makes sure the decisions taken are actually carried out.",
+    "problem": "Companies spend hours in meetings that end without a clear outcome: agreements are forgotten, tasks have no owner or deadline, and a week later nobody checks whether the last meeting's decisions were done.",
+    "approach": "MeetOS covers the whole meeting cycle. Before it, it gathers context on the participants and the topic; during it, it transcribes and analyses the conversation; afterwards, it summarises the discussion, decisions and agreements, extracts the tasks, routes them to the right owners and runs deadlines, reminders and follow-ups.",
+    "result": "The aim is meetings that turn into concrete tasks and trackable results — every decision, its owner and its status on record, and a clear view of how productive meetings are and how well decisions get executed. Within the ecosystem, MeetOS hands those decisions to RootOS and CompanyOS. The capabilities on this page describe the product's planned scope as development continues.",
+    "features": [
+      {
+        "t": "Pre-meeting context",
+        "d": "Prepares background on the participants and the topic before the meeting starts."
+      },
+      {
+        "t": "Transcription and analysis",
+        "d": "Transcribes the meeting and analyses it with AI."
+      },
+      {
+        "t": "Automatic summaries",
+        "d": "Summarises the key discussion, decisions and agreements."
+      },
+      {
+        "t": "Tasks with owners",
+        "d": "Extracts the tasks agreed in the meeting and routes them to the people responsible."
+      },
+      {
+        "t": "Deadlines and follow-ups",
+        "d": "Automates deadlines, reminders and follow-ups, and tracks earlier decisions and their status."
+      },
+      {
+        "t": "Meeting effectiveness",
+        "d": "Analyses how productive meetings are and how consistently decisions are executed."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Decision log",
+        "d": "Every decision and agreement is stored with its owner, deadline and status, so the next meeting starts where the last one ended."
+      },
+      {
+        "t": "Plugged into the work tools",
+        "d": "Integrates with CRM, task management and CompanyOS, so tasks land where the team already works."
+      },
+      {
+        "t": "Part of the ecosystem",
+        "d": "MeetOS captures decisions, RootOS matches them with resources and priorities, CompanyOS plans the work and AgentOS executes the software tasks."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Core",
+        "v": [
+          "Transcription",
+          "AI analysis and summaries",
+          "Task extraction"
+        ]
+      },
+      {
+        "k": "Integrations",
+        "v": [
+          "CRM",
+          "Task management",
+          "CompanyOS"
+        ]
+      },
+      {
+        "k": "Ecosystem",
+        "v": [
+          "RootOS",
+          "CompanyOS",
+          "AgentOS"
+        ]
+      }
+    ],
+    "coverAlt": "MeetOS cover — an M app icon on a dark magenta background",
+    "brandArt": {
+      "hue": 318,
+      "initial": "M",
+      "style": 3
+    }
+  },
+  {
     "slug": "chefmarket",
     "name": "CHEFMARKET",
     "brand": "ChefMarket",

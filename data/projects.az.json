@@ -228,6 +228,104 @@
     "coverAlt": "RootOS loqosu — tünd fonda yaşıl R işarəsi"
   },
   {
+    "slug": "meetos",
+    "line": "Görüş analitikası və icra üçün süni intellekt platforması",
+    "headline": "Görüşləri real biznes nəticələrinə çevirən platforma",
+    "subtitle": "Hər görüşü hazırlayır, qeydə alır və analiz edir, sonra qərarları məsul şəxsi, müddəti və xatırlatmaları olan tapşırıqlara çevirir.",
+    "scope": "Süni intellekt platformaları",
+    "time": "3 ay",
+    "chips": [
+      "3 mərhələ — görüşdən əvvəl, görüş zamanı və sonra",
+      "9 əsas imkan",
+      "4 məhsul vahid süni intellekt ekosistemində"
+    ],
+    "metrics": [
+      {
+        "v": "3",
+        "l": "mərhələ — görüşdən əvvəl, görüş zamanı və sonra"
+      },
+      {
+        "v": "9",
+        "l": "əsas imkan"
+      },
+      {
+        "v": "4",
+        "l": "məhsul vahid süni intellekt ekosistemində"
+      }
+    ],
+    "overview": "MeetOS şirkətdaxili və müştərilərlə keçirilən görüşləri nəticəli edən süni intellekt platformasıdır. Hər görüşü hazırlayır, deyilənləri analiz edir və qəbul edilən qərarların həqiqətən icra olunmasına nəzarət edir.",
+    "problem": "Şirkətlər saatlarını aydın nəticəsiz bitən görüşlərə sərf edir: razılaşmalar unudulur, tapşırıqların məsul şəxsi və müddəti olmur, bir həftə sonra isə əvvəlki görüşün qərarlarının icra olunub-olunmadığını heç kim yoxlamır.",
+    "approach": "MeetOS görüşün bütün dövrünü əhatə edir. Görüşdən əvvəl iştirakçılar və mövzu üzrə kontekst hazırlayır, görüş zamanı söhbəti transkripsiya edir və analiz edir, sonra müzakirələri, qərarları və razılaşmaları xülasə edir, tapşırıqları çıxarır, məsul şəxslərə yönləndirir və deadline, xatırlatma və follow-up proseslərini aparır.",
+    "result": "Məqsəd görüşlərin konkret tapşırıqlara və izlənilə bilən nəticələrə çevrilməsidir: hər qərar, onun məsul şəxsi və vəziyyəti qeydə alınır, görüşlərin nəticəliliyi və icra intizamı aydın görünür. Ekosistemdə MeetOS bu qərarları RootOS və CompanyOS-a ötürür. Bu səhifədəki imkanlar məhsulun inkişafı ilə planlaşdırılan əhatəni təsvir edir.",
+    "features": [
+      {
+        "t": "Görüşdən əvvəl kontekst",
+        "d": "Görüş başlamazdan əvvəl iştirakçılar və mövzu üzrə məlumat hazırlayır."
+      },
+      {
+        "t": "Transkripsiya və analiz",
+        "d": "Görüşü transkripsiya edir və süni intellektlə analiz edir."
+      },
+      {
+        "t": "Avtomatik xülasə",
+        "d": "Əsas müzakirələri, qərarları və razılaşmaları qısa şəkildə ümumiləşdirir."
+      },
+      {
+        "t": "Məsul şəxsli tapşırıqlar",
+        "d": "Görüşdə razılaşdırılan tapşırıqları çıxarır və məsul şəxslərə yönləndirir."
+      },
+      {
+        "t": "Müddət və nəzarət",
+        "d": "Deadline, xatırlatma və follow-up proseslərini avtomatlaşdırır, əvvəlki qərarları və onların icra vəziyyətini izləyir."
+      },
+      {
+        "t": "Görüşlərin səmərəliliyi",
+        "d": "Görüşlərin nəticəliliyini və qərarların icra intizamını təhlil edir."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Qərarlar jurnalı",
+        "d": "Hər qərar və razılaşma məsul şəxsi, müddəti və vəziyyəti ilə saxlanılır — növbəti görüş əvvəlkinin bitdiyi yerdən başlayır."
+      },
+      {
+        "t": "İş alətlərinə qoşulma",
+        "d": "CRM, tapşırıq idarəetmə sistemləri və CompanyOS ilə inteqrasiya: tapşırıqlar komandanın artıq işlədiyi yerə düşür."
+      },
+      {
+        "t": "Ekosistemin bir hissəsi",
+        "d": "MeetOS qərarları qeydə alır, RootOS onları resurslar və prioritetlərlə əlaqələndirir, CompanyOS işi planlaşdırır, AgentOS isə proqram tapşırıqlarını icra edir."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Nüvə",
+        "v": [
+          "Transkripsiya",
+          "Süni intellekt analizi və xülasə",
+          "Tapşırıqların çıxarılması"
+        ]
+      },
+      {
+        "k": "İnteqrasiyalar",
+        "v": [
+          "CRM",
+          "Tapşırıq idarəetməsi",
+          "CompanyOS"
+        ]
+      },
+      {
+        "k": "Ekosistem",
+        "v": [
+          "RootOS",
+          "CompanyOS",
+          "AgentOS"
+        ]
+      }
+    ],
+    "coverAlt": "MeetOS örtüyü — tünd bənövşəyi fonda M hərfli ikon"
+  },
+  {
     "slug": "chefmarket",
     "line": "Restoranları təchizatçılarla birləşdirən B2B marketpleys",
     "headline": "Restoran və təchizatçılar üçün B2B marketpleys ekosistemi",
