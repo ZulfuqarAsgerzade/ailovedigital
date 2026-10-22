@@ -1,5 +1,129 @@
 [
   {
+    "slug": "dailoq",
+    "line": "WhatsApp, Instagram və Telegram üçün süni intellekt köməkçisi",
+    "headline": "Azərbaycan üçün yaradılmış müştəri yazışmaları köməkçisi",
+    "subtitle": "Telegram, Instagram, WhatsApp və saytda bir köməkçi — sənədlərinizə əsasən cavab verir, iş görür və çətin sualları insana ötürür.",
+    "scope": "Süni intellekt platformaları",
+    "time": "3 ay",
+    "chips": [
+      "4 kanal — Telegram, Instagram, WhatsApp, sayt",
+      "≥95% cavab sənədlərinizə söykənir",
+      "≤2% sınaq dəstində uydurma cavab"
+    ],
+    "metrics": [
+      {
+        "v": "4",
+        "l": "kanal — Telegram, Instagram, WhatsApp, sayt"
+      },
+      {
+        "v": "≥95%",
+        "l": "cavab sənədlərinizə söykənir"
+      },
+      {
+        "v": "≤2%",
+        "l": "sınaq dəstində uydurma cavab"
+      }
+    ],
+    "overview": "Dailoq Azərbaycandakı bizneslər üçün yaradılmış, müştəri yazışmalarını aparan süni intellekt köməkçisidir. Müştəri hansı kanaldan yazırsa yazsın — Telegram, Instagram, WhatsApp və ya saytdakı widget — eyni köməkçi azərbaycan, rus və ya ingilis dilində cavab verir. O, şirkətin öz sənədlərinə əsaslanır, masa rezervasiyası kimi sadə işləri görür və çətin söhbətləri qısa xülasə ilə operatora ötürür.",
+    "problem": "Kiçik və orta bizneslər eyni suallara bir neçə messencerdə əl ilə cavab verir — çox vaxt iş saatlarından kənar və azərbaycan-rus qarışıq dildə. Qlobal chatbot platformaları yerli dialektləri, hərf əvəzləmələrini və qarışıq dilli mesajları başa düşmür, qiymətləri xarici valyutada təklif edir və bilmədiyi suala cavab uydurur.",
+    "approach": "Köməkçini yerli dildən başlayaraq qurduq: dialekt ifadələri, hərf əvəzləmələri və qarışıq AZ–RU cümlələri ilə azərbaycan dili ayrıca sınaqdan keçirilir. Cavablar müştərinin öz fayllarından tapılır və hər cavabın mənbəyi göstərilir; köməkçi nəyisə təsdiqləyə bilmirsə, bunu açıq deyir və insana ötürməyi təklif edir. Botun «beynində» hər dəyişiklik müştəriyə çatmazdan əvvəl sınaq suallarından keçməlidir.",
+    "result": "Biznes bütün kanallar üçün bir köməkçi əldə edir: o, şirkətin öz sənədlərinə əsasən cavab verir, səsli mesajları və şəkilləri anlayır, rezervasiya edib təsdiqləyir, söhbəti tam kontekstlə operatora ötürür — hamısı söhbət tarixçəsi və aylıq hesabatlarla birlikdə kodsuz bir paneldən idarə olunur.",
+    "features": [
+      {
+        "t": "Bir ağıl, bütün kanallar",
+        "d": "Telegram, Instagram və veb widget artıq işləyir; WhatsApp Meta-nın rəsmi yolu ilə qoşulur. Müştəri kanalı dəyişəndə söhbət itmir."
+      },
+      {
+        "t": "Doğma Azərbaycan dili",
+        "d": "Dialekti, hərf əvəzləmələrini və qarışıq AZ–RU–EN mesajları başa düşür, müştərinin dilində cavab verir."
+      },
+      {
+        "t": "Mənbəli cavablar",
+        "d": "PDF, DOCX, XLSX, TXT, Markdown, URL və FAQ-larda məna üzrə axtarır; hər cavabın altında mənbə faylı göstərilir, cavabsız suallar bir kliklə FAQ-a çevrilir."
+      },
+      {
+        "t": "Səs və şəkil",
+        "d": "Səsli mesajları mətnə çevirir, şəkildəki yazını — məsələn, menyunu — oxuyur və ona əsasən cavab verir."
+      },
+      {
+        "t": "İş görür",
+        "d": "Əvvəlcə təsdiq alır, sonra masa rezerv edir və ya REST konnektoru ilə müştərinin öz sisteminə müraciət edir — idempotentlik açarı ilə, heç nə iki dəfə icra olunmur."
+      },
+      {
+        "t": "Operatora ötürmə və panel",
+        "d": "Çətin suallar qısa xülasə ilə operatora gedir; sahibkar tonu, bilikləri, kanalları, komanda rollarını və tarixçəni kodsuz bir paneldən idarə edir."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Sınaq maneəsi",
+        "d": "Real suallardan ibarət böyüyən dəst — təxminən yarısı azərbaycanca, 30%-i rusca, 20%-i ingiliscə — hər dəyişiklikdə işə düşür; nəticə pisləşərsə, buraxılış dayandırılır."
+      },
+      {
+        "t": "Müştərilərin ayrılması",
+        "d": "Rol əsaslı giriş və verilənlər bazası səviyyəsində ayrılma hər müştərinin məlumatını digərlərindən qoruyur; qoşulma açarları şifrəli saxlanılır, silinməyən əməliyyat jurnalı hər addımı qeyd edir."
+      },
+      {
+        "t": "Modeldən asılı olmayan nüvə",
+        "d": "Öz modelini öyrətmək əvəzinə hazır dil modellərindən istifadə edir, ona görə model təchizatçısını dəyişmək yenidən yazılış yox, ayar məsələsidir. Məlumatlar Avropada (Frankfurt) saxlanılır."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Frontend",
+        "v": [
+          "Next.js (App Router)",
+          "React",
+          "WebGL 3D maskot (GLB)"
+        ]
+      },
+      {
+        "k": "Kanallar",
+        "v": [
+          "Telegram Bot API",
+          "Instagram Messaging API",
+          "WhatsApp Business Platform",
+          "Veb widget (13 KB, axınla cavab)"
+        ]
+      },
+      {
+        "k": "Süni intellekt",
+        "v": [
+          "LLM (təchizatçıdan asılı deyil)",
+          "Semantik axtarış / RAG",
+          "Nitqin tanınması",
+          "OCR"
+        ]
+      },
+      {
+        "k": "Məlumat və təhlükəsizlik",
+        "v": [
+          "Müştərilərin ayrılması (multi-tenant)",
+          "Rol əsaslı giriş",
+          "Açarların şifrələnməsi",
+          "Audit jurnalı"
+        ]
+      },
+      {
+        "k": "İnfrastruktur",
+        "v": [
+          "Cloudflare",
+          "Avropada hostinq (Frankfurt)"
+        ]
+      },
+      {
+        "k": "İnteqrasiyalar",
+        "v": [
+          "REST konnektoru",
+          "Cal.com (planda)",
+          "Bitrix24 / amoCRM (planda)"
+        ]
+      }
+    ],
+    "coverAlt": "Dailoq saytı laptop və iki telefonda"
+  },
+  {
     "slug": "chefmarket",
     "line": "Restoranları təchizatçılarla birləşdirən B2B marketpleys",
     "headline": "Restoran və təchizatçılar üçün B2B marketpleys ekosistemi",

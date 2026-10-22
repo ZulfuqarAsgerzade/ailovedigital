@@ -27,7 +27,7 @@
 </header>
 <main id="out"></main>
 <script type="module">
-import { prepare, render, cardFromCover } from './compose.js';
+import { prepare, render, cardFromCover, prepareBrand, renderBrand } from './compose.js';
 
 const SAVE = 'http://127.0.0.1:4177/save';
 const log = (m) => { document.getElementById('log').textContent = m; };
@@ -43,6 +43,15 @@ const results = new Map();
 async function build(p, i) {
   // the second argument makes the browser fetch the latin-ext face too (İ, ş, ə, ğ … are not in the latin subset)
   const glyphs = 'İşəğüöçıƏÇŞ'; await document.fonts.load('700 100px Geist', glyphs); await document.fonts.load('450 34px Geist', glyphs);
+  if (p.brandArt) {
+    const prep = await prepareBrand(p);
+    const draw = (opts) => { const c = document.createElement('canvas'); renderBrand(c, p, prep, i, opts); return c; };
+    const cover = draw({ width: 1600, scale: 1 });
+    const card = draw({ width: 1600, scale: 0.5, content: CARD_CONTENT });
+    const og = draw({ width: 1905, scale: 630 / 1000 });
+    results.set(p.slug, { cover, card, og, set: 'brand' });
+    return { preview: card, set: prep.logo ? 'brand logo' : 'brand monogram (placeholder)' };
+  }
   if (!p.mockup) {
     const card = document.createElement('canvas');
     await cardFromCover(card, p, { width: 800, height: 500, content: CARD_CONTENT });
@@ -63,9 +72,13 @@ async function build(p, i) {
 document.getElementById('render').onclick = async () => {
   const out = document.getElementById('out'); out.innerHTML = '';
   const want = only.value;
-  let i = -1; // style index (mirror + mesh) counts only the composed covers, so a hand-made one shifts nothing
+  // Style index (mirror + mesh): an explicit "style" on mockup/brandArt wins; otherwise it counts the composed
+  // covers without one, so neither hand-made covers nor newer styled projects shift the older covers' looks.
+  let auto = -1;
   for (const p of projects) {
-    if (p.mockup) i++;
+    const art = p.mockup || p.brandArt;
+    if (art && art.style === undefined) auto++;
+    const i = art && art.style !== undefined ? art.style : auto;
     if (want && p.slug !== want) continue;
     log(`rendering ${p.brand}…`);
     const { preview, set } = await build(p, i);

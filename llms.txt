@@ -12,6 +12,7 @@ And we make businesses love it too. Built with logic. Finished with love.
 - Think: We set the right direction before you invest: we assess where you stand, build a technology strategy and give you a clear action plan to base decisions on. Because sometimes the right move is to wait for a better opportunity. (Strategy · Technical audits · Digital transformation · Consulting)
 
 ## Selected work
+- [Dailoq](https://ailovedigital.com/work/dailoq/): An AI customer-messaging assistant built for Azerbaijan. One assistant across Telegram, Instagram, WhatsApp and the web — it answers from your documents, takes actions and hands hard questions to a human. [AI platforms, 2026]
 - [ChefMarket](https://ailovedigital.com/work/chefmarket/): A restaurant–supplier B2B marketplace ecosystem. Three mobile apps, an admin panel and a real-time backend — in one ecosystem. [Marketplace, 2026]
 - [Vicdoor](https://ailovedigital.com/work/vicdoor/): A multi-tenant SaaS for door and window manufacturers. Quoting, visual design, production, installation and customer trust in one system. [B2B & SaaS, 2026]
 - [AltisCassa](https://ailovedigital.com/work/altiscassa/): An integrated finance and cash management platform. Multi-currency cash management, counterparty debts and 11+ financial reports. [Fintech & finance, 2026]

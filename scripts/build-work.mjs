@@ -178,12 +178,18 @@ ${footer({ lang, ...links })}
 /** Relative links from a page to the same page in every language (`b` = back to the site root). */
 const langLinks = (b, path) => Object.fromEntries(LANGS.map((l) => [l, `${b}${LOCALES[l].prefix}${path}`]));
 
+// Brand and technology names are Latin words: upper-cased by CSS on a page in Azerbaijani they would gain a
+// dotted İ ("VİCDOOR", "FİREBASE"). Plain-ASCII names are marked lang="en"; text with Azerbaijani letters keeps
+// the page language.
+const name = (s) => (/^[\x00-\x7F]*$/.test(s) ? `<span lang="en">${esc(s)}</span>` : esc(s));
+const nameAttr = (s) => (/^[\x00-\x7F]*$/.test(s) ? ' lang="en"' : '');
+
 // ───────────── shared project card (hub + "related projects") ─────────────
 const hubCard = (p, b, h, eager, level = 3) => `    <li class="hub-card case-rv">
       <div class="hub-media"><img src="${b}${p.homeImg}" width="800" height="500" alt="${esc(p.coverAlt)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async"></div>
       <div class="hub-body">
         <span class="ald-work-num">${pad2(p.n)}</span>
-        <h${level} class="hub-name"><a href="${h}${p.path}" class="hub-link">${esc(p.brand)}</a></h${level}>
+        <h${level} class="hub-name"><a href="${h}${p.path}" class="hub-link"${nameAttr(p.brand)}>${esc(p.brand)}</a></h${level}>
         <p class="hub-line">${esc(p.line)}</p>
         <p class="hub-meta">${esc(p.scope)} · ${esc(p.year)}</p>
       </div>
@@ -194,7 +200,7 @@ const hubCard = (p, b, h, eager, level = 3) => `    <li class="hub-card case-rv"
 function relatedFor(p, list) {
   const others = projects.filter((x) => x.slug !== p.slug);
   const same = others.filter((x) => x.scope === p.scope);
-  const rest = others.filter((x) => x.scope !== p.scope).sort((a, b) => ((a.n - p.n + 16) % 16) - ((b.n - p.n + 16) % 16));
+  const rest = others.filter((x) => x.scope !== p.scope).sort((a, b) => ((a.n - p.n + projects.length) % projects.length) - ((b.n - p.n + projects.length) % projects.length));
   return [...same, ...rest].slice(0, 3).map((x) => list[x.n - 1]);
 }
 
@@ -251,10 +257,10 @@ function casePage(p, i, list, lang) {
 <header class="case-hero">
   <div class="ald-wrap">
     <nav class="case-crumbs" aria-label="${esc(t.crumbs)}">
-      <ol><li><a href="${h}">${t.home}</a></li><li><a href="../">${t.work}</a></li><li aria-current="page">${esc(p.brand)}</li></ol>
+      <ol><li><a href="${h}">${t.home}</a></li><li><a href="../">${t.work}</a></li><li aria-current="page">${name(p.brand)}</li></ol>
     </nav>
     <p class="ald-eyebrow has-idx"><span class="ald-idx">${pad2(p.n)}</span> / ${esc(p.scope)}</p>
-    <h1 class="case-h1"><span class="case-title">${esc(p.brand)}</span><span class="sr-only"> — </span><span class="case-headline">${esc(p.headline)}</span></h1>
+    <h1 class="case-h1"><span class="case-title"${nameAttr(p.brand)}>${esc(p.brand)}</span><span class="sr-only"> — </span><span class="case-headline">${esc(p.headline)}</span></h1>
     <p class="ald-lead case-sub">${esc(p.subtitle)}</p>
     <dl class="ald-work-meta case-meta">${meta}</dl>
   </div>
@@ -328,7 +334,7 @@ ${p.architecture.map((a) => `      <li class="case-rv"><h3>${esc(a.t)}</h3><p>${
       </div>
     </header>
     <dl class="case-stack" aria-labelledby="stack">
-${p.stack.map((g) => `      <div class="case-rv"><dt>${esc(g.k)}</dt><dd><ul class="ald-chips">${g.v.map((t) => `<li class="ald-chip">${esc(t)}</li>`).join('')}</ul></dd></div>`).join('\n')}
+${p.stack.map((g) => `      <div class="case-rv"><dt>${esc(g.k)}</dt><dd><ul class="ald-chips">${g.v.map((t) => `<li class="ald-chip"${nameAttr(t)}>${esc(t)}</li>`).join('')}</ul></dd></div>`).join('\n')}
     </dl>
   </div>
 </section>
@@ -349,8 +355,8 @@ ${relatedFor(p, list).map((r) => hubCard(r, b, h, false)).join('\n')}
 </section>
 
 <nav class="case-pager" aria-label="${esc(t.morePager)}">
-  <a href="${h}${prev.path}" rel="prev"><span class="case-pager-k">${t.prev}</span><span class="case-pager-n">${esc(prev.brand)}</span></a>
-  <a href="${h}${next.path}" rel="next"><span class="case-pager-k">${t.next}</span><span class="case-pager-n">${esc(next.brand)}</span></a>
+  <a href="${h}${prev.path}" rel="prev"><span class="case-pager-k">${t.prev}</span><span class="case-pager-n"${nameAttr(prev.brand)}>${esc(prev.brand)}</span></a>
+  <a href="${h}${next.path}" rel="next"><span class="case-pager-k">${t.next}</span><span class="case-pager-n"${nameAttr(next.brand)}>${esc(next.brand)}</span></a>
 </nav>
 
 <section class="ald-sec ald-sec--dark case-cta">

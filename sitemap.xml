@@ -8,6 +8,7 @@
     <xhtml:link rel="alternate" hreflang="az" href="https://ailovedigital.com/az/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/"/>
     <image:image><image:loc>https://ailovedigital.com/assets/images/og-image.png</image:loc></image:image>
+    <image:image><image:loc>https://ailovedigital.com/assets/images/work/dailoq.webp</image:loc></image:image>
     <image:image><image:loc>https://ailovedigital.com/assets/images/work/chefmarket.webp</image:loc></image:image>
     <image:image><image:loc>https://ailovedigital.com/assets/images/work/vicdoor.webp</image:loc></image:image>
     <image:image><image:loc>https://ailovedigital.com/assets/images/work/altiscassa.webp</image:loc></image:image>
@@ -33,6 +34,7 @@
     <xhtml:link rel="alternate" hreflang="az" href="https://ailovedigital.com/az/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/"/>
     <image:image><image:loc>https://ailovedigital.com/assets/images/og-image.png</image:loc></image:image>
+    <image:image><image:loc>https://ailovedigital.com/assets/images/work/dailoq.webp</image:loc></image:image>
     <image:image><image:loc>https://ailovedigital.com/assets/images/work/chefmarket.webp</image:loc></image:image>
     <image:image><image:loc>https://ailovedigital.com/assets/images/work/vicdoor.webp</image:loc></image:image>
     <image:image><image:loc>https://ailovedigital.com/assets/images/work/altiscassa.webp</image:loc></image:image>
@@ -58,6 +60,7 @@
     <xhtml:link rel="alternate" hreflang="az" href="https://ailovedigital.com/az/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/"/>
     <image:image><image:loc>https://ailovedigital.com/assets/images/og-image.png</image:loc></image:image>
+    <image:image><image:loc>https://ailovedigital.com/assets/images/work/dailoq.webp</image:loc></image:image>
     <image:image><image:loc>https://ailovedigital.com/assets/images/work/chefmarket.webp</image:loc></image:image>
     <image:image><image:loc>https://ailovedigital.com/assets/images/work/vicdoor.webp</image:loc></image:image>
     <image:image><image:loc>https://ailovedigital.com/assets/images/work/altiscassa.webp</image:loc></image:image>
@@ -122,6 +125,33 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://ailovedigital.com/ru/privacy/"/>
     <xhtml:link rel="alternate" hreflang="az" href="https://ailovedigital.com/az/privacy/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/privacy/"/>
+  </url>
+  <url>
+    <loc>https://ailovedigital.com/work/dailoq/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailovedigital.com/work/dailoq/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ailovedigital.com/ru/work/dailoq/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://ailovedigital.com/az/work/dailoq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/work/dailoq/"/>
+    <image:image><image:loc>https://ailovedigital.com/assets/images/work/dailoq/cover.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://ailovedigital.com/ru/work/dailoq/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailovedigital.com/work/dailoq/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ailovedigital.com/ru/work/dailoq/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://ailovedigital.com/az/work/dailoq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/work/dailoq/"/>
+    <image:image><image:loc>https://ailovedigital.com/assets/images/work/dailoq/cover.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://ailovedigital.com/az/work/dailoq/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ailovedigital.com/work/dailoq/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ailovedigital.com/ru/work/dailoq/"/>
+    <xhtml:link rel="alternate" hreflang="az" href="https://ailovedigital.com/az/work/dailoq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ailovedigital.com/work/dailoq/"/>
+    <image:image><image:loc>https://ailovedigital.com/assets/images/work/dailoq/cover.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://ailovedigital.com/work/chefmarket/</loc>

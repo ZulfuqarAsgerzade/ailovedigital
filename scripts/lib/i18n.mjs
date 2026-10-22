@@ -70,6 +70,7 @@ export function localizeProjects(projects, lang) {
     t.stack.forEach((g, j) => { if (g.v.length !== p.stack[j].v.length) throw new Error(`${file}: "${p.slug}".stack[${j}].v length differs`); });
     const out = { ...p, lang };
     for (const k of [...TEXT_FIELDS, ...LIST_FIELDS]) out[k] = t[k];
+    if (p.time) out.time = t.time || p.time; // optional: the timeline, e.g. "3 months"
     out.url = urlIn(lang, p.path);
     return out;
   });

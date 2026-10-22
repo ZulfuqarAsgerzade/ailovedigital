@@ -1,5 +1,143 @@
 [
   {
+    "slug": "dailoq",
+    "name": "DAILOQ",
+    "brand": "Dailoq",
+    "line": "An AI chat assistant for WhatsApp, Instagram and Telegram",
+    "headline": "An AI customer-messaging assistant built for Azerbaijan",
+    "subtitle": "One assistant across Telegram, Instagram, WhatsApp and the web — it answers from your documents, takes actions and hands hard questions to a human.",
+    "year": "2026",
+    "scope": "AI platforms",
+    "time": "3 months",
+    "chips": [
+      "4 channels — Telegram, Instagram, WhatsApp, web",
+      "≥95% of answers grounded in your documents",
+      "≤2% made-up answers on the test set"
+    ],
+    "metrics": [
+      {
+        "v": "4",
+        "l": "channels — Telegram, Instagram, WhatsApp, web"
+      },
+      {
+        "v": "≥95%",
+        "l": "of answers grounded in your documents"
+      },
+      {
+        "v": "≤2%",
+        "l": "made-up answers on the test set"
+      }
+    ],
+    "overview": "Dailoq is an AI assistant for customer conversations, built for businesses in Azerbaijan. Whichever channel a customer writes from — Telegram, Instagram, WhatsApp or a website widget — the same assistant answers, in Azerbaijani, Russian or English. It works from the company's own documents, carries out simple tasks such as booking a table, and passes difficult conversations to a human operator with a summary.",
+    "problem": "Small and mid-sized businesses answer the same questions in several messengers by hand, often out of hours and in a mix of Azerbaijani and Russian. Global chatbot platforms don't understand local dialects, letter substitutions or mixed-language messages, price in foreign currency and tend to invent an answer when they don't know one.",
+    "approach": "We built the assistant around the local language first: Azerbaijani — with dialect phrases, letter substitutions and mixed AZ–RU sentences — is tested on its own. Answers are retrieved from the client's files and every reply shows its source; when the assistant can't confirm something it says so and offers a human. Every change to the bot's brain has to pass an evaluation set before it reaches customers.",
+    "result": "Businesses get one assistant for every channel that answers from their own documents, understands voice messages and photos, books and confirms actions and hands over to operators with full context — all managed from a single no-code panel with conversation history and monthly reports.",
+    "features": [
+      {
+        "t": "One brain, every channel",
+        "d": "Telegram, Instagram and a web widget work today; WhatsApp connects through Meta's official route. The conversation carries on when a customer switches channels."
+      },
+      {
+        "t": "Native Azerbaijani",
+        "d": "Understands dialect, letter substitutions and mixed AZ–RU–EN messages, and replies in the customer's language."
+      },
+      {
+        "t": "Answers with sources",
+        "d": "Searches PDF, DOCX, XLSX, TXT, Markdown, URLs and FAQs by meaning; every answer shows the file it came from, and unanswered questions become FAQ entries in one click."
+      },
+      {
+        "t": "Voice and images",
+        "d": "Transcribes voice messages and reads the text in photos — a menu, for example — then answers from them."
+      },
+      {
+        "t": "Takes actions",
+        "d": "Asks for confirmation, then books a table or calls the client's own system through a REST connector — with an idempotency key, so nothing runs twice."
+      },
+      {
+        "t": "Human handoff and panel",
+        "d": "Hard questions go to an operator with a short summary; owners manage tone, knowledge, channels, team roles and history from one no-code panel."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Evaluation gate",
+        "d": "A growing set of real questions — about half in Azerbaijani, 30% Russian, 20% English — runs on every change; if the score drops, the release is blocked."
+      },
+      {
+        "t": "Tenant isolation",
+        "d": "Role-based access plus database-level isolation keep each client's data apart; connection keys are stored encrypted and an append-only audit log records every action."
+      },
+      {
+        "t": "Model-agnostic core",
+        "d": "Ready-made language models instead of a home-trained one, so switching model provider is a configuration change, not a rewrite. Data is hosted in the EU (Frankfurt)."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Frontend",
+        "v": [
+          "Next.js (App Router)",
+          "React",
+          "WebGL 3D mascot (GLB)"
+        ]
+      },
+      {
+        "k": "Channels",
+        "v": [
+          "Telegram Bot API",
+          "Instagram Messaging API",
+          "WhatsApp Business Platform",
+          "Web widget (13 KB, streaming)"
+        ]
+      },
+      {
+        "k": "AI",
+        "v": [
+          "LLM (provider-agnostic)",
+          "Semantic search / RAG",
+          "Speech-to-text",
+          "OCR"
+        ]
+      },
+      {
+        "k": "Data and security",
+        "v": [
+          "Multi-tenant isolation",
+          "Role-based access",
+          "Encrypted credentials",
+          "Audit log"
+        ]
+      },
+      {
+        "k": "Infrastructure",
+        "v": [
+          "Cloudflare",
+          "EU hosting (Frankfurt)"
+        ]
+      },
+      {
+        "k": "Integrations",
+        "v": [
+          "REST connector",
+          "Cal.com (planned)",
+          "Bitrix24 / amoCRM (planned)"
+        ]
+      }
+    ],
+    "coverAlt": "The Dailoq website shown on a laptop and two phones",
+    "mockup": {
+      "web": [
+        1
+      ],
+      "phones": [
+        2,
+        3
+      ],
+      "bare": true,
+      "style": 4
+    }
+  },
+  {
     "slug": "chefmarket",
     "name": "CHEFMARKET",
     "brand": "ChefMarket",

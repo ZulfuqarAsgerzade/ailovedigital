@@ -20,7 +20,7 @@ const hsl = (h, s, l, a = 1) => `hsla(${((h % 360) + 360) % 360},${s}%,${l}%,${a
 const path = (ctx, x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
 
 // ───────────── sources: crop the baked-in black frame off a screenshot ─────────────
-async function source(slug, n) {
+async function source(slug, n, bare = false) {
   const img = await load(`../../assets/images/work/${slug}/${String(n).padStart(2, '0')}.webp`);
   const W = img.naturalWidth, Hh = img.naturalHeight;
   const c = document.createElement('canvas'); c.width = W; c.height = Hh;
@@ -33,7 +33,7 @@ async function source(slug, n) {
   const rows = [.3, .4, .5, .6, .7].map((f) => Math.round(Hh * f));
   const L = med(rows.map((y) => edge((i) => lum(i, y), 0, W >> 1, 1)));
   const R = med(rows.map((y) => W - 1 - edge((i) => lum(i, y), W - 1, W >> 1, -1)));
-  const inset = Math.min(L, R) + 3;
+  const inset = bare ? 0 : Math.min(L, R) + 3;
   return { img, sx: inset, sy: inset, sw: W - 2 * inset, sh: Hh - 2 * inset, slug, n };
 }
 
@@ -231,7 +231,7 @@ export function deviceSet(m) {
 
 // ───────────── public API ─────────────
 export async function prepare(p) {
-  const m = p.mockup, pick = async (n) => source(p.slug, n);
+  const m = p.mockup, pick = async (n) => source(p.slug, n, !!m.bare);
   const src = {};
   if (m.web) src.web = await pick(m.web[0]);
   if (m.tablet) src.tablet = await pick(m.tablet[0]);
@@ -318,4 +318,52 @@ export async function cardFromCover(canvas, p, { width, height, content }) {
     [fade(0, dy + dh, 0, dy + dh - f), 0, 0, width, height],
   ]) { lx.fillStyle = g; lx.fillRect(rx, ry, rw, rh); }
   ctx.drawImage(layer, 0, 0);
+}
+
+/**
+ * Cover for a product that has a logo but no screens yet ("brandArt" in data/projects.json): the same
+ * background, mesh and title as the device covers, with the logo mark where the devices would be.
+ * brandArt: { hue, logo?: "logo.jpg" (in the project folder), crop?: [x, y, w, h], initial?: "C", style? }.
+ * The logos are drawn with the "lighten" blend, so their black backgrounds melt into the dark cover.
+ * Without a logo an app-icon monogram stands in.
+ */
+export async function prepareBrand(p) {
+  const a = p.brandArt;
+  const logo = a.logo ? await load(`../../assets/images/work/${p.slug}/${a.logo}`) : null;
+  return { brand: true, hue: a.hue ?? 228, logo, crop: a.crop || (logo ? [0, 0, logo.naturalWidth, logo.naturalHeight] : null), initial: a.initial || p.brand.charAt(0) };
+}
+
+export function renderBrand(canvas, p, prep, index, { width, scale, content = 1 }) {
+  const W = width, ctx = canvas.getContext('2d');
+  canvas.width = Math.round(W * scale); canvas.height = Math.round(H * scale);
+  ctx.setTransform(scale, 0, 0, scale, 0, 0);
+  const pal = { h: prep.hue }, rand = rng(p.slug), flip = index % 2 === 1;
+  background(ctx, W, pal);
+  ctx.save(); if (flip) { ctx.translate(W, 0); ctx.scale(-1, 1); }
+  meshes[MESH_ORDER[index % MESH_ORDER.length]](ctx, W, pal, rand);
+  ctx.restore();
+  const cx = W * (flip ? 0.30 : 0.70), cy = H * 0.52;
+  const glow = ctx.createRadialGradient(cx, cy, 0, cx, cy, W * 0.36);
+  glow.addColorStop(0, hsl(pal.h, 85, 58, 0.30)); glow.addColorStop(1, hsl(pal.h, 85, 58, 0));
+  ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
+  ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(content, content); ctx.translate(-W / 2, -H / 2);
+  title(ctx, p, W, pal, flip);
+  if (prep.logo) {
+    const [sx, sy, sw, sh] = prep.crop, maxH = H * 0.62, maxW = W * 0.34;
+    const k = Math.min(maxH / sh, maxW / sw), dw = sw * k, dh = sh * k;
+    ctx.save(); ctx.globalCompositeOperation = 'lighten';
+    ctx.drawImage(prep.logo, sx, sy, sw, sh, cx - dw / 2, cy - dh / 2, dw, dh);
+    ctx.restore();
+  } else {
+    const s = H * 0.46, x = cx - s / 2, y = cy - s / 2;
+    ctx.save(); ctx.shadowColor = hsl(pal.h, 80, 30, 0.6); ctx.shadowBlur = 80; ctx.shadowOffsetY = 30;
+    const g = ctx.createLinearGradient(x, y, x + s, y + s);
+    g.addColorStop(0, hsl(pal.h - 18, 90, 66)); g.addColorStop(1, hsl(pal.h + 22, 80, 46));
+    path(ctx, x, y, s, s, s * 0.24); ctx.fillStyle = g; ctx.fill(); ctx.restore();
+    path(ctx, x + 1, y + 1, s - 2, s - 2, s * 0.24); ctx.strokeStyle = 'rgba(255,255,255,.28)'; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.letterSpacing = '-6px';
+    ctx.font = `700 ${Math.round(s * 0.56)}px Geist`; ctx.fillText(prep.initial, cx, cy + s * 0.02);
+    ctx.letterSpacing = '0px';
+  }
+  ctx.restore();
 }
