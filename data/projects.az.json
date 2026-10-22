@@ -130,6 +130,104 @@
     "coverAlt": "Dailoq saytı laptop və iki telefonda"
   },
   {
+    "slug": "rootos",
+    "line": "Süni intellektlə işləyən biznes analitikası və orkestrasiya mühərriki",
+    "headline": "Şirkətin süni intellektlə işləyən mərkəzi beyni",
+    "subtitle": "Bütün departamentlər üzərində vahid intellektual qat — prosesləri izləyir, problemləri əvvəlcədən görür və süni intellekt agentlərini insan nəzarəti altında koordinasiya edir.",
+    "scope": "Süni intellekt platformaları",
+    "time": "3 ay",
+    "chips": [
+      "1 bütün departamentlər üçün mərkəzi beyin",
+      "8 əsas imkan",
+      "4 məhsul vahid süni intellekt ekosistemində"
+    ],
+    "metrics": [
+      {
+        "v": "1",
+        "l": "bütün departamentlər üçün mərkəzi beyin"
+      },
+      {
+        "v": "8",
+        "l": "əsas imkan"
+      },
+      {
+        "v": "4",
+        "l": "məhsul vahid süni intellekt ekosistemində"
+      }
+    ],
+    "overview": "RootOS şirkətin süni intellektlə işləyən mərkəzi beynidir. O, şirkətin müxtəlif proqramlarını, məlumatlarını, əməkdaşlarını və süni intellekt agentlərini vahid intellektual idarəetmə və orkestrasiya qatında birləşdirir — CompanyOS, AgentOS və MeetOS-un üzərində qurulduğu nüvədir.",
+    "problem": "Şirkət məlumatları yalnız qeydləri saxlayan ayrı-ayrı proqramlarda yerləşir: ümumi mənzərəni heç kim görmür, işçilərin yüklənməsi və gecikmələr çox gec üzə çıxır, rəhbərlik isə artıq köhnəlmiş hesabatlara əsasən qərar verir. Avtomatlaşdırma varsa belə, aydın sahibi və əməliyyat jurnalı olmadan işləyir.",
+    "approach": "RootOS bütün departamentlərin məlumatlarını bir mərkəzdə toplayır və biznes proseslərini real vaxtda izləyir. Bu qatın üzərində süni intellekt agentləri tapşırıqları avtomatik alır və mərkəzdən koordinasiya olunur, icazələr, təsdiq mexanizmləri və audit isə hər avtomatik addımı insan nəzarəti altında saxlayır.",
+    "result": "Məqsəd şirkəti yalnız məlumat saxlayan proqramlarla deyil, baş verən prosesləri anlayan, problemləri əvvəlcədən müəyyənləşdirən və müəyyən işləri müstəqil həyata keçirən süni intellekt sistemi ilə idarə etməkdir. RootOS AI Love Digital ekosisteminin nüvəsidir; bu səhifədəki imkanlar məhsulun inkişafı ilə planlaşdırılan əhatəni təsvir edir.",
+    "features": [
+      {
+        "t": "Vahid şirkət məlumatı",
+        "d": "Bütün departamentlərin məlumatlarını vahid mərkəzdə birləşdirir."
+      },
+      {
+        "t": "Real vaxtda proses analitikası",
+        "d": "Biznes proseslərini real vaxtda izləyir və analiz edir."
+      },
+      {
+        "t": "Problemlərin erkən aşkarlanması",
+        "d": "İşçilərin yüklənməsini, gecikmələri və əməliyyat problemlərini böyüməzdən əvvəl aşkarlayır."
+      },
+      {
+        "t": "Agentlərin orkestrasiyası",
+        "d": "Süni intellekt agentlərinə avtomatik tapşırıq verir və onların fəaliyyətini koordinasiya edir."
+      },
+      {
+        "t": "Qərar dəstəyi",
+        "d": "Rəhbərliyə analitik hesabatlar, risk xəbərdarlıqları və tövsiyələr təqdim edir."
+      },
+      {
+        "t": "Korporativ yaddaş",
+        "d": "Şirkətin daxili bilik bazasını formalaşdırır və təkrarlanan əməliyyatları avtomatlaşdırır."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Nəzarətli avtomatlaşdırma",
+        "d": "İcazələr, təsdiq mexanizmləri və audit agentlərin müstəqil olaraq nəyi edə biləcəyini müəyyən edir."
+      },
+      {
+        "t": "Ekosistemin beyni",
+        "d": "CompanyOS biznesi, AgentOS proqram təminatının hazırlanmasını, MeetOS isə görüşləri idarə edir; RootOS onların məlumatlarını əlaqələndirir və agentlərini koordinasiya edir."
+      },
+      {
+        "t": "Görüşdən icraya qədər",
+        "d": "MeetOS-un qeydə aldığı qərarı RootOS resurslar və prioritetlərlə əlaqələndirir, CompanyOS planlaşdırır, AgentOS icra edir, gedişat isə hesabat kimi rəhbərliyə qayıdır."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Nüvə",
+        "v": [
+          "Məlumat inteqrasiyası qatı",
+          "Proses analitikası",
+          "Agentlərin orkestrasiyası"
+        ]
+      },
+      {
+        "k": "İdarəetmə",
+        "v": [
+          "İcazələr",
+          "Təsdiq mexanizmləri",
+          "Audit jurnalı"
+        ]
+      },
+      {
+        "k": "Ekosistem",
+        "v": [
+          "CompanyOS",
+          "AgentOS",
+          "MeetOS"
+        ]
+      }
+    ],
+    "coverAlt": "RootOS loqosu — tünd fonda yaşıl R işarəsi"
+  },
+  {
     "slug": "chefmarket",
     "line": "Restoranları təchizatçılarla birləşdirən B2B marketpleys",
     "headline": "Restoran və təchizatçılar üçün B2B marketpleys ekosistemi",

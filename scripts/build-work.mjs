@@ -198,8 +198,9 @@ const hubCard = (p, b, h, eager, level = 3) => `    <li class="hub-card case-rv"
 /** Same-scope projects first, then the following ones in order — three, never the project itself.
  *  Grouped on the English data so every language shows the same three; returned from `list`. */
 function relatedFor(p, list) {
+  const base = projects[p.n - 1]; // compare English scopes: `p` may be a translated project
   const others = projects.filter((x) => x.slug !== p.slug);
-  const same = others.filter((x) => x.scope === p.scope);
+  const same = others.filter((x) => x.scope === base.scope);
   const rest = others.filter((x) => x.scope !== p.scope).sort((a, b) => ((a.n - p.n + projects.length) % projects.length) - ((b.n - p.n + projects.length) % projects.length));
   return [...same, ...rest].slice(0, 3).map((x) => list[x.n - 1]);
 }

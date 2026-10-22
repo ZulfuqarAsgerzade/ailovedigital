@@ -144,6 +144,118 @@
     }
   },
   {
+    "slug": "rootos",
+    "name": "ROOTOS",
+    "brand": "RootOS",
+    "line": "An AI business intelligence and orchestration engine",
+    "headline": "The AI brain that connects a company's data, people and agents",
+    "subtitle": "One intelligent layer over every department — it watches the processes, spots problems early and coordinates AI agents under human control.",
+    "year": "2026",
+    "scope": "AI platforms",
+    "time": "3 months",
+    "chips": [
+      "1 central brain for every department",
+      "8 core capabilities",
+      "4 products in one AI ecosystem"
+    ],
+    "metrics": [
+      {
+        "v": "1",
+        "l": "central brain for every department"
+      },
+      {
+        "v": "8",
+        "l": "core capabilities"
+      },
+      {
+        "v": "4",
+        "l": "products in one AI ecosystem"
+      }
+    ],
+    "overview": "RootOS is the central, AI-driven brain of a company. It brings the company's software, data, people and AI agents together into one intelligent management and orchestration layer — the core that CompanyOS, AgentOS and MeetOS build on.",
+    "problem": "Company data sits in separate programs that only store records: nobody sees the whole picture, overloaded people and delays surface too late, and management decides on reports that are already out of date. Where automation exists, it runs without a clear owner or audit trail.",
+    "approach": "RootOS gathers the data of every department in one place and follows business processes in real time. On top of that layer, AI agents receive tasks automatically and are coordinated centrally, while permissions, approval steps and an audit log keep every automated action under human control.",
+    "result": "The aim is a company run not only by software that stores data, but by an AI system that understands what is happening, flags problems before they grow and carries out routine work on its own. RootOS is the core of the AI Love Digital ecosystem; the capabilities on this page describe the product's planned scope as development continues.",
+    "features": [
+      {
+        "t": "Unified company data",
+        "d": "Brings the data of every department together in one centre."
+      },
+      {
+        "t": "Live process analytics",
+        "d": "Follows and analyses business processes in real time."
+      },
+      {
+        "t": "Early problem detection",
+        "d": "Spots overloaded people, delays and operational issues before they escalate."
+      },
+      {
+        "t": "AI agent orchestration",
+        "d": "Assigns tasks to AI agents automatically and coordinates their work."
+      },
+      {
+        "t": "Decision support",
+        "d": "Gives management analytical reports, risk alerts and recommendations."
+      },
+      {
+        "t": "Corporate memory",
+        "d": "Builds the company's internal knowledge base and automates repetitive operations."
+      }
+    ],
+    "architecture": [
+      {
+        "t": "Governed automation",
+        "d": "Permissions, approval steps and an audit log decide what agents may do on their own."
+      },
+      {
+        "t": "The brain of the ecosystem",
+        "d": "CompanyOS runs the business, AgentOS the software delivery and MeetOS the meetings; RootOS links their data and coordinates their agents."
+      },
+      {
+        "t": "From meeting to delivery",
+        "d": "A decision captured in MeetOS is matched by RootOS with resources and priorities, planned in CompanyOS and carried out through AgentOS — and progress flows back to management as a report."
+      }
+    ],
+    "stack": [
+      {
+        "k": "Core",
+        "v": [
+          "Data integration layer",
+          "Process analytics",
+          "AI agent orchestration"
+        ]
+      },
+      {
+        "k": "Governance",
+        "v": [
+          "Permissions",
+          "Approval workflows",
+          "Audit log"
+        ]
+      },
+      {
+        "k": "Ecosystem",
+        "v": [
+          "CompanyOS",
+          "AgentOS",
+          "MeetOS"
+        ]
+      }
+    ],
+    "coverAlt": "The RootOS logo — a green R mark on a dark background",
+    "brandArt": {
+      "hue": 152,
+      "logo": "logo.jpg",
+      "crop": [
+        590,
+        30,
+        410,
+        345
+      ],
+      "style": 0
+    }
+  },
+  {
     "slug": "chefmarket",
     "name": "CHEFMARKET",
     "brand": "ChefMarket",
