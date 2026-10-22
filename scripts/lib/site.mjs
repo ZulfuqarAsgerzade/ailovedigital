@@ -20,6 +20,7 @@ export const PHONE = '(+994 70) 280 18 18';
 export const PHONE_TEL = '+994702801818'; // E.164, for tel: links and structured data
 export const INSTAGRAM = 'https://www.instagram.com/ailovedigital.az/';
 export const LINKEDIN = 'https://www.linkedin.com/company/ailovedigital/';
+export const MAPS = 'https://maps.google.com/?cid=1268243044441275730'; // Google Maps place: Altis Plaza, Binagadi district, Baku
 export const WHATSAPP = `https://wa.me/${PHONE_TEL.slice(1)}`; // opens a WhatsApp chat with PHONE
 export const LOCALE = 'en_US';
 export const LANG = 'en';

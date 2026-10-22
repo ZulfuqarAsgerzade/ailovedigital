@@ -510,8 +510,8 @@
       "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Проектов<br>сдано</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">2<span class=\"ald-dot\">нед</span></div><div class=\"ald-stat-l\">В среднем<br>до первого MVP</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">Специалистов<br>в основной команде</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Выпускников<br>академии</div></div>"
     ],
     [
-      "<span>Binagadi district, Altis Plaza</span>",
-      "<span>Бинагадинский р-н, Altis Plaza</span>"
+      ">Binagadi district, Altis Plaza<",
+      ">Бинагадинский р-н, Altis Plaza<"
     ]
   ],
   "privacy": {

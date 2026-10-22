@@ -17,7 +17,7 @@
 // the domain; i18n/<lang>.json for the other languages.
 
 import {
-  SITE_URL, NAME, EMAIL, PHONE_TEL, INSTAGRAM, LINKEDIN, LANG, BG, OG_IMAGE,
+  SITE_URL, NAME, EMAIL, PHONE_TEL, INSTAGRAM, LINKEDIN, MAPS, LANG, BG, OG_IMAGE,
   read, write, abs, esc, loadProjects,
 } from './lib/site.mjs';
 import {
@@ -102,6 +102,8 @@ function buildHome(lang) {
       email: EMAIL,
       telephone: PHONE_TEL,
       sameAs: [INSTAGRAM, LINKEDIN],
+      address: { '@type': 'PostalAddress', streetAddress: 'Altis Plaza', addressRegion: 'Binagadi district', addressLocality: 'Baku', addressCountry: 'AZ' },
+      hasMap: MAPS,
       description: meta.description,
       slogan: meta.slogan,
       knowsAbout: ['Web development', 'Mobile apps', 'AI automation', 'Workflow automation', 'Digital marketing', 'AI training', 'Technology consulting', 'Digital transformation'],

@@ -506,8 +506,8 @@
       "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Təhvil verilmiş<br>layihə</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">2<span class=\"ald-dot\">həftə</span></div><div class=\"ald-stat-l\">İlk MVP-yə<br>orta müddət</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">Beyin və komandada<br>mütəxəssis</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Akademiya<br>məzunu</div></div>"
     ],
     [
-      "<span>Binagadi district, Altis Plaza</span>",
-      "<span>Binəqədi ray., Altis Plaza</span>"
+      ">Binagadi district, Altis Plaza<",
+      ">Binəqədi ray., Altis Plaza<"
     ]
   ],
   "privacy": {
