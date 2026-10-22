@@ -8,8 +8,8 @@
     "time": "3 ay",
     "chips": [
       "4 kanal — Telegram, Instagram, WhatsApp, sayt",
-      "≥95% cavab sənədlərinizə söykənir",
-      "≤2% sınaq dəstində uydurma cavab"
+      "~98% cavab düzgündür",
+      "15+ şirkət istifadə edir"
     ],
     "metrics": [
       {
@@ -17,22 +17,22 @@
         "l": "kanal — Telegram, Instagram, WhatsApp, sayt"
       },
       {
-        "v": "≥95%",
-        "l": "cavab sənədlərinizə söykənir"
+        "v": "~98%",
+        "l": "cavab düzgündür"
       },
       {
-        "v": "≤2%",
-        "l": "sınaq dəstində uydurma cavab"
+        "v": "15+",
+        "l": "şirkət istifadə edir"
       }
     ],
     "overview": "Dailoq Azərbaycandakı bizneslər üçün yaradılmış, müştəri yazışmalarını aparan süni intellekt köməkçisidir. Müştəri hansı kanaldan yazırsa yazsın — Telegram, Instagram, WhatsApp və ya saytdakı widget — eyni köməkçi azərbaycan, rus və ya ingilis dilində cavab verir. O, şirkətin öz sənədlərinə əsaslanır, masa rezervasiyası kimi sadə işləri görür və çətin söhbətləri qısa xülasə ilə operatora ötürür.",
     "problem": "Kiçik və orta bizneslər eyni suallara bir neçə messencerdə əl ilə cavab verir — çox vaxt iş saatlarından kənar və azərbaycan-rus qarışıq dildə. Qlobal chatbot platformaları yerli dialektləri, hərf əvəzləmələrini və qarışıq dilli mesajları başa düşmür, qiymətləri xarici valyutada təklif edir və bilmədiyi suala cavab uydurur.",
     "approach": "Köməkçini yerli dildən başlayaraq qurduq: dialekt ifadələri, hərf əvəzləmələri və qarışıq AZ–RU cümlələri ilə azərbaycan dili ayrıca sınaqdan keçirilir. Cavablar müştərinin öz fayllarından tapılır və hər cavabın mənbəyi göstərilir; köməkçi nəyisə təsdiqləyə bilmirsə, bunu açıq deyir və insana ötürməyi təklif edir. Botun «beynində» hər dəyişiklik müştəriyə çatmazdan əvvəl sınaq suallarından keçməlidir.",
-    "result": "Biznes bütün kanallar üçün bir köməkçi əldə edir: o, şirkətin öz sənədlərinə əsasən cavab verir, səsli mesajları və şəkilləri anlayır, rezervasiya edib təsdiqləyir, söhbəti tam kontekstlə operatora ötürür — hamısı söhbət tarixçəsi və aylıq hesabatlarla birlikdə kodsuz bir paneldən idarə olunur.",
+    "result": "Dailoq-dan 15-dən çox şirkət istifadə edir. Onlar bütün kanallar üçün bir köməkçi əldə edir: o, şirkətin öz sənədlərinə əsasən cavab verir — cavabların təxminən 98%-i düzgündür, xəta ən çox 2% olur — səsli mesajları və şəkilləri anlayır, rezervasiya edib təsdiqləyir və söhbəti tam kontekstlə operatora ötürür; hamısı söhbət tarixçəsi və aylıq hesabatlarla birlikdə kodsuz bir paneldən idarə olunur.",
     "features": [
       {
         "t": "Bir ağıl, bütün kanallar",
-        "d": "Telegram, Instagram və veb widget artıq işləyir; WhatsApp Meta-nın rəsmi yolu ilə qoşulur. Müştəri kanalı dəyişəndə söhbət itmir."
+        "d": "Telegram, Instagram, WhatsApp və veb widget işləyir, Meta kanalları Meta-nın rəsmi inteqrasiyası ilə qoşulur. Müştəri kanalı dəyişəndə söhbət itmir."
       },
       {
         "t": "Doğma Azərbaycan dili",
@@ -44,7 +44,7 @@
       },
       {
         "t": "Səs və şəkil",
-        "d": "Səsli mesajları mətnə çevirir, şəkildəki yazını — məsələn, menyunu — oxuyur və ona əsasən cavab verir."
+        "d": "Eyni çoxmodallı model səsli mesajları və şəkilləri — məsələn, menyunu — başa düşür və onlara əsasən cavab verir, ayrıca OCR mərhələsi olmadan."
       },
       {
         "t": "İş görür",
@@ -62,14 +62,21 @@
       },
       {
         "t": "Müştərilərin ayrılması",
-        "d": "Rol əsaslı giriş və verilənlər bazası səviyyəsində ayrılma hər müştərinin məlumatını digərlərindən qoruyur; qoşulma açarları şifrəli saxlanılır, silinməyən əməliyyat jurnalı hər addımı qeyd edir."
+        "d": "Rol əsaslı giriş və verilənlər bazası səviyyəsində ayrılma hər müştərinin məlumatını digərlərindən qoruyur; qoşulma açarları şifrəli saxlanılır, silinməyən əməliyyat jurnalı hər addımı qeyd edir. Prod mühiti Avropadakı Contabo serverində, Cloudflare arxasında işləyir."
       },
       {
-        "t": "Modeldən asılı olmayan nüvə",
-        "d": "Öz modelini öyrətmək əvəzinə hazır dil modellərindən istifadə edir, ona görə model təchizatçısını dəyişmək yenidən yazılış yox, ayar məsələsidir. Məlumatlar Avropada (Frankfurt) saxlanılır."
+        "t": "Modellərin yönləndirilməsi",
+        "d": "Bir neçə süni intellekt modeli üçün adapterlər və hər sorğu üçün modeli seçən yönləndirmə qatı — təchizatçını dəyişmək yenidən yazılış yox, ayar məsələsidir. Vektorları öz serverimizdə işləyən bge-m3 modeli hazırlayır, semantik axtarış isə PostgreSQL-in daxilində pgvector ilə işləyir."
       }
     ],
     "stack": [
+      {
+        "k": "Backend",
+        "v": [
+          "C#",
+          "ASP.NET Core 8 (.NET 8)"
+        ]
+      },
       {
         "k": "Frontend",
         "v": [
@@ -79,45 +86,44 @@
         ]
       },
       {
-        "k": "Kanallar",
+        "k": "Məlumat",
         "v": [
-          "Telegram Bot API",
-          "Instagram Messaging API",
-          "WhatsApp Business Platform",
-          "Veb widget (13 KB, axınla cavab)"
+          "PostgreSQL 16",
+          "pgvector",
+          "Redis (keş və növbələr)"
         ]
       },
       {
         "k": "Süni intellekt",
         "v": [
-          "LLM (təchizatçıdan asılı deyil)",
-          "Semantik axtarış / RAG",
-          "Nitqin tanınması",
-          "OCR"
+          "Hər sorğuya model seçən çoxmodelli adapterlər",
+          "Səs və şəkil üçün çoxmodallı model",
+          "bge-m3 vektorları (öz serverimizdə)",
+          "Semantik axtarış / RAG"
         ]
       },
       {
-        "k": "Məlumat və təhlükəsizlik",
+        "k": "Kanallar",
         "v": [
-          "Müştərilərin ayrılması (multi-tenant)",
-          "Rol əsaslı giriş",
-          "Açarların şifrələnməsi",
-          "Audit jurnalı"
+          "WhatsApp və Instagram (Meta)",
+          "Telegram Bot API",
+          "Veb widget (13 KB, axınla cavab)"
         ]
       },
       {
         "k": "İnfrastruktur",
         "v": [
-          "Cloudflare",
-          "Avropada hostinq (Frankfurt)"
+          "Contabo (Avropa)",
+          "Cloudflare"
         ]
       },
       {
-        "k": "İnteqrasiyalar",
+        "k": "Təhlükəsizlik",
         "v": [
-          "REST konnektoru",
-          "Cal.com (planda)",
-          "Bitrix24 / amoCRM (planda)"
+          "Müştərilərin ayrılması (multi-tenant)",
+          "Rol əsaslı giriş",
+          "Açarların şifrələnməsi",
+          "Audit jurnalı"
         ]
       }
     ],
