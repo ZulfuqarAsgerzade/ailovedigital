@@ -73,7 +73,8 @@
     "nsContact": "Контакты",
     "nsEmail": "Почта",
     "nsNext": "Что будет дальше:",
-    "privacyPolicy": "Политика конфиденциальности"
+    "privacyPolicy": "Политика конфиденциальности",
+    "address": "Бинагадинский р-н, Altis Plaza"
   },
   "home": [
     [
@@ -507,6 +508,10 @@
     [
       "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Projects<br>delivered</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">2<span class=\"ald-dot\">wk</span></div><div class=\"ald-stat-l\">Average path<br>to a first MVP</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">Experts in our<br>core team</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Academy<br>graduates</div></div>",
       "<section data-screen-label=\"Proof\" class=\"ald-stats-band\">\n  <div class=\"ald-wrap ald-stats\">\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">40+</div><div class=\"ald-stat-l\">Проектов<br>сдано</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">2<span class=\"ald-dot\">нед</span></div><div class=\"ald-stat-l\">В среднем<br>до первого MVP</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">12</div><div class=\"ald-stat-l\">Специалистов<br>в основной команде</div></div>\n    <div class=\"ald-stat\"><div class=\"ald-stat-n\">300+</div><div class=\"ald-stat-l\">Выпускников<br>академии</div></div>"
+    ],
+    [
+      "<span>Binagadi district, Altis Plaza</span>",
+      "<span>Бинагадинский р-н, Altis Plaza</span>"
     ]
   ],
   "privacy": {
