@@ -154,32 +154,32 @@
     "scope": "AI platforms",
     "time": "3 months",
     "chips": [
-      "1 central brain for every department",
-      "8 core capabilities",
-      "4 products in one AI ecosystem"
+      "11+ connected systems — ERP, CRM, 1C, Microsoft 365 and more",
+      "500+ active users at five international companies",
+      "1 central brain for every department"
     ],
     "metrics": [
       {
+        "v": "11+",
+        "l": "connected systems — ERP, CRM, 1C, Microsoft 365 and more"
+      },
+      {
+        "v": "500+",
+        "l": "active users at five international companies"
+      },
+      {
         "v": "1",
         "l": "central brain for every department"
-      },
-      {
-        "v": "8",
-        "l": "core capabilities"
-      },
-      {
-        "v": "4",
-        "l": "products in one AI ecosystem"
       }
     ],
     "overview": "RootOS is the central, AI-driven brain of a company. It brings the company's software, data, people and AI agents together into one intelligent management and orchestration layer — the core that CompanyOS, AgentOS and MeetOS build on.",
     "problem": "Company data sits in separate programs that only store records: nobody sees the whole picture, overloaded people and delays surface too late, and management decides on reports that are already out of date. Where automation exists, it runs without a clear owner or audit trail.",
     "approach": "RootOS gathers the data of every department in one place and follows business processes in real time. On top of that layer, AI agents receive tasks automatically and are coordinated centrally, while permissions, approval steps and an audit log keep every automated action under human control.",
-    "result": "The aim is a company run not only by software that stores data, but by an AI system that understands what is happening, flags problems before they grow and carries out routine work on its own. RootOS is the core of the AI Love Digital ecosystem; the capabilities on this page describe the product's planned scope as development continues.",
+    "result": "RootOS is live: five international companies and more than 500 active users work with it. It pulls data from ERP and CRM systems, 1C, Excel, Google, Microsoft 365, Slack, Mattermost, Jira, Plane and Linear into one layer, coordinates AI agents through our own orchestration engine and keeps every automated step under permissions, approvals and an audit log, while management gets dashboards, reports and risk alerts. RootOS is the core of the AI Love Digital ecosystem.",
     "features": [
       {
         "t": "Unified company data",
-        "d": "Brings the data of every department together in one centre."
+        "d": "Brings data from ERP, CRM, 1C, Excel, Google, Microsoft 365, Slack, Mattermost, Jira, Plane and Linear together in one centre."
       },
       {
         "t": "Live process analytics",
@@ -191,7 +191,7 @@
       },
       {
         "t": "AI agent orchestration",
-        "d": "Assigns tasks to AI agents automatically and coordinates their work."
+        "d": "Our own orchestration engine assigns tasks to AI agents automatically and coordinates their work."
       },
       {
         "t": "Decision support",
@@ -218,11 +218,47 @@
     ],
     "stack": [
       {
-        "k": "Core",
+        "k": "Backend",
         "v": [
-          "Data integration layer",
-          "Process analytics",
-          "AI agent orchestration"
+          ".NET 10",
+          "ASP.NET Core"
+        ]
+      },
+      {
+        "k": "Apps",
+        "v": [
+          "Web",
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      {
+        "k": "Data",
+        "v": [
+          "PostgreSQL",
+          "Redis",
+          "Vector database"
+        ]
+      },
+      {
+        "k": "AI",
+        "v": [
+          "Claude Opus 5.5",
+          "OpenAI",
+          "Groq",
+          "GLM 5.3",
+          "Proprietary agent orchestration"
+        ]
+      },
+      {
+        "k": "Integrations",
+        "v": [
+          "ERP and CRM",
+          "1C",
+          "Excel and Google",
+          "Microsoft 365",
+          "Slack and Mattermost",
+          "Jira, Plane and Linear"
         ]
       },
       {
@@ -234,11 +270,10 @@
         ]
       },
       {
-        "k": "Ecosystem",
+        "k": "Infrastructure",
         "v": [
-          "CompanyOS",
-          "AgentOS",
-          "MeetOS"
+          "AWS (EU region)",
+          "Cloudflare"
         ]
       }
     ],
@@ -266,28 +301,28 @@
     "scope": "AI platforms",
     "time": "3 months",
     "chips": [
-      "3+ agent types — backend, frontend, QA",
-      "9 core capabilities",
-      "4 dev platforms — GitHub, GitLab, Forgejo, Jira"
+      "750+ pull requests opened by agents",
+      "1,000+ tasks completed",
+      "10 h to rebuild a project that originally took 127 days"
     ],
     "metrics": [
       {
-        "v": "3+",
-        "l": "agent types — backend, frontend, QA"
+        "v": "750+",
+        "l": "pull requests opened by agents"
       },
       {
-        "v": "9",
-        "l": "core capabilities"
+        "v": "1,000+",
+        "l": "tasks completed"
       },
       {
-        "v": "4",
-        "l": "dev platforms — GitHub, GitLab, Forgejo, Jira"
+        "v": "10 h",
+        "l": "to rebuild a project that originally took 127 days"
       }
     ],
     "overview": "AgentOS is an autonomous development platform that coordinates software delivery between human developer teams and specialised AI agents — from the client's requirements to a tested release.",
     "problem": "Software teams lose much of their time to repetitive work: turning requirements into tickets, boilerplate code, reviews, tests and status reports. Progress, blockers and technical risks are hard to see, and handing work to AI tools without structure makes quality harder to control.",
     "approach": "AgentOS analyses client requirements and turns them into technical tasks, splits large projects into stages and small development tasks, and assigns them to AI developer agents. Backend, frontend, QA and other specialised agents work in parallel, while automatic checks, code review, tests and human approval gates keep quality under control.",
-    "result": "The aim is faster, more transparent and measurable software delivery: higher team productivity, less repetitive technical work and clear reporting on progress, blockers, risks and results. Within the ecosystem, AgentOS carries out the software tasks that RootOS and CompanyOS plan. The capabilities on this page describe the product's planned scope as development continues.",
+    "result": "AgentOS is live, used by five international companies and more than 500 active users. Its agents have opened 750+ pull requests and completed more than 1,000 tasks, and rebuilt in 10 hours a project that had originally taken 127 days to write. Models are configurable — Claude Opus 5.5, OpenAI, Groq, GLM 5.3 or whichever model a client prefers — while pull-request approval and merge rules keep people in control of what ships. Within the ecosystem, AgentOS carries out the software tasks that RootOS and CompanyOS plan.",
     "features": [
       {
         "t": "Requirements to tasks",
@@ -299,7 +334,7 @@
       },
       {
         "t": "Parallel AI agents",
-        "d": "Coordinates backend, frontend, QA and other specialised agents working in parallel."
+        "d": "Backend, frontend, QA, BI, project manager, software architect and DevOps agents work in parallel, each in its own role."
       },
       {
         "t": "Automatic quality checks",
@@ -307,7 +342,7 @@
       },
       {
         "t": "CI/CD and releases",
-        "d": "Coordinates CI/CD pipelines, deployment and release processes."
+        "d": "A dedicated DevOps agent runs CI/CD pipelines, deployments and releases automatically."
       },
       {
         "t": "Progress reporting",
@@ -317,11 +352,11 @@
     "architecture": [
       {
         "t": "Human in the loop",
-        "d": "Approval gates and quality checks keep people in control: agents propose, people approve what ships."
+        "d": "Every change goes through pull-request approval and merge rules: agents propose, people approve what ships."
       },
       {
         "t": "Works where developers work",
-        "d": "Integrates with GitHub, GitLab, Forgejo, Jira and other development tools instead of replacing them."
+        "d": "Fully integrated with GitHub, GitLab, Forgejo and Jira — agents open pull requests and update tickets in the tools the team already uses."
       },
       {
         "t": "The ecosystem's developer workforce",
@@ -332,18 +367,46 @@
       {
         "k": "Agents",
         "v": [
-          "Requirements analysis",
-          "Code generation",
-          "Code review",
-          "QA and testing"
+          "Backend",
+          "Frontend",
+          "QA",
+          "BI",
+          "Project manager",
+          "Software architect",
+          "DevOps"
         ]
       },
       {
-        "k": "Delivery",
+        "k": "Backend",
         "v": [
-          "CI/CD",
-          "Deployment",
-          "Release management"
+          ".NET 10",
+          "ASP.NET Core"
+        ]
+      },
+      {
+        "k": "Apps",
+        "v": [
+          "Web",
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      {
+        "k": "Data",
+        "v": [
+          "PostgreSQL",
+          "Redis",
+          "Vector database"
+        ]
+      },
+      {
+        "k": "AI",
+        "v": [
+          "Claude Opus 5.5",
+          "OpenAI",
+          "Groq",
+          "GLM 5.3",
+          "Client's model of choice"
         ]
       },
       {
@@ -353,6 +416,21 @@
           "GitLab",
           "Forgejo",
           "Jira"
+        ]
+      },
+      {
+        "k": "Control",
+        "v": [
+          "Pull-request approval",
+          "Merge rules",
+          "CI/CD"
+        ]
+      },
+      {
+        "k": "Infrastructure",
+        "v": [
+          "AWS (EU region)",
+          "Cloudflare"
         ]
       }
     ],
@@ -517,32 +595,32 @@
     "scope": "AI platforms",
     "time": "3 months",
     "chips": [
-      "1 platform for every department",
-      "9 core capabilities",
-      "4 kinds of systems it connects — ERP, CRM, HRM, communication"
+      "8 modules — from HR and finance to development",
+      "9+ integrations — 1C, Bitrix24, amoCRM, Salesforce and more",
+      "500+ active users at five international companies"
     ],
     "metrics": [
       {
-        "v": "1",
-        "l": "platform for every department"
+        "v": "8",
+        "l": "modules — from HR and finance to development"
       },
       {
-        "v": "9",
-        "l": "core capabilities"
+        "v": "9+",
+        "l": "integrations — 1C, Bitrix24, amoCRM, Salesforce and more"
       },
       {
-        "v": "4",
-        "l": "kinds of systems it connects — ERP, CRM, HRM, communication"
+        "v": "500+",
+        "l": "active users at five international companies"
       }
     ],
     "overview": "CompanyOS is an AI-powered business system that runs all of a company's operations from one platform. It uses RootOS's intelligence to cover day-to-day work across departments, people and projects.",
     "problem": "Most companies run on a patchwork of ERP, CRM, HR, task and finance tools. Leadership has no single view, data is copied between systems by hand, and the software only records the work — someone still has to plan it, chase it and report on it.",
     "approach": "CompanyOS brings the leadership dashboard, HR, projects and tasks, sales and CRM, finance, marketing and client delivery into one platform and connects the systems a company already has. On top of it, AI agents plan, coordinate and monitor the work and — where appropriate — carry it out, preparing reports and recommendations for management.",
-    "result": "The aim goes beyond a classic ERP or task manager: not just recording work, but planning, coordinating and controlling it through AI agents. CompanyOS is built for small, mid-sized and large companies, service businesses, digital agencies, manufacturers and technology firms. The capabilities on this page describe the product's planned scope as development continues.",
+    "result": "CompanyOS is live on web, desktop and mobile, and five international companies with more than 500 active users run their work on it. It goes beyond a classic ERP or task manager: AI agents don't just record the work, they plan, coordinate and control it, and a multi-tenant architecture keeps each company's data apart. CompanyOS is built for small, mid-sized and large companies, service businesses, digital agencies, manufacturers and technology firms.",
     "features": [
       {
         "t": "Leadership dashboard",
-        "d": "One control panel for the CEO and management."
+        "d": "One control panel for the CEO and management to oversee every department."
       },
       {
         "t": "People and HR",
@@ -561,8 +639,8 @@
         "d": "Covers finance, budgets, expenses and profitability analytics."
       },
       {
-        "t": "Marketing and client delivery",
-        "d": "Automates marketing and SMM workflows and tracks client projects and service quality."
+        "t": "Marketing and development",
+        "d": "Automates marketing and SMM workflows and tracks development work, client projects and service quality."
       }
     ],
     "architecture": [
@@ -572,7 +650,7 @@
       },
       {
         "t": "Connects what you already use",
-        "d": "Integrates with existing ERP, CRM, HRM, communication and other business systems instead of forcing a full replacement."
+        "d": "Integrates with ERP, CRM and HRM systems, 1C, Bitrix24, amoCRM, Salesforce, Slack and Microsoft Teams instead of forcing a full replacement."
       },
       {
         "t": "The business layer of the ecosystem",
@@ -583,29 +661,65 @@
       {
         "k": "Modules",
         "v": [
-          "Leadership dashboard",
+          "Leadership dashboard and oversight",
           "HR",
           "Projects and tasks",
           "Sales and CRM",
           "Finance",
-          "Marketing"
+          "Marketing",
+          "Development"
         ]
       },
       {
         "k": "Integrations",
         "v": [
-          "ERP",
-          "CRM",
-          "HRM",
-          "Communication tools"
+          "ERP, CRM, HRM",
+          "1C",
+          "Bitrix24",
+          "amoCRM",
+          "Salesforce",
+          "Slack",
+          "Microsoft Teams"
         ]
       },
       {
-        "k": "Ecosystem",
+        "k": "Backend",
         "v": [
-          "RootOS",
-          "MeetOS",
-          "AgentOS"
+          ".NET 10",
+          "ASP.NET Core"
+        ]
+      },
+      {
+        "k": "Apps",
+        "v": [
+          "Web",
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      {
+        "k": "Data",
+        "v": [
+          "PostgreSQL",
+          "Redis",
+          "Vector database"
+        ]
+      },
+      {
+        "k": "AI",
+        "v": [
+          "Claude Opus 5.5",
+          "OpenAI",
+          "Groq",
+          "GLM 5.3"
+        ]
+      },
+      {
+        "k": "Infrastructure",
+        "v": [
+          "AWS (EU region)",
+          "Cloudflare",
+          "Multi-tenant"
         ]
       }
     ],

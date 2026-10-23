@@ -137,32 +137,32 @@
     "scope": "Süni intellekt platformaları",
     "time": "3 ay",
     "chips": [
-      "1 bütün departamentlər üçün mərkəzi beyin",
-      "8 əsas imkan",
-      "4 məhsul vahid süni intellekt ekosistemində"
+      "11+ qoşulan sistem — ERP, CRM, 1C, Microsoft 365 və digərləri",
+      "500+ aktiv istifadəçi beş xarici şirkətdə",
+      "1 bütün departamentlər üçün mərkəzi beyin"
     ],
     "metrics": [
       {
+        "v": "11+",
+        "l": "qoşulan sistem — ERP, CRM, 1C, Microsoft 365 və digərləri"
+      },
+      {
+        "v": "500+",
+        "l": "aktiv istifadəçi beş xarici şirkətdə"
+      },
+      {
         "v": "1",
         "l": "bütün departamentlər üçün mərkəzi beyin"
-      },
-      {
-        "v": "8",
-        "l": "əsas imkan"
-      },
-      {
-        "v": "4",
-        "l": "məhsul vahid süni intellekt ekosistemində"
       }
     ],
     "overview": "RootOS şirkətin süni intellektlə işləyən mərkəzi beynidir. O, şirkətin müxtəlif proqramlarını, məlumatlarını, əməkdaşlarını və süni intellekt agentlərini vahid intellektual idarəetmə və orkestrasiya qatında birləşdirir — CompanyOS, AgentOS və MeetOS-un üzərində qurulduğu nüvədir.",
     "problem": "Şirkət məlumatları yalnız qeydləri saxlayan ayrı-ayrı proqramlarda yerləşir: ümumi mənzərəni heç kim görmür, işçilərin yüklənməsi və gecikmələr çox gec üzə çıxır, rəhbərlik isə artıq köhnəlmiş hesabatlara əsasən qərar verir. Avtomatlaşdırma varsa belə, aydın sahibi və əməliyyat jurnalı olmadan işləyir.",
     "approach": "RootOS bütün departamentlərin məlumatlarını bir mərkəzdə toplayır və biznes proseslərini real vaxtda izləyir. Bu qatın üzərində süni intellekt agentləri tapşırıqları avtomatik alır və mərkəzdən koordinasiya olunur, icazələr, təsdiq mexanizmləri və audit isə hər avtomatik addımı insan nəzarəti altında saxlayır.",
-    "result": "Məqsəd şirkəti yalnız məlumat saxlayan proqramlarla deyil, baş verən prosesləri anlayan, problemləri əvvəlcədən müəyyənləşdirən və müəyyən işləri müstəqil həyata keçirən süni intellekt sistemi ilə idarə etməkdir. RootOS AI Love Digital ekosisteminin nüvəsidir; bu səhifədəki imkanlar məhsulun inkişafı ilə planlaşdırılan əhatəni təsvir edir.",
+    "result": "RootOS artıq işləyir: ondan beş xarici şirkət və 500-dən çox aktiv istifadəçi istifadə edir. O, ERP və CRM sistemlərindən, 1C, Excel, Google, Microsoft 365, Slack, Mattermost, Jira, Plane və Linear-dan məlumatları vahid qatda toplayır, süni intellekt agentlərini öz orkestrasiya mühərrikimizlə koordinasiya edir və hər avtomatik addımı icazələr, təsdiq mexanizmləri və audit jurnalı ilə nəzarətdə saxlayır, rəhbərlik isə panel, hesabat və risk xəbərdarlıqları alır. RootOS AI Love Digital ekosisteminin nüvəsidir.",
     "features": [
       {
         "t": "Vahid şirkət məlumatı",
-        "d": "Bütün departamentlərin məlumatlarını vahid mərkəzdə birləşdirir."
+        "d": "ERP, CRM, 1C, Excel, Google, Microsoft 365, Slack, Mattermost, Jira, Plane və Linear-dan gələn məlumatları vahid mərkəzdə birləşdirir."
       },
       {
         "t": "Real vaxtda proses analitikası",
@@ -174,7 +174,7 @@
       },
       {
         "t": "Agentlərin orkestrasiyası",
-        "d": "Süni intellekt agentlərinə avtomatik tapşırıq verir və onların fəaliyyətini koordinasiya edir."
+        "d": "Öz orkestrasiya mühərrikimiz süni intellekt agentlərinə avtomatik tapşırıq verir və onların işini koordinasiya edir."
       },
       {
         "t": "Qərar dəstəyi",
@@ -201,11 +201,47 @@
     ],
     "stack": [
       {
-        "k": "Nüvə",
+        "k": "Backend",
         "v": [
-          "Məlumat inteqrasiyası qatı",
-          "Proses analitikası",
-          "Agentlərin orkestrasiyası"
+          ".NET 10",
+          "ASP.NET Core"
+        ]
+      },
+      {
+        "k": "Tətbiqlər",
+        "v": [
+          "Veb",
+          "Desktop",
+          "Mobil"
+        ]
+      },
+      {
+        "k": "Məlumat",
+        "v": [
+          "PostgreSQL",
+          "Redis",
+          "Vektor bazası"
+        ]
+      },
+      {
+        "k": "Süni intellekt",
+        "v": [
+          "Claude Opus 5.5",
+          "OpenAI",
+          "Groq",
+          "GLM 5.3",
+          "Öz agent orkestrasiyamız"
+        ]
+      },
+      {
+        "k": "İnteqrasiyalar",
+        "v": [
+          "ERP və CRM",
+          "1C",
+          "Excel və Google",
+          "Microsoft 365",
+          "Slack və Mattermost",
+          "Jira, Plane və Linear"
         ]
       },
       {
@@ -217,11 +253,10 @@
         ]
       },
       {
-        "k": "Ekosistem",
+        "k": "İnfrastruktur",
         "v": [
-          "CompanyOS",
-          "AgentOS",
-          "MeetOS"
+          "AWS (Aİ regionu)",
+          "Cloudflare"
         ]
       }
     ],
@@ -235,28 +270,28 @@
     "scope": "Süni intellekt platformaları",
     "time": "3 ay",
     "chips": [
-      "3+ agent növü — backend, frontend, QA",
-      "9 əsas imkan",
-      "4 development platforması — GitHub, GitLab, Forgejo, Jira"
+      "750+ pull request agentlər tərəfindən açılıb",
+      "1000+ tapşırıq tamamlanıb",
+      "10 saat əvvəl 127 günə yazılmış layihəni yenidən qurmaq üçün"
     ],
     "metrics": [
       {
-        "v": "3+",
-        "l": "agent növü — backend, frontend, QA"
+        "v": "750+",
+        "l": "pull request agentlər tərəfindən açılıb"
       },
       {
-        "v": "9",
-        "l": "əsas imkan"
+        "v": "1000+",
+        "l": "tapşırıq tamamlanıb"
       },
       {
-        "v": "4",
-        "l": "development platforması — GitHub, GitLab, Forgejo, Jira"
+        "v": "10 saat",
+        "l": "əvvəl 127 günə yazılmış layihəni yenidən qurmaq üçün"
       }
     ],
     "overview": "AgentOS proqram təminatının hazırlanmasını insan developer komandaları ilə ixtisaslaşmış süni intellekt agentləri arasında koordinasiya edən avtonom development platformasıdır — müştəri tələblərindən test olunmuş buraxılışa qədər.",
     "problem": "Development komandaları vaxtın böyük hissəsini təkrarlanan işlərə sərf edir: tələbləri tapşırıqlara çevirmək, şablon kod, code review, testlər və status hesabatları. İşin gedişatı, bloklanmalar və texniki risklər çətin görünür, işi strukturu olmadan süni intellekt alətlərinə vermək isə keyfiyyətə nəzarəti çətinləşdirir.",
     "approach": "AgentOS müştəri tələblərini analiz edib texniki tapşırıqlara çevirir, böyük layihələri mərhələlərə və kiçik development tapşırıqlarına bölür və onları süni intellekt developer agentlərinə paylayır. Backend, frontend, QA və digər ixtisaslaşmış agentlər paralel işləyir, avtomatik yoxlamalar, code review, testlər və insan təsdiqi isə keyfiyyəti nəzarətdə saxlayır.",
-    "result": "Məqsəd proqram təminatının hazırlanmasını daha sürətli, şəffaf və ölçüləbilən prosesə çevirməkdir: komandanın məhsuldarlığı artır, təkrarlanan texniki işlər azalır, işin gedişatı, bloklanmalar, risklər və nəticələr barədə aydın hesabat olur. Ekosistemdə AgentOS RootOS və CompanyOS-un planlaşdırdığı proqram tapşırıqlarını icra edir. Bu səhifədəki imkanlar məhsulun inkişafı ilə planlaşdırılan əhatəni təsvir edir.",
+    "result": "AgentOS artıq işləyir: ondan beş xarici şirkət və 500-dən çox aktiv istifadəçi istifadə edir. Agentlər 750-dən çox pull request açıb, 1000-dən çox tapşırığı tamamlayıb və əvvəl 127 günə yazılmış layihəni 10 saata yenidən qurub. Modellər seçilə bilir — Claude Opus 5.5, OpenAI, Groq, GLM 5.3 və ya müştərinin istədiyi model, — pull request təsdiqi və merge qaydaları isə nəyin buraxılışa gedəcəyi barədə qərarı insanlarda saxlayır. Ekosistemdə AgentOS RootOS və CompanyOS-un planlaşdırdığı proqram tapşırıqlarını icra edir.",
     "features": [
       {
         "t": "Tələbdən tapşırığa",
@@ -268,7 +303,7 @@
       },
       {
         "t": "Paralel agentlər",
-        "d": "Backend, frontend, QA və digər ixtisaslaşmış agentlərin paralel işini koordinasiya edir."
+        "d": "Backend, frontend, QA, BI, layihə meneceri, proqram arxitektoru və DevOps agentləri hər biri öz rolunda paralel işləyir."
       },
       {
         "t": "Avtomatik keyfiyyət yoxlaması",
@@ -276,7 +311,7 @@
       },
       {
         "t": "CI/CD və buraxılışlar",
-        "d": "CI/CD, deployment və release proseslərini koordinasiya edir."
+        "d": "Ayrıca DevOps agenti CI/CD, deploy və buraxılış proseslərini avtomatik aparır."
       },
       {
         "t": "Gedişat hesabatları",
@@ -286,11 +321,11 @@
     "architecture": [
       {
         "t": "İnsan nəzarəti",
-        "d": "Təsdiq mərhələləri və keyfiyyət yoxlamaları nəzarəti insanlarda saxlayır: agentlər təklif edir, buraxılışa gedəni insanlar təsdiqləyir."
+        "d": "Hər dəyişiklik pull request təsdiqindən və merge qaydalarından keçir: agentlər təklif edir, buraxılışa gedəni insanlar təsdiqləyir."
       },
       {
         "t": "Developerlərin işlədiyi yerdə",
-        "d": "GitHub, GitLab, Forgejo, Jira və digər development sistemləri ilə inteqrasiya olunur, onları əvəz etmir."
+        "d": "GitHub, GitLab, Forgejo və Jira ilə tam inteqrasiya: agentlər komandanın artıq istifadə etdiyi alətlərdə pull request açır və tapşırıqları yeniləyir."
       },
       {
         "t": "Ekosistemin developer komandası",
@@ -301,18 +336,46 @@
       {
         "k": "Agentlər",
         "v": [
-          "Tələblərin analizi",
-          "Kod generasiyası",
-          "Code review",
-          "QA və testlər"
+          "Backend",
+          "Frontend",
+          "QA",
+          "BI",
+          "Layihə meneceri",
+          "Proqram arxitektoru",
+          "DevOps"
         ]
       },
       {
-        "k": "Çatdırılma",
+        "k": "Backend",
         "v": [
-          "CI/CD",
-          "Deployment",
-          "Release idarəetməsi"
+          ".NET 10",
+          "ASP.NET Core"
+        ]
+      },
+      {
+        "k": "Tətbiqlər",
+        "v": [
+          "Veb",
+          "Desktop",
+          "Mobil"
+        ]
+      },
+      {
+        "k": "Məlumat",
+        "v": [
+          "PostgreSQL",
+          "Redis",
+          "Vektor bazası"
+        ]
+      },
+      {
+        "k": "Süni intellekt",
+        "v": [
+          "Claude Opus 5.5",
+          "OpenAI",
+          "Groq",
+          "GLM 5.3",
+          "Müştərinin seçdiyi model"
         ]
       },
       {
@@ -322,6 +385,21 @@
           "GitLab",
           "Forgejo",
           "Jira"
+        ]
+      },
+      {
+        "k": "Nəzarət",
+        "v": [
+          "Pull request təsdiqi",
+          "Merge qaydaları",
+          "CI/CD"
+        ]
+      },
+      {
+        "k": "İnfrastruktur",
+        "v": [
+          "AWS (Aİ regionu)",
+          "Cloudflare"
         ]
       }
     ],
@@ -459,32 +537,32 @@
     "scope": "Süni intellekt platformaları",
     "time": "3 ay",
     "chips": [
-      "1 platforma bütün departamentlər üçün",
-      "9 əsas imkan",
-      "4 inteqrasiya növü — ERP, CRM, HRM, kommunikasiya"
+      "8 modul — HR və maliyyədən developmentə qədər",
+      "9+ inteqrasiya — 1C, Bitrix24, amoCRM, Salesforce və digərləri",
+      "500+ aktiv istifadəçi beş xarici şirkətdə"
     ],
     "metrics": [
       {
-        "v": "1",
-        "l": "platforma bütün departamentlər üçün"
+        "v": "8",
+        "l": "modul — HR və maliyyədən developmentə qədər"
       },
       {
-        "v": "9",
-        "l": "əsas imkan"
+        "v": "9+",
+        "l": "inteqrasiya — 1C, Bitrix24, amoCRM, Salesforce və digərləri"
       },
       {
-        "v": "4",
-        "l": "inteqrasiya növü — ERP, CRM, HRM, kommunikasiya"
+        "v": "500+",
+        "l": "aktiv istifadəçi beş xarici şirkətdə"
       }
     ],
     "overview": "CompanyOS şirkətin bütün əməliyyatlarını vahid platformadan idarə edən süni intellekt əsaslı biznes sistemidir. RootOS-un intellektual imkanlarından istifadə edərək departamentlərin, işçilərin və layihələrin gündəlik fəaliyyətini əhatə edir.",
     "problem": "Şirkətlərin çoxu bir-biri ilə bağlı olmayan ERP, CRM, HR, tapşırıq və maliyyə proqramları ilə işləyir. Rəhbərliyin vahid mənzərəsi olmur, məlumatlar sistemlər arasında əl ilə köçürülür, proqramlar isə yalnız işi qeyd edir — onu planlaşdırmaq, izləmək və hesabat vermək yenə insanların üzərində qalır.",
     "approach": "CompanyOS rəhbərlik panelini, HR-ı, layihə və tapşırıqları, satış və CRM-i, maliyyəni, marketinqi və müştəri layihələrini bir platformada birləşdirir və şirkətdə artıq olan sistemlərə qoşulur. Onun üzərində süni intellekt agentləri işi planlaşdırır, koordinasiya edir, nəzarətdə saxlayır, uyğun hallarda isə icra edir və rəhbərlik üçün hesabat və tövsiyələr hazırlayır.",
-    "result": "Məqsəd klassik ERP və ya tapşırıq proqramından daha genişdir: işi yalnız qeyd etmək deyil, süni intellekt agentləri vasitəsilə planlaşdırmaq, koordinasiya etmək və nəzarətdə saxlamaq. CompanyOS kiçik, orta və böyük şirkətlər, xidmət müəssisələri, digital agentliklər, istehsal və texnologiya şirkətləri üçün nəzərdə tutulub. Bu səhifədəki imkanlar məhsulun inkişafı ilə planlaşdırılan əhatəni təsvir edir.",
+    "result": "CompanyOS artıq veb, desktop və mobil versiyalarda işləyir, beş xarici şirkət və 500-dən çox aktiv istifadəçi işini onda aparır. O, klassik ERP və ya tapşırıq proqramından daha genişdir: süni intellekt agentləri işi yalnız qeyd etmir, həm də planlaşdırır, koordinasiya edir və nəzarətdə saxlayır, multi-tenant arxitektura isə hər şirkətin məlumatını ayrıca saxlayır. CompanyOS kiçik, orta və böyük şirkətlər, xidmət biznesləri, rəqəmsal agentliklər, istehsal və texnologiya şirkətləri üçün yaradılıb.",
     "features": [
       {
         "t": "Rəhbərlik paneli",
-        "d": "CEO və rəhbərlik üçün vahid idarəetmə paneli."
+        "d": "CEO və rəhbərliyin bütün departamentlərə nəzarət etdiyi vahid idarəetmə paneli."
       },
       {
         "t": "İşçilər və HR",
@@ -503,8 +581,8 @@
         "d": "Maliyyə, büdcə, xərclər və gəlirlilik analitikası."
       },
       {
-        "t": "Marketinq və müştəri layihələri",
-        "d": "Marketinq və SMM proseslərini avtomatlaşdırır, müştəri layihələrini və xidmət keyfiyyətini izləyir."
+        "t": "Marketinq və development",
+        "d": "Marketinq və SMM proseslərini avtomatlaşdırır, development işlərini, müştəri layihələrini və xidmət keyfiyyətini izləyir."
       }
     ],
     "architecture": [
@@ -514,7 +592,7 @@
       },
       {
         "t": "Mövcud sistemlərə qoşulur",
-        "d": "Mövcud ERP, CRM, HRM, kommunikasiya və digər biznes sistemləri ilə inteqrasiya olunur, onları tamamilə əvəz etməyi tələb etmir."
+        "d": "ERP, CRM və HRM sistemləri, 1C, Bitrix24, amoCRM, Salesforce, Slack və Microsoft Teams ilə inteqrasiya olunur, tam əvəzləməni tələb etmir."
       },
       {
         "t": "Ekosistemin biznes qatı",
@@ -525,29 +603,65 @@
       {
         "k": "Modullar",
         "v": [
-          "Rəhbərlik paneli",
+          "Rəhbərlik paneli və nəzarət",
           "HR",
-          "Layihələr və tapşırıqlar",
+          "Layihə və tapşırıqlar",
           "Satış və CRM",
           "Maliyyə",
-          "Marketinq"
+          "Marketinq",
+          "Development"
         ]
       },
       {
         "k": "İnteqrasiyalar",
         "v": [
-          "ERP",
-          "CRM",
-          "HRM",
-          "Kommunikasiya"
+          "ERP, CRM, HRM",
+          "1C",
+          "Bitrix24",
+          "amoCRM",
+          "Salesforce",
+          "Slack",
+          "Microsoft Teams"
         ]
       },
       {
-        "k": "Ekosistem",
+        "k": "Backend",
         "v": [
-          "RootOS",
-          "MeetOS",
-          "AgentOS"
+          ".NET 10",
+          "ASP.NET Core"
+        ]
+      },
+      {
+        "k": "Tətbiqlər",
+        "v": [
+          "Veb",
+          "Desktop",
+          "Mobil"
+        ]
+      },
+      {
+        "k": "Məlumat",
+        "v": [
+          "PostgreSQL",
+          "Redis",
+          "Vektor bazası"
+        ]
+      },
+      {
+        "k": "Süni intellekt",
+        "v": [
+          "Claude Opus 5.5",
+          "OpenAI",
+          "Groq",
+          "GLM 5.3"
+        ]
+      },
+      {
+        "k": "İnfrastruktur",
+        "v": [
+          "AWS (Aİ regionu)",
+          "Cloudflare",
+          "Multi-tenant"
         ]
       }
     ],
