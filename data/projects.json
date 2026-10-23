@@ -375,103 +375,131 @@
     "brand": "MeetOS",
     "line": "An AI meeting intelligence and execution platform",
     "headline": "An AI platform that turns meetings into real business results",
-    "subtitle": "It prepares each meeting, records and analyses it, then turns decisions into tasks with owners, deadlines and follow-ups.",
+    "subtitle": "A Windows app and browser extension for Google Meet, Zoom and Teams that transcribes and translates calls, then turns decisions into tasks with owners and deadlines.",
     "year": "2026",
     "scope": "AI platforms",
     "time": "3 months",
     "chips": [
-      "3 stages — before, during and after the meeting",
-      "9 core capabilities",
-      "4 products in one AI ecosystem"
+      "3 platforms — Google Meet, Zoom, Teams",
+      "5 meeting modes",
+      "2000+ automated tests"
     ],
     "metrics": [
       {
         "v": "3",
-        "l": "stages — before, during and after the meeting"
+        "l": "platforms — Google Meet, Zoom, Teams"
       },
       {
-        "v": "9",
-        "l": "core capabilities"
+        "v": "5",
+        "l": "meeting modes"
       },
       {
-        "v": "4",
-        "l": "products in one AI ecosystem"
+        "v": "2000+",
+        "l": "automated tests"
       }
     ],
-    "overview": "MeetOS is an AI platform that makes meetings — internal ones and those with clients — produce results. It prepares each meeting, analyses what was said and makes sure the decisions taken are actually carried out.",
+    "overview": "MeetOS is an AI platform that makes meetings — internal ones and those with clients — produce results. A browser extension and a Windows app capture Google Meet, Zoom and Microsoft Teams calls; the platform transcribes and translates them, summarises the decisions and makes sure the tasks that come out of them get done.",
     "problem": "Companies spend hours in meetings that end without a clear outcome: agreements are forgotten, tasks have no owner or deadline, and a week later nobody checks whether the last meeting's decisions were done.",
-    "approach": "MeetOS covers the whole meeting cycle. Before it, it gathers context on the participants and the topic; during it, it transcribes and analyses the conversation; afterwards, it summarises the discussion, decisions and agreements, extracts the tasks, routes them to the right owners and runs deadlines, reminders and follow-ups.",
-    "result": "The aim is meetings that turn into concrete tasks and trackable results — every decision, its owner and its status on record, and a clear view of how productive meetings are and how well decisions get executed. Within the ecosystem, MeetOS hands those decisions to RootOS and CompanyOS. The capabilities on this page describe the product's planned scope as development continues.",
+    "approach": "MeetOS covers the whole meeting cycle. Before a call it prepares context on the participants and the topic; during it, the browser extension or the Windows app — which captures the call audio and the microphone — feeds multilingual transcription and a live interpreter mode; afterwards it summarises decisions and agreements, extracts tasks, assigns owners and runs deadlines, reminders and follow-ups in the tools the team already uses.",
+    "result": "The platform is complete — Windows app, browser extension, server and admin panel — and passes more than 2,000 automated tests. It runs in two regions, the US and Europe, and is now open to its first pilot partners. Within the ecosystem, MeetOS hands its decisions to RootOS and CompanyOS.",
     "features": [
       {
-        "t": "Pre-meeting context",
-        "d": "Prepares background on the participants and the topic before the meeting starts."
+        "t": "Works with every call",
+        "d": "Google Meet, Zoom and Microsoft Teams through a browser extension on Windows, Mac, Linux and Chromebook; the Windows app captures the call audio and the microphone. A dedicated Mac app is planned."
       },
       {
-        "t": "Transcription and analysis",
-        "d": "Transcribes the meeting and analyses it with AI."
+        "t": "Multilingual transcription",
+        "d": "Transcribes calls in English, Spanish, French, German, Russian, Arabic and more; Azerbaijani and Turkish are supported in the US region."
       },
       {
-        "t": "Automatic summaries",
-        "d": "Summarises the key discussion, decisions and agreements."
+        "t": "Live interpreter mode",
+        "d": "Translates the conversation as it happens, so every participant can follow in their own language."
       },
       {
-        "t": "Tasks with owners",
-        "d": "Extracts the tasks agreed in the meeting and routes them to the people responsible."
+        "t": "Summaries and decisions",
+        "d": "Summarises the key discussion, decisions and agreements and keeps a log of them with owners and status."
       },
       {
-        "t": "Deadlines and follow-ups",
-        "d": "Automates deadlines, reminders and follow-ups, and tracks earlier decisions and their status."
+        "t": "Tasks into your tools",
+        "d": "Sends tasks and follow-ups to Slack, Teams, Jira, Asana, webhooks and Google or Microsoft calendars; HubSpot and Salesforce switch on with the pilot."
       },
       {
-        "t": "Meeting effectiveness",
-        "d": "Analyses how productive meetings are and how consistently decisions are executed."
+        "t": "Privacy by default",
+        "d": "Personal data in Azerbaijani — national ID (FİN), IBAN and phone numbers — is masked automatically."
       }
     ],
     "architecture": [
       {
-        "t": "Decision log",
-        "d": "Every decision and agreement is stored with its owner, deadline and status, so the next meeting starts where the last one ended."
+        "t": "Two regions",
+        "d": "Separate US and European regions keep each client's data where it belongs; the platform is ready to deploy on Fly.io."
       },
       {
-        "t": "Plugged into the work tools",
-        "d": "Integrates with CRM, task management and CompanyOS, so tasks land where the team already works."
+        "t": "A regional AI stack",
+        "d": "In the US, Whisper and gpt-oss run on Groq; in Europe, Deepgram Nova-3 transcribes and Azure OpenAI analyses."
       },
       {
-        "t": "Part of the ecosystem",
-        "d": "MeetOS captures decisions, RootOS matches them with resources and priorities, CompanyOS plans the work and AgentOS executes the software tasks."
+        "t": "Tested end to end",
+        "d": "More than 2,000 automated tests cover the Windows app, the browser extension, the server and the admin panel."
       }
     ],
     "stack": [
       {
-        "k": "Core",
+        "k": "Backend",
         "v": [
-          "Transcription",
-          "AI analysis and summaries",
-          "Task extraction"
+          ".NET 10",
+          "ASP.NET Core"
+        ]
+      },
+      {
+        "k": "Clients",
+        "v": [
+          "Windows app (WPF)",
+          "Chrome and Edge extension",
+          "Admin panel"
+        ]
+      },
+      {
+        "k": "Data and hosting",
+        "v": [
+          "PostgreSQL",
+          "US and EU regions",
+          "Fly.io"
+        ]
+      },
+      {
+        "k": "AI — US region",
+        "v": [
+          "Groq",
+          "Whisper",
+          "gpt-oss"
+        ]
+      },
+      {
+        "k": "AI — EU region",
+        "v": [
+          "Deepgram Nova-3",
+          "Azure OpenAI"
         ]
       },
       {
         "k": "Integrations",
         "v": [
-          "CRM",
-          "Task management",
-          "CompanyOS"
-        ]
-      },
-      {
-        "k": "Ecosystem",
-        "v": [
-          "RootOS",
-          "CompanyOS",
-          "AgentOS"
+          "Slack",
+          "Microsoft Teams",
+          "Jira",
+          "Asana",
+          "Webhooks",
+          "Google and Microsoft calendars",
+          "HubSpot and Salesforce (with the pilot)"
         ]
       }
     ],
-    "coverAlt": "MeetOS cover — an M app icon on a dark magenta background",
+    "coverAlt": "The MeetOS logo — a sound-wave mark on a green app icon",
     "brandArt": {
-      "hue": 318,
-      "initial": "M",
+      "hue": 163,
+      "logo": "logo.jpg",
+      "radius": 0.25,
+      "size": 0.48,
       "style": 3
     }
   },

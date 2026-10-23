@@ -323,14 +323,17 @@ export async function cardFromCover(canvas, p, { width, height, content }) {
 /**
  * Cover for a product that has a logo but no screens yet ("brandArt" in data/projects.json): the same
  * background, mesh and title as the device covers, with the logo mark where the devices would be.
- * brandArt: { hue, logo?: "logo.jpg" (in the project folder), crop?: [x, y, w, h], initial?: "C", style? }.
- * The logos are drawn with the "lighten" blend, so their black backgrounds melt into the dark cover.
+ * brandArt: { hue, logo?: "logo.jpg" (in the project folder), crop?: [x, y, w, h], initial?: "C", style?,
+ *   radius?: 0.25 (clip an app-icon logo to a rounded square of that corner fraction, hiding a JPEG's white
+ *   corners), size?: 0.62 (logo height as a share of the cover height) }.
+ * Logos on black are drawn with the "lighten" blend, so the black melts into the dark cover; clipped app icons
+ * are drawn as they are, with a soft shadow.
  * Without a logo an app-icon monogram stands in.
  */
 export async function prepareBrand(p) {
   const a = p.brandArt;
   const logo = a.logo ? await load(`../../assets/images/work/${p.slug}/${a.logo}`) : null;
-  return { brand: true, hue: a.hue ?? 228, logo, crop: a.crop || (logo ? [0, 0, logo.naturalWidth, logo.naturalHeight] : null), initial: a.initial || p.brand.charAt(0) };
+  return { brand: true, hue: a.hue ?? 228, logo, crop: a.crop || (logo ? [0, 0, logo.naturalWidth, logo.naturalHeight] : null), initial: a.initial || p.brand.charAt(0), radius: a.radius || 0, size: a.size || 0.62 };
 }
 
 export function renderBrand(canvas, p, prep, index, { width, scale, content = 1 }) {
@@ -349,11 +352,20 @@ export function renderBrand(canvas, p, prep, index, { width, scale, content = 1 
   ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(content, content); ctx.translate(-W / 2, -H / 2);
   title(ctx, p, W, pal, flip);
   if (prep.logo) {
-    const [sx, sy, sw, sh] = prep.crop, maxH = H * 0.62, maxW = W * 0.34;
-    const k = Math.min(maxH / sh, maxW / sw), dw = sw * k, dh = sh * k;
-    ctx.save(); ctx.globalCompositeOperation = 'lighten';
-    ctx.drawImage(prep.logo, sx, sy, sw, sh, cx - dw / 2, cy - dh / 2, dw, dh);
-    ctx.restore();
+    const [sx, sy, sw, sh] = prep.crop, maxH = H * prep.size, maxW = W * 0.34;
+    const k = Math.min(maxH / sh, maxW / sw), dw = sw * k, dh = sh * k, x = cx - dw / 2, y = cy - dh / 2;
+    if (prep.radius) {
+      const inset = dw * 0.004, r = (dw - 2 * inset) * prep.radius; // a hair inside, so no light fringe survives
+      ctx.save(); ctx.shadowColor = hsl(pal.h, 80, 12, 0.7); ctx.shadowBlur = 80; ctx.shadowOffsetY = 30;
+      path(ctx, x + inset, y + inset, dw - 2 * inset, dh - 2 * inset, r); ctx.fillStyle = hsl(pal.h, 60, 30); ctx.fill(); ctx.restore();
+      ctx.save(); path(ctx, x + inset, y + inset, dw - 2 * inset, dh - 2 * inset, r); ctx.clip();
+      ctx.drawImage(prep.logo, sx, sy, sw, sh, x, y, dw, dh);
+      ctx.restore();
+    } else {
+      ctx.save(); ctx.globalCompositeOperation = 'lighten';
+      ctx.drawImage(prep.logo, sx, sy, sw, sh, x, y, dw, dh);
+      ctx.restore();
+    }
   } else {
     const s = H * 0.46, x = cx - s / 2, y = cy - s / 2;
     ctx.save(); ctx.shadowColor = hsl(pal.h, 80, 30, 0.6); ctx.shadowBlur = 80; ctx.shadowOffsetY = 30;

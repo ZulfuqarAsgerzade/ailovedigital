@@ -331,99 +331,125 @@
     "slug": "meetos",
     "line": "Görüş analitikası və icra üçün süni intellekt platforması",
     "headline": "Görüşləri real biznes nəticələrinə çevirən platforma",
-    "subtitle": "Hər görüşü hazırlayır, qeydə alır və analiz edir, sonra qərarları məsul şəxsi, müddəti və xatırlatmaları olan tapşırıqlara çevirir.",
+    "subtitle": "Google Meet, Zoom və Teams üçün Windows proqramı və brauzer əlavəsi: zəngləri transkripsiya edir və tərcümə edir, sonra qərarları məsul şəxsi və müddəti olan tapşırıqlara çevirir.",
     "scope": "Süni intellekt platformaları",
     "time": "3 ay",
     "chips": [
-      "3 mərhələ — görüşdən əvvəl, görüş zamanı və sonra",
-      "9 əsas imkan",
-      "4 məhsul vahid süni intellekt ekosistemində"
+      "3 platforma — Google Meet, Zoom, Teams",
+      "5 görüş rejimi",
+      "2000+ avtomatik test"
     ],
     "metrics": [
       {
         "v": "3",
-        "l": "mərhələ — görüşdən əvvəl, görüş zamanı və sonra"
+        "l": "platforma — Google Meet, Zoom, Teams"
       },
       {
-        "v": "9",
-        "l": "əsas imkan"
+        "v": "5",
+        "l": "görüş rejimi"
       },
       {
-        "v": "4",
-        "l": "məhsul vahid süni intellekt ekosistemində"
+        "v": "2000+",
+        "l": "avtomatik test"
       }
     ],
-    "overview": "MeetOS şirkətdaxili və müştərilərlə keçirilən görüşləri nəticəli edən süni intellekt platformasıdır. Hər görüşü hazırlayır, deyilənləri analiz edir və qəbul edilən qərarların həqiqətən icra olunmasına nəzarət edir.",
+    "overview": "MeetOS şirkətdaxili və müştərilərlə keçirilən görüşləri nəticəli edən süni intellekt platformasıdır. Brauzer əlavəsi və Windows proqramı Google Meet, Zoom və Microsoft Teams zənglərinə qoşulur; platforma onları transkripsiya və tərcümə edir, qərarları xülasə edir və görüşdən çıxan tapşırıqların icra olunmasına nəzarət edir.",
     "problem": "Şirkətlər saatlarını aydın nəticəsiz bitən görüşlərə sərf edir: razılaşmalar unudulur, tapşırıqların məsul şəxsi və müddəti olmur, bir həftə sonra isə əvvəlki görüşün qərarlarının icra olunub-olunmadığını heç kim yoxlamır.",
-    "approach": "MeetOS görüşün bütün dövrünü əhatə edir. Görüşdən əvvəl iştirakçılar və mövzu üzrə kontekst hazırlayır, görüş zamanı söhbəti transkripsiya edir və analiz edir, sonra müzakirələri, qərarları və razılaşmaları xülasə edir, tapşırıqları çıxarır, məsul şəxslərə yönləndirir və deadline, xatırlatma və follow-up proseslərini aparır.",
-    "result": "Məqsəd görüşlərin konkret tapşırıqlara və izlənilə bilən nəticələrə çevrilməsidir: hər qərar, onun məsul şəxsi və vəziyyəti qeydə alınır, görüşlərin nəticəliliyi və icra intizamı aydın görünür. Ekosistemdə MeetOS bu qərarları RootOS və CompanyOS-a ötürür. Bu səhifədəki imkanlar məhsulun inkişafı ilə planlaşdırılan əhatəni təsvir edir.",
+    "approach": "MeetOS görüşün bütün dövrünü əhatə edir. Zəngdən əvvəl iştirakçılar və mövzu üzrə kontekst hazırlayır; zəng zamanı brauzer əlavəsi və ya Windows proqramı — o, zəngin səsini və mikrofonu tutur — çoxdilli transkripsiyaya və canlı tərcüməçi rejiminə ötürür; sonra qərarları və razılaşmaları xülasə edir, tapşırıqları çıxarır, məsul şəxsləri təyin edir və deadline, xatırlatma və follow-up proseslərini komandanın artıq istifadə etdiyi alətlərdə aparır.",
+    "result": "Platforma hazırdır — Windows proqramı, brauzer əlavəsi, server və idarə paneli tam qurulub — və 2000-dən çox avtomatik testdən keçir. ABŞ və Avropa olmaqla iki regionda işləyir və ilk pilot tərəfdaşlar üçün qəbul açıqdır. Ekosistemdə MeetOS qərarlarını RootOS və CompanyOS-a ötürür.",
     "features": [
       {
-        "t": "Görüşdən əvvəl kontekst",
-        "d": "Görüş başlamazdan əvvəl iştirakçılar və mövzu üzrə məlumat hazırlayır."
+        "t": "Hər zənglə işləyir",
+        "d": "Google Meet, Zoom və Microsoft Teams — Windows, Mac, Linux və Chromebook-da brauzer əlavəsi ilə; Windows proqramı zəngin səsini və mikrofonu tutur. Mac üçün ayrıca proqram planlaşdırılır."
       },
       {
-        "t": "Transkripsiya və analiz",
-        "d": "Görüşü transkripsiya edir və süni intellektlə analiz edir."
+        "t": "Çoxdilli transkripsiya",
+        "d": "Zəngləri ingilis, ispan, fransız, alman, rus, ərəb və digər dillərdə transkripsiya edir; ABŞ regionunda Azərbaycan və türk dilləri də dəstəklənir."
       },
       {
-        "t": "Avtomatik xülasə",
-        "d": "Əsas müzakirələri, qərarları və razılaşmaları qısa şəkildə ümumiləşdirir."
+        "t": "Canlı tərcüməçi rejimi",
+        "d": "Söhbəti real vaxtda tərcümə edir ki, hər iştirakçı onu öz dilində izləyə bilsin."
       },
       {
-        "t": "Məsul şəxsli tapşırıqlar",
-        "d": "Görüşdə razılaşdırılan tapşırıqları çıxarır və məsul şəxslərə yönləndirir."
+        "t": "Xülasə və qərarlar",
+        "d": "Əsas müzakirələri, qərarları və razılaşmaları xülasə edir və onların məsul şəxs və vəziyyətlə jurnalını aparır."
       },
       {
-        "t": "Müddət və nəzarət",
-        "d": "Deadline, xatırlatma və follow-up proseslərini avtomatlaşdırır, əvvəlki qərarları və onların icra vəziyyətini izləyir."
+        "t": "Tapşırıqlar alətlərinizə",
+        "d": "Tapşırıqları və xatırlatmaları Slack, Teams, Jira, Asana, webhook və Google və Microsoft təqvimlərinə göndərir; HubSpot və Salesforce pilotla aktivləşir."
       },
       {
-        "t": "Görüşlərin səmərəliliyi",
-        "d": "Görüşlərin nəticəliliyini və qərarların icra intizamını təhlil edir."
+        "t": "Defolt olaraq məxfilik",
+        "d": "Azərbaycan dilində şəxsi məlumatlar — FİN, IBAN və telefon nömrələri — avtomatik maskalanır."
       }
     ],
     "architecture": [
       {
-        "t": "Qərarlar jurnalı",
-        "d": "Hər qərar və razılaşma məsul şəxsi, müddəti və vəziyyəti ilə saxlanılır — növbəti görüş əvvəlkinin bitdiyi yerdən başlayır."
+        "t": "İki region",
+        "d": "ABŞ və Avropa üçün ayrıca regionlar hər müştərinin məlumatını aid olduğu yerdə saxlayır; platforma Fly.io-da yerləşdirməyə hazırdır."
       },
       {
-        "t": "İş alətlərinə qoşulma",
-        "d": "CRM, tapşırıq idarəetmə sistemləri və CompanyOS ilə inteqrasiya: tapşırıqlar komandanın artıq işlədiyi yerə düşür."
+        "t": "Regional süni intellekt steki",
+        "d": "ABŞ-da Whisper və gpt-oss Groq üzərində işləyir; Avropada transkripsiyanı Deepgram Nova-3, analizi isə Azure OpenAI aparır."
       },
       {
-        "t": "Ekosistemin bir hissəsi",
-        "d": "MeetOS qərarları qeydə alır, RootOS onları resurslar və prioritetlərlə əlaqələndirir, CompanyOS işi planlaşdırır, AgentOS isə proqram tapşırıqlarını icra edir."
+        "t": "Tam test olunub",
+        "d": "2000-dən çox avtomatik test Windows proqramını, brauzer əlavəsini, serveri və idarə panelini əhatə edir."
       }
     ],
     "stack": [
       {
-        "k": "Nüvə",
+        "k": "Backend",
         "v": [
-          "Transkripsiya",
-          "Süni intellekt analizi və xülasə",
-          "Tapşırıqların çıxarılması"
+          ".NET 10",
+          "ASP.NET Core"
+        ]
+      },
+      {
+        "k": "Klientlər",
+        "v": [
+          "Windows proqramı (WPF)",
+          "Chrome və Edge əlavəsi",
+          "İdarə paneli"
+        ]
+      },
+      {
+        "k": "Məlumat və hostinq",
+        "v": [
+          "PostgreSQL",
+          "ABŞ və Avropa regionları",
+          "Fly.io"
+        ]
+      },
+      {
+        "k": "Süni intellekt — ABŞ regionu",
+        "v": [
+          "Groq",
+          "Whisper",
+          "gpt-oss"
+        ]
+      },
+      {
+        "k": "Süni intellekt — Avropa regionu",
+        "v": [
+          "Deepgram Nova-3",
+          "Azure OpenAI"
         ]
       },
       {
         "k": "İnteqrasiyalar",
         "v": [
-          "CRM",
-          "Tapşırıq idarəetməsi",
-          "CompanyOS"
-        ]
-      },
-      {
-        "k": "Ekosistem",
-        "v": [
-          "RootOS",
-          "CompanyOS",
-          "AgentOS"
+          "Slack",
+          "Microsoft Teams",
+          "Jira",
+          "Asana",
+          "Webhook",
+          "Google və Microsoft təqvimləri",
+          "HubSpot və Salesforce (pilotla)"
         ]
       }
     ],
-    "coverAlt": "MeetOS örtüyü — tünd bənövşəyi fonda M hərfli ikon"
+    "coverAlt": "MeetOS loqosu — yaşıl tətbiq ikonunda səs dalğası işarəsi"
   },
   {
     "slug": "companyos",
