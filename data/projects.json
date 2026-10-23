@@ -5,19 +5,19 @@
     "brand": "Dailoq",
     "line": "An AI chat assistant for WhatsApp, Instagram and Telegram",
     "headline": "An AI customer-messaging assistant built for Azerbaijan",
-    "subtitle": "One assistant across Telegram, Instagram, WhatsApp and the web — it answers from your documents, takes actions and hands hard questions to a human.",
+    "subtitle": "One assistant across Telegram, Instagram, WhatsApp, Messenger and the web — it answers from your documents, takes actions and hands hard questions to a human.",
     "year": "2026",
     "scope": "AI platforms",
     "time": "3 months",
     "chips": [
-      "4 channels — Telegram, Instagram, WhatsApp, web",
+      "5 channels — Telegram, Instagram, WhatsApp, Messenger, web",
       "~98% of answers correct",
       "15+ companies using it"
     ],
     "metrics": [
       {
-        "v": "4",
-        "l": "channels — Telegram, Instagram, WhatsApp, web"
+        "v": "5",
+        "l": "channels — Telegram, Instagram, WhatsApp, Messenger, web"
       },
       {
         "v": "~98%",
@@ -28,14 +28,14 @@
         "l": "companies using it"
       }
     ],
-    "overview": "Dailoq is an AI assistant for customer conversations, built for businesses in Azerbaijan. Whichever channel a customer writes from — Telegram, Instagram, WhatsApp or a website widget — the same assistant answers, in Azerbaijani, Russian or English. It works from the company's own documents, carries out simple tasks such as booking a table, and passes difficult conversations to a human operator with a summary.",
+    "overview": "Dailoq is an AI assistant for customer conversations, built for businesses in Azerbaijan. Whichever channel a customer writes from — Telegram, Instagram, WhatsApp, Messenger or a website widget — the same assistant answers, in Azerbaijani, Russian or English. It works from the company's own documents, carries out simple tasks such as booking a table, and passes difficult conversations to a human operator with a summary.",
     "problem": "Small and mid-sized businesses answer the same questions in several messengers by hand, often out of hours and in a mix of Azerbaijani and Russian. Global chatbot platforms don't understand local dialects, letter substitutions or mixed-language messages, price in foreign currency and tend to invent an answer when they don't know one.",
     "approach": "We built the assistant around the local language first: Azerbaijani — with dialect phrases, letter substitutions and mixed AZ–RU sentences — is tested on its own. Answers are retrieved from the client's files and every reply shows its source; when the assistant can't confirm something it says so and offers a human. Every change to the bot's brain has to pass an evaluation set before it reaches customers.",
     "result": "More than 15 companies use Dailoq. They get one assistant for every channel that answers from their own documents — around 98% of answers are correct, with at most 2% errors — understands voice messages and photos, books and confirms actions and hands over to operators with full context, all managed from a single no-code panel with conversation history and monthly reports.",
     "features": [
       {
         "t": "One brain, every channel",
-        "d": "Telegram, Instagram, WhatsApp and a web widget all work, the Meta channels through Meta's official integration. The conversation carries on when a customer switches channels."
+        "d": "Telegram, Instagram, WhatsApp, Messenger and a web widget all work, the Meta channels through Meta's official integration. The conversation carries on when a customer switches channels."
       },
       {
         "t": "Native Azerbaijani",
@@ -108,7 +108,7 @@
       {
         "k": "Channels",
         "v": [
-          "WhatsApp and Instagram (Meta)",
+          "WhatsApp, Instagram and Messenger (Meta)",
           "Telegram Bot API",
           "Web widget (13 KB, streaming)"
         ]

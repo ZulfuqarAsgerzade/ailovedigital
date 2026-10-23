@@ -3,18 +3,18 @@
     "slug": "dailoq",
     "line": "WhatsApp, Instagram və Telegram üçün süni intellekt köməkçisi",
     "headline": "Azərbaycan üçün yaradılmış müştəri yazışmaları köməkçisi",
-    "subtitle": "Telegram, Instagram, WhatsApp və saytda bir köməkçi — sənədlərinizə əsasən cavab verir, iş görür və çətin sualları insana ötürür.",
+    "subtitle": "Telegram, Instagram, WhatsApp, Messenger və saytda bir köməkçi — sənədlərinizə əsasən cavab verir, iş görür və çətin sualları insana ötürür.",
     "scope": "Süni intellekt platformaları",
     "time": "3 ay",
     "chips": [
-      "4 kanal — Telegram, Instagram, WhatsApp, sayt",
+      "5 kanal — Telegram, Instagram, WhatsApp, Messenger, sayt",
       "~98% cavab düzgündür",
       "15+ şirkət istifadə edir"
     ],
     "metrics": [
       {
-        "v": "4",
-        "l": "kanal — Telegram, Instagram, WhatsApp, sayt"
+        "v": "5",
+        "l": "kanal — Telegram, Instagram, WhatsApp, Messenger, sayt"
       },
       {
         "v": "~98%",
@@ -25,14 +25,14 @@
         "l": "şirkət istifadə edir"
       }
     ],
-    "overview": "Dailoq Azərbaycandakı bizneslər üçün yaradılmış, müştəri yazışmalarını aparan süni intellekt köməkçisidir. Müştəri hansı kanaldan yazırsa yazsın — Telegram, Instagram, WhatsApp və ya saytdakı widget — eyni köməkçi azərbaycan, rus və ya ingilis dilində cavab verir. O, şirkətin öz sənədlərinə əsaslanır, masa rezervasiyası kimi sadə işləri görür və çətin söhbətləri qısa xülasə ilə operatora ötürür.",
+    "overview": "Dailoq Azərbaycandakı bizneslər üçün yaradılmış, müştəri yazışmalarını aparan süni intellekt köməkçisidir. Müştəri hansı kanaldan yazırsa yazsın — Telegram, Instagram, WhatsApp, Messenger və ya saytdakı widget — eyni köməkçi azərbaycan, rus və ya ingilis dilində cavab verir. O, şirkətin öz sənədlərinə əsaslanır, masa rezervasiyası kimi sadə işləri görür və çətin söhbətləri qısa xülasə ilə operatora ötürür.",
     "problem": "Kiçik və orta bizneslər eyni suallara bir neçə messencerdə əl ilə cavab verir — çox vaxt iş saatlarından kənar və azərbaycan-rus qarışıq dildə. Qlobal chatbot platformaları yerli dialektləri, hərf əvəzləmələrini və qarışıq dilli mesajları başa düşmür, qiymətləri xarici valyutada təklif edir və bilmədiyi suala cavab uydurur.",
     "approach": "Köməkçini yerli dildən başlayaraq qurduq: dialekt ifadələri, hərf əvəzləmələri və qarışıq AZ–RU cümlələri ilə azərbaycan dili ayrıca sınaqdan keçirilir. Cavablar müştərinin öz fayllarından tapılır və hər cavabın mənbəyi göstərilir; köməkçi nəyisə təsdiqləyə bilmirsə, bunu açıq deyir və insana ötürməyi təklif edir. Botun «beynində» hər dəyişiklik müştəriyə çatmazdan əvvəl sınaq suallarından keçməlidir.",
     "result": "Dailoq-dan 15-dən çox şirkət istifadə edir. Onlar bütün kanallar üçün bir köməkçi əldə edir: o, şirkətin öz sənədlərinə əsasən cavab verir — cavabların təxminən 98%-i düzgündür, xəta ən çox 2% olur — səsli mesajları və şəkilləri anlayır, rezervasiya edib təsdiqləyir və söhbəti tam kontekstlə operatora ötürür; hamısı söhbət tarixçəsi və aylıq hesabatlarla birlikdə kodsuz bir paneldən idarə olunur.",
     "features": [
       {
         "t": "Bir ağıl, bütün kanallar",
-        "d": "Telegram, Instagram, WhatsApp və veb widget işləyir, Meta kanalları Meta-nın rəsmi inteqrasiyası ilə qoşulur. Müştəri kanalı dəyişəndə söhbət itmir."
+        "d": "Telegram, Instagram, WhatsApp, Messenger və veb widget işləyir, Meta kanalları Meta-nın rəsmi inteqrasiyası ilə qoşulur. Müştəri kanalı dəyişəndə söhbət itmir."
       },
       {
         "t": "Doğma Azərbaycan dili",
@@ -105,7 +105,7 @@
       {
         "k": "Kanallar",
         "v": [
-          "WhatsApp və Instagram (Meta)",
+          "WhatsApp, Instagram və Messenger (Meta)",
           "Telegram Bot API",
           "Veb widget (13 KB, axınla cavab)"
         ]
