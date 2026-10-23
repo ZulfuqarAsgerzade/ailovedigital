@@ -172,7 +172,7 @@
         "l": "central brain for every department"
       }
     ],
-    "overview": "RootOS is the central, AI-driven brain of a company. It brings the company's software, data, people and AI agents together into one intelligent management and orchestration layer — the core that CompanyOS, AgentOS and MeetOS build on.",
+    "overview": "RootOS is the central, AI-driven brain of a company. It brings the company's software, data, people and AI agents together into one intelligent management and orchestration layer — the core that AgentOS and MeetOS build on.",
     "problem": "Company data sits in separate programs that only store records: nobody sees the whole picture, overloaded people and delays surface too late, and management decides on reports that are already out of date. Where automation exists, it runs without a clear owner or audit trail.",
     "approach": "RootOS gathers the data of every department in one place and follows business processes in real time. On top of that layer, AI agents receive tasks automatically and are coordinated centrally, while permissions, approval steps and an audit log keep every automated action under human control.",
     "result": "RootOS is live: five international companies and more than 500 active users work with it. It pulls data from ERP and CRM systems, 1C, Excel, Google, Microsoft 365, Slack, Mattermost, Jira, Plane and Linear into one layer, coordinates AI agents through our own orchestration engine and keeps every automated step under permissions, approvals and an audit log, while management gets dashboards, reports and risk alerts. RootOS is the core of the AI Love Digital ecosystem.",
@@ -209,11 +209,11 @@
       },
       {
         "t": "The brain of the ecosystem",
-        "d": "CompanyOS runs the business, AgentOS the software delivery and MeetOS the meetings; RootOS links their data and coordinates their agents."
+        "d": "AgentOS runs the software delivery and MeetOS the meetings; RootOS links their data and coordinates their agents."
       },
       {
         "t": "From meeting to delivery",
-        "d": "A decision captured in MeetOS is matched by RootOS with resources and priorities, planned in CompanyOS and carried out through AgentOS — and progress flows back to management as a report."
+        "d": "A decision captured in MeetOS is matched by RootOS with resources and priorities and carried out through AgentOS — and progress flows back to management as a report."
       }
     ],
     "stack": [
@@ -322,7 +322,7 @@
     "overview": "AgentOS is an autonomous development platform that coordinates software delivery between human developer teams and specialised AI agents — from the client's requirements to a tested release.",
     "problem": "Software teams lose much of their time to repetitive work: turning requirements into tickets, boilerplate code, reviews, tests and status reports. Progress, blockers and technical risks are hard to see, and handing work to AI tools without structure makes quality harder to control.",
     "approach": "AgentOS analyses client requirements and turns them into technical tasks, splits large projects into stages and small development tasks, and assigns them to AI developer agents. Backend, frontend, QA and other specialised agents work in parallel, while automatic checks, code review, tests and human approval gates keep quality under control.",
-    "result": "AgentOS is live, used by five international companies and more than 500 active users. Its agents have opened 750+ pull requests and completed more than 1,000 tasks, and rebuilt in 10 hours a project that had originally taken 127 days to write. Models are configurable — Claude Opus 5.5, OpenAI, Groq, GLM 5.3 or whichever model a client prefers — while pull-request approval and merge rules keep people in control of what ships. Within the ecosystem, AgentOS carries out the software tasks that RootOS and CompanyOS plan.",
+    "result": "AgentOS is live, used by five international companies and more than 500 active users. Its agents have opened 750+ pull requests and completed more than 1,000 tasks, and rebuilt in 10 hours a project that had originally taken 127 days to write. Models are configurable — Claude Opus 5.5, OpenAI, Groq, GLM 5.3 or whichever model a client prefers — while pull-request approval and merge rules keep people in control of what ships. Within the ecosystem, AgentOS carries out the software tasks that RootOS plans.",
     "features": [
       {
         "t": "Requirements to tasks",
@@ -360,7 +360,7 @@
       },
       {
         "t": "The ecosystem's developer workforce",
-        "d": "AgentOS executes the software tasks that come out of MeetOS decisions, RootOS priorities and CompanyOS plans."
+        "d": "AgentOS executes the software tasks that come out of MeetOS decisions and RootOS priorities."
       }
     ],
     "stack": [
@@ -479,7 +479,7 @@
     "overview": "MeetOS is an AI platform that makes meetings — internal ones and those with clients — produce results. A browser extension and a Windows app capture Google Meet, Zoom and Microsoft Teams calls; the platform transcribes and translates them, summarises the decisions and makes sure the tasks that come out of them get done.",
     "problem": "Companies spend hours in meetings that end without a clear outcome: agreements are forgotten, tasks have no owner or deadline, and a week later nobody checks whether the last meeting's decisions were done.",
     "approach": "MeetOS covers the whole meeting cycle. Before a call it prepares context on the participants and the topic. During it, the browser extension or the Windows app — which captures the call audio and the microphone, so no bot joins the meeting — feeds multilingual transcription; the assistant answers questions from the company's own documents, shows the source of every answer and privately flags a statement that contradicts them. Afterwards it summarises decisions and agreements, extracts tasks, assigns owners and runs deadlines, reminders and follow-ups in the tools the team already uses.",
-    "result": "The platform is complete — Windows app, browser extension, server and admin panel — and passes more than 2,000 automated tests. It runs in two regions, the US and Europe, and is now open to its first pilot partners. Within the ecosystem, MeetOS hands its decisions to RootOS and CompanyOS.",
+    "result": "The platform is complete — Windows app, browser extension, server and admin panel — and passes more than 2,000 automated tests. It runs in two regions, the US and Europe, and is now open to its first pilot partners. Within the ecosystem, MeetOS hands its decisions to RootOS.",
     "features": [
       {
         "t": "Works with every call",
@@ -582,152 +582,6 @@
       "radius": 0.25,
       "hue": 163,
       "style": 3
-    }
-  },
-  {
-    "slug": "companyos",
-    "name": "COMPANYOS",
-    "brand": "CompanyOS",
-    "line": "An AI-powered enterprise operating system",
-    "headline": "One AI-powered platform to run every part of a company",
-    "subtitle": "Departments, people, projects, sales, finance and marketing in one system — with AI agents that plan, coordinate and carry out the work.",
-    "year": "2026",
-    "scope": "AI platforms",
-    "time": "3 months",
-    "chips": [
-      "8 modules — from HR and finance to development",
-      "9+ integrations — 1C, Bitrix24, amoCRM, Salesforce and more",
-      "500+ active users at five international companies"
-    ],
-    "metrics": [
-      {
-        "v": "8",
-        "l": "modules — from HR and finance to development"
-      },
-      {
-        "v": "9+",
-        "l": "integrations — 1C, Bitrix24, amoCRM, Salesforce and more"
-      },
-      {
-        "v": "500+",
-        "l": "active users at five international companies"
-      }
-    ],
-    "overview": "CompanyOS is an AI-powered business system that runs all of a company's operations from one platform. It uses RootOS's intelligence to cover day-to-day work across departments, people and projects.",
-    "problem": "Most companies run on a patchwork of ERP, CRM, HR, task and finance tools. Leadership has no single view, data is copied between systems by hand, and the software only records the work — someone still has to plan it, chase it and report on it.",
-    "approach": "CompanyOS brings the leadership dashboard, HR, projects and tasks, sales and CRM, finance, marketing and client delivery into one platform and connects the systems a company already has. On top of it, AI agents plan, coordinate and monitor the work and — where appropriate — carry it out, preparing reports and recommendations for management.",
-    "result": "CompanyOS is live on web, desktop and mobile, and five international companies with more than 500 active users run their work on it. It goes beyond a classic ERP or task manager: AI agents don't just record the work, they plan, coordinate and control it, and a multi-tenant architecture keeps each company's data apart. CompanyOS is built for small, mid-sized and large companies, service businesses, digital agencies, manufacturers and technology firms.",
-    "features": [
-      {
-        "t": "Leadership dashboard",
-        "d": "One control panel for the CEO and management to oversee every department."
-      },
-      {
-        "t": "People and HR",
-        "d": "Manages employees, departments and HR processes."
-      },
-      {
-        "t": "Projects and performance",
-        "d": "Tracks projects, tasks, deadlines and team performance."
-      },
-      {
-        "t": "Sales and CRM",
-        "d": "Manages sales, CRM, client relationships and contracts."
-      },
-      {
-        "t": "Finance analytics",
-        "d": "Covers finance, budgets, expenses and profitability analytics."
-      },
-      {
-        "t": "Marketing and development",
-        "d": "Automates marketing and SMM workflows and tracks development work, client projects and service quality."
-      }
-    ],
-    "architecture": [
-      {
-        "t": "AI that executes, not just records",
-        "d": "AI agents plan, coordinate and monitor the work and, where appropriate, carry it out — with automatic reports and recommendations for management."
-      },
-      {
-        "t": "Connects what you already use",
-        "d": "Integrates with ERP, CRM and HRM systems, 1C, Bitrix24, amoCRM, Salesforce, Slack and Microsoft Teams instead of forcing a full replacement."
-      },
-      {
-        "t": "The business layer of the ecosystem",
-        "d": "Runs on RootOS's intelligence, receives decisions from MeetOS and hands software work to AgentOS."
-      }
-    ],
-    "stack": [
-      {
-        "k": "Modules",
-        "v": [
-          "Leadership dashboard and oversight",
-          "HR",
-          "Projects and tasks",
-          "Sales and CRM",
-          "Finance",
-          "Marketing",
-          "Development"
-        ]
-      },
-      {
-        "k": "Integrations",
-        "v": [
-          "ERP, CRM, HRM",
-          "1C",
-          "Bitrix24",
-          "amoCRM",
-          "Salesforce",
-          "Slack",
-          "Microsoft Teams"
-        ]
-      },
-      {
-        "k": "Backend",
-        "v": [
-          ".NET 10",
-          "ASP.NET Core"
-        ]
-      },
-      {
-        "k": "Apps",
-        "v": [
-          "Web",
-          "Desktop",
-          "Mobile"
-        ]
-      },
-      {
-        "k": "Data",
-        "v": [
-          "PostgreSQL",
-          "Redis",
-          "Vector database"
-        ]
-      },
-      {
-        "k": "AI",
-        "v": [
-          "Claude Opus 5.5",
-          "OpenAI",
-          "Groq",
-          "GLM 5.3"
-        ]
-      },
-      {
-        "k": "Infrastructure",
-        "v": [
-          "AWS (EU region)",
-          "Cloudflare",
-          "Multi-tenant"
-        ]
-      }
-    ],
-    "coverAlt": "CompanyOS cover — a C app icon on a dark amber background",
-    "brandArt": {
-      "hue": 28,
-      "initial": "C",
-      "style": 1
     }
   },
   {
