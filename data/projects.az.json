@@ -355,7 +355,7 @@
     ],
     "overview": "MeetOS şirkətdaxili və müştərilərlə keçirilən görüşləri nəticəli edən süni intellekt platformasıdır. Brauzer əlavəsi və Windows proqramı Google Meet, Zoom və Microsoft Teams zənglərinə qoşulur; platforma onları transkripsiya və tərcümə edir, qərarları xülasə edir və görüşdən çıxan tapşırıqların icra olunmasına nəzarət edir.",
     "problem": "Şirkətlər saatlarını aydın nəticəsiz bitən görüşlərə sərf edir: razılaşmalar unudulur, tapşırıqların məsul şəxsi və müddəti olmur, bir həftə sonra isə əvvəlki görüşün qərarlarının icra olunub-olunmadığını heç kim yoxlamır.",
-    "approach": "MeetOS görüşün bütün dövrünü əhatə edir. Zəngdən əvvəl iştirakçılar və mövzu üzrə kontekst hazırlayır; zəng zamanı brauzer əlavəsi və ya Windows proqramı — o, zəngin səsini və mikrofonu tutur — çoxdilli transkripsiyaya və canlı tərcüməçi rejiminə ötürür; sonra qərarları və razılaşmaları xülasə edir, tapşırıqları çıxarır, məsul şəxsləri təyin edir və deadline, xatırlatma və follow-up proseslərini komandanın artıq istifadə etdiyi alətlərdə aparır.",
+    "approach": "MeetOS görüşün bütün dövrünü əhatə edir. Zəngdən əvvəl iştirakçılar və mövzu üzrə kontekst hazırlayır. Zəng zamanı brauzer əlavəsi və ya Windows proqramı — o, zəngin səsini və mikrofonu tutur, ona görə görüşə heç bir bot qoşulmur — çoxdilli transkripsiyaya ötürür; köməkçi sualları şirkətin öz sənədlərinə əsasən cavablandırır, hər cavabın mənbəyini göstərir və deyilən söz sənədlərə zidd olanda bunu yalnız sizə göstərərək xəbərdar edir. Görüşdən sonra qərarları və razılaşmaları xülasə edir, tapşırıqları çıxarır, məsul şəxsləri təyin edir və deadline, xatırlatma və follow-up proseslərini komandanın artıq istifadə etdiyi alətlərdə aparır.",
     "result": "Platforma hazırdır — Windows proqramı, brauzer əlavəsi, server və idarə paneli tam qurulub — və 2000-dən çox avtomatik testdən keçir. ABŞ və Avropa olmaqla iki regionda işləyir və ilk pilot tərəfdaşlar üçün qəbul açıqdır. Ekosistemdə MeetOS qərarlarını RootOS və CompanyOS-a ötürür.",
     "features": [
       {
@@ -367,8 +367,8 @@
         "d": "Zəngləri ingilis, ispan, fransız, alman, rus, ərəb və digər dillərdə transkripsiya edir; ABŞ regionunda Azərbaycan və türk dilləri də dəstəklənir."
       },
       {
-        "t": "Canlı tərcüməçi rejimi",
-        "d": "Söhbəti real vaxtda tərcümə edir ki, hər iştirakçı onu öz dilində izləyə bilsin."
+        "t": "Beş görüş rejimi",
+        "d": "Satış zəngi, komanda görüşü, müştəri dəstəyi, müsahibə hazırlığı və söhbəti real vaxtda tərcümə edən canlı tərcüməçi."
       },
       {
         "t": "Xülasə və qərarlar",
@@ -449,7 +449,7 @@
         ]
       }
     ],
-    "coverAlt": "MeetOS loqosu — yaşıl tətbiq ikonunda səs dalğası işarəsi"
+    "coverAlt": "Noutbukda MeetOS proqramı Teams zəngi zamanı şirkət sənədlərindən suala cavab verir"
   },
   {
     "slug": "companyos",

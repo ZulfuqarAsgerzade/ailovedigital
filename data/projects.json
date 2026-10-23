@@ -400,7 +400,7 @@
     ],
     "overview": "MeetOS is an AI platform that makes meetings — internal ones and those with clients — produce results. A browser extension and a Windows app capture Google Meet, Zoom and Microsoft Teams calls; the platform transcribes and translates them, summarises the decisions and makes sure the tasks that come out of them get done.",
     "problem": "Companies spend hours in meetings that end without a clear outcome: agreements are forgotten, tasks have no owner or deadline, and a week later nobody checks whether the last meeting's decisions were done.",
-    "approach": "MeetOS covers the whole meeting cycle. Before a call it prepares context on the participants and the topic; during it, the browser extension or the Windows app — which captures the call audio and the microphone — feeds multilingual transcription and a live interpreter mode; afterwards it summarises decisions and agreements, extracts tasks, assigns owners and runs deadlines, reminders and follow-ups in the tools the team already uses.",
+    "approach": "MeetOS covers the whole meeting cycle. Before a call it prepares context on the participants and the topic. During it, the browser extension or the Windows app — which captures the call audio and the microphone, so no bot joins the meeting — feeds multilingual transcription; the assistant answers questions from the company's own documents, shows the source of every answer and privately flags a statement that contradicts them. Afterwards it summarises decisions and agreements, extracts tasks, assigns owners and runs deadlines, reminders and follow-ups in the tools the team already uses.",
     "result": "The platform is complete — Windows app, browser extension, server and admin panel — and passes more than 2,000 automated tests. It runs in two regions, the US and Europe, and is now open to its first pilot partners. Within the ecosystem, MeetOS hands its decisions to RootOS and CompanyOS.",
     "features": [
       {
@@ -412,8 +412,8 @@
         "d": "Transcribes calls in English, Spanish, French, German, Russian, Arabic and more; Azerbaijani and Turkish are supported in the US region."
       },
       {
-        "t": "Live interpreter mode",
-        "d": "Translates the conversation as it happens, so every participant can follow in their own language."
+        "t": "Five meeting modes",
+        "d": "Sales call, team meeting, customer support, interview preparation and a live interpreter that translates the conversation as it happens."
       },
       {
         "t": "Summaries and decisions",
@@ -494,12 +494,15 @@
         ]
       }
     ],
-    "coverAlt": "The MeetOS logo — a sound-wave mark on a green app icon",
-    "brandArt": {
-      "hue": 163,
+    "coverAlt": "The MeetOS app on a laptop, answering a question from the company's documents during a Teams call",
+    "mockup": {
+      "web": [
+        1
+      ],
+      "bare": true,
       "logo": "logo.jpg",
       "radius": 0.25,
-      "size": 0.48,
+      "hue": 163,
       "style": 3
     }
   },

@@ -239,7 +239,8 @@ export async function prepare(p) {
   if (m.tablets) for (let i = 0; i < m.tablets.length; i++) src['tablet' + i] = await pick(m.tablets[i]);
   if (m.phones) for (let i = 0; i < m.phones.length; i++) src['phone' + i] = await pick(m.phones[i]);
   const all = Object.values(src).filter(Boolean);
-  return { src, hue: m.hue ?? dominantHue(all), set: deviceSet(m) };
+  const logo = m.logo ? await load(`../../assets/images/work/${p.slug}/${m.logo}`) : null; // optional app icon above the title
+  return { src, hue: m.hue ?? dominantHue(all), set: deviceSet(m), logo, radius: m.radius || 0.25 };
 }
 
 /**
@@ -261,6 +262,12 @@ export function render(canvas, p, prep, index, { width, scale, content = 1 }) {
   ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
   ctx.save(); ctx.translate(W / 2, H / 2); ctx.scale(content, content); ctx.translate(-W / 2, -H / 2);
   title(ctx, p, W, pal, flip);
+  if (prep.logo) {
+    const s = 92, x = flip ? W - 100 - s : 100, y = 56, r = s * prep.radius;
+    ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.45)'; ctx.shadowBlur = 30; ctx.shadowOffsetY = 12;
+    path(ctx, x, y, s, s, r); ctx.fillStyle = hsl(pal.h, 60, 30); ctx.fill(); ctx.restore();
+    ctx.save(); path(ctx, x + 0.5, y + 0.5, s - 1, s - 1, r); ctx.clip(); ctx.drawImage(prep.logo, x, y, s, s); ctx.restore();
+  }
   const items = layout(prep.set, W);
   // far-to-near order as listed; for flipped covers mirror the positions, not the screenshots
   for (const [kind, key, x, y, w] of items) {
