@@ -18,7 +18,7 @@
 import { rmSync, cpSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  ROOT, SITES, ORG_ID, NAME, EMAIL, PHONE, PHONE_TEL, INSTAGRAM, LINKEDIN, WHATSAPP, MAPS, BG, OG_IMAGE, GSC_VERIFICATION, BING_VERIFICATION,
+  ROOT, SITES, ORG_ID, NAME, EMAIL, PHONE, PHONE_TEL, INSTAGRAM, LINKEDIN, WHATSAPP, MAPS, BG, OG_IMAGE, GSC_VERIFICATION, BING_VERIFICATION, DAILOQ_WIDGET,
   LEGAL_NAME, TAX_ID, LEGAL_ADDRESS, read, write, esc, pad2, clip, loadProjects,
 } from './lib/site.mjs';
 import {
@@ -34,7 +34,7 @@ const projects = loadProjects();
 const today = new Date().toISOString().slice(0, 10);
 
 // ───────────────────────────── dist/ + static files ─────────────────────────────
-const STATIC = ['assets', 'css', 'js', 'vendor', 'favicon.ico', 'BingSiteAuth.xml']; // BingSiteAuth.xml: Bing Webmaster verification, must stay at each site's root
+const STATIC = ['assets', 'css', 'js', 'vendor', 'favicon.ico', 'BingSiteAuth.xml', 'a9a8e413c53835d9785a320600695f9d.txt']; // at each site's root: Bing Webmaster verification; IndexNow key (scripts/lib/site.mjs INDEXNOW_KEY)
 for (const site of Object.values(SITES)) {
   rmSync(join(ROOT, site.dir), { recursive: true, force: true });
   for (const f of STATIC) if (existsSync(join(ROOT, f))) cpSync(join(ROOT, f), join(ROOT, site.dir, f), { recursive: true });
@@ -173,6 +173,7 @@ ${nav({ lang, b, current, langHrefs })}
 ${main}
 </main>
 ${footer({ lang, b })}
+${DAILOQ_WIDGET}
 </body>
 </html>
 `;

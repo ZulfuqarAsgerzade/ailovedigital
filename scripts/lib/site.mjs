@@ -22,6 +22,10 @@ export const ORG_ID = `${SITES.az.origin}/#org`;
 export const WEBSITE_ID = (origin) => `${origin}/#website`;
 export const GSC_VERIFICATION = 'LMYNGduPKSjR0Iq1BrJwVnJaHG2mVrcuhzV6e6R_1kk'; // Google Search Console (same token on both domains)
 export const BING_VERIFICATION = 'D41285A846F1041A1FF87DE18E6DAB14'; // Bing Webmaster Tools (msvalidate.01, tied to the account) — keep it after verification
+export const INDEXNOW_KEY = 'a9a8e413c53835d9785a320600695f9d'; // IndexNow (Bing, Yandex…): the key file <key>.txt sits at the repo root and is copied to both sites
+// Dailoq web chat (our AI assistant), loaded before </body> on every page of both sites.
+// Allowed domains are set in the Dailoq panel (app.dailoq.az → Widget); empty string here turns it off.
+export const DAILOQ_WIDGET = '<script src="https://api-staging.dailoq.az/widget.js" data-bot-key="e49f428c371c2e16c9cd66aee6263ba2" data-api-base="https://api-staging.dailoq.az"></script>';
 export const NAME = 'AILoveDigital';
 export const TITLE = 'AILoveDigital — IT & Digital Marketing Agency in Baku';
 export const DESCRIPTION =

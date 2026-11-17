@@ -8,7 +8,10 @@
     "build": "node scripts/build-work.mjs && node scripts/build-seo.mjs",
     "build:work": "node scripts/build-work.mjs",
     "build:seo": "node scripts/build-seo.mjs",
-    "serve": "python3 -m http.server 4173"
+    "serve": "python3 -m http.server 4173",
+    "indexnow": "node scripts/indexnow.mjs"
   },
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  }
 }

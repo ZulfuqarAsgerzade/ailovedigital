@@ -22,7 +22,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  ROOT, SITES, NAME, EMAIL, PHONE, PHONE_TEL, INSTAGRAM, LINKEDIN, MAPS, BG, OG_IMAGE, GSC_VERIFICATION, BING_VERIFICATION,
+  ROOT, SITES, NAME, EMAIL, PHONE, PHONE_TEL, INSTAGRAM, LINKEDIN, MAPS, BG, OG_IMAGE, GSC_VERIFICATION, BING_VERIFICATION, DAILOQ_WIDGET,
   LEGAL_NAME, TAX_ID, read, write, esc, loadProjects,
 } from './lib/site.mjs';
 import {
@@ -210,6 +210,9 @@ ${svcs.map((s) => `      <li><a href="${L(s.path)}">${esc(s.name)}</a></li>`).jo
   html = replaceBlock(html, 'svclinks', svcLinks);
   html = replaceBlock(html, 'footsvc', footSvc);
   html = replaceBlock(html, 'footco', footCo);
+  // Dailoq chat widget before the last </body> (the page's inline scripts contain no other one, but be safe).
+  const end = html.lastIndexOf('</body>');
+  if (DAILOQ_WIDGET && end > -1 && !html.includes(DAILOQ_WIDGET)) html = `${html.slice(0, end)}${DAILOQ_WIDGET}\n${html.slice(end)}`;
   write(outFile(lang, ''), html);
   return { lang, services, work, svcs };
 }

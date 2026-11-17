@@ -80,3 +80,6 @@ npm run build
   output of the old single-site build and are no longer updated.
 - After going live: submit both sitemaps in Search Console (one property per domain), then check a service
   URL in the Rich Results Test (FAQ, Breadcrumb, Service).
+- After every upload: `npm run indexnow` — pings IndexNow (Bing, Yandex) with every sitemap URL. It needs the
+  key file `<INDEXNOW_KEY>.txt` (repo root, copied into both sites) to be live; HTTP 403 means it is not yet.
+- Bing Webmaster Tools: verified by `BingSiteAuth.xml` and the `msvalidate.01` meta tag — keep both.
