@@ -1,0 +1,3 @@
+# Byte-exact: vendor/ must match the SRI hashes pinned in js/support.js
+vendor/** -text
+assets/fonts/** binary
