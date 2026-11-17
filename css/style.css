@@ -3,6 +3,8 @@
   --bg:#F7F5F0; --bg-alt:#EFECE6; --ink:#0B0B0B; --muted:#5E5E59;
   --line:rgba(11,11,11,.13); --line-soft:rgba(11,11,11,.07);
   --red:#FF304D;
+  /* small red text on light backgrounds: #FF304D is only 3.3:1 there; #CC1230 is >=4.8:1 (WCAG AA 4.5:1) */
+  --red-ink:#CC1230;
   --dark:#0A0A0A; --dark-ink:#F6F6F3; --dark-muted:#A9A9A3; --dark-line:rgba(246,246,243,.18);
   --sans:'Geist','Helvetica Neue',Helvetica,Arial,sans-serif;
   --mono:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -186,7 +188,7 @@ a.ald-lang-opt:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
 .ald-works{display:flex;flex-direction:column;gap:clamp(60px,8vw,108px);margin-top:clamp(48px,6vw,80px)}
 .ald-work{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:clamp(24px,4vw,64px);align-items:center}
 .ald-work:nth-child(even) .ald-work-media{order:-1}
-.ald-work-num{margin-bottom:14px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--red);font-variant-numeric:tabular-nums}
+.ald-work-num{margin-bottom:14px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--red-ink);font-variant-numeric:tabular-nums}
 .ald-work-name{margin:0 0 14px;font-size:clamp(27px,3.9vw,56px);font-weight:700;letter-spacing:-.03em;line-height:1}
 .ald-work-line{margin:0 0 20px;max-width:30ch;font-size:clamp(16px,1.5vw,20px);line-height:1.55;color:var(--muted)}
 .ald-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
@@ -337,3 +339,10 @@ html.ald-gsap{scroll-behavior:auto}
 }
 /* translated pages: the big display words run longer in Russian and Azerbaijani */
 :lang(ru) .ald-svc-word,:lang(az) .ald-svc-word{font-size:clamp(25px,5.6vw,80px)}
+
+/* ---------- SEO additions: screen-reader text and the service links under the home services list ---------- */
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.ald-svc-links{display:flex;flex-wrap:wrap;gap:10px 12px;margin:clamp(26px,3vw,40px) 0 0;padding:0;list-style:none}
+.ald-svc-links a{display:inline-flex;align-items:center;min-height:40px;padding:9px 18px;border:1px solid var(--line);border-radius:var(--r-pill);font-size:14px;font-weight:550;transition:color .2s,border-color .2s}
+.ald-svc-links a:hover{color:var(--red);border-color:var(--red)}
+.ald-svc-links .is-all{border-color:var(--ink)}

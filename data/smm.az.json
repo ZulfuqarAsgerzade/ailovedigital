@@ -1,0 +1,343 @@
+{
+  "eyebrow": "SMM xidmət paketləri · 2026",
+  "h1Top": "Bakıda SMM xidmətləri",
+  "h1Big": "Bəyənmədən müştəriyə qədər",
+  "lead": "Kontent, reklam və süni intellektlə cavab — bir komandadan, ölçülən nəticə ilə. SMM-i ayrıca xidmət kimi yox, satış sisteminin bir hissəsi kimi qururuq: diqqəti müraciətə, müraciəti müştəriyə çeviririk.",
+  "ctaAudit": "Pulsuz SMM auditi al",
+  "ctaPackages": "Paketlərə bax",
+  "waAudit": "Salam! Pulsuz SMM auditi istəyirəm.",
+  "waPackage": "Salam! {pkg} SMM paketi ilə maraqlanıram.",
+  "stats": [
+    {
+      "v": "850",
+      "u": "AZN-dən",
+      "l": "aylıq paket qiyməti"
+    },
+    {
+      "v": "3",
+      "u": "paket",
+      "l": "START, GROWTH, PRO"
+    },
+    {
+      "v": "24/7",
+      "u": "",
+      "l": "Dailoq AI ilə mesajlara cavab"
+    },
+    {
+      "v": "0",
+      "u": "AZN",
+      "l": "ilkin audit — pulsuzdur"
+    }
+  ],
+  "pillars": {
+    "eyebrow": "Biz kimik",
+    "h": "Texnologiya və kreativ studiya",
+    "lead": "Bir komandada üç iş: auditoriyanı böyüdürük, cavabı avtomatlaşdırırıq, lazım olanda saytı və tətbiqi qururuq.",
+    "items": [
+      {
+        "k": "Grow",
+        "t": "Böyüt",
+        "d": "SMM, kontent istehsalı və Meta reklamları. Diqqəti müraciətə çeviririk."
+      },
+      {
+        "k": "Automate",
+        "t": "Avtomatlaşdır",
+        "d": "Öz AI məhsulumuz Dailoq ilə Instagram və WhatsApp mesajlarına dərhal cavab.",
+        "link": "work/dailoq/"
+      },
+      {
+        "k": "Build",
+        "t": "Qur",
+        "d": "Kampaniya saytı, veb və mobil tətbiq — lazım olduqda eyni komandadan."
+      }
+    ]
+  },
+  "chain": {
+    "eyebrow": "Fərqimiz",
+    "h": "Reklamda dayanmırıq, satışa qədər gedirik",
+    "items": [
+      {
+        "t": "Kontent",
+        "d": "Reels, dizayn, story — satış strategiyasına bağlı."
+      },
+      {
+        "t": "Reklam",
+        "d": "Düzgün auditoriya və kreativ testləri."
+      },
+      {
+        "t": "AI cavab",
+        "d": "Dailoq mesajlara gecə-gündüz dərhal cavab verir."
+      },
+      {
+        "t": "Lead qeydi",
+        "d": "Hər müraciət cədvələ düşür, itmir."
+      },
+      {
+        "t": "Hesabat",
+        "d": "Neçə müraciət, nə qiymətə, nə qədəri satışa çevrildi."
+      }
+    ],
+    "stop": "Adi SMM agentliyi burada dayanır",
+    "go": "AILoveDigital bura qədər davam edir"
+  },
+  "packages": {
+    "eyebrow": "Paketlər",
+    "h": "Üç paket, bir məqsəd: müştəri",
+    "lead": "Qiymətlər aylıqdır və açıqdır. Hansı paketin sizə uyğun olduğunu pulsuz auditdən sonra birlikdə seçirik.",
+    "recommended": "Tövsiyə",
+    "perMonth": "AZN / ay",
+    "withoutD": "Dailoqsuz",
+    "withD": "Dailoq ilə",
+    "dNote": "ayda 2 000 Dailoq mesajı, 1 kanal",
+    "noD": "Dailoq bu paketə əlavə olunmur",
+    "choose": "Bu paketi seç",
+    "adNote": "Reklam büdcəsi paket qiymətinə daxil deyil — onu birbaşa Meta-ya öz kartınızla ödəyirsiniz.",
+    "items": {
+      "start": {
+        "tag": "Görünürlük qurmaq istəyənlər üçün",
+        "features": [
+          "Instagram + Facebook",
+          "12 post / ay (6 Reels)",
+          "Gündəlik 1 story",
+          "Ayda 2 çəkiliş",
+          "Meta reklam idarəsi",
+          "Aylıq hesabat"
+        ]
+      },
+      "growth": {
+        "tag": "Müntəzəm müraciət axını üçün",
+        "features": [
+          "Instagram + Facebook + TikTok",
+          "20 post / ay (10 Reels)",
+          "Gündəlik 3 story",
+          "Ayda 4 çəkiliş",
+          "Reklam + kreativ testləri",
+          "Aylıq hesabat"
+        ]
+      },
+      "pro": {
+        "tag": "Tam satış sistemi istəyənlər üçün",
+        "features": [
+          "Instagram + Facebook + TikTok",
+          "30 post / ay (15 Reels)",
+          "Gündəlik 5 story",
+          "Ayda 4 çəkiliş",
+          "Reklam + kreativ testləri",
+          "Lead cədvəli + həftəlik hesabat"
+        ]
+      }
+    }
+  },
+  "included": {
+    "eyebrow": "Bütün paketlərdə",
+    "h": "Hər paketə daxil olanlar",
+    "items": [
+      {
+        "t": "Audit və strategiya",
+        "d": "Rəqib, auditoriya və mesaj analizi."
+      },
+      {
+        "t": "Profilin qurulması",
+        "d": "Bio, vizual stil, story örtükləri."
+      },
+      {
+        "t": "Aylıq kontent planı",
+        "d": "Əvvəlcədən təsdiq üçün təqdim olunur."
+      },
+      {
+        "t": "2 dildə mətnlər",
+        "d": "Azərbaycan + rus və ya ingilis dili."
+      },
+      {
+        "t": "Peşəkar çəkiliş",
+        "d": "Foto və video, öz komandamızla."
+      },
+      {
+        "t": "Meta reklamları",
+        "d": "Kampaniya qurulması və optimallaşdırma."
+      },
+      {
+        "t": "Mesaj ssenariləri",
+        "d": "Tez-tez verilən suallara hazır cavablar."
+      },
+      {
+        "t": "Aylıq hesabat",
+        "d": "Görüntü yox — müraciət və nəticə rəqəmləri."
+      }
+    ]
+  },
+  "compare": {
+    "eyebrow": "Müqayisə",
+    "h": "Paketlər yan-yana",
+    "rows": {
+      "platforms": "Platformalar",
+      "posts": "Post / ay",
+      "reels": "o cümlədən Reels",
+      "stories": "Story",
+      "shoots": "Çəkiliş / ay",
+      "ads": "Meta reklam idarəsi",
+      "report": "Hesabat",
+      "price": "Qiymət — Dailoqsuz",
+      "priceD": "Qiymət — Dailoq ilə (2 000 mesaj)"
+    },
+    "story": "gündəlik {n}",
+    "reports": [
+      "aylıq",
+      "aylıq",
+      "həftəlik + lead qiyməti"
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "h": "İdarə etdiyimiz hesablardan bəziləri",
+    "lead": "Müxtəlif sahələrdən brendlər — tibbi geyimdən avtomobilə qədər. Hesablara baxın, kontentin keyfiyyətini özünüz qiymətləndirin.",
+    "view": "Instagram-da bax",
+    "sectors": {
+      "blanco_medical_apparel": "Tibbi geyim",
+      "lux_isiqlandirma": "İşıqlandırma",
+      "finecup.coffee.roasters": "Qəhvə qovurma",
+      "globalavto.az": "Avtomobil"
+    },
+    "moreT": "və daha çox brend",
+    "moreD": "Bütün işlərimizi və gündəlik kontentimizi Instagram səhifəmizdə izləyin.",
+    "moreLink": "@ailovedigital.az"
+  },
+  "who": {
+    "eyebrow": "Kimlər üçün",
+    "h": "Bu paketlər kimlər üçündür",
+    "items": [
+      {
+        "t": "Kiçik və orta biznes",
+        "d": "Restoran, klinika, gözəllik salonu, mağaza, xidmət şirkəti — Instagram-dan müraciət gözləyən hər kəs."
+      },
+      {
+        "t": "B2B və xidmət şirkətləri",
+        "d": "Instagram və Facebook-da müştəri etibarı qazanmaq istəyən şirkətlər."
+      },
+      {
+        "t": "Şəxsi brend",
+        "d": "Ekspert, həkim, təlimçi — öz adını və xidmətini önə çıxarmaq istəyənlər."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "İş prosesi",
+    "h": "Beş addımda necə işləyirik",
+    "items": [
+      {
+        "t": "Audit",
+        "d": "Hesablarınız, rəqiblər və müştəri sualları analiz olunur. Pulsuzdur."
+      },
+      {
+        "t": "Strategiya",
+        "d": "Hədəf auditoriya, mesajlar və aylıq kontent planı razılaşdırılır."
+      },
+      {
+        "t": "İstehsal",
+        "d": "Çəkiliş, montaj, dizayn və mətnlər. Hər post əvvəlcə sizin təsdiqinizə gəlir."
+      },
+      {
+        "t": "Yayım və reklam",
+        "d": "Paylaşım, story, Meta reklamları və AI cavab axını işə düşür."
+      },
+      {
+        "t": "Ölçmə",
+        "d": "Rəqəmlərə baxırıq, işləyəni gücləndiririk, işləməyəni dəyişirik."
+      }
+    ]
+  },
+  "measure": {
+    "eyebrow": "Nəticə",
+    "h": "Nəyi ölçürük və necə hesabat veririk",
+    "items": [
+      {
+        "t": "Müraciət sayı",
+        "d": "DM, WhatsApp, zəng və formalardan gələn real müraciətlər."
+      },
+      {
+        "t": "Cavab vaxtı",
+        "d": "Müştəri mesajına ilk cavaba qədər keçən vaxt."
+      },
+      {
+        "t": "Bir müraciətin qiyməti",
+        "d": "Reklam xərci ÷ gələn müraciət sayı."
+      },
+      {
+        "t": "Satışa çevrilmə",
+        "d": "Müraciətlərin neçəsi müştəriyə çevrildi (sizin satış məlumatınızla)."
+      }
+    ],
+    "honestT": "Uydurma vəd vermirik.",
+    "honestD": "Birinci ay başlanğıc göstəricilərinizi ölçürük, ikinci aydan hədəfləri birlikdə rəqəmlə qoyuruq. Nəticə məhsuldan, qiymətdən və satış komandanızdan da asılıdır — biz öz hissəmizi şəffaf ölçürük."
+  },
+  "terms": {
+    "eyebrow": "Şəffaf şərtlər",
+    "h": "Əvvəlcədən bilməli olduqlarınız",
+    "items": [
+      {
+        "t": "Reklam büdcəsi ayrıcadır",
+        "d": "Paket qiymətinə daxil deyil. Büdcəni birlikdə müəyyən edirik, siz birbaşa Meta-ya öz kartınızla ödəyirsiniz."
+      },
+      {
+        "t": "Hesablar sizindir",
+        "d": "Səhifələr, reklam hesabı və hazırlanan bütün kontent müştərinin mülkiyyətidir."
+      },
+      {
+        "t": "Təsdiq və düzəliş",
+        "d": "Hər post paylaşımdan əvvəl təsdiqinizə gəlir; post başına 2 düzəliş raundu daxildir."
+      },
+      {
+        "t": "Müqavilə müddəti",
+        "d": "Minimum 3 ay. Sonra aylıq davam edir; dayandırmaq üçün 30 gün əvvəl yazılı bildiriş."
+      },
+      {
+        "t": "Ödəniş",
+        "d": "Hər ayın əvvəlində, xidmət ayından öncə."
+      },
+      {
+        "t": "Çəkiliş",
+        "d": "Bakı daxilində. Model, məkan icarəsi və rekvizit xərci lazım olarsa əvvəlcədən razılaşdırılır."
+      }
+    ]
+  },
+  "addons": {
+    "eyebrow": "Əlavə xidmətlər",
+    "h": "Lazım olduqda əlavə edilənlər",
+    "items": [
+      {
+        "t": "Kampaniya saytı (landing page)",
+        "d": "Reklamdan gələnlər üçün bir səhifəlik satış saytı.",
+        "p": "299 AZN-dən",
+        "link": "web"
+      },
+      {
+        "t": "Əlavə çəkiliş günü",
+        "d": "Paketdəki çəkilişlərdən əlavə tədbir və ya məhsul çəkilişi.",
+        "p": "razılaşma ilə"
+      },
+      {
+        "t": "Google Ads",
+        "d": "Axtarış reklamlarının qurulması və idarəsi.",
+        "p": "razılaşma ilə",
+        "link": "marketing"
+      },
+      {
+        "t": "Dailoq — əlavə mesajlar",
+        "d": "Paketdəki 2 000 Dailoq mesajı bitəndə bot dayanır; istəsəniz davam edir.",
+        "p": "0,15 AZN / mesaj",
+        "link": "ai"
+      },
+      {
+        "t": "Veb-sayt və mobil tətbiq",
+        "d": "Satış və əməliyyat üçün tam rəqəmsal məhsul.",
+        "p": "layihə qiymətləndirməsi ilə",
+        "link": "mobile"
+      }
+    ]
+  },
+  "final": {
+    "eyebrow": "Növbəti addım",
+    "h": "Pulsuz SMM auditi ilə başlayaq",
+    "s": "Hesablarınıza və rəqiblərinizə baxırıq, 3–5 konkret müşahidə və sizə uyğun paketi təqdim edirik."
+  }
+}

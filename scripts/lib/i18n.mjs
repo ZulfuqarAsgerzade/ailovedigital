@@ -9,23 +9,42 @@
 
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { ROOT, SITE_URL, TITLE, DESCRIPTION, TAGLINE, SLOGAN, OG_ALT, read, esc } from './site.mjs';
+import { ROOT, SITES, TITLE, DESCRIPTION, TAGLINE, SLOGAN, OG_ALT, read, esc } from './site.mjs';
 
 export const LANGS = ['en', 'ru', 'az'];
 export const DEFAULT_LANG = 'en';
+// site: which entry of SITES (scripts/lib/site.mjs) the language is published on; prefix: its folder there.
 export const LOCALES = {
-  en: { code: 'en', prefix: '', ogLocale: 'en_US', label: 'English', short: 'EN' },
-  ru: { code: 'ru', prefix: 'ru/', ogLocale: 'ru_RU', label: 'Русский', short: 'RU' },
-  az: { code: 'az', prefix: 'az/', ogLocale: 'az_AZ', label: 'Azərbaycanca', short: 'AZ' },
+  en: { code: 'en', site: 'com', prefix: '', ogLocale: 'en_US', label: 'English', short: 'EN' },
+  ru: { code: 'ru', site: 'com', prefix: 'ru/', ogLocale: 'ru_RU', label: 'Русский', short: 'RU' },
+  az: { code: 'az', site: 'az', prefix: '', ogLocale: 'az_AZ', label: 'Azərbaycanca', short: 'AZ' },
 };
 
-/** Absolute URL of a site path ("" = home, "work/", "work/<slug>/") in a language. */
-export const urlIn = (lang, path = '') => `${SITE_URL}/${LOCALES[lang].prefix}${path}`;
+/** A page path is one string for every language ("work/rana/") or a per-language map for pages with
+ *  translated slugs ({ az: 'xidmetler/smm/', en: 'services/smm/' }); a language missing from the map has no such page. */
+export const pathIn = (path, lang) => (typeof path === 'string' ? path : path?.[lang]);
+export const langsOf = (path) => LANGS.filter((l) => pathIn(path, l) !== undefined);
 
-/** `<link rel="alternate" hreflang>` for every language plus x-default (English). */
-export const hreflangLinks = (path = '') =>
-  [...LANGS.map((l) => `<link rel="alternate" hreflang="${l}" href="${urlIn(l, path)}">`),
-    `<link rel="alternate" hreflang="x-default" href="${urlIn(DEFAULT_LANG, path)}">`].join('\n');
+export const originOf = (lang) => SITES[LOCALES[lang].site].origin;
+/** Absolute URL of a site path ("" = home, "work/", "work/<slug>/" or a per-language map) in a language. */
+export const urlIn = (lang, path = '') => `${originOf(lang)}/${LOCALES[lang].prefix}${pathIn(path, lang)}`;
+/** Absolute URL of a file (image, icon) on the site a language is published on. */
+export const absIn = (lang, p) => (p.startsWith('http') ? p : `${originOf(lang)}/${p.replace(/^\.?\//, '')}`);
+/** Where a page of `lang` is written: dist/<site>/<prefix><path>index.html */
+export const outFile = (lang, path = '', file = 'index.html') => `${SITES[LOCALES[lang].site].dir}/${LOCALES[lang].prefix}${pathIn(path, lang)}${file}`;
+/** Relative path from a page back to the root of its own site ("" on the root page, "../../" on /work/rana/). */
+export const backTo = (lang, path = '') => '../'.repeat((LOCALES[lang].prefix + pathIn(path, lang)).split('/').filter(Boolean).length);
+/** Link from a page in `from` (whose root is `b`) to `path` in `to`: relative on the same site, absolute across sites. */
+export const hrefTo = (from, to, path, b) =>
+  LOCALES[from].site === LOCALES[to].site ? (`${b}${LOCALES[to].prefix}${pathIn(path, to)}` || './') : urlIn(to, path);
+
+/** `<link rel="alternate" hreflang>` for every language the page exists in, plus x-default (English, else the first). */
+export const hreflangLinks = (path = '') => {
+  const ls = langsOf(path);
+  const def = ls.includes(DEFAULT_LANG) ? DEFAULT_LANG : ls[0];
+  return [...ls.map((l) => `<link rel="alternate" hreflang="${l}" href="${urlIn(l, path)}">`),
+    `<link rel="alternate" hreflang="x-default" href="${urlIn(def, path)}">`].join('\n');
+};
 
 /** og:locale for this language and og:locale:alternate for the others. */
 export const ogLocaleTags = (lang) =>

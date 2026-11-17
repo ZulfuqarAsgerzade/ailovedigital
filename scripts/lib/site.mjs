@@ -8,11 +8,24 @@ import { fileURLToPath } from 'node:url';
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 
 // ───────────────────────────── CONFIG ─────────────────────────────
-export const SITE_URL = 'https://ailovedigital.com'; // ← production origin, no trailing slash
+// Two production sites, each built into its own folder under dist/ and deployed as-is:
+//   ailovedigital.az   Azerbaijani at the root (the primary market)
+//   ailovedigital.com  English at the root, Russian under /ru/
+// Which language lives where is LOCALES in scripts/lib/i18n.mjs.
+export const SITES = {
+  az: { origin: 'https://ailovedigital.az', dir: 'dist/ailovedigital.az' },
+  com: { origin: 'https://ailovedigital.com', dir: 'dist/ailovedigital.com' },
+};
+export const SITE_URL = SITES.com.origin; // English origin (x-default), no trailing slash
+// One entity for the company on both domains: every page's JSON-LD points at this @id.
+export const ORG_ID = `${SITES.az.origin}/#org`;
+export const WEBSITE_ID = (origin) => `${origin}/#website`;
+export const GSC_VERIFICATION = 'LMYNGduPKSjR0Iq1BrJwVnJaHG2mVrcuhzV6e6R_1kk'; // Google Search Console (same token on both domains)
+export const BING_VERIFICATION = 'D41285A846F1041A1FF87DE18E6DAB14'; // Bing Webmaster Tools (msvalidate.01, tied to the account) — keep it after verification
 export const NAME = 'AILoveDigital';
-export const TITLE = 'AILoveDigital — AI, Technology & Business Growth';
+export const TITLE = 'AILoveDigital — IT & Digital Marketing Agency in Baku';
 export const DESCRIPTION =
-  'AILoveDigital is a Baku-based technology and creative studio. We build digital products with AI at the core, grow their audience and train the teams that run them.';
+  'Baku IT and digital marketing studio: website and mobile app development, AI automation, SMM and ads — one team, 20 shipped digital products.';
 export const TAGLINE = 'And we make businesses love it too.';
 export const SLOGAN = 'Built with logic. Finished with love.';
 export const EMAIL = 'info@ailovedigital.com';
@@ -20,6 +33,12 @@ export const PHONE = '(+994 70) 280 18 18';
 export const PHONE_TEL = '+994702801818'; // E.164, for tel: links and structured data
 export const INSTAGRAM = 'https://www.instagram.com/ailovedigital.az/';
 export const LINKEDIN = 'https://www.linkedin.com/company/ailovedigital/';
+// NAP — one public address everywhere (schema, footer, contact page, llms.txt). The office is the Google
+// Maps place below; the registered (legal) address is shown only as company details.
+export const OFFICE = { street: 'Altis Plaza', district: 'Binagadi district', city: 'Baku', country: 'AZ' };
+export const LEGAL_NAME = '"AI LOVE DIGITAL" LLC';
+export const TAX_ID = '1009781681';
+export const LEGAL_ADDRESS = 'AZ1107, Hamza Babashov str. 11, apt. 2, Binagadi district, Baku, Azerbaijan';
 export const MAPS = 'https://maps.google.com/?cid=1268243044441275730'; // Google Maps place: Altis Plaza, Binagadi district, Baku
 export const WHATSAPP = `https://wa.me/${PHONE_TEL.slice(1)}`; // opens a WhatsApp chat with PHONE
 export const LOCALE = 'en_US';

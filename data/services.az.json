@@ -1,0 +1,606 @@
+{
+  "ui": {
+    "servicesNav": "Xidmətlər",
+    "includesEyebrow": "Nələr daxildir",
+    "includesH": "Xidmətə nələr daxildir",
+    "processEyebrow": "Proses",
+    "processH": "Necə işləyirik",
+    "pricingEyebrow": "Qiymət",
+    "pricingH": "Qiymət nədən asılıdır",
+    "whyEyebrow": "Niyə biz",
+    "whyH": "Niyə AILoveDigital",
+    "faqEyebrow": "Suallar",
+    "faqH": "Tez-tez verilən suallar",
+    "casesEyebrow": "Layihələr",
+    "casesH": "Bu sahədə layihələrimiz",
+    "otherEyebrow": "Daha çox",
+    "otherH": "Digər xidmətlər",
+    "ctaH": "Layihənizi<br>müzakirə edək<span class=\"ald-dot\">.</span>",
+    "ctaS": "Qısa yazın — bir iş günü ərzində cavab veririk.",
+    "ctaContact": "Əlaqə səhifəsi →",
+    "more": "Ətraflı →",
+    "servicesUsed": "Göstərilən xidmətlər",
+    "allServices": "Bütün xidmətlər →",
+    "why": [
+      {
+        "t": "Bir komanda, bütün bacarıqlar",
+        "d": "Strategiya, dizayn, proqramlaşdırma və marketinq bir yerdədir. İşi bir podratçıdan digərinə ötürmək və məsuliyyəti bölüşdürmək lazım gəlmir."
+      },
+      {
+        "t": "Ölçülə bilən nəticə",
+        "d": "Hər layihənin əvvəlində uğurun necə ölçüləcəyini yazılı razılaşdırırıq və nəticəni hesabatda rəqəmlərlə göstəririk."
+      },
+      {
+        "t": "Sizə məxsus nəticə",
+        "d": "Kod, hesablar, sənədləşdirmə və bütün girişlər sizdə qalır. Bizdən asılı qalmırsınız."
+      }
+    ],
+    "notFound": {
+      "title": "Səhifə tapılmadı",
+      "h1": "Azmısınız?",
+      "headline": "Bu səhifə artıq mövcud deyil.",
+      "lead": "Ana səhifəyə qayıdın, xidmətlərimizə və ya layihələrimizə baxın.",
+      "home": "Ana səhifə"
+    },
+    "homeH1": "Bakıda IT və rəqəmsal marketinq agentliyi"
+  },
+  "hub": {
+    "title": "Xidmətlərimiz: sayt, mobil tətbiq, SMM və AI | AILoveDigital",
+    "description": "AILoveDigital xidmətləri: sayt və mobil tətbiq hazırlanması, süni intellektlə avtomatlaşdırma, SMM, rəqəmsal marketinq, IT təlimləri və konsaltinq. Bakı.",
+    "eyebrow": "Xidmətlər",
+    "h1": "Xidmətlərimiz",
+    "lead": "Strategiya, texnologiya və kreativ iş bir komandada birləşəndə nəticə güclü olur. Sizə lazım olanı seçin, ya da hansından başlamağı birlikdə müəyyənləşdirək."
+  },
+  "about": {
+    "title": "Haqqımızda — Bakıda IT və kreativ studiya | AILoveDigital",
+    "description": "AILoveDigital Bakıda texnologiya, süni intellekt və marketinqi bir komandada birləşdirən studiyadır. Necə işlədiyimiz, dəyərlərimiz və şirkət məlumatları.",
+    "eyebrow": "Haqqımızda",
+    "h1": "Texnologiya, kreativ və biznes — bir komandada",
+    "lead": "AILoveDigital Bakıda yerləşən texnologiya və kreativ studiyadır. Süni intellekt əsasında rəqəmsal məhsullar yaradır, onların auditoriyasını böyüdür və onları idarə edəcək komandaları yetişdiririk.",
+    "intro": [
+      "Biz bir sual ətrafında qurulmuşuq: texnologiya biznesə real olaraq nə qazandırır? Ona görə hər layihəyə alət siyahısı ilə deyil, biznesin rəqəmləri, auditoriyası və məhdudiyyətləri ilə başlayırıq.",
+      "Komandamızda proqramçılar, dizaynerlər, marketoloqlar və süni intellekt mütəxəssisləri birlikdə işləyir. Portfoliomuzda marketpleyslər, fintex, kibertəhlükəsizlik, e-ticarət və süni intellekt platformaları daxil olmaqla 20 rəqəmsal məhsul var. Dailoq, MeetOS, RootOS və AgentOS kimi öz süni intellekt məhsullarımızı da hazırlayırıq."
+    ],
+    "whatH": "Nə edirik",
+    "processH": "Necə işləyirik",
+    "valuesH": "Nəyə inanırıq",
+    "companyH": "Şirkət məlumatları",
+    "legalName": "Hüquqi ad",
+    "taxId": "VÖEN",
+    "legalAddress": "Hüquqi ünvan",
+    "office": "Ofis",
+    "officeValue": "Altis Plaza, Binəqədi rayonu, Bakı",
+    "email": "E-poçt",
+    "phone": "Telefon",
+    "workLink": "Layihələrimizə baxın →"
+  },
+  "contact": {
+    "title": "Əlaqə — AILoveDigital, Bakı: telefon, ünvan, WhatsApp",
+    "description": "AILoveDigital ilə əlaqə: +994 70 280 18 18, info@ailovedigital.com, WhatsApp. Ofis: Altis Plaza, Binəqədi rayonu, Bakı. Bir iş günü ərzində cavab veririk.",
+    "eyebrow": "Əlaqə",
+    "h1": "AILoveDigital ilə əlaqə",
+    "lead": "Nə qurmaq, düzəltmək və ya böyütmək istədiyinizi yazın. Qısa qeyd kifayətdir — düzgün sualları biz verəcəyik.",
+    "detailsH": "Əlaqə məlumatları",
+    "email": "E-poçt",
+    "phone": "Telefon",
+    "whatsapp": "WhatsApp",
+    "address": "Ünvan",
+    "addressValue": "Altis Plaza, Binəqədi rayonu, Bakı, Azərbaycan",
+    "mapLink": "Google Xəritədə aç →",
+    "company": "Şirkət",
+    "nextH": "Sonra nə olur",
+    "next": [
+      "Mesajınızı diqqətlə oxuyur və bir iş günü ərzində cavab veririk.",
+      "30 dəqiqəlik görüş: təqdimat deyil, suallar.",
+      "Qısa yazılı plan: əhatə, müddət və qiymət."
+    ],
+    "formH": "Mesaj göndərin",
+    "name": "Adınız",
+    "emailField": "E-poçt",
+    "companyField": "Şirkət",
+    "message": "Mesaj",
+    "send": "Göndər",
+    "formNote": "Bir iş günü ərzində cavab veririk. Göndərdiyiniz məlumatı necə emal etdiyimizi Məxfilik siyasətində oxuya bilərsiniz.",
+    "subject": "Saytdan yeni müraciət (AZ)"
+  },
+  "services": {
+    "smm": {
+      "name": "SMM xidmətləri",
+      "short": "Instagram, Facebook və TikTok üçün kontent, çəkiliş, Meta reklamı və AI ilə cavab — paketlər ayda 850 AZN-dən.",
+      "serviceType": "Sosial media marketinqi (SMM)",
+      "title": "SMM xidmətləri Bakıda — paketlər 850 AZN-dən | AILoveDigital",
+      "description": "Bakıda SMM paketləri: START 850, GROWTH 1 300, PRO 1 900 AZN/ay. Reels, çəkiliş, Meta reklamı, AI cavab (Dailoq) və hesabat. Pulsuz audit.",
+      "h1": "Bakıda SMM xidmətləri",
+      "lead": "Sosial mediada sadəcə post paylaşmırıq. Auditoriyanızı müştəriyə çevirən sistem qururuq: strategiya, kontent, reklam və hər manatın hesabatı bir komandada.",
+      "intro": [
+        "Çox biznes sosial medianı «gündə bir post» kimi görür və nəticə gözləyir. Bizim yanaşmamız fərqlidir: əvvəl hədəf auditoriyanı, rəqibləri və satış hunisini öyrənirik, sonra hər paylaşımın konkret məqsədi olan kontent planı qururuq.",
+        "AILoveDigital-da SMM təkcə dizayn deyil. Strategiya, kreativ istehsal, hədəfli reklam və analitika eyni komandadadır. Ona görə məzmun, reklam büdcəsi və müraciətlər bir-biri ilə əlaqəli idarə olunur, hər ay nə etdiyimizi və nəyin işlədiyini rəqəmlərlə göstəririk."
+      ],
+      "includes": [
+        {
+          "t": "Strategiya və audit",
+          "d": "Mövcud hesabların, rəqiblərin və auditoriyanın təhlili; hədəflər, əsas mesajlar və platformaların seçimi."
+        },
+        {
+          "t": "Kontent planı",
+          "d": "Aylıq kontent təqvimi: post, karusel, Reels və Stories — hər birinin məqsədi və mətni ilə."
+        },
+        {
+          "t": "Kreativ istehsal",
+          "d": "Dizayn, foto və video çəkiliş, montaj və qısa videolar üçün ssenarilər."
+        },
+        {
+          "t": "Hədəfli reklam",
+          "d": "Instagram, Facebook və TikTok reklam kampaniyaları, auditoriya testləri və büdcənin optimallaşdırılması."
+        },
+        {
+          "t": "İcma idarəsi",
+          "d": "Şərh və mesajlara vaxtında cavab, cavab şablonları; istəsəniz süni intellekt köməkçisi ilə 24/7 cavab."
+        },
+        {
+          "t": "Analitika və hesabat",
+          "d": "Aylıq hesabat: əhatə, qarşılıqlı əlaqə, müraciətlər və reklam xərcinin hər manatı."
+        }
+      ],
+      "pricing": {
+        "p": "SMM xidmətinin qiyməti sabit paketdən deyil, işin həcmindən asılıdır. İlkin görüşdən sonra əhatəni, müddəti və qiyməti yazılı plan şəklində təqdim edirik.",
+        "items": [
+          "Platformaların sayı (Instagram, TikTok, Facebook, LinkedIn)",
+          "Aylıq kontentin həcmi və formatı (post, Reels, video çəkiliş)",
+          "Reklam kampaniyalarının idarə olunması",
+          "İcma idarəsi və mesajlara cavab tələbi"
+        ]
+      },
+      "faq": [
+        {
+          "q": "Bakıda SMM xidmətinin qiyməti nə qədərdir?",
+          "a": "Üç aylıq paketimiz var: START — 850 AZN, GROWTH — 1 300 AZN (Dailoq ilə 1 400 AZN), PRO — 1 900 AZN (Dailoq ilə 2 000 AZN). Reklam büdcəsi paket qiymətinə daxil deyil və birbaşa Meta-ya ödənilir."
+        },
+        {
+          "q": "SMM paketinə nələr daxildir?",
+          "a": "Hər paketdə audit və strategiya, profilin qurulması, aylıq kontent planı, 2 dildə mətnlər, peşəkar foto və video çəkiliş, Meta reklamlarının idarəsi, mesaj ssenariləri və aylıq hesabat var. Paketlər post, Reels, story və çəkiliş sayına görə fərqlənir."
+        },
+        {
+          "q": "Dailoq nədir və nə üçün lazımdır?",
+          "a": "Dailoq bizim öz süni intellekt məhsulumuzdur: Instagram və WhatsApp mesajlarına gecə-gündüz dərhal cavab verir və müraciəti itirmir. GROWTH və PRO paketlərinə ayda 2 000 mesajla (1 kanal) əlavə olunur; əlavə mesaj 0,15 AZN-dir."
+        },
+        {
+          "q": "Minimum müqavilə müddəti nə qədərdir?",
+          "a": "Minimum 3 ay. Sonra aylıq davam edir; dayandırmaq üçün 30 gün əvvəl yazılı bildiriş kifayətdir. Ödəniş hər ayın əvvəlində edilir."
+        },
+        {
+          "q": "SMM-in nəticəsi nə vaxt görünür?",
+          "a": "Birinci ay başlanğıc göstəricilərinizi ölçürük, ikinci aydan hədəfləri birlikdə rəqəmlə qoyuruq. Müraciət sayı, bir müraciətin qiyməti, cavab vaxtı və satışa çevrilmə hər ay hesabatda göstərilir."
+        },
+        {
+          "q": "Hansı platformalarla işləyirsiniz?",
+          "a": "Paketlər Instagram, Facebook və TikTok-u əhatə edir (START — Instagram və Facebook). Google Ads əlavə xidmət kimi qoşulur; LinkedIn və YouTube ehtiyaca görə razılaşdırılır."
+        },
+        {
+          "q": "Hesablarımız və kontent kimə məxsus olacaq?",
+          "a": "Sizə. Səhifələr, reklam hesabı və hazırlanan bütün foto, video və mətnlər müştərinin mülkiyyətidir. Hər post paylaşımdan əvvəl sizin təsdiqinizə gəlir, post başına 2 düzəliş raundu daxildir."
+        }
+      ]
+    },
+    "marketing": {
+      "name": "Rəqəmsal marketinq və reklam",
+      "short": "Google, Meta və TikTok reklamı, SEO, analitika və satış hunisi — bir strategiyada.",
+      "serviceType": "Rəqəmsal marketinq",
+      "title": "Rəqəmsal marketinq agentliyi Bakıda: reklam və SEO | AILoveDigital",
+      "description": "Bakıda rəqəmsal marketinq: Google, Meta və TikTok reklamı, SEO, analitika və açılış səhifələri — bir strategiyada, hər manatın aylıq hesabatı ilə.",
+      "h1": "Bakıda rəqəmsal marketinq agentliyi",
+      "lead": "Reklam, SEO, kontent və analitikanı bir strategiyada birləşdiririk ki, marketinq büdcəniz xərc yox, ölçülə bilən investisiya olsun.",
+      "intro": [
+        "Rəqəmsal marketinq ayrı-ayrı kanallarda təsadüfi kampaniyalar deyil. Əvvəl biznes hədəfinizi və rəqəmlərinizi anlayırıq — orta sifariş dəyəri, bir müştərini qazanmağın məqbul qiyməti, satış dövrü — sonra kanalları və büdcəni buna görə bölürük.",
+        "Komandamızda marketoloqlar, dizaynerlər və proqramçılar birlikdə işləyir. Reklam üçün lazım olan açılış səhifəsini, izləmə sistemini (analitika, piksel, konversiyalar) və CRM inteqrasiyasını başqa podratçı axtarmadan özümüz qururuq."
+      ],
+      "includes": [
+        {
+          "t": "Marketinq strategiyası",
+          "d": "Auditoriya, rəqib və bazar təhlili; kanal planı, büdcə bölgüsü və ölçüləcək göstəricilər (KPI)."
+        },
+        {
+          "t": "Google reklamı",
+          "d": "Axtarış, Performance Max, YouTube və remarketinq kampaniyaları — açar sözlər və mənfi açar sözlərlə."
+        },
+        {
+          "t": "Meta və TikTok reklamı",
+          "d": "Instagram, Facebook və TikTok kampaniyaları, kreativ testləri və auditoriya seqmentləri."
+        },
+        {
+          "t": "SEO",
+          "d": "Texniki audit, açar söz tədqiqatı, səhifələrin optimallaşdırılması və kontent planı — Google-dan üzvi trafik üçün."
+        },
+        {
+          "t": "Açılış səhifələri və konversiya",
+          "d": "Reklam üçün sürətli açılış səhifələri, formalar və A/B testləri."
+        },
+        {
+          "t": "Analitika və hesabat",
+          "d": "GA4, Meta Pixel, konversiya izləmə və aylıq hesabat — hər manatın hara getdiyi aydın görünür."
+        }
+      ],
+      "pricing": {
+        "p": "Qiymət kanalların sayına və işin həcminə görə formalaşır. Reklam büdcəsi ayrıca, birbaşa platformaya ödənilir və sizin nəzarətinizdə qalır.",
+        "items": [
+          "İdarə olunan kanallar (Google, Meta, TikTok, SEO)",
+          "Aylıq reklam büdcəsinin həcmi",
+          "Açılış səhifəsi və kreativ istehsalı ehtiyacı",
+          "Analitika və CRM inteqrasiyasının mürəkkəbliyi"
+        ]
+      },
+      "faq": [
+        {
+          "q": "Rəqəmsal marketinq agentliyi nə edir?",
+          "a": "Biznesinizin onlayn müştəri qazanmasını idarə edir: strategiya qurur, reklam kampaniyalarını aparır, SEO ilə üzvi trafiki artırır, kontent hazırlayır və nəticələri ölçür. AILoveDigital-da bütün bunlar bir komandadadır."
+        },
+        {
+          "q": "Google reklamı, yoxsa Instagram reklamı?",
+          "a": "Məqsəddən asılıdır. İnsanlar xidmətinizi aktiv axtarırsa, Google axtarış reklamı daha tez müraciət gətirir. Məhsul vizualdırsa və tələb yaratmaq lazımdırsa, Instagram və TikTok daha effektivdir. Çox vaxt ən yaxşı nəticəni ikisinin birləşməsi verir."
+        },
+        {
+          "q": "SEO nəticəsi nə qədər vaxt aparır?",
+          "a": "Texniki düzəlişlərin təsiri bir neçə həftədə görünə bilər, rəqabətli sorğularda sabit mövqe isə adətən 3–6 ay çəkir. SEO uzunmüddətli investisiyadır, reklam isə dərhal trafik verir — ona görə çox vaxt ikisini paralel aparırıq."
+        },
+        {
+          "q": "Nəticəni necə ölçürsünüz?",
+          "a": "Saytda və reklam kabinetlərində konversiya izləmə qururuq: zəng, forma, WhatsApp müraciəti, satış. Aylıq hesabatda bəyənmələri yox, müraciətlərin sayını və bir müştərinin qiymətini göstəririk."
+        },
+        {
+          "q": "Minimum reklam büdcəsi nə qədərdir?",
+          "a": "Sabit minimum yoxdur, amma büdcə test üçün kifayət etməlidir. İlkin görüşdə hədəflərinizə uyğun real büdcəni hesablayıb təqdim edirik."
+        }
+      ]
+    },
+    "web": {
+      "name": "Sayt hazırlanması",
+      "short": "Korporativ saytlar, e-ticarət və veb platformalar — sürətli, SEO-ya hazır, sizə məxsus.",
+      "serviceType": "Sayt hazırlanması",
+      "title": "Sayt hazırlanması Bakıda: korporativ və e-ticarət | AILoveDigital",
+      "description": "Bakıda sayt hazırlanması: korporativ sayt, e-ticarət, portal və veb platformalar. Sürətli, mobil uyğun və SEO-ya hazır; kod və idarəetmə paneli sizindir.",
+      "h1": "Bakıda sayt hazırlanması",
+      "lead": "Korporativ saytdan mürəkkəb veb platformaya qədər — sürətli, Google üçün hazır və komandanızın özünün idarə edə biləcəyi saytlar hazırlayırıq.",
+      "intro": [
+        "Sayt ən çox işləyən satış əməkdaşınızdır: 24 saat açıqdır və müştərinin sizinlə ilk tanışlığı çox vaxt orada baş verir. Ona görə dizayndan əvvəl məqsədi müəyyən edirik: sayt kimin üçündür, ziyarətçi hansı addımı atmalıdır (zəng, sifariş, müraciət) və nəticə necə ölçüləcək.",
+        "Saytları Next.js, React və .NET kimi müasir texnologiyalarla qururuq. Nəticədə sayt sürətli açılır, Google tərəfindən düzgün indekslənir və mobil cihazlarda rahat işləyir. Kod, domen və hostinq sizin adınıza olur, məzmunu isə idarəetmə paneli ilə proqramçısız dəyişə bilərsiniz."
+      ],
+      "includes": [
+        {
+          "t": "Korporativ saytlar",
+          "d": "Şirkətinizi, xidmətlərinizi və işlərinizi təqdim edən və müraciət gətirən saytlar."
+        },
+        {
+          "t": "E-ticarət",
+          "d": "Məhsul kataloqu, səbət, onlayn ödəniş, çatdırılma və sifarişlərin idarəsi."
+        },
+        {
+          "t": "Veb platformalar və portallar",
+          "d": "Şəxsi kabinet, istifadəçi rolları, CRM və ERP inteqrasiyası olan mürəkkəb sistemlər."
+        },
+        {
+          "t": "UI/UX dizayn",
+          "d": "İstifadəçi ssenariləri, prototip və brendinizə uyğun unikal dizayn — hazır şablon yox."
+        },
+        {
+          "t": "SEO-ya hazır texniki baza",
+          "d": "Sürət, mobil uyğunluq, strukturlaşdırılmış məlumat və sitemap — Google üçün ilk gündən."
+        },
+        {
+          "t": "İdarəetmə paneli və dəstək",
+          "d": "Məzmunu özünüz dəyişirsiniz; sayt istifadəyə veriləndən sonra texniki dəstək və inkişaf."
+        }
+      ],
+      "pricing": {
+        "p": "Saytın qiyməti səhifələrin sayından, funksionallıqdan və inteqrasiyalardan asılıdır. İlkin görüşdən sonra əhatəni, müddəti və qiyməti yazılı şəkildə təqdim edirik.",
+        "items": [
+          "Saytın növü: korporativ, e-ticarət və ya platforma",
+          "Səhifələrin sayı və unikal dizayn tələbi",
+          "Onlayn ödəniş, CRM, 1C və digər inteqrasiyalar",
+          "Dil versiyaları (azərbaycan, rus, ingilis)"
+        ]
+      },
+      "faq": [
+        {
+          "q": "Sayt hazırlanması nə qədər vaxt aparır?",
+          "a": "Müddət saytın həcmindən asılıdır: korporativ sayt e-ticarət saytından və ya veb platformadan xeyli tez hazır olur. Dəqiq qrafiki ilkin görüşdən sonra yazılı planda veririk. Böyük layihələrdə ilk işlək versiyanı təxminən iki həftəyə göstəririk."
+        },
+        {
+          "q": "Saytın kodu və domeni kimə məxsus olacaq?",
+          "a": "Sizə. Kod, domen, hostinq və bütün girişlər biznesinizin adına olur və sənədləşdirmə ilə birlikdə təhvil verilir."
+        },
+        {
+          "q": "Sayt Google-da çıxacaqmı?",
+          "a": "Hər sayt texniki SEO bazası ilə hazırlanır: sürət, mobil uyğunluq, düzgün başlıqlar, strukturlaşdırılmış məlumat və sitemap. Rəqabətli sorğularda yüksək mövqe üçün əlavə SEO və kontent işi lazımdır — bunu da təklif edirik."
+        },
+        {
+          "q": "Saytı sonra özümüz idarə edə bilərikmi?",
+          "a": "Bəli. Mətnləri, şəkilləri və məhsulları proqramçısız dəyişmək üçün idarəetmə paneli qururuq və komandanıza ondan necə istifadə etməyi göstəririk."
+        },
+        {
+          "q": "Sayt neçə dildə ola bilər?",
+          "a": "İstədiyiniz qədər. Azərbaycanda adətən azərbaycan, rus və ingilis dilləri seçilir; hər dil versiyası Google üçün ayrıca və düzgün qurulur."
+        },
+        {
+          "q": "Mövcud saytımızı yeniləyirsinizmi?",
+          "a": "Bəli. Mövcud saytın texniki və SEO auditini edir, sonra yenidən dizayn, sürət optimallaşdırması və ya yeni platformaya köçürmə təklif edirik."
+        }
+      ]
+    },
+    "mobile": {
+      "name": "Mobil tətbiq hazırlanması",
+      "short": "iOS və Android tətbiqləri: dizayn, mobil tətbiq, backend və admin panel bir komandada.",
+      "serviceType": "Mobil tətbiq hazırlanması",
+      "title": "Mobil tətbiq hazırlanması — iOS və Android | AILoveDigital",
+      "description": "Bakıda mobil tətbiq hazırlanması: iOS və Android, React Native, Flutter və native. İdeyadan App Store və Google Play-ə qədər, backend və admin panel daxil.",
+      "h1": "Mobil tətbiq hazırlanması — iOS və Android",
+      "lead": "İdeyanı App Store və Google Play-də işləyən tətbiqə çeviririk: dizayn, mobil tətbiq, backend və admin panel bir komandada.",
+      "intro": [
+        "Uğurlu tətbiq funksiyaların çoxluğu ilə yox, istifadəçinin bir problemini rahat həll etməsi ilə başlayır. Ona görə əvvəl əsas ssenarini müəyyənləşdirir, ilk versiyanı (MVP) tez buraxır və real istifadəçi rəyinə görə inkişaf etdiririk.",
+        "Portfoliomuzda marketpleys, fintex, təhlükəsizlik və parkinq tətbiqləri var — React Native və Flutter ilə, həmçinin Swift və Kotlin ilə native həllər. Tətbiqin arxasındakı server hissəsini, admin paneli və inteqrasiyaları da özümüz qururuq."
+      ],
+      "includes": [
+        {
+          "t": "iOS və Android",
+          "d": "Bir kod bazası ilə hər iki platforma (React Native, Flutter) və ya lazım olduqda native (Swift, Kotlin)."
+        },
+        {
+          "t": "UI/UX dizayn",
+          "d": "İstifadəçi ssenariləri, prototip və platformaların qaydalarına uyğun dizayn."
+        },
+        {
+          "t": "Backend və admin panel",
+          "d": "Server, verilənlər bazası, istifadəçi rolları, real vaxt bildirişləri və idarəetmə paneli."
+        },
+        {
+          "t": "Ödəniş və inteqrasiyalar",
+          "d": "Onlayn ödəniş, xəritələr, SMS/OTP, CRM və digər sistemlərlə inteqrasiya."
+        },
+        {
+          "t": "Mağazalarda yayım",
+          "d": "App Store və Google Play-də yerləşdirmə, yoxlamadan keçmə və versiya yeniləmələri."
+        },
+        {
+          "t": "Dəstək və inkişaf",
+          "d": "Analitika, xəta monitorinqi və yeni funksiyalar — tətbiq istifadəyə veriləndən sonra da."
+        }
+      ],
+      "pricing": {
+        "p": "Tətbiqin qiyməti ekranların sayından, platformalardan və backend-in mürəkkəbliyindən asılıdır. Ən sərfəli yol adətən əsas funksiyalarla MVP-dən başlamaqdır.",
+        "items": [
+          "Platformalar: yalnız Android, yalnız iOS və ya hər ikisi",
+          "Ekranların və istifadəçi rollarının sayı",
+          "Ödəniş, xəritə, çat kimi inteqrasiyalar",
+          "Backend və admin panel tələbi"
+        ]
+      },
+      "faq": [
+        {
+          "q": "Mobil tətbiq hazırlamaq nə qədər vaxt aparır?",
+          "a": "Əsas funksiyaları olan ilk versiya (MVP) təxminən iki həftədən başlayaraq hazırlana bilər; tam funksional marketpleys və ya fintex tətbiqi isə bir neçə ay çəkir. Dəqiq müddəti ilkin görüşdən sonra yazılı planda göstəririk."
+        },
+        {
+          "q": "React Native, Flutter, yoxsa native?",
+          "a": "Çox layihə üçün React Native və ya Flutter idealdır: bir kod bazası, iki platforma, daha tez və sərfəli. Kamera, təhlükəsizlik və ya yüksək performans tələb edən hallarda native (Swift, Kotlin) seçirik."
+        },
+        {
+          "q": "Tətbiqi App Store və Google Play-də yerləşdirirsiniz?",
+          "a": "Bəli. Mağaza səhifəsinin hazırlanması, yoxlamadan keçmə və sonrakı yeniləmələr xidmətə daxildir."
+        },
+        {
+          "q": "Tətbiqin mənbə kodu kimə məxsusdur?",
+          "a": "Sizə. Kod, serverlər və mağaza hesabları biznesinizin adına olur və sənədləşdirmə ilə təhvil verilir."
+        },
+        {
+          "q": "Tətbiq istifadəyə veriləndən sonra dəstək verirsiniz?",
+          "a": "Bəli. Xəta monitorinqi, yeni iOS və Android versiyalarına uyğunlaşma və yeni funksiyalar üçün davamlı dəstək təklif edirik."
+        }
+      ]
+    },
+    "ai": {
+      "name": "Süni intellekt və avtomatlaşdırma",
+      "short": "AI çatbotlar, AI agentlər və iş proseslərinin avtomatlaşdırılması — qənaət edilən saatlar hesabatda.",
+      "serviceType": "Süni intellektlə biznes avtomatlaşdırması",
+      "title": "Süni intellektlə avtomatlaşdırma və AI agentlər | AILoveDigital",
+      "description": "Biznes üçün süni intellekt: WhatsApp və Instagram üçün AI çatbotlar, AI agentlər, CRM və ERP inteqrasiyası, iş proseslərinin avtomatlaşdırılması. Bakı.",
+      "h1": "Biznes üçün süni intellekt və avtomatlaşdırma",
+      "lead": "Təkrarlanan işləri tapır və süni intellektlə avtomatlaşdırırıq — müştəri mesajlarından sənəd emalına qədər. Qənaət edilən saatlar hesabatda qeyd olunur.",
+      "intro": [
+        "Süni intellekt hər problemin həlli deyil, amma düzgün yerdə tətbiq olunanda komandanın həftəlik onlarla saatını azad edir. İşə proseslərinizi xəritələməklə başlayırıq: hansı iş təkrarlanır, harada səhv baş verir, hansı sistemlər bir-biri ilə əlaqəsizdir.",
+        "Öz süni intellekt məhsullarımızı da hazırlayırıq: Dailoq — Azərbaycan üçün yaradılmış müştəri yazışmaları köməkçisi, MeetOS — görüş zəkası platforması, həmçinin RootOS və AgentOS. Yəni müştərilərə təklif etdiyimiz texnologiyanı əvvəlcə öz məhsullarımızda sınayırıq."
+      ],
+      "includes": [
+        {
+          "t": "AI çatbot və köməkçilər",
+          "d": "WhatsApp, Instagram, Telegram və saytda müştəri suallarına sənədləriniz əsasında 24/7 cavab."
+        },
+        {
+          "t": "AI agentlər",
+          "d": "Sifariş qəbulu, müraciətlərin bölüşdürülməsi, hesabat hazırlanması kimi çoxaddımlı işləri yerinə yetirən agentlər."
+        },
+        {
+          "t": "İş proseslərinin avtomatlaşdırılması",
+          "d": "Əl ilə köçürülən məlumatları, təsdiq axınlarını və bildirişləri avtomatlaşdırırıq."
+        },
+        {
+          "t": "CRM və ERP inteqrasiyası",
+          "d": "Mövcud sistemlərinizi (CRM, 1C, ERP, Google Sheets) bir-biri ilə əlaqələndiririk."
+        },
+        {
+          "t": "Sənəd emalı (OCR)",
+          "d": "Qaimə, faktura və müqavilələrdən məlumatın avtomatik oxunması və sistemə yazılması."
+        },
+        {
+          "t": "Daxili alətlər və analitika",
+          "d": "Komanda üçün xüsusi panellər və süni intellektə sual verməklə hazırlanan hesabatlar."
+        }
+      ],
+      "pricing": {
+        "p": "Qiymət avtomatlaşdırılan prosesin mürəkkəbliyindən və inteqrasiyaların sayından asılıdır. Çox vaxt bir prosesdən başlayıb nəticəni ölçmək, sonra genişləndirmək ən sərfəli yoldur.",
+        "items": [
+          "Avtomatlaşdırılan proseslərin sayı və mürəkkəbliyi",
+          "Qoşulacaq sistemlər (CRM, ERP, mesajlaşma kanalları)",
+          "Süni intellekt modellərinin istifadə həcmi",
+          "Təhlükəsizlik və məlumatların saxlanması tələbləri"
+        ]
+      },
+      "faq": [
+        {
+          "q": "Süni intellekt biznesimə necə kömək edə bilər?",
+          "a": "Ən çox nəticə verən sahələr: müştəri suallarına avtomatik cavab, müraciətlərin emalı, sənədlərdən məlumat çıxarılması, hesabatların hazırlanması və sistemlər arasında məlumat ötürülməsi. İlkin görüşdə sizin prosesləriniz üçün real imkanları göstəririk."
+        },
+        {
+          "q": "AI çatbot Azərbaycan dilində cavab verə bilərmi?",
+          "a": "Bəli. Məsələn, Dailoq azərbaycan, rus və ingilis dillərində, qarışıq dilli mesajlarda da cavab verir, biznesin öz sənədlərinə əsaslanır və çətin söhbətləri operatora ötürür."
+        },
+        {
+          "q": "Məlumatlarımız təhlükəsiz olacaqmı?",
+          "a": "Məlumatlara giriş rollarla məhdudlaşdırılır, şifrələnir və yalnız lazım olan sistemlərə ötürülür. Tələb olunarsa, həlli sizin serverinizdə də yerləşdirə bilərik."
+        },
+        {
+          "q": "Avtomatlaşdırma işçiləri əvəz edəcəkmi?",
+          "a": "Məqsəd insanları əvəz etmək deyil, onları təkrarlanan işdən azad etməkdir. Komanda vaxtını müştəriyə və qərar tələb edən işlərə sərf edir."
+        },
+        {
+          "q": "Nəticəni necə ölçürsünüz?",
+          "a": "Başlamazdan əvvəl prosesin indiki vaxtını və xərcini ölçürük, avtomatlaşdırmadan sonra qənaət edilən saatları və xətaların azalmasını hesabatda göstəririk."
+        }
+      ]
+    },
+    "training": {
+      "name": "Süni intellekt və IT təlimləri",
+      "short": "Komandalar üçün korporativ AI təlimləri, proqramlaşdırma, marketinq və dizayn kursları.",
+      "serviceType": "Süni intellekt və IT təlimləri",
+      "title": "Süni intellekt və IT təlimləri Bakıda | AILoveDigital",
+      "description": "Bakıda süni intellekt və IT təlimləri: komandalar üçün korporativ AI təlimləri, proqramlaşdırma, marketinq və dizayn kursları, mentorluq və real layihələr.",
+      "h1": "Süni intellekt və IT təlimləri",
+      "lead": "Komandanızı artıq istifadə etdiyi və etməli olduğu alətlərlə daha sürətli edirik — real iş prosesləri üzərində, praktiki tapşırıqlarla.",
+      "intro": [
+        "Süni intellekt alətləri hər gün yenilənir, amma komandaların çoxu onlardan yalnız səthi istifadə edir. Təlimlərimiz nəzəri mühazirə deyil: iştirakçılar öz iş tapşırıqlarını — hesabat, məzmun, analiz, kod — süni intellektlə necə daha tez görəcəklərini elə təlim zamanı tətbiq edirlər.",
+        "AILoveDigital akademiyasında proqramlaşdırma, marketinq, dizayn və süni intellekt üzrə kurslar keçirilir; bu günə qədər 300-dən çox məzun hazırlanıb. Korporativ müştərilər üçün proqramı komandanın səviyyəsinə və sahəsinə uyğunlaşdırırıq."
+      ],
+      "includes": [
+        {
+          "t": "Korporativ AI təlimləri",
+          "d": "ChatGPT, Claude, Gemini və digər alətlərlə praktiki iş — sizin iş proseslərinizə uyğun."
+        },
+        {
+          "t": "Rəhbərlər üçün AI strategiyası",
+          "d": "Süni intellektin biznesə harada dəyər qatacağını anlamaq və düzgün qərar vermək üçün seminar."
+        },
+        {
+          "t": "Proqramlaşdırma kursları",
+          "d": "Veb və mobil proqramlaşdırma — real layihələr üzərində, mentorluqla."
+        },
+        {
+          "t": "Marketinq və dizayn kursları",
+          "d": "SMM, rəqəmsal reklam, kontent və dizayn — praktiki tapşırıqlarla."
+        },
+        {
+          "t": "Mentorluq və real layihələr",
+          "d": "İştirakçılar real tapşırıqlar üzərində işləyir və nəticəni portfoliosuna əlavə edir."
+        },
+        {
+          "t": "Ofisdə və ya onlayn",
+          "d": "Təlimlər ofisimizdə, şirkətinizdə və ya onlayn formatda keçirilir."
+        }
+      ],
+      "pricing": {
+        "p": "Qiymət iştirakçıların sayından, təlimin müddətindən və formatından asılıdır. Korporativ proqramlar komandanın ehtiyacına görə hazırlanır.",
+        "items": [
+          "İştirakçıların sayı",
+          "Təlimin müddəti və saatların sayı",
+          "Format: bizim ofisdə, şirkətinizdə və ya onlayn",
+          "Proqramın fərdiləşdirilməsi (sahənizə uyğun tapşırıqlar)"
+        ]
+      },
+      "faq": [
+        {
+          "q": "Süni intellekt təlimi kimlər üçündür?",
+          "a": "Rəhbərlər, marketinq, satış, maliyyə, HR və IT komandaları üçün. Texniki bilik tələb olunmur — proqram iştirakçıların səviyyəsinə uyğunlaşdırılır."
+        },
+        {
+          "q": "Təlim hansı dildə keçirilir?",
+          "a": "Azərbaycan, rus və ya ingilis dilində — komandanız üçün hansı rahatdırsa."
+        },
+        {
+          "q": "Təlimdən sonra nə dəyişəcək?",
+          "a": "İştirakçılar gündəlik tapşırıqlarını süni intellektlə necə həll edəcəklərini təlim zamanı tətbiq edir və hazır iş axınları, şablonlarla ayrılırlar."
+        },
+        {
+          "q": "Korporativ təlimi şirkətimizdə keçirə bilərsinizmi?",
+          "a": "Bəli. Təlimləri şirkətinizin ofisində, bizim ofisimizdə və ya onlayn keçiririk."
+        },
+        {
+          "q": "Fərdi şəxslər kurslara qatıla bilərmi?",
+          "a": "Akademiyamızın kursları barədə — növbəti qruplar, proqram və şərtlər — məlumat almaq üçün bizimlə əlaqə saxlayın."
+        }
+      ]
+    },
+    "consulting": {
+      "name": "IT konsaltinq və rəqəmsal transformasiya",
+      "short": "IT audit, texnologiya strategiyası və investisiyadan əvvəl aydın plan.",
+      "serviceType": "IT konsaltinq",
+      "title": "IT konsaltinq və rəqəmsal transformasiya Bakıda | AILoveDigital",
+      "description": "Texnologiyaya investisiyadan əvvəl düzgün istiqamət: IT audit, texnologiya strategiyası, rəqəmsal transformasiya planı və texniki rəhbərlik. Bakı.",
+      "h1": "IT konsaltinq və rəqəmsal transformasiya",
+      "lead": "Texnologiyaya pul xərcləməzdən əvvəl düzgün qərar: hazırkı vəziyyəti qiymətləndirir, strategiya qurur və qərarlarınıza əsas olacaq aydın plan veririk.",
+      "intro": [
+        "Bir çox şirkət yanlış sistemə, lazımsız funksiyaya və ya vaxtından əvvəl başlanan böyük layihəyə investisiya etdiyi üçün pul itirir. Konsaltinqin məqsədi bunun qarşısını almaqdır: əvvəl biznes problemini anlayırıq, sonra texnologiyanı seçirik — əksinə yox.",
+        "Bəzən düzgün cavab «hələ yox»dur. Biz texnologiya satmırıq; ehtiyac yoxdursa, bunu açıq deyirik. Plan hazır olandan sonra onu istədiyiniz komanda ilə, o cümlədən bizimlə həyata keçirə bilərsiniz."
+      ],
+      "includes": [
+        {
+          "t": "IT və texniki audit",
+          "d": "Mövcud sistemlərin, kodun, infrastrukturun və təhlükəsizliyin qiymətləndirilməsi."
+        },
+        {
+          "t": "Texnologiya strategiyası",
+          "d": "Hansı sistemlərin lazım olduğu, nəyin hazır alınacağı və nəyin sifarişlə hazırlanacağı."
+        },
+        {
+          "t": "Rəqəmsal transformasiya",
+          "d": "Kağız və Excel əsaslı proseslərin rəqəmsal sistemlərə mərhələli keçidi."
+        },
+        {
+          "t": "Süni intellektə hazırlıq",
+          "d": "Süni intellektin biznesinizdə harada real dəyər yaradacağının qiymətləndirilməsi."
+        },
+        {
+          "t": "Layihə planı və büdcə",
+          "d": "Əhatə, mərhələlər, müddət və büdcə ilə aydın yol xəritəsi."
+        },
+        {
+          "t": "Texniki rəhbərlik",
+          "d": "Daxili komandanız və ya digər podratçılar üçün texniki nəzarət və məsləhət."
+        }
+      ],
+      "pricing": {
+        "p": "Konsaltinq ya sabit qiymətli audit, ya da saatlıq və ya aylıq məsləhət formatında aparılır. Əhatəni ilkin görüşdə müəyyənləşdiririk.",
+        "items": [
+          "Şirkətin ölçüsü və sistemlərin sayı",
+          "Auditin dərinliyi (kod, infrastruktur, təhlükəsizlik)",
+          "Bir dəfəlik audit və ya davamlı texniki rəhbərlik",
+          "Hesabatın və yol xəritəsinin detallılığı"
+        ]
+      },
+      "faq": [
+        {
+          "q": "IT konsaltinq nə vaxt lazımdır?",
+          "a": "Yeni sistem almadan və ya hazırlatmadan əvvəl, mövcud sistemlər yavaşladıqda və ya bir-biri ilə işləmədikdə, böyümə planlarında texnologiyanın rolu aydın olmadıqda."
+        },
+        {
+          "q": "Auditin nəticəsində nə təhvil verirsiniz?",
+          "a": "Tapılan problemlər, risklər və prioritetləşdirilmiş tövsiyələrlə yazılı hesabat, həmçinin əhatə, müddət və büdcə ilə yol xəritəsi."
+        },
+        {
+          "q": "Planı başqa komanda ilə həyata keçirə bilərikmi?",
+          "a": "Bəli. Plan sizə məxsusdur; onu daxili komandanızla, başqa podratçı ilə və ya bizimlə həyata keçirə bilərsiniz."
+        },
+        {
+          "q": "Rəqəmsal transformasiya nədən başlayır?",
+          "a": "Ən çox vaxt itirilən və ya ən çox səhv baş verən bir prosesdən. Kiçik, ölçülə bilən addımla başlayıb nəticəni gördükdən sonra genişləndirmək ən etibarlı yoldur."
+        }
+      ]
+    }
+  }
+}

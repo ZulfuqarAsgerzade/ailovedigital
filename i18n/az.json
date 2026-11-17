@@ -1,8 +1,8 @@
 {
   "_note": "ui/meta: page chrome and meta tags. home: [English fragment in index.html, translation] — applied to build /az/index.html; every English fragment must still exist in index.html or the build fails.",
   "meta": {
-    "title": "AILoveDigital — Süni intellekt, texnologiya və biznes artımı",
-    "description": "AILoveDigital Bakıda yerləşən texnologiya və kreativ studiyadır. Süni intellekt əsasında rəqəmsal məhsullar yaradır, onların auditoriyasını böyüdür və onları idarə edəcək komandaları yetişdiririk.",
+    "title": "AILoveDigital — Bakıda IT və rəqəmsal marketinq agentliyi",
+    "description": "Bakıda IT və rəqəmsal marketinq studiyası: sayt və mobil tətbiq hazırlanması, süni intellektlə avtomatlaşdırma, SMM və reklam — hamısı bir komandada.",
     "tagline": "Və bizneslərin də bunu sevməsini təmin edirik.",
     "slogan": "Məntiqlə qurulub. Sevgiylə tamamlanıb.",
     "ogAlt": "AILoveDigital — piksel ürək loqosu və «AI, Technology & Business Growth» şüarı"
@@ -57,7 +57,7 @@
     "ctaReal": "Gəlin onu reallığa çevirək.",
     "allProjects": "Bütün layihələr →",
     "allProjectsLabel": "Bütün layihələr",
-    "hubTitle": "Layihələr — {n} rəqəmsal məhsul | {name}",
+    "hubTitle": "Portfolio: {n} sayt, mobil tətbiq və AI layihəsi | {name}",
     "hubDescription": "{name} komandasının hazırladığı {n} məhsul: {scopes} — mobil tətbiqlər, veb platformalar və süni intellekt alətləri. Hər birinin problemi, yanaşması və nəticəsi ilə.",
     "selectedWork": "Seçilmiş işlər",
     "hubH1": "Sevgiylə <span class=\"ald-dot\">♥</span><br>yaratdıqlarımız<span class=\"ald-dot\">.</span>",
@@ -486,14 +486,6 @@
       "ald-foot-h\">Əlaqə saxlayın<"
     ],
     [
-      "<a href=\"#services\">Build</a><a href=\"#services\">Automate</a><a href=\"#services\">Grow</a><a href=\"#services\">Teach</a><a href=\"#services\">Think</a>",
-      "<a href=\"#services\">İnkişaf</a><a href=\"#services\">Avtomatlaşdırma</a><a href=\"#services\">Böyümə</a><a href=\"#services\">Tədris</a><a href=\"#services\">Strategiya</a>"
-    ],
-    [
-      "<a href=\"#work\">Work</a><a href=\"#process\">Process</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a><a href=\"./privacy/\">Privacy Policy</a>",
-      "<a href=\"#work\">Layihələr</a><a href=\"#process\">Proses</a><a href=\"#about\">Haqqımızda</a><a href=\"#contact\">Əlaqə</a><a href=\"./privacy/\">Məxfilik siyasəti</a>"
-    ],
-    [
       "<span>Built with logic. Finished with love.</span>",
       "<span>Məntiqlə qurulub. Sevgiylə tamamlanıb.</span>"
     ],
@@ -512,7 +504,7 @@
   ],
   "privacy": {
     "title": "Məxfilik siyasəti | AILoveDigital",
-    "description": "AILoveDigital ailovedigital.com saytında fərdi məlumatları necə emal edir: əlaqə forması ilə nə alırıq, məlumatları kim alır, nə qədər saxlayırıq və hüquqlarınız nələrdir.",
+    "description": "AILoveDigital fərdi məlumatları necə emal edir: əlaqə forması ilə nə alırıq, kim alır, nə qədər saxlayırıq və hüquqlarınız nələrdir.",
     "eyebrow": "Hüquqi məlumat",
     "h1": "Məxfilik siyasəti",
     "lead": "ailovedigital.com saytında fərdi məlumatları necə emal edirik.",

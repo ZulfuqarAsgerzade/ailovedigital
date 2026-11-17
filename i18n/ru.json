@@ -1,8 +1,8 @@
 {
   "_note": "ui/meta: page chrome and meta tags. home: [English fragment in index.html, translation] — applied to build /ru/index.html; every English fragment must still exist in index.html or the build fails.",
   "meta": {
-    "title": "AILoveDigital — ИИ, технологии и рост бизнеса",
-    "description": "AILoveDigital — технологическая и креативная студия из Баку. Создаём цифровые продукты с ИИ в основе, растим их аудиторию и обучаем команды, которые ими управляют.",
+    "title": "AILoveDigital — IT и digital-маркетинг агентство в Баку",
+    "description": "IT и digital-маркетинг студия в Баку: разработка сайтов и мобильных приложений, автоматизация на ИИ, SMM и реклама — всё в одной команде.",
     "tagline": "И делаем так, чтобы бизнес тоже это полюбил.",
     "slogan": "Построено на логике. Сделано с любовью.",
     "ogAlt": "AILoveDigital — пиксельное сердце и слоган «AI, Technology & Business Growth»"
@@ -57,7 +57,7 @@
     "ctaReal": "Давайте воплотим её.",
     "allProjects": "Все проекты →",
     "allProjectsLabel": "Все проекты",
-    "hubTitle": "Проекты — {n} цифровых продуктов | {name}",
+    "hubTitle": "Портфолио: {n} сайтов, приложений и ИИ-проектов | {name}",
     "hubDescription": "{n} продуктов от {name}: {scopes} — мобильные приложения, веб-платформы и ИИ-инструменты. У каждого — задача, подход и результат.",
     "selectedWork": "Избранные работы",
     "hubH1": "Сделано с <span class=\"ald-dot\">♥</span><span class=\"ald-dot\">.</span>",
@@ -490,14 +490,6 @@
       "ald-foot-h\">Связаться<"
     ],
     [
-      "<a href=\"#services\">Build</a><a href=\"#services\">Automate</a><a href=\"#services\">Grow</a><a href=\"#services\">Teach</a><a href=\"#services\">Think</a>",
-      "<a href=\"#services\">Разработка</a><a href=\"#services\">Автоматизация</a><a href=\"#services\">Рост</a><a href=\"#services\">Обучение</a><a href=\"#services\">Стратегия</a>"
-    ],
-    [
-      "<a href=\"#work\">Work</a><a href=\"#process\">Process</a><a href=\"#about\">About</a><a href=\"#contact\">Contact</a><a href=\"./privacy/\">Privacy Policy</a>",
-      "<a href=\"#work\">Проекты</a><a href=\"#process\">Процесс</a><a href=\"#about\">О нас</a><a href=\"#contact\">Контакты</a><a href=\"./privacy/\">Политика конфиденциальности</a>"
-    ],
-    [
       "<span>Built with logic. Finished with love.</span>",
       "<span>Построено на логике. Сделано с любовью.</span>"
     ],
@@ -516,7 +508,7 @@
   ],
   "privacy": {
     "title": "Политика конфиденциальности | AILoveDigital",
-    "description": "Как AILoveDigital обрабатывает персональные данные на ailovedigital.com: что мы получаем через контактную форму, кто получает эти данные, сколько мы их храним и какие у вас права.",
+    "description": "Как AILoveDigital обрабатывает персональные данные: что мы получаем через форму, кто их получает, сколько храним и какие у вас права.",
     "eyebrow": "Правовая информация",
     "h1": "Политика конфиденциальности",
     "lead": "Как мы обрабатываем персональные данные на сайте ailovedigital.com.",

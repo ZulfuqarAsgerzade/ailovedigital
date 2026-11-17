@@ -1,0 +1,343 @@
+{
+  "eyebrow": "SMM packages · 2026",
+  "h1Top": "SMM services in Baku",
+  "h1Big": "From a like to a customer",
+  "lead": "Content, ads and AI replies — from one team, with results you can measure. We don't sell SMM as a separate service; we build it as part of your sales system: attention becomes enquiries, enquiries become customers.",
+  "ctaAudit": "Get a free SMM audit",
+  "ctaPackages": "See the packages",
+  "waAudit": "Hello! I'd like a free SMM audit.",
+  "waPackage": "Hello! I'm interested in the {pkg} SMM package.",
+  "stats": [
+    {
+      "v": "850",
+      "u": "AZN",
+      "l": "packages from, per month"
+    },
+    {
+      "v": "3",
+      "u": "packages",
+      "l": "START, GROWTH, PRO"
+    },
+    {
+      "v": "24/7",
+      "u": "",
+      "l": "replies with the Dailoq AI assistant"
+    },
+    {
+      "v": "0",
+      "u": "AZN",
+      "l": "the first audit is free"
+    }
+  ],
+  "pillars": {
+    "eyebrow": "Who we are",
+    "h": "A technology and creative studio",
+    "lead": "Three jobs in one team: we grow your audience, automate the replies and, when you need it, build the website or the app.",
+    "items": [
+      {
+        "k": "Grow",
+        "t": "Grow",
+        "d": "SMM, content production and Meta ads. We turn attention into enquiries."
+      },
+      {
+        "k": "Automate",
+        "t": "Automate",
+        "d": "Instant replies on Instagram and WhatsApp with Dailoq, our own AI product.",
+        "link": "work/dailoq/"
+      },
+      {
+        "k": "Build",
+        "t": "Build",
+        "d": "Campaign landing pages, websites and mobile apps — from the same team when you need them."
+      }
+    ]
+  },
+  "chain": {
+    "eyebrow": "The difference",
+    "h": "We don't stop at the ad — we go all the way to the sale",
+    "items": [
+      {
+        "t": "Content",
+        "d": "Reels, design and stories tied to a sales strategy."
+      },
+      {
+        "t": "Ads",
+        "d": "The right audience and creative testing."
+      },
+      {
+        "t": "AI replies",
+        "d": "Dailoq answers messages instantly, day and night."
+      },
+      {
+        "t": "Lead log",
+        "d": "Every enquiry lands in a sheet — none get lost."
+      },
+      {
+        "t": "Report",
+        "d": "How many enquiries, at what cost, and how many became sales."
+      }
+    ],
+    "stop": "A typical SMM agency stops here",
+    "go": "AILoveDigital keeps going to here"
+  },
+  "packages": {
+    "eyebrow": "Packages",
+    "h": "Three packages, one goal: customers",
+    "lead": "Prices are monthly and public. We pick the right package together after the free audit.",
+    "recommended": "Recommended",
+    "perMonth": "AZN / month",
+    "withoutD": "without Dailoq",
+    "withD": "with Dailoq",
+    "dNote": "2,000 Dailoq messages a month, 1 channel",
+    "noD": "Dailoq can't be added to this package",
+    "choose": "Choose this package",
+    "adNote": "The ad budget is not included in the package price — you pay Meta directly with your own card.",
+    "items": {
+      "start": {
+        "tag": "For building visibility",
+        "features": [
+          "Instagram + Facebook",
+          "12 posts / month (6 Reels)",
+          "1 story a day",
+          "2 shoots a month",
+          "Meta ads management",
+          "Monthly report"
+        ]
+      },
+      "growth": {
+        "tag": "For a steady flow of enquiries",
+        "features": [
+          "Instagram + Facebook + TikTok",
+          "20 posts / month (10 Reels)",
+          "3 stories a day",
+          "4 shoots a month",
+          "Ads + creative testing",
+          "Monthly report"
+        ]
+      },
+      "pro": {
+        "tag": "For a complete sales system",
+        "features": [
+          "Instagram + Facebook + TikTok",
+          "30 posts / month (15 Reels)",
+          "5 stories a day",
+          "4 shoots a month",
+          "Ads + creative testing",
+          "Lead sheet + weekly report"
+        ]
+      }
+    }
+  },
+  "included": {
+    "eyebrow": "In every package",
+    "h": "What every package includes",
+    "items": [
+      {
+        "t": "Audit and strategy",
+        "d": "Competitor, audience and message analysis."
+      },
+      {
+        "t": "Profile setup",
+        "d": "Bio, visual style, story highlight covers."
+      },
+      {
+        "t": "Monthly content plan",
+        "d": "Sent to you for approval in advance."
+      },
+      {
+        "t": "Copy in 2 languages",
+        "d": "Azerbaijani + Russian or English."
+      },
+      {
+        "t": "Professional shoots",
+        "d": "Photo and video, by our own team."
+      },
+      {
+        "t": "Meta ads",
+        "d": "Campaign setup and optimisation."
+      },
+      {
+        "t": "Message scripts",
+        "d": "Ready answers to frequent questions."
+      },
+      {
+        "t": "Monthly report",
+        "d": "Not views — enquiries and results."
+      }
+    ]
+  },
+  "compare": {
+    "eyebrow": "Comparison",
+    "h": "The packages side by side",
+    "rows": {
+      "platforms": "Platforms",
+      "posts": "Posts / month",
+      "reels": "of which Reels",
+      "stories": "Stories",
+      "shoots": "Shoots / month",
+      "ads": "Meta ads management",
+      "report": "Report",
+      "price": "Price — without Dailoq",
+      "priceD": "Price — with Dailoq (2,000 messages)"
+    },
+    "story": "{n} a day",
+    "reports": [
+      "monthly",
+      "monthly",
+      "weekly + cost per lead"
+    ]
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "h": "Some of the accounts we run",
+    "lead": "Brands from very different fields — from medical apparel to cars. Open the accounts and judge the content for yourself.",
+    "view": "View on Instagram",
+    "sectors": {
+      "blanco_medical_apparel": "Medical apparel",
+      "lux_isiqlandirma": "Lighting",
+      "finecup.coffee.roasters": "Coffee roastery",
+      "globalavto.az": "Automotive"
+    },
+    "moreT": "and more brands",
+    "moreD": "Follow all our work and our day-to-day content on our Instagram page.",
+    "moreLink": "@ailovedigital.az"
+  },
+  "who": {
+    "eyebrow": "Who it's for",
+    "h": "Who these packages are for",
+    "items": [
+      {
+        "t": "Small and medium businesses",
+        "d": "Restaurants, clinics, beauty salons, shops, service companies — anyone who expects enquiries from Instagram."
+      },
+      {
+        "t": "B2B and service companies",
+        "d": "Companies that want to earn customer trust on Instagram and Facebook."
+      },
+      {
+        "t": "Personal brands",
+        "d": "Experts, doctors, coaches — people who want to put their name and services forward."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Process",
+    "h": "How we work, in five steps",
+    "items": [
+      {
+        "t": "Audit",
+        "d": "We analyse your accounts, competitors and customers' questions. Free of charge."
+      },
+      {
+        "t": "Strategy",
+        "d": "We agree the target audience, the messages and the monthly content plan."
+      },
+      {
+        "t": "Production",
+        "d": "Shoots, editing, design and copy. Every post comes to you for approval first."
+      },
+      {
+        "t": "Publishing and ads",
+        "d": "Posts, stories, Meta ads and the AI reply flow go live."
+      },
+      {
+        "t": "Measurement",
+        "d": "We look at the numbers, scale what works and change what doesn't."
+      }
+    ]
+  },
+  "measure": {
+    "eyebrow": "Results",
+    "h": "What we measure and how we report",
+    "items": [
+      {
+        "t": "Number of enquiries",
+        "d": "Real enquiries from DMs, WhatsApp, calls and forms."
+      },
+      {
+        "t": "Response time",
+        "d": "Time from a customer's message to the first reply."
+      },
+      {
+        "t": "Cost per enquiry",
+        "d": "Ad spend ÷ number of enquiries."
+      },
+      {
+        "t": "Conversion to sales",
+        "d": "How many enquiries became customers (with your sales data)."
+      }
+    ],
+    "honestT": "No made-up promises.",
+    "honestD": "In the first month we measure your starting numbers; from the second month we set targets together, in numbers. Results also depend on the product, the price and your sales team — we measure our part transparently."
+  },
+  "terms": {
+    "eyebrow": "Transparent terms",
+    "h": "What to know up front",
+    "items": [
+      {
+        "t": "The ad budget is separate",
+        "d": "It is not included in the package price. We set the budget together and you pay Meta directly with your own card."
+      },
+      {
+        "t": "The accounts are yours",
+        "d": "Pages, the ad account and all the content we produce belong to the client."
+      },
+      {
+        "t": "Approval and revisions",
+        "d": "Every post comes to you for approval before publishing; 2 revision rounds per post are included."
+      },
+      {
+        "t": "Contract term",
+        "d": "3 months minimum, then month to month; 30 days' written notice to stop."
+      },
+      {
+        "t": "Payment",
+        "d": "At the start of each month, before the service month."
+      },
+      {
+        "t": "Shoots",
+        "d": "Within Baku. Models, location rental and props, if needed, are agreed in advance."
+      }
+    ]
+  },
+  "addons": {
+    "eyebrow": "Add-ons",
+    "h": "Added when you need them",
+    "items": [
+      {
+        "t": "Campaign landing page",
+        "d": "A one-page sales site for people coming from your ads.",
+        "p": "from 299 AZN",
+        "link": "web"
+      },
+      {
+        "t": "Extra shoot day",
+        "d": "An event or product shoot beyond the shoots in the package.",
+        "p": "by agreement"
+      },
+      {
+        "t": "Google Ads",
+        "d": "Setting up and managing search ads.",
+        "p": "by agreement",
+        "link": "marketing"
+      },
+      {
+        "t": "Dailoq — extra messages",
+        "d": "When the 2,000 Dailoq messages in the package run out the bot pauses; it continues if you want.",
+        "p": "0.15 AZN / message",
+        "link": "ai"
+      },
+      {
+        "t": "Website and mobile app",
+        "d": "A complete digital product for sales and operations.",
+        "p": "quoted per project",
+        "link": "mobile"
+      }
+    ]
+  },
+  "final": {
+    "eyebrow": "Next step",
+    "h": "Let's start with a free SMM audit",
+    "s": "We look at your accounts and your competitors and come back with 3–5 concrete observations and the package that fits you."
+  }
+}

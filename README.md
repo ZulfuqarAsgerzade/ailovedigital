@@ -1,16 +1,23 @@
 # AILoveDigital
 
-One-page marketing site plus a static case-study page for every project.
+Marketing site of AILoveDigital, published as two sites:
+
+- **ailovedigital.az** — Azerbaijani, at the root (the primary market)
+- **ailovedigital.com** — English at the root, Russian under `/ru/`
+
+Both are built into `dist/` and deployed as-is: `dist/ailovedigital.az/` → ailovedigital.az,
+`dist/ailovedigital.com/` → ailovedigital.com.
 
 ```
 index.html              home page (dc-runtime component; the project cards are generated, see below)
-work/                   GENERATED — /work/ hub and /work/<slug>/ case studies (plain HTML, no JS needed to read)
-ru/  az/                GENERATED — the same site in Russian and Azerbaijani (see Languages)
+dist/                   GENERATED — the two sites, ready to upload (never edit by hand)
 data/projects.json      the single source of truth for every project
+data/services*.json     service pages, about and contact: URLs per language + the text in each language
 css/style.css           design tokens + home page      css/case.css   case studies and the /work/ hub
 js/site.js              home glue (scroll/ScrollTrigger fixes, Back-button restore)   js/case.js   case-study behaviour
 js/support.js           vendor runtime — do not edit
-scripts/                build-work.mjs (pages + home data) → build-seo.mjs (head, JSON-LD, sitemap, llms.txt)
+scripts/                build-work.mjs (every page except home) → build-seo.mjs (home pages, sitemap, robots, llms.txt)
+vendor/  assets/fonts/  React and the Geist fonts, self-hosted (no third-party requests)
 tools/covers/           cover composer — draws each project's hero image from its real screens (see below)
 assets/images/work/     <slug>.webp (home card, 800×500) and <slug>/{cover.webp, 01.webp…, og.jpg}
 ```
@@ -35,9 +42,11 @@ or the config in `scripts/lib/site.mjs`. It is idempotent. Never edit `work/**` 
 
 ## Languages
 
-English is served from the root; Russian and Azerbaijani from `/ru/` and `/az/` with the same paths
-(`/ru/work/<slug>/` …). Every page carries `hreflang` alternates (plus `x-default` → English), its own canonical,
-`og:locale` and JSON-LD `inLanguage`; `sitemap.xml` lists every URL with its alternates. The nav's language menu
+Azerbaijani is served from the root of ailovedigital.az; English from the root of ailovedigital.com and Russian
+from its `/ru/`. Service, about and contact pages have translated URLs (`/xidmetler/smm/`, `/services/smm/`,
+`/ru/uslugi/smm/` — see `data/services.json`); case studies keep `/work/<slug>/` everywhere. Every page carries
+`hreflang` alternates across both domains (plus `x-default` → English), its own canonical, `og:locale` and JSON-LD
+`inLanguage`; each site's `sitemap.xml` lists its URLs with alternates and `lastmod` (from git). The nav's language menu
 links to the same page in the other languages. Config lives in `scripts/lib/i18n.mjs`.
 
 - `i18n/<lang>.json` — page chrome (`ui`), meta tags (`meta`) and the home page as `[English fragment, translation]`
@@ -63,6 +72,11 @@ npm run build
 
 ## Deploy notes
 
-- Served from the domain root (`SITE_URL` in `scripts/lib/site.mjs`); pages use directory URLs
-  (`/work/<slug>/`), which every static host serves from `index.html`.
-- After going live: submit `sitemap.xml` in Search Console, then check a case-study URL in the Rich Results Test.
+- Upload the **contents** of `dist/ailovedigital.az/` to the ailovedigital.az web root and of
+  `dist/ailovedigital.com/` to the ailovedigital.com web root (domains: `SITES` in `scripts/lib/site.mjs`).
+  Pages use directory URLs, which every static host serves from `index.html`; each site has its own
+  `404.html`, `robots.txt`, `sitemap.xml`, `llms.txt` and `site.webmanifest`.
+- The root-level `work/`, `ru/`, `az/`, `privacy/`, `404.html`, `sitemap.xml`, `robots.txt`, `llms.txt` are
+  output of the old single-site build and are no longer updated.
+- After going live: submit both sitemaps in Search Console (one property per domain), then check a service
+  URL in the Rich Results Test (FAQ, Breadcrumb, Service).

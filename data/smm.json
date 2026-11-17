@@ -1,0 +1,100 @@
+{
+  "_comment": "SMM packages (source: AILoveDigital_SMM_Paketleri_v4.pdf) and the SMM portfolio. Numbers and prices live here once; the text of the SMM page is in data/smm.<lang>.json. Prices in AZN per month.",
+  "currency": "AZN",
+  "dailoqMessages": 2000,
+  "extraMessagePrice": 0.15,
+  "landingFrom": 299,
+  "packages": [
+    {
+      "key": "start",
+      "name": "START",
+      "platforms": "IG + FB",
+      "posts": 12,
+      "reels": 6,
+      "stories": 1,
+      "shoots": 2,
+      "ads": true,
+      "report": 0,
+      "price": 850,
+      "priceDailoq": null
+    },
+    {
+      "key": "growth",
+      "name": "GROWTH",
+      "featured": true,
+      "platforms": "IG + FB + TikTok",
+      "posts": 20,
+      "reels": 10,
+      "stories": 3,
+      "shoots": 4,
+      "ads": true,
+      "report": 1,
+      "price": 1300,
+      "priceDailoq": 1400
+    },
+    {
+      "key": "pro",
+      "name": "PRO",
+      "platforms": "IG + FB + TikTok",
+      "posts": 30,
+      "reels": 15,
+      "stories": 5,
+      "shoots": 4,
+      "ads": true,
+      "report": 2,
+      "price": 1900,
+      "priceDailoq": 2000
+    }
+  ],
+  "_portfolio": "Instagram accounts we run. Optional images in assets/images/smm/: <handle>-logo.(webp|png|jpg) — square logo, replaces the letter avatar; <handle>.(webp|png|jpg) — portrait profile screenshot (about 4:5), replaces the generated grid.",
+  "portfolio": [
+    {
+      "handle": "blanco_medical_apparel",
+      "name": "Blanco Medical Apparel",
+      "mono": "B",
+      "colors": [
+        "#EAF0F4",
+        "#13304A",
+        "#9DB7CB",
+        "#D4E1EA",
+        "#5C7F9B"
+      ]
+    },
+    {
+      "handle": "lux_isiqlandirma",
+      "name": "Lux İşıqlandırma",
+      "mono": "L",
+      "colors": [
+        "#14110B",
+        "#F2C14E",
+        "#3A2F1A",
+        "#8C6B2A",
+        "#FFE3A1"
+      ]
+    },
+    {
+      "handle": "finecup.coffee.roasters",
+      "name": "Fine Cup Coffee Roasters",
+      "mono": "F",
+      "colors": [
+        "#2A1F17",
+        "#C9D6B4",
+        "#8FA37A",
+        "#5B4332",
+        "#D9A066"
+      ]
+    },
+    {
+      "handle": "globalavto.az",
+      "name": "Global Avto",
+      "mono": "G",
+      "colors": [
+        "#15171A",
+        "#FF304D",
+        "#3B4048",
+        "#8A929C",
+        "#D9DDE2"
+      ]
+    }
+  ]
+}

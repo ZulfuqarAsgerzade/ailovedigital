@@ -1,0 +1,15 @@
+{
+  "_note": "Structure of the service, about and contact pages: URL per language and the case studies each service links to (slugs from projects.json). Text lives in data/services.<lang>.json. A language missing from a path has no such page.",
+  "hub": { "path": { "az": "xidmetler/", "en": "services/", "ru": "uslugi/" } },
+  "about": { "path": { "az": "haqqimizda/", "en": "about/", "ru": "o-nas/" } },
+  "contact": { "path": { "az": "elaqe/", "en": "contact/", "ru": "kontakty/" } },
+  "services": [
+    { "key": "smm", "home": 2, "path": { "az": "xidmetler/smm/", "en": "services/smm/", "ru": "uslugi/smm/" }, "cases": ["dailoq"] },
+    { "key": "marketing", "home": 2, "path": { "az": "xidmetler/reqemsal-marketinq/", "en": "services/digital-marketing/", "ru": "uslugi/digital-marketing/" }, "cases": [] },
+    { "key": "web", "home": 0, "path": { "az": "xidmetler/sayt-hazirlanmasi/", "en": "services/website-development/", "ru": "uslugi/razrabotka-saitov/" }, "cases": ["arsa-creative", "marka-house", "jobremotely", "guraba", "suntech", "vicdoor"] },
+    { "key": "mobile", "home": 0, "path": { "az": "xidmetler/mobil-tetbiq-hazirlanmasi/", "en": "services/mobile-app-development/", "ru": "uslugi/razrabotka-mobilnyh-prilozhenij/" }, "cases": ["chefmarket", "nitro-garage", "parkhub", "safemole", "e-faktura", "rana"] },
+    { "key": "ai", "home": 1, "path": { "az": "xidmetler/suni-intellekt-avtomatlasdirma/", "en": "services/ai-automation/", "ru": "uslugi/avtomatizaciya-ii/" }, "cases": ["dailoq", "rootos", "agentos", "meetos", "e-hesab"] },
+    { "key": "training", "home": 3, "path": { "az": "xidmetler/suni-intellekt-telimleri/", "en": "services/ai-training/", "ru": "uslugi/obuchenie-ii/" }, "cases": [] },
+    { "key": "consulting", "home": 4, "path": { "az": "xidmetler/it-konsaltinq/", "en": "services/it-consulting/", "ru": "uslugi/it-konsalting/" }, "cases": ["altiscassa", "insanis", "vicdoor"] }
+  ]
+}

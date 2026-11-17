@@ -1,0 +1,606 @@
+{
+  "ui": {
+    "servicesNav": "Services",
+    "includesEyebrow": "What’s included",
+    "includesH": "What the service includes",
+    "processEyebrow": "Process",
+    "processH": "How we work",
+    "pricingEyebrow": "Pricing",
+    "pricingH": "What the price depends on",
+    "whyEyebrow": "Why us",
+    "whyH": "Why AILoveDigital",
+    "faqEyebrow": "Questions",
+    "faqH": "Frequently asked questions",
+    "casesEyebrow": "Work",
+    "casesH": "Projects in this area",
+    "otherEyebrow": "More",
+    "otherH": "Other services",
+    "ctaH": "Let’s talk about<br>your project<span class=\"ald-dot\">.</span>",
+    "ctaS": "Send a short note — we reply within one working day.",
+    "ctaContact": "Contact page →",
+    "more": "Learn more →",
+    "servicesUsed": "Services delivered",
+    "allServices": "All services →",
+    "why": [
+      {
+        "t": "One team, every skill",
+        "d": "Strategy, design, engineering and marketing sit together. No hand-offs between contractors and no finger-pointing."
+      },
+      {
+        "t": "Measurable results",
+        "d": "At the start of every project we agree in writing how success will be measured — and report it in numbers."
+      },
+      {
+        "t": "Yours to own",
+        "d": "Code, accounts, documentation and every access stay with you. You never depend on us."
+      }
+    ],
+    "notFound": {
+      "title": "Page not found",
+      "h1": "Lost?",
+      "headline": "That page doesn’t exist any more.",
+      "lead": "Head back to the start, or browse our services and work.",
+      "home": "Home"
+    },
+    "homeH1": "IT & digital marketing agency in Baku"
+  },
+  "hub": {
+    "title": "Services: websites, mobile apps, SMM & AI | AILoveDigital",
+    "description": "AILoveDigital services in Baku: website and mobile app development, AI automation, SMM, digital marketing, AI and IT training, and technology consulting.",
+    "eyebrow": "Services",
+    "h1": "Our services",
+    "lead": "The strongest results come when strategy, technology and creative work sit in one team. Pick what you need — or let’s work out together where to start."
+  },
+  "about": {
+    "title": "About AILoveDigital — Technology & Creative Studio in Baku",
+    "description": "AILoveDigital is a Baku studio that puts technology, AI and marketing in one team. How we work, what we believe and our company details.",
+    "eyebrow": "About",
+    "h1": "Tech, creativity and business — in one team",
+    "lead": "AILoveDigital is a Baku-based technology and creative studio. We build digital products with AI at the core, grow their audience and train the teams that run them.",
+    "intro": [
+      "We are built around one question: what does technology actually earn a business? So every project starts with the business’s numbers, audience and constraints — not a tool list.",
+      "Engineers, designers, marketers and AI specialists work in one team. Our portfolio holds 20 digital products across marketplaces, fintech, cybersecurity, e-commerce and AI platforms, and we build AI products of our own — Dailoq, MeetOS, RootOS and AgentOS."
+    ],
+    "whatH": "What we do",
+    "processH": "How we work",
+    "valuesH": "What we believe",
+    "companyH": "Company details",
+    "legalName": "Legal name",
+    "taxId": "Tax ID",
+    "legalAddress": "Registered address",
+    "office": "Office",
+    "officeValue": "Altis Plaza, Binagadi district, Baku",
+    "email": "Email",
+    "phone": "Phone",
+    "workLink": "See selected work →"
+  },
+  "contact": {
+    "title": "Contact AILoveDigital — Baku: phone, address, WhatsApp",
+    "description": "Contact AILoveDigital: +994 70 280 18 18, info@ailovedigital.com, WhatsApp. Office: Altis Plaza, Binagadi district, Baku. We reply within one working day.",
+    "eyebrow": "Contact",
+    "h1": "Contact AILoveDigital",
+    "lead": "Tell us what you want to build, fix or grow. A short note is enough — we will ask the right questions.",
+    "detailsH": "Contact details",
+    "email": "Email",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "address": "Address",
+    "addressValue": "Altis Plaza, Binagadi district, Baku, Azerbaijan",
+    "mapLink": "Open in Google Maps →",
+    "company": "Company",
+    "nextH": "What happens next",
+    "next": [
+      "We read it properly and reply within one working day.",
+      "A 30-minute call. Questions, not a pitch deck.",
+      "A short written plan: scope, timeline and price."
+    ],
+    "formH": "Send a message",
+    "name": "Name",
+    "emailField": "Email",
+    "companyField": "Company",
+    "message": "Message",
+    "send": "Send",
+    "formNote": "We reply within one working day. See our Privacy Policy for how we handle what you send.",
+    "subject": "New enquiry from the website (EN)"
+  },
+  "services": {
+    "smm": {
+      "name": "SMM & social media management",
+      "short": "Content, shoots, Meta ads and AI replies for Instagram, Facebook and TikTok — packages from 850 AZN a month.",
+      "serviceType": "Social media marketing (SMM)",
+      "title": "SMM Services in Baku — Packages from 850 AZN | AILoveDigital",
+      "description": "SMM packages in Baku: START 850, GROWTH 1,300, PRO 1,900 AZN/month. Reels, shoots, Meta ads, AI replies (Dailoq) and reports. Free audit.",
+      "h1": "SMM services in Baku",
+      "lead": "We don’t just post. We build a system that turns your audience into customers — strategy, content, ads and a report on every manat, in one team.",
+      "intro": [
+        "Many businesses treat social media as “a post a day” and wait for results. We work the other way round: first we study the audience, the competitors and the sales funnel, then we build a content plan where every post has a job to do.",
+        "At AILoveDigital, SMM is more than design. Strategy, creative production, targeted ads and analytics sit in the same team, so content, ad spend and enquiries are managed as one — and every month we show in numbers what we did and what worked."
+      ],
+      "includes": [
+        {
+          "t": "Strategy and audit",
+          "d": "Analysis of your accounts, competitors and audience; goals, key messages and the right platforms."
+        },
+        {
+          "t": "Content plan",
+          "d": "A monthly content calendar — posts, carousels, Reels and Stories — each with its purpose and copy."
+        },
+        {
+          "t": "Creative production",
+          "d": "Design, photo and video shoots, editing and scripts for short-form video."
+        },
+        {
+          "t": "Targeted ads",
+          "d": "Instagram, Facebook and TikTok campaigns, audience tests and budget optimisation."
+        },
+        {
+          "t": "Community management",
+          "d": "Timely replies to comments and messages, reply templates — and 24/7 answers from an AI assistant if you want them."
+        },
+        {
+          "t": "Analytics and reporting",
+          "d": "A monthly report on reach, engagement, enquiries and every manat of ad spend."
+        }
+      ],
+      "pricing": {
+        "p": "SMM pricing depends on the scope of work, not a fixed package. After a first call we send scope, timeline and price as a short written plan.",
+        "items": [
+          "Number of platforms (Instagram, TikTok, Facebook, LinkedIn)",
+          "Monthly content volume and formats (posts, Reels, video shoots)",
+          "Whether we run your ad campaigns",
+          "Community management and message handling"
+        ]
+      },
+      "faq": [
+        {
+          "q": "How much do SMM services cost in Baku?",
+          "a": "We have three monthly packages: START — 850 AZN, GROWTH — 1,300 AZN (1,400 AZN with Dailoq), PRO — 1,900 AZN (2,000 AZN with Dailoq). The ad budget is not included and is paid directly to Meta."
+        },
+        {
+          "q": "What does an SMM package include?",
+          "a": "Every package includes an audit and strategy, profile setup, a monthly content plan, copy in 2 languages, professional photo and video shoots, Meta ads management, message scripts and a monthly report. Packages differ in the number of posts, Reels, stories and shoots."
+        },
+        {
+          "q": "What is Dailoq and why would I need it?",
+          "a": "Dailoq is our own AI product: it answers Instagram and WhatsApp messages instantly, day and night, so no enquiry is lost. It is added to GROWTH and PRO with 2,000 messages a month (1 channel); extra messages are 0.15 AZN each."
+        },
+        {
+          "q": "What is the minimum contract term?",
+          "a": "3 months minimum, then month to month; 30 days’ written notice is enough to stop. Payment is made at the start of each month."
+        },
+        {
+          "q": "When will I see results from SMM?",
+          "a": "In the first month we measure your starting numbers; from the second month we set targets together, in numbers. Enquiries, cost per enquiry, response time and conversion to sales are in the report every month."
+        },
+        {
+          "q": "Which platforms do you work with?",
+          "a": "The packages cover Instagram, Facebook and TikTok (START: Instagram and Facebook). Google Ads is available as an add-on; LinkedIn and YouTube by agreement."
+        },
+        {
+          "q": "Who owns our accounts and content?",
+          "a": "You do. Pages, the ad account and every photo, video and text we produce belong to the client. Every post comes to you for approval before publishing, with 2 revision rounds per post."
+        }
+      ]
+    },
+    "marketing": {
+      "name": "Digital marketing & advertising",
+      "short": "Google, Meta and TikTok ads, SEO, analytics and landing pages — in one strategy.",
+      "serviceType": "Digital marketing",
+      "title": "Digital Marketing Agency in Baku: Ads & SEO | AILoveDigital",
+      "description": "Digital marketing in Baku: Google, Meta and TikTok ads, SEO, analytics and landing pages — in one strategy, with a monthly report on every manat.",
+      "h1": "Digital marketing agency in Baku",
+      "lead": "We bring ads, SEO, content and analytics into one strategy, so your marketing budget becomes a measurable investment rather than a cost.",
+      "intro": [
+        "Digital marketing is not a set of random campaigns on separate channels. We start with your business goal and numbers — average order value, an acceptable cost to win a customer, the length of the sales cycle — and split channels and budget accordingly.",
+        "Marketers, designers and engineers work in one team. The landing page an ad needs, the tracking (analytics, pixels, conversions) and the CRM integration are built in-house — no second contractor required."
+      ],
+      "includes": [
+        {
+          "t": "Marketing strategy",
+          "d": "Audience, competitor and market analysis; a channel plan, budget split and the KPIs we will measure."
+        },
+        {
+          "t": "Google Ads",
+          "d": "Search, Performance Max, YouTube and remarketing campaigns — with keyword and negative-keyword work."
+        },
+        {
+          "t": "Meta and TikTok ads",
+          "d": "Instagram, Facebook and TikTok campaigns, creative testing and audience segments."
+        },
+        {
+          "t": "SEO",
+          "d": "Technical audit, keyword research, on-page optimisation and a content plan — for organic traffic from Google."
+        },
+        {
+          "t": "Landing pages and conversion",
+          "d": "Fast landing pages for campaigns, forms and A/B tests."
+        },
+        {
+          "t": "Analytics and reporting",
+          "d": "GA4, Meta Pixel, conversion tracking and a monthly report — so you see where every manat goes."
+        }
+      ],
+      "pricing": {
+        "p": "Pricing depends on the number of channels and the scope of work. The ad budget is separate, paid directly to the platforms and under your control.",
+        "items": [
+          "Channels managed (Google, Meta, TikTok, SEO)",
+          "Monthly ad budget",
+          "Landing pages and creative production needed",
+          "Complexity of analytics and CRM integration"
+        ]
+      },
+      "faq": [
+        {
+          "q": "What does a digital marketing agency do?",
+          "a": "It runs how your business wins customers online: builds the strategy, runs ad campaigns, grows organic traffic with SEO, produces content and measures the results. At AILoveDigital all of that is one team."
+        },
+        {
+          "q": "Google Ads or Instagram ads?",
+          "a": "It depends on the goal. If people actively search for what you sell, Google search ads bring enquiries faster. If the product is visual and demand needs creating, Instagram and TikTok work better. Most often the best result comes from combining both."
+        },
+        {
+          "q": "How long does SEO take?",
+          "a": "Technical fixes can show within weeks; stable positions for competitive queries usually take 3–6 months. SEO is a long-term investment while ads bring traffic immediately — which is why we often run both in parallel."
+        },
+        {
+          "q": "How do you measure results?",
+          "a": "We set up conversion tracking on the site and in the ad accounts: calls, forms, WhatsApp enquiries, sales. The monthly report shows enquiries and cost per customer — not likes."
+        },
+        {
+          "q": "What is the minimum ad budget?",
+          "a": "There is no fixed minimum, but the budget has to be enough to test properly. On the first call we work out a realistic budget for your goals."
+        }
+      ]
+    },
+    "web": {
+      "name": "Website development",
+      "short": "Corporate websites, e-commerce and web platforms — fast, SEO-ready and yours to own.",
+      "serviceType": "Website development",
+      "title": "Website Development in Baku: Corporate & E-commerce | AILoveDigital",
+      "description": "Website development in Baku: corporate sites, e-commerce, portals and web platforms. Fast, mobile-friendly and SEO-ready — the code and admin panel are yours.",
+      "h1": "Website development in Baku",
+      "lead": "From a corporate site to a complex web platform — fast, ready for Google and easy for your own team to run.",
+      "intro": [
+        "Your website is your hardest-working salesperson: open 24 hours, and often the first place a customer meets you. So before any design we define the goal: who the site is for, what the visitor should do (call, order, enquire) and how we will measure it.",
+        "We build with modern technology — Next.js, React and .NET — so the site loads fast, is indexed correctly by Google and works well on phones. Code, domain and hosting are in your name, and an admin panel lets you change content without a developer."
+      ],
+      "includes": [
+        {
+          "t": "Corporate websites",
+          "d": "Sites that present your company, services and work — and bring in enquiries."
+        },
+        {
+          "t": "E-commerce",
+          "d": "Product catalogue, cart, online payment, delivery and order management."
+        },
+        {
+          "t": "Web platforms and portals",
+          "d": "Complex systems with user accounts, roles and CRM or ERP integration."
+        },
+        {
+          "t": "UI/UX design",
+          "d": "User flows, prototypes and a distinctive design built for your brand — not a template."
+        },
+        {
+          "t": "SEO-ready foundations",
+          "d": "Speed, mobile-friendliness, structured data and a sitemap — ready for Google from day one."
+        },
+        {
+          "t": "Admin panel and support",
+          "d": "You edit the content yourself; technical support and development continue after launch."
+        }
+      ],
+      "pricing": {
+        "p": "The price of a website depends on the number of pages, the functionality and the integrations. After a first call we send scope, timeline and price in writing.",
+        "items": [
+          "Type of site: corporate, e-commerce or platform",
+          "Number of pages and custom design",
+          "Online payment, CRM, 1C and other integrations",
+          "Language versions (Azerbaijani, Russian, English)"
+        ]
+      },
+      "faq": [
+        {
+          "q": "How long does it take to build a website?",
+          "a": "It depends on the scope: a corporate site is ready much sooner than an e-commerce store or a web platform. We give an exact schedule in the written plan after the first call; on large projects we show a first working version in about two weeks."
+        },
+        {
+          "q": "Who owns the code and the domain?",
+          "a": "You do. Code, domain, hosting and all access are in your business’s name and handed over with documentation."
+        },
+        {
+          "q": "Will the site show up on Google?",
+          "a": "Every site is built on technical SEO foundations: speed, mobile-friendliness, correct headings, structured data and a sitemap. Ranking high for competitive queries takes extra SEO and content work — which we also offer."
+        },
+        {
+          "q": "Can we manage the site ourselves afterwards?",
+          "a": "Yes. We build an admin panel for changing text, images and products without a developer, and show your team how to use it."
+        },
+        {
+          "q": "How many languages can the site have?",
+          "a": "As many as you need. In Azerbaijan it is usually Azerbaijani, Russian and English, and every language version is set up correctly for Google."
+        },
+        {
+          "q": "Do you redesign existing websites?",
+          "a": "Yes. We audit the current site technically and for SEO, then propose a redesign, speed optimisation or a move to a new platform."
+        }
+      ]
+    },
+    "mobile": {
+      "name": "Mobile app development",
+      "short": "iOS and Android apps: design, app, backend and admin panel in one team.",
+      "serviceType": "Mobile app development",
+      "title": "Mobile App Development in Baku — iOS & Android | AILoveDigital",
+      "description": "Mobile app development in Baku: iOS and Android with React Native, Flutter or native code. From idea to the App Store and Google Play, backend and admin included.",
+      "h1": "Mobile app development — iOS and Android",
+      "lead": "We turn an idea into an app that works on the App Store and Google Play: design, app, backend and admin panel in one team.",
+      "intro": [
+        "A successful app starts not with a long feature list but with solving one problem well. So we define the core scenario first, ship a first version (MVP) quickly and grow it from real user feedback.",
+        "Our portfolio includes marketplace, fintech, security and parking apps — built with React Native and Flutter, and natively with Swift and Kotlin. We also build the server side, the admin panel and the integrations behind the app."
+      ],
+      "includes": [
+        {
+          "t": "iOS and Android",
+          "d": "Both platforms from one codebase (React Native, Flutter), or native (Swift, Kotlin) when it is needed."
+        },
+        {
+          "t": "UI/UX design",
+          "d": "User flows, prototypes and design that follows each platform’s guidelines."
+        },
+        {
+          "t": "Backend and admin panel",
+          "d": "Server, database, user roles, real-time notifications and an admin panel."
+        },
+        {
+          "t": "Payments and integrations",
+          "d": "Online payments, maps, SMS/OTP, CRM and other systems."
+        },
+        {
+          "t": "Store release",
+          "d": "Publishing on the App Store and Google Play, passing review and shipping updates."
+        },
+        {
+          "t": "Support and growth",
+          "d": "Analytics, crash monitoring and new features — after launch too."
+        }
+      ],
+      "pricing": {
+        "p": "The price of an app depends on the number of screens, the platforms and the backend. The most cost-effective route is usually to start with an MVP of the core features.",
+        "items": [
+          "Platforms: Android only, iOS only or both",
+          "Number of screens and user roles",
+          "Integrations such as payments, maps or chat",
+          "Backend and admin panel requirements"
+        ]
+      },
+      "faq": [
+        {
+          "q": "How long does it take to build a mobile app?",
+          "a": "A first version with the core features (MVP) can be ready from about two weeks; a full marketplace or fintech app takes a few months. We give the exact timeline in the written plan after the first call."
+        },
+        {
+          "q": "React Native, Flutter or native?",
+          "a": "For most projects React Native or Flutter is ideal: one codebase, two platforms, faster and more cost-effective. For heavy camera, security or performance needs we go native with Swift and Kotlin."
+        },
+        {
+          "q": "Do you publish the app on the App Store and Google Play?",
+          "a": "Yes. Store listings, passing review and later updates are part of the service."
+        },
+        {
+          "q": "Who owns the app’s source code?",
+          "a": "You do. Code, servers and store accounts are in your business’s name and handed over with documentation."
+        },
+        {
+          "q": "Do you support the app after launch?",
+          "a": "Yes. We offer ongoing support for crash monitoring, new iOS and Android versions and new features."
+        }
+      ]
+    },
+    "ai": {
+      "name": "AI & business automation",
+      "short": "AI chatbots, AI agents and workflow automation — with the hours saved on record.",
+      "serviceType": "AI business automation",
+      "title": "AI Automation & AI Agents for Business in Baku | AILoveDigital",
+      "description": "AI for business: WhatsApp and Instagram chatbots, AI agents, CRM/ERP integration and workflow automation — from a Baku studio that ships its own AI products.",
+      "h1": "AI and automation for business",
+      "lead": "We find the repetitive work and automate it with AI — from customer messages to document processing — with the hours it saves on record.",
+      "intro": [
+        "AI is not the answer to every problem, but used in the right place it frees up hours of a team’s week. We start by mapping your processes: which work repeats, where mistakes happen, which systems don’t talk to each other.",
+        "We also build AI products of our own: Dailoq, a customer-messaging assistant built for Azerbaijan; MeetOS, a meeting intelligence platform; and RootOS and AgentOS. The technology we offer clients is proven in our own products first."
+      ],
+      "includes": [
+        {
+          "t": "AI chatbots and assistants",
+          "d": "24/7 answers to customer questions on WhatsApp, Instagram, Telegram and your website — based on your documents."
+        },
+        {
+          "t": "AI agents",
+          "d": "Agents that handle multi-step work such as taking orders, routing enquiries or preparing reports."
+        },
+        {
+          "t": "Workflow automation",
+          "d": "We automate manual data copying, approval flows and notifications."
+        },
+        {
+          "t": "CRM and ERP integration",
+          "d": "We connect your existing systems — CRM, 1C, ERP, Google Sheets."
+        },
+        {
+          "t": "Document processing (OCR)",
+          "d": "Reading data from invoices, waybills and contracts automatically and writing it into your systems."
+        },
+        {
+          "t": "Internal tools and analytics",
+          "d": "Custom dashboards for your team and reports you can query in plain language."
+        }
+      ],
+      "pricing": {
+        "p": "Pricing depends on the complexity of the process and the number of integrations. Starting with one process, measuring the result and then expanding is usually the most cost-effective route.",
+        "items": [
+          "Number and complexity of processes automated",
+          "Systems to connect (CRM, ERP, messaging channels)",
+          "AI model usage volume",
+          "Security and data-residency requirements"
+        ]
+      },
+      "faq": [
+        {
+          "q": "How can AI help my business?",
+          "a": "The areas that pay off most: automatic answers to customer questions, handling enquiries, extracting data from documents, preparing reports and moving data between systems. On the first call we show what is realistic for your processes."
+        },
+        {
+          "q": "Can an AI chatbot answer in Azerbaijani?",
+          "a": "Yes. Dailoq, for example, answers in Azerbaijani, Russian and English — mixed-language messages included — works from the business’s own documents and hands hard conversations to a human."
+        },
+        {
+          "q": "Will our data be safe?",
+          "a": "Access is limited by roles, data is encrypted and passed only to the systems that need it. If required, we can deploy the solution on your own servers."
+        },
+        {
+          "q": "Will automation replace employees?",
+          "a": "The goal is not to replace people but to free them from repetitive work, so the team spends its time on customers and decisions."
+        },
+        {
+          "q": "How do you measure the result?",
+          "a": "Before we start we measure the current time and cost of the process; after automation the report shows the hours saved and the drop in errors."
+        }
+      ]
+    },
+    "training": {
+      "name": "AI & IT training",
+      "short": "Corporate AI training for teams, plus programming, marketing and design courses.",
+      "serviceType": "AI and IT training",
+      "title": "AI & IT Training for Teams in Baku | AILoveDigital",
+      "description": "AI and IT training in Baku: corporate AI training for teams, programming, marketing and design courses, mentorship and real project work.",
+      "h1": "AI and IT training",
+      "lead": "We make your team faster with the tools they already have — plus the ones they should — on real workflows, with hands-on practice.",
+      "intro": [
+        "AI tools change every week, yet most teams only scratch the surface. Our training is not a lecture: participants apply AI to their own tasks — reports, content, analysis, code — during the session itself.",
+        "The AILoveDigital academy runs courses in programming, marketing, design and AI, with more than 300 graduates so far. For corporate clients we tailor the programme to the team’s level and field."
+      ],
+      "includes": [
+        {
+          "t": "Corporate AI training",
+          "d": "Hands-on work with ChatGPT, Claude, Gemini and other tools — fitted to your workflows."
+        },
+        {
+          "t": "AI strategy for leaders",
+          "d": "A workshop on where AI adds value to the business and how to decide well."
+        },
+        {
+          "t": "Programming courses",
+          "d": "Web and mobile development — on real projects, with mentorship."
+        },
+        {
+          "t": "Marketing and design courses",
+          "d": "SMM, digital advertising, content and design — with practical assignments."
+        },
+        {
+          "t": "Mentorship and real projects",
+          "d": "Participants work on real tasks and add the result to their portfolio."
+        },
+        {
+          "t": "On-site or online",
+          "d": "At our office, at your company or online."
+        }
+      ],
+      "pricing": {
+        "p": "Pricing depends on the number of participants, the length of the training and the format. Corporate programmes are built around the team’s needs.",
+        "items": [
+          "Number of participants",
+          "Length and number of hours",
+          "Format: our office, your company or online",
+          "Customisation (assignments from your field)"
+        ]
+      },
+      "faq": [
+        {
+          "q": "Who is AI training for?",
+          "a": "Leaders and teams in marketing, sales, finance, HR and IT. No technical background is needed — the programme is fitted to the participants’ level."
+        },
+        {
+          "q": "What language is the training in?",
+          "a": "Azerbaijani, Russian or English — whichever suits your team."
+        },
+        {
+          "q": "What changes after the training?",
+          "a": "Participants apply AI to their daily tasks during the session and leave with ready workflows and templates."
+        },
+        {
+          "q": "Can you run corporate training at our office?",
+          "a": "Yes — at your office, at ours or online."
+        },
+        {
+          "q": "Can individuals join the courses?",
+          "a": "Get in touch for details on the academy’s courses — upcoming groups, programme and terms."
+        }
+      ]
+    },
+    "consulting": {
+      "name": "IT consulting & digital transformation",
+      "short": "IT audits, technology strategy and a clear plan before you invest.",
+      "serviceType": "IT consulting",
+      "title": "IT Consulting & Digital Transformation in Baku | AILoveDigital",
+      "description": "The right direction before you invest in technology: IT audits, technology strategy, a digital transformation plan and technical leadership. Baku.",
+      "h1": "IT consulting and digital transformation",
+      "lead": "The right decision before you spend on technology: we assess where you stand, build a strategy and give you a clear plan to base decisions on.",
+      "intro": [
+        "Many companies lose money by investing in the wrong system, an unnecessary feature or a big project started too early. Consulting exists to prevent that: we understand the business problem first and choose the technology second — never the other way round.",
+        "Sometimes the right answer is “not yet”. We don’t sell technology; if you don’t need it, we say so. Once the plan is ready you can deliver it with any team — including ours."
+      ],
+      "includes": [
+        {
+          "t": "IT and technical audit",
+          "d": "Assessment of your systems, code, infrastructure and security."
+        },
+        {
+          "t": "Technology strategy",
+          "d": "Which systems you need, what to buy off the shelf and what to build."
+        },
+        {
+          "t": "Digital transformation",
+          "d": "A staged move from paper and Excel to digital systems."
+        },
+        {
+          "t": "AI readiness",
+          "d": "Where AI would create real value in your business."
+        },
+        {
+          "t": "Project plan and budget",
+          "d": "A clear roadmap with scope, phases, timeline and budget."
+        },
+        {
+          "t": "Technical leadership",
+          "d": "Technical oversight and advice for your in-house team or other contractors."
+        }
+      ],
+      "pricing": {
+        "p": "Consulting runs either as a fixed-price audit or as hourly or monthly advisory. We define the scope on the first call.",
+        "items": [
+          "Company size and number of systems",
+          "Depth of the audit (code, infrastructure, security)",
+          "One-off audit or ongoing technical leadership",
+          "Level of detail in the report and roadmap"
+        ]
+      },
+      "faq": [
+        {
+          "q": "When do you need IT consulting?",
+          "a": "Before buying or commissioning a new system, when current systems slow down or don’t work together, and when the role of technology in your growth plans is unclear."
+        },
+        {
+          "q": "What do we get from an audit?",
+          "a": "A written report with the problems found, the risks and prioritised recommendations, plus a roadmap with scope, timeline and budget."
+        },
+        {
+          "q": "Can we deliver the plan with another team?",
+          "a": "Yes. The plan is yours — deliver it with your in-house team, another contractor or us."
+        },
+        {
+          "q": "Where does digital transformation start?",
+          "a": "With the one process that wastes the most time or causes the most errors. Starting small and measurable, then expanding once the result is visible, is the most reliable path."
+        }
+      ]
+    }
+  }
+}

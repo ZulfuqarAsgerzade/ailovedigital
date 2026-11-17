@@ -1,3 +1,17 @@
+// Serve React from this site instead of unpkg: support.js asks window.__resources for a
+// replacement before it falls back to the CDN URL (see cdnScriptFor there). The files in
+// vendor/ are byte-identical to those URLs — their SHA-384 matches the SRI pinned in
+// support.js (checked by scripts/build-seo.mjs). Must run before support.js.
+// Paths are resolved from this script's own URL, so the same file works on / and on /ru/.
+(function () {
+  var base = document.currentScript ? document.currentScript.src : location.href;
+  var v = function (f) { return new URL('../vendor/' + f, base).href; };
+  window.__resources = {
+    'https://unpkg.com/react@18.3.1/umd/react.production.min.js': v('react.production.min.js'),
+    'https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js': v('react-dom.production.min.js')
+  };
+})();
+
 // Site-level glue code — everything here sits outside the dc-runtime's
 // component (which must stay inline in index.html, see the <script
 // data-dc-script> comment there) and outside the vendor runtime file
