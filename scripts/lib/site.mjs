@@ -48,7 +48,8 @@ export const OG_IMAGE = '/assets/images/og-image.png';
 export const OG_ALT = 'AILoveDigital — pixel heart logo and the tagline "AI, Technology & Business Growth"';
 // ──────────────────────────────────────────────────────────────────
 
-export const read = (f) => readFileSync(join(ROOT, f), 'utf8');
+// Normalised to LF: a Windows checkout (core.autocrlf) must not break the multi-line fragments in i18n/*.json.
+export const read = (f) => readFileSync(join(ROOT, f), 'utf8').replace(/\r\n/g, '\n');
 export const write = (f, s) => {
   mkdirSync(dirname(join(ROOT, f)), { recursive: true });
   writeFileSync(join(ROOT, f), s);

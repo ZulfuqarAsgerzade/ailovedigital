@@ -34,7 +34,7 @@ const projects = loadProjects();
 const today = new Date().toISOString().slice(0, 10);
 
 // ───────────────────────────── dist/ + static files ─────────────────────────────
-const STATIC = ['assets', 'css', 'js', 'vendor', 'favicon.ico'];
+const STATIC = ['assets', 'css', 'js', 'vendor', 'favicon.ico', 'BingSiteAuth.xml']; // BingSiteAuth.xml: Bing Webmaster verification, must stay at each site's root
 for (const site of Object.values(SITES)) {
   rmSync(join(ROOT, site.dir), { recursive: true, force: true });
   for (const f of STATIC) if (existsSync(join(ROOT, f))) cpSync(join(ROOT, f), join(ROOT, site.dir, f), { recursive: true });

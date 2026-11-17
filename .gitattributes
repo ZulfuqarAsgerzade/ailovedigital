@@ -1,3 +1,11 @@
+# LF everywhere: the build matches multi-line HTML fragments (i18n/*.json) against index.html
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary
+*.woff2 binary
+*.pdf binary
 # Byte-exact: vendor/ must match the SRI hashes pinned in js/support.js
 vendor/** -text
 assets/fonts/** binary
